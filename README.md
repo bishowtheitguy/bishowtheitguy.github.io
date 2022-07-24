@@ -1,2 +1,2 @@
 # bishowtheitguy.github.io
-A websites for geeks 
+A website for geeks 
