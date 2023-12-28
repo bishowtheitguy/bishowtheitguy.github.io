@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../01-jwt/">
+        <link rel="prev" href="../middleware/">
       
       
-        <link rel="next" href="../django-view/">
+        <link rel="next" href="../../../tools/git/01-git/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>JWT Tutorial - Bishow IT Guy</title>
+        <title>DRF - Bishow IT Guy</title>
       
     
     
@@ -74,6 +74,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#function-based-views-fbvs" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -106,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              JWT Tutorial
+              DRF
             
           </span>
         </div>
@@ -392,17 +397,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../02-jwt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -411,7 +409,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -463,19 +460,21 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
         
           
           <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
@@ -489,7 +488,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
             Django
@@ -563,10 +562,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../01-drf-functionbasedviews/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    DRF
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -575,6 +592,69 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#function-based-views-fbvs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function-based views (FBVs)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#class-based-views-cbvs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class-based views (CBVs)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#djangos-generic-cbvs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Django's Generic CBVs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#djangos-built-in-cbv-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Django's Built-in CBV Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1441,6 +1521,59 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#function-based-views-fbvs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function-based views (FBVs)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#class-based-views-cbvs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class-based views (CBVs)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#djangos-generic-cbvs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Django's Generic CBVs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#djangos-built-in-cbv-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Django's Built-in CBV Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1454,9 +1587,212 @@
                   
 
 
-  <h1>JWT Tutorial</h1>
+  <h1>DRF</h1>
+
+<p>Django has two types of views;</p>
+<ul>
+<li>function-based views (FBVs), &amp;</li>
+<li>class-based views (CBVs)</li>
+</ul>
+<p>Django originally started out with only FBVs, but then added CBVs as a way to templatize functionality so that you didn’t have to write boilerplate (i.e. the same code) code over and over again.</p>
+<h2 id="function-based-views-fbvs">Function-based views (FBVs)</h2>
+<blockquote>
+<p>FBVs code here:</p>
+</blockquote>
+<p>Todo App (using FBVs)</p>
+<p>Let's look at how a simple todo application that allows CRUD operations would be written using only FBVs.</p>
+<pre><code># todo/views.py
+
+from django.shortcuts import render, get_object_or_404, redirect
+
+from .forms import TaskForm, ConfirmForm
+from .models import Task
 
 
+def task_list_view(request):
+    return render(request, 'todo/task_list.html', {
+        'tasks': Task.objects.all(),
+    })
+
+
+def task_create_view(request):
+    if request.method == 'POST':
+        form = TaskForm(data=request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse('task-list'))
+
+    return render(request, 'todo/task_create.html', {
+        'form': TaskForm(),
+    })
+
+
+def task_detail_view(request, pk):
+    task = get_object_or_404(Task, pk=pk)
+    return render(request, 'todo/task_detail.html', {
+        'task': task,
+    })
+
+
+def task_update_view(request, pk):
+    task = get_object_or_404(Task, pk=pk)
+
+    if request.method == 'POST':
+        form = TaskForm(instance=task, data=request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse('task-detail', args={pk: pk}))
+
+    return render(request, 'todo/task_update.html', {
+        'task': task,
+        'form': TaskForm(instance=task),
+    })
+
+
+def task_delete_view(request, pk):
+    task = get_object_or_404(Task, pk=pk)
+
+    if request.method == 'POST':
+        form = ConfirmForm(data=request.POST)
+        if form.is_valid():
+            task.delete()
+            return HttpResponseRedirect(reverse('task-list'))
+
+    return render(request, 'todo/task_delete.html', {
+        'task': task,
+        'form': ConfirmForm(),
+    })
+
+</code></pre>
+<p>You can get the full source code on <a href="https://github.com/testdrivenio/django-cbv-fbv/tree/main/fbv">GitHub</a>.</p>
+<h2 id="class-based-views-cbvs">Class-based views (CBVs)</h2>
+<blockquote>
+<p>CBVs code here:</p>
+</blockquote>
+<p><a class="glightbox" href="https://testdriven.io/static/images/blog/django/django-cbv-fbv/cbv-code-flow.png" data-type="image" data-width="100%" data-height="auto" data-title="django-cbv-flow" data-desc-position="bottom"><img alt="django-cbv-flow" src="https://testdriven.io/static/images/blog/django/django-cbv-fbv/cbv-code-flow.png" /></a></p>
+<p>Todo App (using CBVs)</p>
+<p>Now, let's rewrite our todo application to only use CBVs:</p>
+<pre><code># todo/views.py
+
+from django.shortcuts import render, get_object_or_404, redirect
+from django.views import View
+
+from .forms import TaskForm, ConfirmForm
+from .models import Task
+
+
+class TaskListView(View):
+
+    def get(self, request, *args, **kwargs):
+        return render(request, 'todo/task_list.html', {
+            'tasks': Task.objects.all(),
+        })
+
+
+class TaskCreateView(View):
+
+    def get(self, request, *args, **kwargs):
+        return render(request, 'todo/task_create.html', {
+            'form': TaskForm(),
+        })
+
+    def post(self, request, *args, **kwargs):
+        form = TaskForm(data=request.POST)
+        if form.is_valid():
+            task = form.save()
+            return redirect('task-detail', pk=task.pk)
+
+        return self.get(request)
+
+
+class TaskDetailView(View):
+
+    def get(self, request, pk, *args, **kwargs):
+        task = get_object_or_404(Task, pk=pk)
+
+        return render(request, 'todo/task_detail.html', {
+            'task': task,
+        })
+
+
+class TaskUpdateView(View):
+
+    def get(self, request, pk, *args, **kwargs):
+        task = get_object_or_404(Task, pk=pk)
+        return render(request, 'todo/task_update.html', {
+            'task': task,
+            'form': TaskForm(instance=task),
+        })
+
+    def post(self, request, pk, *args, **kwargs):
+        task = get_object_or_404(Task, pk=pk)
+        form = TaskForm(instance=task, data=request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('task-detail', pk=task.pk)
+
+        return self.get(request, pk)
+
+
+class TaskDeleteView(View):
+
+    def get(self, request, pk, *args, **kwargs):
+        task = get_object_or_404(Task, pk=pk)
+        return render(request, 'todo/task_confirm_delete.html', {
+            'task': task,
+            'form': ConfirmForm(),
+        })
+
+    def post(self, request, pk, *args, **kwargs):
+        task = get_object_or_404(Task, pk=pk)
+        form = ConfirmForm(data=request.POST)
+        if form.is_valid():
+            task.delete()
+            return redirect('task-list')
+
+        return self.get(request, pk)
+
+</code></pre>
+<p>Also, let's not forget to make our urls.py call <code>as_view()</code>:</p>
+<pre><code># todo/urls.py
+
+from django.urls import path
+
+from .views import TaskListView, TaskDetailView, TaskCreateView, TaskUpdateView, TaskDeleteView
+
+
+urlpatterns = [
+    path('', TaskListView.as_view(), name='task-list'),
+    path('create/', TaskCreateView.as_view(), name='task-create'),
+    path('&lt;int:pk&gt;/', TaskDetailView.as_view(), name='task-detail'),
+    path('update/&lt;int:pk&gt;/', TaskUpdateView.as_view(), name='task-update'),
+    path('delete/&lt;int:pk&gt;/', TaskDeleteView.as_view(), name='task-delete'),
+]
+
+</code></pre>
+<p>You can get the full source code on <a href="https://github.com/testdrivenio/django-cbv-fbv/tree/main/cbv">Github</a></p>
+<hr />
+<h2 id="djangos-generic-cbvs">Django's Generic CBVs</h2>
+<p>Django's generic CBVs are great for solving common problems like retrieving, creating, modifying, and deleting objects as well as pagination and archive views. They speed up the development process too.</p>
+<pre><code>from django.views.generic import CreateView
+
+
+class TaskCreateView(CreateView):
+    model = Task
+    context_object_name = 'task'
+    fields = ('name', 'description', 'is_done')
+    template_name = 'todo/task_create.html'
+
+</code></pre>
+<h2 id="djangos-built-in-cbv-types">Django's Built-in CBV Types</h2>
+<hr />
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://medium.com/@ksarthak4ever/django-class-based-views-vs-function-based-view-e74b47b2e41b">Django : Class Based Views vs Function Based Views</a></li>
+<li><a href="https://www.geeksforgeeks.org/class-based-vs-function-based-views-which-one-is-better-to-use-in-django/">Class Based vs Function Based Views – Which One is Better to Use in Django?</a></li>
+<li><a href="https://testdriven.io/blog/django-class-based-vs-function-based-views/">Class-based vs Function-based Views in Django</a></li>
+<li><a href="https://vegibit.com/what-are-djangos-class-based-views-and-how-to-use-them-effectively/">What Are Django’s Class-Based Views and How to Use Them Effectively</a></li>
+</ul>
 
 
 

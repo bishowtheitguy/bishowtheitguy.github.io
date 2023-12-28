@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../01-jwt/">
+        <link rel="prev" href="../02-jwt/">
       
       
-        <link rel="next" href="../django-view/">
+        <link rel="next" href="../django-form/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>JWT Tutorial - Bishow IT Guy</title>
+        <title>Views - Bishow IT Guy</title>
       
     
     
@@ -74,6 +74,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#reference" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -106,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              JWT Tutorial
+              Views
             
           </span>
         </div>
@@ -392,17 +397,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../02-jwt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -411,7 +409,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -463,19 +460,21 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
         
           
           <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
@@ -489,7 +488,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
             Django
@@ -500,10 +499,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../django-view/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Views
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -512,6 +529,33 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1441,6 +1485,23 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1454,9 +1515,27 @@
                   
 
 
-  <h1>JWT Tutorial</h1>
+  <h1>Views</h1>
 
-
+<blockquote>
+<p>As per Django Documentation,</p>
+</blockquote>
+<p><strong>A view function is a Python function that takes a Web request and returns a Web response.</strong> This response can be the HTML contents of a Web page, or a redirect, or a 404 error, or an XML document, or an image, anything that a web browser can display.</p>
+<p><a class="glightbox" href="https://media.geeksforgeeks.org/wp-content/uploads/20210606092225/image.png" data-type="image" data-width="100%" data-height="auto" data-title="django mvt structure" data-desc-position="bottom"><img alt="django mvt structure" src="https://media.geeksforgeeks.org/wp-content/uploads/20210606092225/image.png" /></a></p>
+<p><strong>Django views roughly correspond to controllers in MVC, and Django templates to views in MVC.</strong></p>
+<p><a class="glightbox" href="https://media.geeksforgeeks.org/wp-content/uploads/20200124153519/django-views.jpg" data-type="image" data-width="100%" data-height="auto" data-title="Djano View" data-desc-position="bottom"><img alt="Djano View" src="https://media.geeksforgeeks.org/wp-content/uploads/20200124153519/django-views.jpg" /></a></p>
+<p><a class="glightbox" href="https://media.geeksforgeeks.org/wp-content/uploads/20200123160947/djang-views-types-1024x631.jpg" data-type="image" data-width="100%" data-height="auto" data-title="Django views" data-desc-position="bottom"><img alt="Django views" src="https://media.geeksforgeeks.org/wp-content/uploads/20200123160947/djang-views-types-1024x631.jpg" /></a></p>
+<hr />
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://www.geeksforgeeks.org/django-tutorial/">Django Tutorial - geeksforgeeks</a></li>
+<li><a href="https://www.w3schools.com/django/">Django w3schools</a></li>
+<li><a href="https://www.javatpoint.com/django-tutorial">Django javatpoint</a></li>
+<li><a href="https://www.geeksforgeeks.org/django-crud-create-retrieve-update-delete-function-based-views/">Django crud: function based views</a></li>
+<li><a href="https://www.geeksforgeeks.org/class-based-generic-views-django-create-retrieve-update-delete/">Django crud: class based views</a></li>
+<li><a href="https://www.geeksforgeeks.org/django-project-mvt-structure/">Django project MVT structure</a></li>
+<li><a href="https://realpython.com/tutorials/django/">Django Tutorial: realPython</a></li>
+</ul>
 
 
 
