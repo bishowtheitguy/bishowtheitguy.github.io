@@ -11,22 +11,22 @@
       
       
       
-        <link rel="prev" href="../middleware/">
+        <link rel="prev" href="../frontend/react/00-roadmap/">
       
       
-        <link rel="next" href="../../../tools/git/01-git/">
+        <link rel="next" href="../frontend/react/state-management/01-state/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
     
     
       
-        <title>DRF - Bishow IT Guy</title>
+        <title>React Router - Bishow IT Guy</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
       
       
 
@@ -45,14 +45,14 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -63,7 +63,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#function-based-views-fbvs" class="md-skip">
+        <a href="#router" class="md-skip">
           Skip to content
         </a>
       
@@ -91,7 +91,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Bishow IT Guy" class="md-header__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
+    <a href=".." title="Bishow IT Guy" class="md-header__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              DRF
+              React Router
             
           </span>
         </div>
@@ -149,7 +149,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Bishow IT Guy" class="md-nav__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
+    <a href=".." title="Bishow IT Guy" class="md-nav__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -164,19 +164,21 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -190,7 +192,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             REACT
@@ -204,7 +206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../frontend/react/00-roadmap/" class="md-nav__link">
+      <a href="../frontend/react/00-roadmap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -222,10 +224,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../others/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    React Router
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -234,6 +254,117 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#router" class="md-nav__link">
+    <span class="md-ellipsis">
+      Router
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Router">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-install-react-router" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Install React Router?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#components-in-react-router" class="md-nav__link">
+    <span class="md-ellipsis">
+      Components in React Router
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redirect-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redirect Component
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#react-router-hooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      React Router Hooks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upgrading-fro-v5-to-v6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upgrading fro v5 to v6
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#history" class="md-nav__link">
+    <span class="md-ellipsis">
+      History
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="History">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -283,7 +414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../frontend/react/state-management/01-state/" class="md-nav__link">
+      <a href="../frontend/react/state-management/01-state/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -316,21 +447,19 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -344,7 +473,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             DJANGO
@@ -395,7 +524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../jwt/01-jwt/" class="md-nav__link">
+      <a href="../backend/jwt/01-jwt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -416,7 +545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-jwt/" class="md-nav__link">
+      <a href="../backend/django/01-jwt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -437,7 +566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-jwt/" class="md-nav__link">
+      <a href="../backend/django/02-jwt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -458,7 +587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/python-dotenv" class="md-nav__link">
+      <a href="../backend/python/python-dotenv" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -479,7 +608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/mysqlclient" class="md-nav__link">
+      <a href="../backend/python/mysqlclient" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -505,21 +634,19 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -533,7 +660,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             djangorestframework
@@ -547,7 +674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-view/" class="md-nav__link">
+      <a href="../backend/django/django-view/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -568,7 +695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-form/" class="md-nav__link">
+      <a href="../backend/django/django-form/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -589,7 +716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../middleware/" class="md-nav__link">
+      <a href="../backend/django/middleware/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -607,28 +734,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    DRF
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../backend/django/01-drf-functionbasedviews/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -637,69 +746,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#function-based-views-fbvs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function-based views (FBVs)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#class-based-views-cbvs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Class-based views (CBVs)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#djangos-generic-cbvs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Django's Generic CBVs
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#djangos-built-in-cbv-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      Django's Built-in CBV Types
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reference" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reference
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -764,7 +810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/git/01-git/" class="md-nav__link">
+      <a href="../tools/git/01-git/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -785,7 +831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../others/vite/" class="md-nav__link">
+      <a href="vite/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -850,7 +896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../others/interviewQuestions/js/" class="md-nav__link">
+      <a href="interviewQuestions/js/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -871,7 +917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../others/interviewQuestions/react/" class="md-nav__link">
+      <a href="interviewQuestions/react/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -892,7 +938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../others/interviewQuestions/terminology/" class="md-nav__link">
+      <a href="interviewQuestions/terminology/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -913,7 +959,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/01-python/" class="md-nav__link">
+      <a href="../backend/python/01-python/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -934,7 +980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../11-drf-viewsets/" class="md-nav__link">
+      <a href="../backend/django/11-drf-viewsets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1036,7 +1082,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../others/research/04-prevent-default/" class="md-nav__link">
+      <a href="research/04-prevent-default/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1057,7 +1103,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../others/research/tricks/" class="md-nav__link">
+      <a href="research/tricks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1078,7 +1124,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../others/research/new-topic/" class="md-nav__link">
+      <a href="research/new-topic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1144,7 +1190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../others/redux/rtk/" class="md-nav__link">
+      <a href="redux/rtk/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1165,7 +1211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../others/redux/middleware/" class="md-nav__link">
+      <a href="redux/middleware/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1231,7 +1277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../others/mkdocs/01-advanced-mkdocs/" class="md-nav__link">
+      <a href="mkdocs/01-advanced-mkdocs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1252,7 +1298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../others/mkdocs/02-advanced-mkdocs/" class="md-nav__link">
+      <a href="mkdocs/02-advanced-mkdocs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1318,7 +1364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../frontend/slides/" class="md-nav__link">
+      <a href="../frontend/slides/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1339,7 +1385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../frontend/slides/" class="md-nav__link">
+      <a href="../frontend/slides/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1368,7 +1414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../others/rabbitmq/" class="md-nav__link">
+      <a href="rabbitmq/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1389,7 +1435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../others/notes/" class="md-nav__link">
+      <a href="notes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1410,7 +1456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../others/reference/" class="md-nav__link">
+      <a href="reference/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1456,47 +1502,95 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#function-based-views-fbvs" class="md-nav__link">
+  <a href="#router" class="md-nav__link">
     <span class="md-ellipsis">
-      Function-based views (FBVs)
+      Router
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Router">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-install-react-router" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Install React Router?
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#class-based-views-cbvs" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#components-in-react-router" class="md-nav__link">
     <span class="md-ellipsis">
-      Class-based views (CBVs)
+      Components in React Router
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#djangos-generic-cbvs" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
     <span class="md-ellipsis">
-      Django's Generic CBVs
+      Code
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#djangos-built-in-cbv-types" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#redirect-component" class="md-nav__link">
     <span class="md-ellipsis">
-      Django's Built-in CBV Types
+      Redirect Component
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#react-router-hooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      React Router Hooks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upgrading-fro-v5-to-v6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upgrading fro v5 to v6
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
+  <a href="#history" class="md-nav__link">
+    <span class="md-ellipsis">
+      History
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="History">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1515,211 +1609,208 @@
                   
 
 
-  <h1>DRF</h1>
+  <h1>React Router</h1>
 
-<p>Django has two types of views;</p>
+<h2 id="router">Router</h2>
+<pre><code>// Installation
+
+$ pnpm install react-router-dom
+</code></pre>
+<h4 id="how-to-install-react-router">How to Install React Router?</h4>
+<p>React router contains 3 different packages for routing.</p>
 <ul>
-<li>function-based views (FBVs), &amp;</li>
-<li>class-based views (CBVs)</li>
+<li><code>react-router</code>: contains most of the core functionality of React Router including the route matching algorithm and most of the core components and react hooks</li>
+<li><code>react-router-native</code>: It is designed for mobile applications.</li>
+<li><code>react-router-dom</code>: It is designed for web applications.</li>
 </ul>
-<p>Django originally started out with only FBVs, but then added CBVs as a way to templatize functionality so that you didn’t have to write boilerplate (i.e. the same code) code over and over again.</p>
-<h2 id="function-based-views-fbvs">Function-based views (FBVs)</h2>
-<blockquote>
-<p>FBVs code here:</p>
-</blockquote>
-<p>Todo App (using FBVs)</p>
-<p>Let's look at how a simple todo application that allows CRUD operations would be written using only FBVs.</p>
-<pre><code># todo/views.py
-
-from django.shortcuts import render, get_object_or_404, redirect
-
-from .forms import TaskForm, ConfirmForm
-from .models import Task
-
-
-def task_list_view(request):
-    return render(request, 'todo/task_list.html', {
-        'tasks': Task.objects.all(),
-    })
-
-
-def task_create_view(request):
-    if request.method == 'POST':
-        form = TaskForm(data=request.POST)
-        if form.is_valid():
-            form.save()
-            return HttpResponseRedirect(reverse('task-list'))
-
-    return render(request, 'todo/task_create.html', {
-        'form': TaskForm(),
-    })
-
-
-def task_detail_view(request, pk):
-    task = get_object_or_404(Task, pk=pk)
-    return render(request, 'todo/task_detail.html', {
-        'task': task,
-    })
-
-
-def task_update_view(request, pk):
-    task = get_object_or_404(Task, pk=pk)
-
-    if request.method == 'POST':
-        form = TaskForm(instance=task, data=request.POST)
-        if form.is_valid():
-            form.save()
-            return HttpResponseRedirect(reverse('task-detail', args={pk: pk}))
-
-    return render(request, 'todo/task_update.html', {
-        'task': task,
-        'form': TaskForm(instance=task),
-    })
-
-
-def task_delete_view(request, pk):
-    task = get_object_or_404(Task, pk=pk)
-
-    if request.method == 'POST':
-        form = ConfirmForm(data=request.POST)
-        if form.is_valid():
-            task.delete()
-            return HttpResponseRedirect(reverse('task-list'))
-
-    return render(request, 'todo/task_delete.html', {
-        'task': task,
-        'form': ConfirmForm(),
-    })
-
-</code></pre>
-<p>You can get the full source code on <a href="https://github.com/testdrivenio/django-cbv-fbv/tree/main/fbv">GitHub</a>.</p>
-<h2 id="class-based-views-cbvs">Class-based views (CBVs)</h2>
-<blockquote>
-<p>CBVs code here:</p>
-</blockquote>
-<p><a class="glightbox" href="https://testdriven.io/static/images/blog/django/django-cbv-fbv/cbv-code-flow.png" data-type="image" data-width="100%" data-height="auto" data-title="django-cbv-flow" data-desc-position="bottom"><img alt="django-cbv-flow" src="https://testdriven.io/static/images/blog/django/django-cbv-fbv/cbv-code-flow.png" /></a></p>
-<p>Todo App (using CBVs)</p>
-<p>Now, let's rewrite our todo application to only use CBVs:</p>
-<pre><code># todo/views.py
-
-from django.shortcuts import render, get_object_or_404, redirect
-from django.views import View
-
-from .forms import TaskForm, ConfirmForm
-from .models import Task
-
-
-class TaskListView(View):
-
-    def get(self, request, *args, **kwargs):
-        return render(request, 'todo/task_list.html', {
-            'tasks': Task.objects.all(),
-        })
-
-
-class TaskCreateView(View):
-
-    def get(self, request, *args, **kwargs):
-        return render(request, 'todo/task_create.html', {
-            'form': TaskForm(),
-        })
-
-    def post(self, request, *args, **kwargs):
-        form = TaskForm(data=request.POST)
-        if form.is_valid():
-            task = form.save()
-            return redirect('task-detail', pk=task.pk)
-
-        return self.get(request)
-
-
-class TaskDetailView(View):
-
-    def get(self, request, pk, *args, **kwargs):
-        task = get_object_or_404(Task, pk=pk)
-
-        return render(request, 'todo/task_detail.html', {
-            'task': task,
-        })
-
-
-class TaskUpdateView(View):
-
-    def get(self, request, pk, *args, **kwargs):
-        task = get_object_or_404(Task, pk=pk)
-        return render(request, 'todo/task_update.html', {
-            'task': task,
-            'form': TaskForm(instance=task),
-        })
-
-    def post(self, request, pk, *args, **kwargs):
-        task = get_object_or_404(Task, pk=pk)
-        form = TaskForm(instance=task, data=request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('task-detail', pk=task.pk)
-
-        return self.get(request, pk)
-
-
-class TaskDeleteView(View):
-
-    def get(self, request, pk, *args, **kwargs):
-        task = get_object_or_404(Task, pk=pk)
-        return render(request, 'todo/task_confirm_delete.html', {
-            'task': task,
-            'form': ConfirmForm(),
-        })
-
-    def post(self, request, pk, *args, **kwargs):
-        task = get_object_or_404(Task, pk=pk)
-        form = ConfirmForm(data=request.POST)
-        if form.is_valid():
-            task.delete()
-            return redirect('task-list')
-
-        return self.get(request, pk)
-
-</code></pre>
-<p>Also, let's not forget to make our urls.py call <code>as_view()</code>:</p>
-<pre><code># todo/urls.py
-
-from django.urls import path
-
-from .views import TaskListView, TaskDetailView, TaskCreateView, TaskUpdateView, TaskDeleteView
-
-
-urlpatterns = [
-    path('', TaskListView.as_view(), name='task-list'),
-    path('create/', TaskCreateView.as_view(), name='task-create'),
-    path('&lt;int:pk&gt;/', TaskDetailView.as_view(), name='task-detail'),
-    path('update/&lt;int:pk&gt;/', TaskUpdateView.as_view(), name='task-update'),
-    path('delete/&lt;int:pk&gt;/', TaskDeleteView.as_view(), name='task-delete'),
-]
-
-</code></pre>
-<p>You can get the full source code on <a href="https://github.com/testdrivenio/django-cbv-fbv/tree/main/cbv">Github</a></p>
-<hr />
-<h2 id="djangos-generic-cbvs">Django's Generic CBVs</h2>
-<p>Django's generic CBVs are great for solving common problems like retrieving, creating, modifying, and deleting objects as well as pagination and archive views. They speed up the development process too.</p>
-<pre><code>from django.views.generic import CreateView
-
-
-class TaskCreateView(CreateView):
-    model = Task
-    context_object_name = 'task'
-    fields = ('name', 'description', 'is_done')
-    template_name = 'todo/task_create.html'
-
-</code></pre>
-<h2 id="djangos-built-in-cbv-types">Django's Built-in CBV Types</h2>
-<hr />
-<h2 id="reference">Reference</h2>
+<h4 id="components-in-react-router">Components in React Router</h4>
+<p>React router components are divided into 3 main categories -</p>
 <ul>
-<li><a href="https://medium.com/@ksarthak4ever/django-class-based-views-vs-function-based-view-e74b47b2e41b">Django : Class Based Views vs Function Based Views</a></li>
-<li><a href="https://www.geeksforgeeks.org/class-based-vs-function-based-views-which-one-is-better-to-use-in-django/">Class Based vs Function Based Views – Which One is Better to Use in Django?</a></li>
-<li><a href="https://testdriven.io/blog/django-class-based-vs-function-based-views/">Class-based vs Function-based Views in Django</a></li>
-<li><a href="https://vegibit.com/what-are-djangos-class-based-views-and-how-to-use-them-effectively/">What Are Django’s Class-Based Views and How to Use Them Effectively</a></li>
+<li><code>Routers</code> - for instance, <code>&lt;BrowserRouter&gt;</code> and <code>&lt;HashRouter&gt;</code> components</li>
+<li><code>Route matchers</code> - for instance, <code>&lt;Routes&gt;</code> and <code>&lt;Route&gt;</code> components</li>
+<li><code>Navigation</code> – for instance, <code>&lt;Link&gt;</code> and <code>&lt;NavLink&gt;</code> components</li>
+</ul>
+<p><a class="glightbox" href="https://www.knowledgehut.com/_next/image?url=https%3A%2F%2Fd2o2utebsixu4k.cloudfront.net%2Fmedia%2Fimages%2F1652078448413-Image-1%20(15).png&amp;w=1080&amp;q=75" data-type="image" data-width="100%" data-height="auto" data-title="React Router" data-desc-position="bottom"><img alt="React Router" src="https://www.knowledgehut.com/_next/image?url=https%3A%2F%2Fd2o2utebsixu4k.cloudfront.net%2Fmedia%2Fimages%2F1652078448413-Image-1%20(15).png&amp;w=1080&amp;q=75" /></a></p>
+<h4 id="code">Code</h4>
+<pre><code>import { BrowserRouter as Router, Switch, Route } from &quot;react-router-dom&quot;;
+
+export default function App() {
+  return (
+    &lt;Router&gt;
+      &lt;Navbar /&gt;
+      &lt;Switch&gt;
+        &lt;Route exact path=&quot;/&quot; component={Home} /&gt;
+        &lt;Route path=&quot;/about&quot; component={About} /&gt;
+      &lt;/Switch&gt;
+    &lt;/Router&gt;
+  );
+}
+</code></pre>
+<h4 id="redirect-component">Redirect Component</h4>
+<pre><code>import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from &quot;react-router-dom&quot;;
+
+export default function App() {
+  return (
+    &lt;Router&gt;
+      &lt;Switch&gt;
+        &lt;Route exact path=&quot;/&quot; component={Home} /&gt;
+        &lt;PrivateRoute path=&quot;/hidden&quot; component={Hidden} /&gt;
+      &lt;/Switch&gt;
+    &lt;/Router&gt;
+  );
+}
+
+function PrivateRoute({ component: Component, ...rest }) {
+  // useAuth is some custom hook to get the current user's auth state
+  const isAuth = useAuth();
+
+  return (
+    &lt;Route
+      {...rest}
+      render={(props) =&gt;
+        isAuth ? &lt;Component {...props} /&gt; : &lt;Redirect to=&quot;/&quot; /&gt;
+      }
+    /&gt;
+  );
+}
+
+function Home() {
+  return &lt;&gt;home&lt;/&gt;;
+}
+
+function Hidden() {
+  return &lt;&gt;hidden&lt;/&gt;;
+}
+</code></pre>
+<p>The redirect component is very simple to use, very declarative, and allows us to see the great benefit of React Router DOM being component-based, just like everything in React.</p>
+<h4 id="react-router-hooks">React Router Hooks</h4>
+<ul>
+<li>useHistory Hook</li>
+<li>useLocation Hook</li>
+<li>useParams Hook + Dynamic Routes</li>
+<li>useRouteMatch Hook</li>
+</ul>
+<pre><code>import { useHistory } from &quot;react-router-dom&quot;;
+
+
+function About() {
+  const history = useHistory();
+
+  console.log(history.location.pathname); // '/about'
+
+  return (
+    &lt;&gt;
+     &lt;h1&gt;The about page is on: {history.location.pathname}&lt;/h1&gt;
+     &lt;button onClick={() =&gt; history.push('/')}&gt;Go to home page&lt;/button&gt;
+    &lt;/&gt;
+  );
+}
+</code></pre>
+<h3 id="upgrading-fro-v5-to-v6">Upgrading fro <code>v5</code> to <code>v6</code></h3>
+<ul>
+<li>Upgrade all <code>&lt;Switch&gt;</code> elements to <code>&lt;Routes&gt;</code></li>
+<li>Use <code>useNavigate</code> instead of <code>useHistory</code></li>
+<li>Replace <code>useRouteMatch</code> with <code>useMatch</code></li>
+</ul>
+<p>Replacing Switch component with Routes</p>
+<pre><code>// old with Switch
+
+export function App() {
+  return (
+    &lt;div&gt;
+      &lt;Switch&gt;
+        &lt;Route path=&quot;/about&quot;&gt;
+          &lt;AboutPage /&gt;
+        &lt;/Route&gt;
+        &lt;Route exact path=&quot;/profile&quot;&gt;
+          &lt;ProfilePage /&gt;
+        &lt;/Route&gt;
+        &lt;Route path=&quot;/profile/:id&quot;&gt;
+          &lt;ProfileUserPage /&gt;
+        &lt;/Route&gt;
+      &lt;/Switch&gt;
+    &lt;/div&gt;
+  )
+}
+
+// new with Routes
+
+export function App() {
+  return (
+    &lt;div&gt;
+      &lt;Routes&gt;
+        &lt;Route path=&quot;/about&quot; element={&lt;AboutPage /&gt;} /&gt;
+        &lt;Route exact path=&quot;/profile&quot; element={&lt;ProfilePage /&gt;} /&gt;
+        &lt;Route path=&quot;/profile/:id&quot; element={&lt;ProfileUserPage /&gt;} /&gt;
+      &lt;/Routes&gt;
+    &lt;/div&gt;
+  )
+}
+
+</code></pre>
+<p>Internal changes &amp; path evaluation (no more needed exact prop)
+For V5 we needed to put the exact prop on the component to go for that specific route we want</p>
+<pre><code>// old
+
+export function App() {
+  return (
+    &lt;div&gt;
+      &lt;Routes&gt;
+        &lt;Route path=&quot;/about&quot; element={&lt;AboutPage /&gt;} /&gt;
+        &lt;Route exact path=&quot;/profile&quot; element={&lt;ProfilePage /&gt;} /&gt;
+        &lt;Route path=&quot;/profile/:id&quot; element={&lt;ProfileUserPage /&gt;} /&gt;
+      &lt;/Routes&gt;
+    &lt;/div&gt;
+  )
+}
+
+// new
+export function App() {
+  return (
+    &lt;div&gt;
+      &lt;Routes&gt;
+        &lt;Route path=&quot;/about&quot; element={&lt;AboutPage /&gt;} /&gt;
+        &lt;Route path=&quot;/profile&quot; element={&lt;ProfilePage /&gt;} /&gt;
+        &lt;Route path=&quot;/profile/:id&quot; element={&lt;ProfileUserPage /&gt;} /&gt;
+      &lt;/Routes&gt;
+    &lt;/div&gt;
+  )
+}
+</code></pre>
+<hr />
+<h2 id="history">History</h2>
+<pre><code>$ npm i history
+</code></pre>
+<p>There are three types of history</p>
+<ul>
+<li>browser</li>
+<li>hash</li>
+<li>memory</li>
+</ul>
+<pre><code>import {
+  createBrowserHistory,
+  createHashHistory,
+  createMemoryHistory
+} from 'history'
+</code></pre>
+<p>If you are using React Router, it can automatically create history objects for you, so you may never have to actually interact with history directly. Still, it is important to understand the differences between each type of history so that you can determine which one is right for your project.</p>
+<hr />
+<h5 id="reference">Reference</h5>
+<ul>
+<li><a href="https://reactrouter.com/en/main/start/overview">React router overview</a></li>
+<li><a href="https://www.knowledgehut.com/blog/web-development/react-router">React Router - Types, Mechanism, Installation And Examples</a></li>
+<li><a href="https://www.freecodecamp.org/news/react-router-cheatsheet/">The React Router Cheatsheet – Everything You Need to Know - (BEST)</a></li>
+<li><a href="https://www.upbeatcode.com/react/using-hashrouter-with-react-definitive-guide/">Using Hashrouter With React - Definitive Guide</a></li>
+<li><a href="https://upmostly.com/tutorials/what-is-hash-routing">What is Hash Routing?</a></li>
+<li><a href="https://reactrouter.com/en/main/upgrading/v5">upgrading v5 - v6: oficial doc</a></li>
+<li><a href="https://dev.to/gabrlcj/react-router-v6-some-of-the-new-changes-181m">React router V6: Some of the new changes </a></li>
+<li><a href="https://medium.com/@pshrmn/a-little-bit-of-history-f245306f48dd">A little bit of history - npm</a></li>
+<li><a href="https://www.npmjs.com/package/history">history - npm</a></li>
 </ul>
 
 
@@ -1767,10 +1858,10 @@ class TaskCreateView(CreateView):
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
