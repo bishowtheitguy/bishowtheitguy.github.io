@@ -11,18 +11,22 @@
       
       
       
+        <link rel="prev" href="react-hooks.html">
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+        <link rel="next" href="rtk-guide.html">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
     
     
       
-        <title>Bishow IT Guy</title>
+        <title>react router - Bishow IT Guy</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
       
       
 
@@ -43,14 +47,25 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-  </head>
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -60,6 +75,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#router" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -73,7 +93,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="Bishow IT Guy" class="md-header__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
+    <a href=".." title="Bishow IT Guy" class="md-header__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -93,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              react router
             
           </span>
         </div>
@@ -180,7 +200,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Bishow IT Guy" class="md-nav__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
+    <a href=".." title="Bishow IT Guy" class="md-nav__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -247,7 +267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/frontend/typescript-installation.html" class="md-nav__link">
+      <a href="typescript-installation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -268,7 +288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/frontend/typescript-compiler.html" class="md-nav__link">
+      <a href="typescript-compiler.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -293,19 +313,21 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -319,7 +341,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             React
@@ -333,7 +355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/frontend/guides.html" class="md-nav__link">
+      <a href="guides.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -354,7 +376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/frontend/react-hooks.html" class="md-nav__link">
+      <a href="react-hooks.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -372,10 +394,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/frontend/react-router.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    react router
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="react-router.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -384,6 +424,117 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#router" class="md-nav__link">
+    <span class="md-ellipsis">
+      Router
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Router">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-install-react-router" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Install React Router?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#components-in-react-router" class="md-nav__link">
+    <span class="md-ellipsis">
+      Components in React Router
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redirect-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redirect Component
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#react-router-hooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      React Router Hooks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upgrading-fro-v5-to-v6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upgrading fro v5 to v6
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#history" class="md-nav__link">
+    <span class="md-ellipsis">
+      History
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="History">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -396,7 +547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/frontend/rtk-guide.html" class="md-nav__link">
+      <a href="rtk-guide.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -417,7 +568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/frontend/redux-middleware.html" class="md-nav__link">
+      <a href="redux-middleware.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -482,7 +633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/backend/python-dotenv.html" class="md-nav__link">
+      <a href="../backend/python-dotenv.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -503,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/backend/python-mysqlclient.html" class="md-nav__link">
+      <a href="../backend/python-mysqlclient.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -524,7 +675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/backend/jwt-guide.html" class="md-nav__link">
+      <a href="../backend/jwt-guide.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -545,7 +696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/backend/jwt-installation.html" class="md-nav__link">
+      <a href="../backend/jwt-installation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -566,7 +717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/backend/django-view.html" class="md-nav__link">
+      <a href="../backend/django-view.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -587,7 +738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/backend/django-form.html" class="md-nav__link">
+      <a href="../backend/django-form.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -608,7 +759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/backend/django-middleware.html" class="md-nav__link">
+      <a href="../backend/django-middleware.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -629,7 +780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/backend/drf-functionbasedviews.html" class="md-nav__link">
+      <a href="../backend/drf-functionbasedviews.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -650,7 +801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/backend/drf-viewsets.html" class="md-nav__link">
+      <a href="../backend/drf-viewsets.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -671,7 +822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/backend/python-microservices.html" class="md-nav__link">
+      <a href="../backend/python-microservices.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -736,7 +887,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tools/git.html" class="md-nav__link">
+      <a href="../tools/git.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -757,7 +908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tools/vite.html" class="md-nav__link">
+      <a href="../tools/vite.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -822,7 +973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/interviewquestion/terminology.html" class="md-nav__link">
+      <a href="../interviewquestion/terminology.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -843,7 +994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/interviewquestion/javascript.html" class="md-nav__link">
+      <a href="../interviewquestion/javascript.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -864,7 +1015,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/interviewquestion/react.html" class="md-nav__link">
+      <a href="../interviewquestion/react.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -885,7 +1036,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/interviewquestion/django.html" class="md-nav__link">
+      <a href="../interviewquestion/django.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -906,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/interviewquestion/python-certification.md" class="md-nav__link">
+      <a href="../interviewquestion/python-certification.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -971,7 +1122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mkdocs/01-advanced-mkdocs.html" class="md-nav__link">
+      <a href="../mkdocs/01-advanced-mkdocs.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -992,7 +1143,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mkdocs/02-advanced-mkdocs.html" class="md-nav__link">
+      <a href="../mkdocs/02-advanced-mkdocs.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1057,7 +1208,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/frontend/slides.html" class="md-nav__link">
+      <a href="slides.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1078,7 +1229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/backend/slides.html" class="md-nav__link">
+      <a href="../backend/slides.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1143,7 +1294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/certification/python-certification.html" class="md-nav__link">
+      <a href="../certification/python-certification.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1208,7 +1359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/roadmap/space-repetition.html" class="md-nav__link">
+      <a href="../roadmap/space-repetition.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1273,7 +1424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/books/tech-books.html" class="md-nav__link">
+      <a href="../books/tech-books.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1338,7 +1489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/research/micro-frontend.html" class="md-nav__link">
+      <a href="../research/micro-frontend.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1359,7 +1510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/research/js-prevent-default.html" class="md-nav__link">
+      <a href="../research/js-prevent-default.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1380,7 +1531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/research/tricks.html" class="md-nav__link">
+      <a href="../research/tricks.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1401,7 +1552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/research/antd.html" class="md-nav__link">
+      <a href="../research/antd.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1422,7 +1573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/research/rabbitmq.html" class="md-nav__link">
+      <a href="../research/rabbitmq.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1443,7 +1594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/research/videos.html" class="md-nav__link">
+      <a href="../research/videos.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1464,7 +1615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/research/notes.html" class="md-nav__link">
+      <a href="../research/notes.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1485,7 +1636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/research/reference.html" class="md-nav__link">
+      <a href="../research/reference.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1524,6 +1675,107 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#router" class="md-nav__link">
+    <span class="md-ellipsis">
+      Router
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Router">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-install-react-router" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Install React Router?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#components-in-react-router" class="md-nav__link">
+    <span class="md-ellipsis">
+      Components in React Router
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redirect-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redirect Component
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#react-router-hooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      React Router Hooks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upgrading-fro-v5-to-v6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upgrading fro v5 to v6
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#history" class="md-nav__link">
+    <span class="md-ellipsis">
+      History
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="History">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1534,8 +1786,228 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+  
+  
+
+
+  <h1>react router</h1>
+
+<div><h2 id="router">Router</h2>
+<pre><code>// Installation
+
+$ pnpm install react-router-dom
+</code></pre>
+<h4 id="how-to-install-react-router">How to Install React Router?</h4>
+<p>React router contains 3 different packages for routing.</p>
+<ul>
+<li><code>react-router</code>: contains most of the core functionality of React Router including the route matching algorithm and most of the core components and react hooks</li>
+<li><code>react-router-native</code>: It is designed for mobile applications.</li>
+<li><code>react-router-dom</code>: It is designed for web applications.</li>
+</ul>
+<h4 id="components-in-react-router">Components in React Router</h4>
+<p>React router components are divided into 3 main categories -</p>
+<ul>
+<li><code>Routers</code> - for instance, <code>&lt;BrowserRouter&gt;</code> and <code>&lt;HashRouter&gt;</code> components</li>
+<li><code>Route matchers</code> - for instance, <code>&lt;Routes&gt;</code> and <code>&lt;Route&gt;</code> components</li>
+<li><code>Navigation</code> – for instance, <code>&lt;Link&gt;</code> and <code>&lt;NavLink&gt;</code> components</li>
+</ul>
+<p><a class="glightbox" href="https://www.knowledgehut.com/_next/image?url=https%3A%2F%2Fd2o2utebsixu4k.cloudfront.net%2Fmedia%2Fimages%2F1652078448413-Image-1%20(15).png&amp;w=1080&amp;q=75" data-type="image" data-width="100%" data-height="auto" data-title="React Router" data-desc-position="bottom"><img alt="React Router" src="https://www.knowledgehut.com/_next/image?url=https%3A%2F%2Fd2o2utebsixu4k.cloudfront.net%2Fmedia%2Fimages%2F1652078448413-Image-1%20(15).png&amp;w=1080&amp;q=75"></a></p>
+<h4 id="code">Code</h4>
+<pre><code>import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+export default function App() {
+  return (
+    &lt;Router&gt;
+      &lt;Navbar /&gt;
+      &lt;Switch&gt;
+        &lt;Route exact path="/" component={Home} /&gt;
+        &lt;Route path="/about" component={About} /&gt;
+      &lt;/Switch&gt;
+    &lt;/Router&gt;
+  );
+}
+</code></pre>
+<h4 id="redirect-component">Redirect Component</h4>
+<pre><code>import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from "react-router-dom";
+
+export default function App() {
+  return (
+    &lt;Router&gt;
+      &lt;Switch&gt;
+        &lt;Route exact path="/" component={Home} /&gt;
+        &lt;PrivateRoute path="/hidden" component={Hidden} /&gt;
+      &lt;/Switch&gt;
+    &lt;/Router&gt;
+  );
+}
+
+function PrivateRoute({ component: Component, ...rest }) {
+  // useAuth is some custom hook to get the current user's auth state
+  const isAuth = useAuth();
+
+  return (
+    &lt;Route
+      {...rest}
+      render={(props) =&gt;
+        isAuth ? &lt;Component {...props} /&gt; : &lt;Redirect to="/" /&gt;
+      }
+    /&gt;
+  );
+}
+
+function Home() {
+  return &lt;&gt;home&lt;/&gt;;
+}
+
+function Hidden() {
+  return &lt;&gt;hidden&lt;/&gt;;
+}
+</code></pre>
+<p>The redirect component is very simple to use, very declarative, and allows us to see the great benefit of React Router DOM being component-based, just like everything in React.</p>
+<h4 id="react-router-hooks">React Router Hooks</h4>
+<ul>
+<li>useHistory Hook</li>
+<li>useLocation Hook</li>
+<li>useParams Hook + Dynamic Routes</li>
+<li>useRouteMatch Hook</li>
+</ul>
+<pre><code>import { useHistory } from "react-router-dom";
+
+
+function About() {
+  const history = useHistory();
+
+  console.log(history.location.pathname); // '/about'
+
+  return (
+    &lt;&gt;
+     &lt;h1&gt;The about page is on: {history.location.pathname}&lt;/h1&gt;
+     &lt;button onClick={() =&gt; history.push('/')}&gt;Go to home page&lt;/button&gt;
+    &lt;/&gt;
+  );
+}
+</code></pre>
+<h3 id="upgrading-fro-v5-to-v6">Upgrading fro <code>v5</code> to <code>v6</code></h3>
+<ul>
+<li>Upgrade all <code>&lt;Switch&gt;</code> elements to <code>&lt;Routes&gt;</code></li>
+<li>Use <code>useNavigate</code> instead of <code>useHistory</code></li>
+<li>Replace <code>useRouteMatch</code> with <code>useMatch</code></li>
+</ul>
+<p>Replacing Switch component with Routes</p>
+<pre><code>// old with Switch
+
+export function App() {
+  return (
+    &lt;div&gt;
+      &lt;Switch&gt;
+        &lt;Route path="/about"&gt;
+          &lt;AboutPage /&gt;
+        &lt;/Route&gt;
+        &lt;Route exact path="/profile"&gt;
+          &lt;ProfilePage /&gt;
+        &lt;/Route&gt;
+        &lt;Route path="/profile/:id"&gt;
+          &lt;ProfileUserPage /&gt;
+        &lt;/Route&gt;
+      &lt;/Switch&gt;
+    &lt;/div&gt;
+  )
+}
+
+// new with Routes
+
+export function App() {
+  return (
+    &lt;div&gt;
+      &lt;Routes&gt;
+        &lt;Route path="/about" element={&lt;AboutPage /&gt;} /&gt;
+        &lt;Route exact path="/profile" element={&lt;ProfilePage /&gt;} /&gt;
+        &lt;Route path="/profile/:id" element={&lt;ProfileUserPage /&gt;} /&gt;
+      &lt;/Routes&gt;
+    &lt;/div&gt;
+  )
+}
+
+</code></pre>
+<p>Internal changes &amp; path evaluation (no more needed exact prop)
+For V5 we needed to put the exact prop on the component to go for that specific route we want</p>
+<pre><code>// old
+
+export function App() {
+  return (
+    &lt;div&gt;
+      &lt;Routes&gt;
+        &lt;Route path="/about" element={&lt;AboutPage /&gt;} /&gt;
+        &lt;Route exact path="/profile" element={&lt;ProfilePage /&gt;} /&gt;
+        &lt;Route path="/profile/:id" element={&lt;ProfileUserPage /&gt;} /&gt;
+      &lt;/Routes&gt;
+    &lt;/div&gt;
+  )
+}
+
+// new
+export function App() {
+  return (
+    &lt;div&gt;
+      &lt;Routes&gt;
+        &lt;Route path="/about" element={&lt;AboutPage /&gt;} /&gt;
+        &lt;Route path="/profile" element={&lt;ProfilePage /&gt;} /&gt;
+        &lt;Route path="/profile/:id" element={&lt;ProfileUserPage /&gt;} /&gt;
+      &lt;/Routes&gt;
+    &lt;/div&gt;
+  )
+}
+</code></pre>
+<hr>
+<h2 id="history">History</h2>
+<pre><code>$ npm i history
+</code></pre>
+<p>There are three types of history</p>
+<ul>
+<li>browser</li>
+<li>hash</li>
+<li>memory</li>
+</ul>
+<pre><code>import {
+  createBrowserHistory,
+  createHashHistory,
+  createMemoryHistory
+} from 'history'
+</code></pre>
+<p>If you are using React Router, it can automatically create history objects for you, so you may never have to actually interact with history directly. Still, it is important to understand the differences between each type of history so that you can determine which one is right for your project.</p>
+<hr>
+<h5 id="reference">Reference</h5>
+<ul>
+<li><a href="https://reactrouter.com/en/main/start/overview">React router overview</a></li>
+<li><a href="https://www.knowledgehut.com/blog/web-development/react-router">React Router - Types, Mechanism, Installation And Examples</a></li>
+<li><a href="https://www.freecodecamp.org/news/react-router-cheatsheet/">The React Router Cheatsheet – Everything You Need to Know - (BEST)</a></li>
+<li><a href="https://www.upbeatcode.com/react/using-hashrouter-with-react-definitive-guide/">Using Hashrouter With React - Definitive Guide</a></li>
+<li><a href="https://upmostly.com/tutorials/what-is-hash-routing">What is Hash Routing?</a></li>
+<li><a href="https://reactrouter.com/en/main/upgrading/v5">upgrading v5 - v6: oficial doc</a></li>
+<li><a href="https://dev.to/gabrlcj/react-router-v6-some-of-the-new-changes-181m">React router V6: Some of the new changes </a></li>
+<li><a href="https://medium.com/@pshrmn/a-little-bit-of-history-f245306f48dd">A little bit of history - npm</a></li>
+<li><a href="https://www.npmjs.com/package/history">history - npm</a></li>
+</ul></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -1569,11 +2041,11 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/", "features": [], "search": "/assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

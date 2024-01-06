@@ -12,17 +12,19 @@
       
       
       
+        <link rel="next" href="typescript-compiler.html">
       
-      <link rel="icon" href="/assets/images/favicon.png">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
     
     
       
-        <title>Bishow IT Guy</title>
+        <title>installation - Bishow IT Guy</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
       
       
 
@@ -43,14 +45,25 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-  </head>
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -60,6 +73,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#typescript" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -73,7 +91,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="Bishow IT Guy" class="md-header__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
+    <a href=".." title="Bishow IT Guy" class="md-header__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -93,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              installation
             
           </span>
         </div>
@@ -180,7 +198,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Bishow IT Guy" class="md-nav__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
+    <a href=".." title="Bishow IT Guy" class="md-nav__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -207,19 +225,21 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -233,7 +253,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Typescript
@@ -244,10 +264,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/frontend/typescript-installation.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    installation
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="typescript-installation.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -256,6 +296,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is TypeScript?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-use-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I use TypeScript?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -268,7 +355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/frontend/typescript-compiler.html" class="md-nav__link">
+      <a href="typescript-compiler.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -333,7 +420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/frontend/guides.html" class="md-nav__link">
+      <a href="guides.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -354,7 +441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/frontend/react-hooks.html" class="md-nav__link">
+      <a href="react-hooks.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -375,7 +462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/frontend/react-router.html" class="md-nav__link">
+      <a href="react-router.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -396,7 +483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/frontend/rtk-guide.html" class="md-nav__link">
+      <a href="rtk-guide.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -417,7 +504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/frontend/redux-middleware.html" class="md-nav__link">
+      <a href="redux-middleware.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -482,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/backend/python-dotenv.html" class="md-nav__link">
+      <a href="../backend/python-dotenv.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -503,7 +590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/backend/python-mysqlclient.html" class="md-nav__link">
+      <a href="../backend/python-mysqlclient.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -524,7 +611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/backend/jwt-guide.html" class="md-nav__link">
+      <a href="../backend/jwt-guide.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -545,7 +632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/backend/jwt-installation.html" class="md-nav__link">
+      <a href="../backend/jwt-installation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -566,7 +653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/backend/django-view.html" class="md-nav__link">
+      <a href="../backend/django-view.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -587,7 +674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/backend/django-form.html" class="md-nav__link">
+      <a href="../backend/django-form.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -608,7 +695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/backend/django-middleware.html" class="md-nav__link">
+      <a href="../backend/django-middleware.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -629,7 +716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/backend/drf-functionbasedviews.html" class="md-nav__link">
+      <a href="../backend/drf-functionbasedviews.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -650,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/backend/drf-viewsets.html" class="md-nav__link">
+      <a href="../backend/drf-viewsets.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -671,7 +758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/backend/python-microservices.html" class="md-nav__link">
+      <a href="../backend/python-microservices.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -736,7 +823,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tools/git.html" class="md-nav__link">
+      <a href="../tools/git.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -757,7 +844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tools/vite.html" class="md-nav__link">
+      <a href="../tools/vite.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -822,7 +909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/interviewquestion/terminology.html" class="md-nav__link">
+      <a href="../interviewquestion/terminology.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -843,7 +930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/interviewquestion/javascript.html" class="md-nav__link">
+      <a href="../interviewquestion/javascript.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -864,7 +951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/interviewquestion/react.html" class="md-nav__link">
+      <a href="../interviewquestion/react.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -885,7 +972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/interviewquestion/django.html" class="md-nav__link">
+      <a href="../interviewquestion/django.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -906,7 +993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/interviewquestion/python-certification.md" class="md-nav__link">
+      <a href="../interviewquestion/python-certification.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -971,7 +1058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mkdocs/01-advanced-mkdocs.html" class="md-nav__link">
+      <a href="../mkdocs/01-advanced-mkdocs.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -992,7 +1079,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mkdocs/02-advanced-mkdocs.html" class="md-nav__link">
+      <a href="../mkdocs/02-advanced-mkdocs.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1057,7 +1144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/frontend/slides.html" class="md-nav__link">
+      <a href="slides.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1078,7 +1165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/backend/slides.html" class="md-nav__link">
+      <a href="../backend/slides.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1143,7 +1230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/certification/python-certification.html" class="md-nav__link">
+      <a href="../certification/python-certification.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1208,7 +1295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/roadmap/space-repetition.html" class="md-nav__link">
+      <a href="../roadmap/space-repetition.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1273,7 +1360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/books/tech-books.html" class="md-nav__link">
+      <a href="../books/tech-books.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1338,7 +1425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/research/micro-frontend.html" class="md-nav__link">
+      <a href="../research/micro-frontend.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1359,7 +1446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/research/js-prevent-default.html" class="md-nav__link">
+      <a href="../research/js-prevent-default.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1380,7 +1467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/research/tricks.html" class="md-nav__link">
+      <a href="../research/tricks.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1401,7 +1488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/research/antd.html" class="md-nav__link">
+      <a href="../research/antd.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1422,7 +1509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/research/rabbitmq.html" class="md-nav__link">
+      <a href="../research/rabbitmq.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1443,7 +1530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/research/videos.html" class="md-nav__link">
+      <a href="../research/videos.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1464,7 +1551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/research/notes.html" class="md-nav__link">
+      <a href="../research/notes.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1485,7 +1572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/research/reference.html" class="md-nav__link">
+      <a href="../research/reference.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1523,6 +1610,43 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is TypeScript?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-use-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I use TypeScript?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1534,8 +1658,48 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+  
+  
+
+
+<div><h1 id="typescript">Typescript</h1>
+<h2 id="what-is-typescript">What is TypeScript?</h2>
+<blockquote>
+<p>TypeScript is JavaScript with added syntax for types.</p>
+</blockquote>
+<p>TypeScript is a syntactic superset of JavaScript which adds <strong>static typing</strong>.</p>
+<p>This basically means that TypeScript adds syntax on top of JavaScript, allowing developers to add <strong>types</strong>.</p>
+<blockquote>
+<p>TypeScript being a "Syntactic Superset" means that it shares the same base syntax as JavaScript, but adds something to it.</p>
+</blockquote>
+<h2 id="how-do-i-use-typescript">How do I use TypeScript?</h2>
+<p>A common way to use TypeScript is to use the official TypeScript compiler, which transpiles TypeScript code into JavaScript.</p>
+<p>The next section shows how to get the compiler setup for a local project.</p>
+<p>Some popular code editors, such as Visual Studio Code, have built-in TypeScript support and can show errors as you write code!</p>
+<blockquote>
+<p>TypeScript uses compile time type checking. Which means it checks if the specified types match before running the code, not while running the code.</p>
+<p>TypeScript allows developers to add types to JavaScript.</p>
+</blockquote>
+<hr>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://www.w3schools.com/typescript/index.php">TypeScript Tutorial: w3schools.com</a></li>
+</ul></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -1569,11 +1733,11 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/", "features": [], "search": "/assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
