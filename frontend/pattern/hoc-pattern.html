@@ -11,25 +11,25 @@
       
       
       
-        <link rel="prev" href="python-mysqlclient.html">
+        <link rel="prev" href="react-pattern-intro.html">
       
       
-        <link rel="next" href="jwt-installation.html">
+        <link rel="next" href="../package/antd/index.html">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
     
     
       
-        <title>jwt installation - Bishow IT Guy</title>
+        <title>Hoc Pattern - Bishow IT Guy</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,14 +50,14 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -68,7 +68,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#jwt" class="md-skip">
+        <a href="#when-naming-higher-order-component-hoc-files-in-a-react-application" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Bishow IT Guy" class="md-header__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
+    <a href="../.." title="Bishow IT Guy" class="md-header__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              jwt installation
+              Hoc Pattern
             
           </span>
         </div>
@@ -246,7 +246,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Bishow IT Guy" class="md-nav__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
+    <a href="../.." title="Bishow IT Guy" class="md-nav__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -313,7 +313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../frontend/typescript/typescript-installation.html" class="md-nav__link">
+      <a href="../typescript/typescript-installation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -334,7 +334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../frontend/typescript/typescript-compiler.html" class="md-nav__link">
+      <a href="../typescript/typescript-compiler.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -359,19 +359,21 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -385,7 +387,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             React
@@ -436,7 +438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../frontend/react/intro.html" class="md-nav__link">
+      <a href="../react/intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -457,7 +459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../frontend/react/useEffect-technique.html" class="md-nav__link">
+      <a href="../react/useEffect-technique.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -478,7 +480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../frontend/react/useEffect-technique-used.html" class="md-nav__link">
+      <a href="../react/useEffect-technique-used.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -499,7 +501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../frontend/react/useEffect-cleanup.html" class="md-nav__link">
+      <a href="../react/useEffect-cleanup.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -520,7 +522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../frontend/react/react-book.html" class="md-nav__link">
+      <a href="../react/react-book.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -541,7 +543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../frontend/react/guides.html" class="md-nav__link">
+      <a href="../react/guides.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -562,7 +564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../frontend/react/react-hooks.html" class="md-nav__link">
+      <a href="../react/react-hooks.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -583,7 +585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../frontend/react/react-router.html" class="md-nav__link">
+      <a href="../react/react-router.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -604,7 +606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../frontend/react/migrating-cra-vite.html" class="md-nav__link">
+      <a href="../react/migrating-cra-vite.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -630,19 +632,21 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -656,7 +660,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             React Pattern
@@ -670,7 +674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../frontend/pattern/react-pattern-intro.html" class="md-nav__link">
+      <a href="react-pattern-intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -688,10 +692,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../frontend/pattern/hoc-pattern.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Hoc Pattern
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="hoc-pattern.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -700,6 +722,33 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#when-naming-higher-order-component-hoc-files-in-a-react-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      When naming Higher-Order Component (HOC) files in a React application
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -757,7 +806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../frontend/package/antd/index.html" class="md-nav__link">
+      <a href="../package/antd/index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -778,7 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../frontend/package/antd/controlled-components.html" class="md-nav__link">
+      <a href="../package/antd/controlled-components.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -799,7 +848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../frontend/package/antd/antd-form.html" class="md-nav__link">
+      <a href="../package/antd/antd-form.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -865,7 +914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../frontend/rtk-guide.html" class="md-nav__link">
+      <a href="../rtk-guide.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -886,7 +935,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../frontend/redux-middleware.html" class="md-nav__link">
+      <a href="../redux-middleware.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -919,21 +968,19 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -947,7 +994,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Backend
@@ -998,7 +1045,7 @@
   
   
     <li class="md-nav__item">
-      <a href="django/django-view.html" class="md-nav__link">
+      <a href="../../backend/django/django-view.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1019,7 +1066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="django/django-form.html" class="md-nav__link">
+      <a href="../../backend/django/django-form.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1040,7 +1087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="django/django-middleware.html" class="md-nav__link">
+      <a href="../../backend/django/django-middleware.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1106,7 +1153,7 @@
   
   
     <li class="md-nav__item">
-      <a href="drf/drf-functionbasedviews.html" class="md-nav__link">
+      <a href="../../backend/drf/drf-functionbasedviews.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1127,7 +1174,7 @@
   
   
     <li class="md-nav__item">
-      <a href="drf/drf-viewsets.html" class="md-nav__link">
+      <a href="../../backend/drf/drf-viewsets.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1148,7 +1195,7 @@
   
   
     <li class="md-nav__item">
-      <a href="drf/python-microservices.html" class="md-nav__link">
+      <a href="../../backend/drf/python-microservices.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1174,21 +1221,19 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -1202,7 +1247,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             package
@@ -1216,7 +1261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python-dotenv.html" class="md-nav__link">
+      <a href="../../backend/python-dotenv.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1237,7 +1282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="python-mysqlclient.html" class="md-nav__link">
+      <a href="../../backend/python-mysqlclient.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1255,30 +1300,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    jwt installation
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="jwt-guide.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../backend/jwt-guide.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1287,86 +1312,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#virtual-env" class="md-nav__link">
-    <span class="md-ellipsis">
-      Virtual env
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installed-apps" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installed apps
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#env-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      .env example
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      Project Settings
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Project Settings">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#reference" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reference
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1379,7 +1324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="jwt-installation.html" class="md-nav__link">
+      <a href="../../backend/jwt-installation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1452,7 +1397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../interviewquestion/terminology.html" class="md-nav__link">
+      <a href="../../interviewquestion/terminology.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1473,7 +1418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../interviewquestion/javascript.html" class="md-nav__link">
+      <a href="../../interviewquestion/javascript.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1494,7 +1439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../interviewquestion/react.html" class="md-nav__link">
+      <a href="../../interviewquestion/react.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1515,7 +1460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../interviewquestion/django.html" class="md-nav__link">
+      <a href="../../interviewquestion/django.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1536,7 +1481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../interviewquestion/python-certification.md" class="md-nav__link">
+      <a href="../../interviewquestion/python-certification.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1638,7 +1583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../more/certification/python-certification.html" class="md-nav__link">
+      <a href="../../more/certification/python-certification.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1704,7 +1649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../more/mkdocs/01-advanced-mkdocs.html" class="md-nav__link">
+      <a href="../../more/mkdocs/01-advanced-mkdocs.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1725,7 +1670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../more/mkdocs/02-advanced-mkdocs.html" class="md-nav__link">
+      <a href="../../more/mkdocs/02-advanced-mkdocs.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1791,7 +1736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../frontend/slides.html" class="md-nav__link">
+      <a href="../slides.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1812,7 +1757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="slides.html" class="md-nav__link">
+      <a href="../../backend/slides.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1878,7 +1823,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../more/roadmap/study-technique.html" class="md-nav__link">
+      <a href="../../more/roadmap/study-technique.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1899,7 +1844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../roadmap/space-repetition.md" class="md-nav__link">
+      <a href="../../roadmap/space-repetition.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1965,7 +1910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../more/books/tech-books.html" class="md-nav__link">
+      <a href="../../more/books/tech-books.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2031,7 +1976,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../more/tools/git.html" class="md-nav__link">
+      <a href="../../more/tools/git.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2052,7 +1997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../more/tools/vite.html" class="md-nav__link">
+      <a href="../../more/tools/vite.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2118,7 +2063,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../more/research/micro-frontend.html" class="md-nav__link">
+      <a href="../../more/research/micro-frontend.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2139,7 +2084,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../more/research/js-prevent-default.html" class="md-nav__link">
+      <a href="../../more/research/js-prevent-default.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2160,7 +2105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../more/research/tricks.html" class="md-nav__link">
+      <a href="../../more/research/tricks.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2181,7 +2126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../more/research/antd.html" class="md-nav__link">
+      <a href="../../more/research/antd.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2202,7 +2147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../more/research/rabbitmq.html" class="md-nav__link">
+      <a href="../../more/research/rabbitmq.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2223,7 +2168,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../more/research/videos.html" class="md-nav__link">
+      <a href="../../more/research/videos.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2244,7 +2189,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../more/research/notes.html" class="md-nav__link">
+      <a href="../../more/research/notes.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2265,7 +2210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../more/research/reference.html" class="md-nav__link">
+      <a href="../../more/research/reference.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2311,8 +2256,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2321,62 +2264,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#virtual-env" class="md-nav__link">
+  <a href="#when-naming-higher-order-component-hoc-files-in-a-react-application" class="md-nav__link">
     <span class="md-ellipsis">
-      Virtual env
+      When naming Higher-Order Component (HOC) files in a React application
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installed-apps" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installed apps
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#env-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      .env example
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      Project Settings
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Project Settings">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#reference" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reference
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2398,79 +2290,90 @@
   
 
 
-<div><h1 id="jwt">jwt</h1>
-<h2 id="virtual-env">Virtual env</h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ python -m venv venv
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>$ cd venv/Scripts
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>$ activate
+  <h1>Hoc Pattern</h1>
+
+<div><p>Higher-Order Components (HOCs) are a design pattern in React that allows the reuse of component logic.</p>
+<p>A Higher-Order Component is a function that takes a component and returns a new component with additional props or behavior. HOCs are commonly used for cross-cutting concerns such as authentication, logging, and data fetching.</p>
+<blockquote>
+<p>Here's an example of a Higher-Order Component using a functional component:</p>
+</blockquote>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">withLogging.js (HOC file):</label><label for="__tabbed_1_2">MyComponent.js</label><label for="__tabbed_1_3">App.js</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-jsx highlight"><span class="filename">jsx</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useEffect</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'react'</span><span class="p">;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">withLogging</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">WrappedComponent</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">WithLogging</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">props</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="nx">useEffect</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">            </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Component </span><span class="si">${</span><span class="nx">WrappedComponent</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">'Anonymous'</span><span class="si">}</span><span class="sb"> is mounted`</span><span class="p">);</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">                </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Component </span><span class="si">${</span><span class="nx">WrappedComponent</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">'Anonymous'</span><span class="si">}</span><span class="sb"> is unmounted`</span><span class="p">);</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">            </span><span class="p">};</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="p">},</span><span class="w"> </span><span class="p">[]);</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">&lt;</span><span class="nt">WrappedComponent</span><span class="w"> </span><span class="p">{</span><span class="na">...props</span><span class="p">}</span><span class="w"> </span><span class="p">/&gt;;</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">WithLogging</span><span class="p">;</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="p">};</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">withLogging</span><span class="p">;</span>
 </span></code></pre></div>
-<h2 id="installation">Installation</h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$ pip install django
+</div>
+<div class="tabbed-block">
+<div class="language-jsx highlight"><span class="filename">jsx</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'react'</span><span class="p">;</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>$ pip install djangorestframework
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>$ pip install markdown
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>$ pip install django-filter
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">MyComponent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span><span class="nx">Hello</span><span class="p">,</span><span class="w"> </span><span class="nx">I</span><span class="err">'</span><span class="nx">m</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">functional</span><span class="w"> </span><span class="nx">component</span><span class="o">!</span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">};</span>
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>$ pip install djangorestframework-simplejwt
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a># pip install python-dotenv
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>$ pip install mysqlclient
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">MyComponent</span><span class="p">;</span>
 </span></code></pre></div>
-<h2 id="installed-apps">Installed apps</h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>INSTALLED_APPS = [
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    ...'
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    'rest_framework',
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    'rest_framework_simplejwt',
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    ...
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>]
+</div>
+<div class="tabbed-block">
+<div class="language-jsx highlight"><span class="filename">jsx</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'react'</span><span class="p">;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">import</span><span class="w"> </span><span class="nx">withLogging</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'./withLogging'</span><span class="p">;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">import</span><span class="w"> </span><span class="nx">MyComponent</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'./MyComponent'</span><span class="p">;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="kd">const</span><span class="w"> </span><span class="nx">MyComponentWithLogging</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">withLogging</span><span class="p">(</span><span class="nx">MyComponent</span><span class="p">);</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="kd">const</span><span class="w"> </span><span class="nx">App</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">        </span><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">            </span><span class="p">&lt;</span><span class="nt">MyComponentWithLogging</span><span class="w"> </span><span class="p">/&gt;</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">        </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="p">);</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="p">};</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">App</span><span class="p">;</span>
 </span></code></pre></div>
-<h2 id="env-example">.env example</h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>SECRET_KEY=""
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>DB_NAME=django_db
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>DB_USER=root
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>DB_PASS=
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>DB_HOST=localhost
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>DB_PORT=3308
-</span></code></pre></div>
-<h2 id="project-settings">Project Settings</h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a># settings.py
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>from dotenv import load_dotenv
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>import os
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>load_dotenv()
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>SECRET_KEY = os.environ.get('SECRET_KEY')
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a># Database
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>DATABASES = {
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    'default': {
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>        'ENGINE': 'django.db.backends.mysql',
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>        'NAME': os.environ.get('DB_NAME'), #here
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>        'USER': os.environ.get('DB_USER'), #here
-</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>        'PASSWORD': os.environ.get('DB_PASS'), #here
-</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>        'HOST': '127.0.0.1',
-</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>        'PORT': '3306',
-</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>        'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"},
-</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>    }
-</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>}
-</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>
-</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a># Add
-</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>REST_FRAMEWORK = {
-</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>    'DEFAULT_AUTHENTICATION_CLASSES': [
-</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>        'rest_framework_simplejwt.authentication.JWTAuthentication',
-</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>        'rest_framework.authentication.SessionAuthentication',
-</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>    ],
-</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>}
-</span></code></pre></div>
-<hr>
-<h4 id="reference">Reference</h4>
+</div>
+</div>
+</div>
+<p>In this structure:</p>
 <ul>
-<li><a href="https://codinggear.blog/django-environment-variables/">Django Environment - python-dotenv</a></li>
-<li><a href="https://pypi.org/project/python-dotenv/">python-dotenv</a></li>
-<li><a href="https://codinggear.blog/django-generate-secret-key">Generating Secret key in django app</a></li>
-<li><a href="https://github.com/cjsheets/mkdocs-rtd-dropdown/blob/master/docs/user-guide/writing-your-docs.md">mkdocs dropdown - github</a></li>
-<li><a href="https://stackoverflow.com/questions/65647371/making-sub-menus-to-appear-as-drop-down-menus-at-top-in-mkdocs-material-theme">mkdocs dropdown - stackoverflow </a></li>
+<li><code>withLogging.js</code> contains the HOC (<strong>withLogging</strong>).</li>
+<li><code>MyComponent.js</code> contains the functional component (<strong>MyComponent</strong>).</li>
+<li><code>App.js</code> uses the HOC by importing it and applying it to <strong>MyComponent</strong>.</li>
+</ul>
+<p>This modular approach allows you to organize your code better and promotes reusability. You can easily apply the <strong>withLogging</strong> HOC to other components in different files without duplicating the logic.</p>
+<h2 id="when-naming-higher-order-component-hoc-files-in-a-react-application">When naming Higher-Order Component (HOC) files in a React application</h2>
+<ul>
+<li>
+<p>Prefix with "<strong>with</strong>":</p>
+<p>It's a common convention to prefix the HOC file name with "with" to indicate that it is a Higher-Order Component.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>withExampleHOC.js
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>withAuthentication.js
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>withTheme.js
+</span></code></pre></div>
+</li>
+<li>
+<p>Suffix with "<strong>HOC</strong>":</p>
+<p>Optionally, you can suffix the file name with "HOC" to make it explicit that it is a Higher-Order Component.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ExampleComponentHOC.js
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>AuthenticationHOC.js
+</span></code></pre></div>
+</li>
 </ul></div>
 
 
@@ -2518,10 +2421,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>

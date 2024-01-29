@@ -11,8 +11,10 @@
       
       
       
-        <link rel="prev" href="1-blog.html">
+        <link rel="prev" href="typescript-installation.html">
       
+      
+        <link rel="next" href="../react/intro.html">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,11 +22,14 @@
     
     
       
-        <title>Checking React Version - Bishow IT Guy</title>
+        <title>compiler - Bishow IT Guy</title>
       
     
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -66,7 +71,14 @@
             </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -75,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-check-the-react-version-in-your-project" class="md-skip">
+        <a href="#typescript-compiler" class="md-skip">
           Skip to content
         </a>
       
@@ -111,12 +123,48 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Checking React Version
+              compiler
             
           </span>
         </div>
       </div>
     </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
     
     
       <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -225,19 +273,21 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -251,7 +301,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Typescript
@@ -265,7 +315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../frontend/typescript-installation.html" class="md-nav__link">
+      <a href="typescript-installation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -283,10 +333,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../frontend/typescript-compiler.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    compiler
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="typescript-compiler.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -295,6 +365,71 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-the-compiler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing the Compiler
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#globally-installing-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Globally Installing TypeScript
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-the-compiler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring the compiler
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-typescript-compatible-transpilers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with TypeScript-compatible transpilers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -350,8 +485,45 @@
   
   
   
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Basic
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Basic
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../frontend/intro.html" class="md-nav__link">
+      <a href="../react/intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -372,7 +544,70 @@
   
   
     <li class="md-nav__item">
-      <a href="../../frontend/react-book.html" class="md-nav__link">
+      <a href="../react/useEffect-technique.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    useEffect Technique
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../react/useEffect-technique-used.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    useEffect mostly used
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../react/useEffect-cleanup.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    useEffect cleanup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../react/react-book.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -393,7 +628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../frontend/guides.html" class="md-nav__link">
+      <a href="../react/guides.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -414,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../frontend/react-hooks.html" class="md-nav__link">
+      <a href="../react/react-hooks.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -435,7 +670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../frontend/react-router.html" class="md-nav__link">
+      <a href="../react/react-router.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -456,7 +691,268 @@
   
   
     <li class="md-nav__item">
-      <a href="../../frontend/rtk-guide.html" class="md-nav__link">
+      <a href="../react/migrating-cra-vite.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Migrating Cra to vite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    React Pattern
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            React Pattern
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pattern/react-pattern-intro.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pattern/hoc-pattern.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hoc Pattern
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Antd
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Antd
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../package/antd/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../package/antd/controlled-components.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Controlled Component
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../package/antd/antd-form.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Antd Form
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Redux
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Redux
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rtk-guide.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -477,7 +973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../frontend/redux-middleware.html" class="md-nav__link">
+      <a href="../redux-middleware.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -491,22 +987,9 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../frontend/migrating-cra-vite.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Migrating Cra to vite
-  </span>
-  
-
-      </a>
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1061,21 +1544,19 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -1089,7 +1570,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             More
@@ -1140,7 +1621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../certification/python-certification.html" class="md-nav__link">
+      <a href="../../more/certification/python-certification.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1206,7 +1687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mkdocs/01-advanced-mkdocs.html" class="md-nav__link">
+      <a href="../../more/mkdocs/01-advanced-mkdocs.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1227,7 +1708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mkdocs/02-advanced-mkdocs.html" class="md-nav__link">
+      <a href="../../more/mkdocs/02-advanced-mkdocs.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1293,7 +1774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../frontend/slides.html" class="md-nav__link">
+      <a href="../slides.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1380,7 +1861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../roadmap/study-technique.html" class="md-nav__link">
+      <a href="../../more/roadmap/study-technique.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1467,7 +1948,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../books/tech-books.html" class="md-nav__link">
+      <a href="../../more/books/tech-books.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1533,7 +2014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tools/git.html" class="md-nav__link">
+      <a href="../../more/tools/git.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1554,7 +2035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tools/vite.html" class="md-nav__link">
+      <a href="../../more/tools/vite.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1620,7 +2101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../research/micro-frontend.html" class="md-nav__link">
+      <a href="../../more/research/micro-frontend.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1641,7 +2122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../research/js-prevent-default.html" class="md-nav__link">
+      <a href="../../more/research/js-prevent-default.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1662,7 +2143,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../research/tricks.html" class="md-nav__link">
+      <a href="../../more/research/tricks.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1683,7 +2164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../research/antd.html" class="md-nav__link">
+      <a href="../../more/research/antd.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1704,7 +2185,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../research/rabbitmq.html" class="md-nav__link">
+      <a href="../../more/research/rabbitmq.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1725,7 +2206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../research/videos.html" class="md-nav__link">
+      <a href="../../more/research/videos.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1746,7 +2227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../research/notes.html" class="md-nav__link">
+      <a href="../../more/research/notes.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1767,7 +2248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../research/reference.html" class="md-nav__link">
+      <a href="../../more/research/reference.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1776,158 +2257,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_8" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_5_8" id="__nav_5_8_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Blog
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_8_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5_8">
-            <span class="md-nav__icon md-icon"></span>
-            Blog
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="1-blog.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Managing Multiple SSH Keys
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Checking React Version
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="2-blog.html" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Checking React Version
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-check-the-react-version-in-your-project" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to Check the React Version in Your Project
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methods-to-check-react-version" class="md-nav__link">
-    <span class="md-ellipsis">
-      Methods to Check React Version:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusion:
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1965,6 +2294,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1973,27 +2304,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-to-check-the-react-version-in-your-project" class="md-nav__link">
+  <a href="#installing-the-compiler" class="md-nav__link">
     <span class="md-ellipsis">
-      How to Check the React Version in Your Project
+      Installing the Compiler
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#methods-to-check-react-version" class="md-nav__link">
+  <a href="#globally-installing-typescript" class="md-nav__link">
     <span class="md-ellipsis">
-      Methods to Check React Version:
+      Globally Installing TypeScript
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
+  <a href="#configuring-the-compiler" class="md-nav__link">
     <span class="md-ellipsis">
-      Conclusion:
+      Configuring the compiler
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-typescript-compatible-transpilers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with TypeScript-compatible transpilers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
     </span>
   </a>
   
@@ -2017,43 +2366,52 @@
   
 
 
-  <h1>Checking React Version</h1>
-
-<div><h2 id="how-to-check-the-react-version-in-your-project">How to Check the React Version in Your Project</h2>
-<p>React, a popular JavaScript library for building user interfaces, undergoes regular updates to introduce new features, improvements, and bug fixes. As a React developer, it's essential to know the version of React used in your project. In this short blog post, we'll explore how you can easily check the React version of your project.</p>
-<h2 id="methods-to-check-react-version">Methods to Check React Version:</h2>
+<div><h1 id="typescript-compiler">TypeScript Compiler</h1>
+<p>TypeScript is transpiled into JavaScript using a compiler.</p>
+<blockquote>
+<p>TypeScript being converted into JavaScript means it runs anywhere that JavaScript runs!</p>
+</blockquote>
+<h2 id="installing-the-compiler">Installing the Compiler</h2>
+<p>TypeScript has an official compiler which can be installed through npm.</p>
+<p>Within your npm project, run the following command to install the compiler:</p>
+<blockquote>
+<p>npm install typescript --save-dev</p>
+</blockquote>
+<p>You can then run the TypeScript compiler using one of the following commands:</p>
+<blockquote>
+<p>npx tsc</p>
+<p>yarn tsc</p>
+<p>pnpm tsc</p>
+</blockquote>
+<h2 id="globally-installing-typescript">Globally Installing TypeScript</h2>
+<blockquote>
+<p>npm install -g typescript</p>
+</blockquote>
+<h2 id="configuring-the-compiler">Configuring the compiler</h2>
+<p>You can have TypeScript create <code>tsconfig.json</code> with the recommended settings with:</p>
+<blockquote>
+<p>npx tsc --init</p>
+</blockquote>
+<p>Here is an example of more things you could add to the <code>tsconfig.json</code> file:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>{
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  "include": ["src"],
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  "compilerOptions": {
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    "outDir": "./build"
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  }
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>}
+</span></code></pre></div>
+<h2 id="working-with-typescript-compatible-transpilers">Working with TypeScript-compatible transpilers</h2>
+<p>There are other tools which convert TypeScript files to JavaScript files</p>
 <ol>
-<li>
-<p>Examine <code>package.json</code>:
-    The <code>package.json</code> file is a central configuration file for Node.js projects, including React applications. Open the <code>package.json</code> file in your project's root directory using a text editor. Look for the "dependencies" section, where React is listed with its version.</p>
-<pre><code>"dependencies": {
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    // other dependencies...
-}
-</code></pre>
-<p>In this example, the version of React is specified as "<code>^17.0.1</code>".</p>
-</li>
-<li>
-<p>Use Command Line:</p>
-<p>You can also use the command line to check the installed version of React. Open your terminal or command prompt, navigate to your project's root directory, and run the following command:</p>
-<pre><code>npm list react
-</code></pre>
-<p>If you're using Yarn, run:</p>
-<pre><code>yarn list react
-</code></pre>
-<p>This command will display the version of React installed in your project.</p>
-</li>
-<li>
-<p>Inspect the Browser Console:</p>
-<p>During development, you can view the React version in your browser's developer tools console. Open your application in a web browser, right-click on the page, select "Inspect" to open the developer tools, and navigate to the "Console" tab. Type the following command and press Enter:</p>
-<pre><code>console.log(React.version);
-</code></pre>
-<p>This will log the React version to the console.</p>
-</li>
+<li><strong>Babel:</strong> Babel is a very popular JavaScript transpiler which supports TypeScript files via the plugin @babel/plugin-transform-typescript.</li>
+<li><strong>swc:</strong> swc is a fast transpiler created in Rust which supports many of Babel's features including TypeScript.</li>
+<li><strong>Sucrase:</strong> Sucrase is a Babel fork focused on speed for using in development mode. Sucrase supports TypeScript natively.</li>
 </ol>
-<h2 id="conclusion">Conclusion:</h2>
-<p>Knowing the React version in your project is crucial for various reasons, including understanding the available features, compatibility, and potential need for updates. By examining your <code>package.json</code> file, using command-line tools, or inspecting the browser console, you can easily check the React version and ensure your project stays up-to-date with the latest advancements in React development.</p></div>
+<hr>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://www.w3schools.com/typescript/typescript_getstarted.php">TypeScript Compiler :w3chools.com</a></li>
+</ul></div>
 
 
 
