@@ -2376,6 +2376,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#black-belt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Black Belt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cat-commands" class="md-nav__link">
     <span class="md-ellipsis">
       Cat Commands
@@ -2385,27 +2394,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#debian-package-tool-dpkg" class="md-nav__link">
+  <a href="#types-of-packages" class="md-nav__link">
     <span class="md-ellipsis">
-      Debian package tool (dpkg)
+      Types of Packages
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#advanced-package-tool-apt" class="md-nav__link">
+  <a href="#package-manager" class="md-nav__link">
     <span class="md-ellipsis">
-      Advanced Package Tool (apt)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#snap-snap" class="md-nav__link">
-    <span class="md-ellipsis">
-      Snap (.snap)
+      Package Manager
     </span>
   </a>
   
@@ -2488,6 +2488,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#black-belt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Black Belt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cat-commands" class="md-nav__link">
     <span class="md-ellipsis">
       Cat Commands
@@ -2497,27 +2506,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#debian-package-tool-dpkg" class="md-nav__link">
+  <a href="#types-of-packages" class="md-nav__link">
     <span class="md-ellipsis">
-      Debian package tool (dpkg)
+      Types of Packages
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#advanced-package-tool-apt" class="md-nav__link">
+  <a href="#package-manager" class="md-nav__link">
     <span class="md-ellipsis">
-      Advanced Package Tool (apt)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#snap-snap" class="md-nav__link">
-    <span class="md-ellipsis">
-      Snap (.snap)
+      Package Manager
     </span>
   </a>
   
@@ -2561,7 +2561,9 @@
 
   <h1>Debian</h1>
 
-<div><h2 id="basic">Basic</h2>
+<div><p>What is a daemon?</p>
+<p>A daemon (pronounced <code>DAY-MAN</code>, <code>DAY-MON</code> or sometimes <code>DEE-MON</code>) is a background process that runs on the Linux OS continuously. When we say background, we mean that the program runs without any user interaction. It runs “behind the scenes“ so to speak.</p>
+<h2 id="basic">Basic</h2>
 <ul>
 <li>
 <p>To see which <code>kernel version</code> is running on your system:</p>
@@ -2600,68 +2602,121 @@
 </span></code></pre></div>
 </li>
 </ul>
+<h2 id="black-belt">Black Belt</h2>
+<ul>
+<li>
+<p><code>Tmux</code>: Secret Background Windows</p>
+<p><code>tmux</code> or <code>Terminal Multiplexer</code> is a piece of software used to manage terminal sessions. In addition, it can spin up long-standing terminals in the background of the Linux operating system that can be saved and recalled later.</p>
+<p>Tmux cancaome in handy for when you are doing work on a Linux system remotely via <mark>SSH</mark> and need to keep a session open and to come back to later.</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># install</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>$<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>tmux
+</span></code></pre></div>
+</li>
+</ul>
 <hr>
 <h2 id="cat-commands">Cat Commands</h2>
 <p>Cat means <code>concatenate</code> frequently used command in Linux. It can read data from the file and gives the content as output. It can help us to <code>create</code>, <code>view</code> and <code>concatenate</code> files. </p>
 <p>So let us see frequently used <code>cat</code> commands.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># TO VIEW A SINGLE FILE:</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>$<span class="w"> </span>cat<span class="w"> </span>filename
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># TO VIEW MULTIPLE FILES</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>$<span class="w"> </span>cat<span class="w"> </span>filename1<span class="w"> </span>filename2
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1"># TO VIEW THE CONTENTS OF A FILE PRECEDING WITH LINE NUMBERS:</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>$<span class="w"> </span>cat<span class="w"> </span>-n<span class="w"> </span>filename
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="c1"># TO CREATE A FILE</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>$<span class="w"> </span>cat<span class="w"> </span>&gt;<span class="w"> </span>new_file
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># TO VIEW A SINGLE FILE:</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>$<span class="w"> </span>cat<span class="w"> </span>filename
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># TO VIEW MULTIPLE FILES</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>$<span class="w"> </span>cat<span class="w"> </span>filename1<span class="w"> </span>filename2
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># TO VIEW THE CONTENTS OF A FILE PRECEDING WITH LINE NUMBERS:</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>$<span class="w"> </span>cat<span class="w"> </span>-n<span class="w"> </span>filename
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="c1"># TO CREATE A FILE</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>$<span class="w"> </span>cat<span class="w"> </span>&gt;<span class="w"> </span>new_file
 </span></code></pre></div>
 <p>Ubuntu Important Commands</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># It gives information about how long the system has been running in one line.</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>$<span class="w"> </span>uptime
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># It displays detailed information about the users who are logged in the system currently.</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>$<span class="w"> </span>w
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># Using DNS Tools</span>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="c1"># 1. It display information about the domain name, IP address &amp; DNS server</span>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>$<span class="w"> </span>nslookup<span class="w"> </span>www.google.com
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="c1"># 2. It display information about the domain name &amp; IP Addresss</span>
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>$<span class="w"> </span>host<span class="w"> </span>www.google.com
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="c1"># 3. dig is a more advanced DNS tool</span>
-</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>$<span class="w"> </span>dig<span class="w"> </span>www.google.com
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># It gives information about how long the system has been running in one line.</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>$<span class="w"> </span>uptime
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># It displays detailed information about the users who are logged in the system currently.</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>$<span class="w"> </span>w
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="c1"># Using DNS Tools</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="c1"># 1. It display information about the domain name, IP address &amp; DNS server</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>$<span class="w"> </span>nslookup<span class="w"> </span>www.google.com
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="c1"># 2. It display information about the domain name &amp; IP Addresss</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>$<span class="w"> </span>host<span class="w"> </span>www.google.com
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="c1"># 3. dig is a more advanced DNS tool</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>$<span class="w"> </span>dig<span class="w"> </span>www.google.com
 </span></code></pre></div>
 <hr>
-<h2 id="debian-package-tool-dpkg">Debian package tool (<mark>dpkg</mark>)</h2>
-<h2 id="advanced-package-tool-apt">Advanced Package Tool (<mark>apt</mark>)</h2>
-<p>Keeping Software Up to Date
-</p><div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+<h2 id="types-of-packages">Types of Packages</h2>
+<p>The two most popular packages</p>
+<ol>
+<li>
+<p>Debian (<code>.deb</code>) packages:</p>
+<p>Debian packages are used for distributions like Debian, Ubuntu, and Linux Mint. </p>
+</li>
+<li>
+<p>Red Hat (<code>.rpm</code>):</p>
+<p>Red Hat packages are used in Fedora, CentOS, RHEL, Suse, and others.</p>
+</li>
+</ol>
+<hr>
+<h2 id="package-manager">Package Manager</h2>
+<ol>
+<li>
+<p>Debian package tool (<strong>dpkg</strong>): DPKG - The True Hero</p>
+<p><code>Dpkg</code> is a tool that APT is using behind the scenes to install packages. <code>Dpkg</code> <mark>doesn’t install dependencies</mark>. If we have a <code>.deb</code> package on our system, we can install it easily with dpkg:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># install</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>$<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>my_package_to_be_installed.deb
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># remove</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>$<span class="w"> </span>dpkg<span class="w"> </span>-r<span class="w"> </span>my_package_to_be_removed.deb
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="c1"># list</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>$<span class="w"> </span>dpkg<span class="w"> </span>-l
 </span></code></pre></div>
-<h2 id="snap-snap">Snap (<mark>.snap</mark>)</h2>
+</li>
+<li>
+<p><strong>apt-get</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># syntax</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>$<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>&lt;package-name&gt;
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>$<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>nmap
+</span></code></pre></div>
+</li>
+<li>
+<p>Advanced Package Tool (<strong>apt</strong>)</p>
+<p><code>apt</code> was introduced to be a bit more user-friendly than <code>apt-get</code>.
+APT builds on dpkg and adds some special features like managing dependencies, upgrades and searching for package</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Keeping Software Up to Date</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</span></code></pre></div>
+</li>
+<li>
+<p>Snap (<strong>.snap</strong>)</p>
 <p>Snap, a <code>package management system</code> developed by <mark>Canonical, Ltd</mark>. Unlike <code>apt</code>
 packages, <code>snap</code> bundles all of the dependencies for a package into a single <code>.snap</code> file.  </p>
 <p>This ensures that the software package is self-contained with its own copy of all of the libraries and assets needed to run. This avoids the potential conflicts of packages relying on different versions of the same shared assets and libraries. The Snap system also allows different versions of the same packages to be installed in parallel.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Basic Snap Commands</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>$<span class="w"> </span>snap<span class="w"> </span>list
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>$<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>remmina
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>$<span class="w"> </span>snap<span class="w"> </span>remove<span class="w"> </span>remmina
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>$<span class="w"> </span>snap<span class="w"> </span>find<span class="w"> </span>vlc
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>$<span class="w"> </span>snap<span class="w"> </span>info<span class="w"> </span>remmina
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># Basic Snap Commands</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>$<span class="w"> </span>snap<span class="w"> </span>list
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>$<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>remmina
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>$<span class="w"> </span>snap<span class="w"> </span>remove<span class="w"> </span>remmina
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>$<span class="w"> </span>snap<span class="w"> </span>find<span class="w"> </span>vlc
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>$<span class="w"> </span>snap<span class="w"> </span>info<span class="w"> </span>remmina
 </span></code></pre></div>
+</li>
+</ol>
 <hr>
 <h2 id="tar-tape-archive">Tar (<mark>Tape Archive</mark>)</h2>
 <p>Tar is a powerful archiving utility used to compress and backup files in the Linux operating system. It is popular tool for creating <code>archives</code> of files and directories.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># To create a tar archive</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>$<span class="w"> </span>tar<span class="w"> </span>-cvf<span class="w"> </span>archive.tar<span class="w"> </span>directory/
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1"># To view the contents of a tar archive</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>$<span class="w"> </span>tar<span class="w"> </span>-tvf<span class="w"> </span>archive.tar
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="c1"># To extract the contents of a tar archive</span>
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>$<span class="w"> </span>tar<span class="w"> </span>-xvf<span class="w"> </span>archive.tar
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># To create a tar archive</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>$<span class="w"> </span>tar<span class="w"> </span>-cvf<span class="w"> </span>archive.tar<span class="w"> </span>directory/
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="c1"># To view the contents of a tar archive</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>$<span class="w"> </span>tar<span class="w"> </span>-tvf<span class="w"> </span>archive.tar
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="c1"># To extract the contents of a tar archive</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>$<span class="w"> </span>tar<span class="w"> </span>-xvf<span class="w"> </span>archive.tar
 </span></code></pre></div>
 <ul>
 <li>‘<code>c</code>’ flag stands for <code>create</code></li>
