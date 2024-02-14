@@ -2335,18 +2335,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#shorcuts-alias" class="md-nav__link">
+  <a href="#manipulating-text" class="md-nav__link">
     <span class="md-ellipsis">
-      Shorcuts alias
+      Manipulating Text
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#easter-eggs" class="md-nav__link">
+  <a href="#-shorcuts-alias" class="md-nav__link">
     <span class="md-ellipsis">
-      Easter Eggs
+      - Shorcuts alias
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-easter-eggs" class="md-nav__link">
+    <span class="md-ellipsis">
+      - Easter Eggs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      - Commands
     </span>
   </a>
   
@@ -2785,18 +2803,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#shorcuts-alias" class="md-nav__link">
+  <a href="#manipulating-text" class="md-nav__link">
     <span class="md-ellipsis">
-      Shorcuts alias
+      Manipulating Text
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#easter-eggs" class="md-nav__link">
+  <a href="#-shorcuts-alias" class="md-nav__link">
     <span class="md-ellipsis">
-      Easter Eggs
+      - Shorcuts alias
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-easter-eggs" class="md-nav__link">
+    <span class="md-ellipsis">
+      - Easter Eggs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      - Commands
     </span>
   </a>
   
@@ -2834,9 +2870,10 @@
 <div><p>tmux is short for [<mark>t</mark>]erminal [<mark>mu</mark>]ltiple[<mark>x</mark>]er. A multiplexer is simply a fancy way of describing an application that lets you easily manage multiple terminal windows within
 one screen.</p>
 <p>tmux runs a server/client architecture.</p>
-<p>Prefix Command</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&lt;Ctrl&gt; and b
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a># tmux prefix command
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>&lt;Ctrl&gt; and b
 </span></code></pre></div>
+<p><a class="glightbox" href="../../assets/tmux-working-diagram.png" data-type="image" data-width="100%" data-height="auto" data-title="https://thevaluable.dev/tmux-config-mouseless/" data-desc-position="bottom"><img alt="https://thevaluable.dev/tmux-config-mouseless/" src="../../assets/tmux-working-diagram.png"></a></p>
 <h2 id="installation">Installation</h2>
 <div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>tmux
 </span></code></pre></div>
@@ -2867,7 +2904,10 @@ one screen.</p>
 </span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="nb">exit</span>
 </span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="c1">#or</span>
 </span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>​tmux​<span class="w"> </span>​kill-session<span class="w"> </span>​<span class="w"> </span>​-t​<span class="w"> </span>​<span class="w"> </span>basic<span class="w"> </span>​
-</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>tmux​<span class="w"> </span>​kill-session<span class="w"> </span>​<span class="w"> </span>​-t​<span class="w"> </span>​<span class="w"> </span>second_session<span class="w"> </span>​
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>tmux​<span class="w"> </span>​kill-session<span class="w"> </span>​<span class="w"> </span>​-t​<span class="w"> </span>​<span class="w"> </span>second_session
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>
+</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="c1"># Kill the tmux server and, as a result, every session</span>
+</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>$<span class="w"> </span>tmux<span class="w"> </span>kill-server​
 </span></code></pre></div>
 <h2 id="windows">Windows</h2>
 <div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># To create new window: (c for create)</span>
@@ -2916,31 +2956,120 @@ one screen.</p>
 </span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>&lt;PREFIX&gt;<span class="w"> </span>SPACEBAR<span class="w"> </span>
 </span></code></pre></div>
 <hr>
-<h2 id="shorcuts-alias">Shorcuts <code>alias</code></h2>
-<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>​$<span class="w"> </span>tmux​<span class="w"> </span>​list-sessions
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="c1"># alias</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>$<span class="w"> </span>​tmux​<span class="w"> </span>​ls<span class="w"> </span>
+<h2 id="manipulating-text">Manipulating Text</h2>
+<p>There are <strong>two important components of tmux</strong></p>
+<ul>
+<li>Copy mode</li>
+<li>paste buffers</li>
+</ul>
+<p><strong>Explaining the Window history</strong></p>
+<p>In order to work its magic and keep everything in a single terminal window, tmux
+has to hide all of the text that won't fit in the currently viewed pane. It keeps all of
+this text stored in something called <mark>Window history</mark>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a># copy mode
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a># To enter copy mode
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>&lt;Prefix&gt;, [
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>​$<span class="w"> </span>tmux​<span class="w"> </span>​new-session<span class="w"> </span>​<span class="w"> </span>​-s<span class="w"> </span>​<span class="w"> </span>​basic​
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="c1"># alias</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>$<span class="w"> </span>​tmux​<span class="w"> </span>​new​<span class="w"> </span>​-s<span class="w"> </span>​<span class="w"> </span>​basic
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="c1"># By using the -n flag, we tell tmux to name the first window so we can identify it easily.</span>
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>​$<span class="w"> </span>tmux​<span class="w"> </span>​new​<span class="w"> </span>​-s<span class="w"> </span>​<span class="w"> </span>​windows<span class="w"> </span>​<span class="w"> </span>​-n<span class="w"> </span>​<span class="w"> </span>​shell<span class="w"> </span>
-</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>
-</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>$<span class="w"> </span>tmux<span class="w"> </span>rename-session<span class="w"> </span>-t<span class="w"> </span>old_name<span class="w"> </span>new_name
-</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="c1"># alias</span>
-</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>$<span class="w"> </span>tmux<span class="w"> </span>rename<span class="w"> </span>-t<span class="w"> </span>old_name<span class="w"> </span>new_name.​
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a># To copy text into the paste buffer. 
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a># This sets the start point of the selection.
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>press Ctrl + Space bar (Space bar)
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a># When you are satisfied with your selection,
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>simply press Meta + w (Enter) 
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a># to copythe text and you will leave Copy mode immediately
+</span></code></pre></div>
+<p>Interacting with the paste buffer</p>
+<p>The paste buffer is a holding bucket for all of the text you will copy. It is actually a stack, so each item copied from Copy mode is added at the top of the stack.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a># Pasting text from the paste buffer
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>&lt;Prefix&gt;, ]
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a># Choosing items from the paste buffer
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>&lt;Prefix&gt;, =
+</span></code></pre></div>
+<p><strong>Explaining the different tmux modes</strong></p>
+<ul>
+<li>
+<p><strong>Default</strong> mode:</p>
+<p>You are in <code>Default mode</code> <mark>by default</mark>, and if you go into any other mode and then exit it, you'll end up back in Default mode.</p>
+</li>
+<li>
+<p><strong>Copy</strong> mode:</p>
+<p>This allows us to access the <mark>Window history</mark> and <code>copy/paste</code> contents from that history.</p>
+</li>
+<li>
+<p><strong>Command</strong> mode:</p>
+<p>This mode is used to enter arbitrary tmux commands. It is similar to the vi mode of the same name and can be accessed by <code>&lt;Prefix&gt;, :</code>.</p>
+</li>
+<li>
+<p><strong>Clock</strong> mode:</p>
+<p>This mode shows the current time and is more of a novelty utility than an actual mode, like the rest. It can be accessed by <code>&lt;Prefix&gt;, t</code>.</p>
+</li>
+<li>
+<p><strong>Control</strong> mode:</p>
+<p>This mode allows third-party applications to interact with tmux through a text-only protocol.</p>
+</li>
+</ul>
+<hr>
+<h2 id="-shorcuts-alias">- Shorcuts <code>alias</code></h2>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>​$<span class="w"> </span>tmux​<span class="w"> </span>​list-sessions
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="c1"># alias</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>$<span class="w"> </span>​tmux​<span class="w"> </span>​ls<span class="w"> </span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>​$<span class="w"> </span>tmux​<span class="w"> </span>​new-session<span class="w"> </span>​<span class="w"> </span>​-s<span class="w"> </span>​<span class="w"> </span>​basic​
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="c1"># alias</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>$<span class="w"> </span>​tmux​<span class="w"> </span>​new​<span class="w"> </span>​-s<span class="w"> </span>​<span class="w"> </span>​basic
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="c1"># By using the -n flag, we tell tmux to name the first window so we can identify it easily.</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>​$<span class="w"> </span>tmux​<span class="w"> </span>​new​<span class="w"> </span>​-s<span class="w"> </span>​<span class="w"> </span>​windows<span class="w"> </span>​<span class="w"> </span>​-n<span class="w"> </span>​<span class="w"> </span>​shell<span class="w"> </span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>$<span class="w"> </span>tmux<span class="w"> </span>rename-session<span class="w"> </span>-t<span class="w"> </span>old_name<span class="w"> </span>new_name
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="c1"># alias</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>$<span class="w"> </span>tmux<span class="w"> </span>rename<span class="w"> </span>-t<span class="w"> </span>old_name<span class="w"> </span>new_name.​
 </span></code></pre></div>
 <hr>
-<h2 id="easter-eggs">Easter Eggs</h2>
-<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># To display clock on the screen.</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>&lt;Prefix&gt;,<span class="w"> </span>t
+<h2 id="-easter-eggs">- Easter Eggs</h2>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># To display clock on the screen.</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>&lt;Prefix&gt;,<span class="w"> </span>t
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="c1"># list of sessions and select any of them.</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>&lt;Prefix&gt;,<span class="w"> </span>s<span class="w"> </span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="c1"># To attach last session, after you detach session</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>$<span class="w"> </span>tmux<span class="w"> </span>attach
 </span></code></pre></div>
+<hr>
+<h2 id="-commands">- Commands</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Default Commands for Sessions, Windows, and Panes
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>&lt;Prefix&gt;, n: Moves to the next window.
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>&lt;Prefix&gt;, p: Moves to the previous window.
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>&lt;Prefix&gt;, 0 ... 9:Selects windows by number.
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>&lt;Prefix&gt;, w: Displays a selectable list of windows in the current session.
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>&lt;Prefix&gt;, &amp;: Closes the current window after prompting for confirmation.
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>&lt;Prefix&gt;, q: Momentarily displays pane numbers in each pane.
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>&lt;Preix&gt;, x: Closes the current pane after prompting for confirmation.
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>&lt;Prefix&gt;, space: Cycles through the various pane layouts.
+</span></code></pre></div>
+<hr>
+<p><a class="glightbox" href="../../assets/tmux-cheatsheet.png" data-type="image" data-width="100%" data-height="auto" data-title="https://www.rffuste.com/2023/04/17/oh-my-tmux-mapheet/" data-desc-position="bottom"><img alt="https://www.rffuste.com/2023/04/17/oh-my-tmux-mapheet/" src="../../assets/tmux-cheatsheet.png"></a></p>
 <hr>
 <h2 id="reference">Reference</h2>
 <ul>
-<li><a href=""></a></li>
+<li>
+<p><a href="https://www.amazon.com/Getting-Started-tmux-Victor-Quinn-ebook/dp/B00NW474T6">Getting Started with tmux by Victor Quinn, J.D.</a></p>
+</li>
+<li>
+<p><a href="https://www.oreilly.com/library/view/tmux-taster/9781484207758/">tmux Taster by Mark McDonnell</a></p>
+</li>
+<li>
+<p><a href="https://pragprog.com/titles/bhtmux2/tmux-2/">tmux 2: Productive Mouse-Free Development by Brian P. Hogan</a></p>
+</li>
 </ul></div>
 
 
