@@ -3259,14 +3259,13 @@ permission denied while trying to connect to the Docker daemon socket at unix://
 <li>
 <p>Restart Docker Service:</p>
 <p>Restart the Docker service to apply any changes to group memberships or permissions:</p>
-<p>``bash title="bash"
-sudo systemctl restart docker
-```</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>docker
+</span></code></pre></div>
 </li>
 <li>
 <p>Logout and Log Back In:</p>
 <p>If the above steps don't resolve the issue, try logging out and logging back in to refresh your session and apply any group membership changes:</p>
-<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nb">logout</span>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nb">logout</span>
 </span></code></pre></div>
 <p>Then log back in and try running <code>docker ps</code> again.</p>
 </li>
