@@ -2853,17 +2853,41 @@
 </span></code></pre></div>
 <p>If you want to include Docker-in-Docker (DinD) functionality in your Jenkins container setup, you'll need to bind the Docker socket (/var/run/docker.sock) from the host machine to the Jenkins container. This allows the Jenkins container to communicate with the Docker daemon running on the host machine.</p>
 <p>Here's the modified command to include the Docker socket binding:</p>
-<p>bash</p>
-<p>docker run -d \
-  -p 8080:8080 \
-  -p 50000:50000 \
-  --name jenkins \
-  --restart unless-stopped \
-  -v jenkins_home:/var/jenkins_home \
-  -v /var/run/docker.sock:/var/run/docker.sock \
-  jenkins/jenkins:lts</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span>-p<span class="w"> </span><span class="m">8080</span>:8080<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span>-p<span class="w"> </span><span class="m">50000</span>:50000<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span>--name<span class="w"> </span>jenkins<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span>--restart<span class="w"> </span>unless-stopped<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span>-v<span class="w"> </span>jenkins_home:/var/jenkins_home<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span>-v<span class="w"> </span>/var/run/docker.sock:/var/run/docker.sock<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">  </span>jenkins/jenkins:lts
+</span></code></pre></div>
 <p>I've added <code>-v</code> <code>/var/run/docker.sock:/var/run/docker.sock</code> to the command, which binds the Docker socket from the host to the Jenkins container. This allows Jenkins to execute Docker commands inside the container.</p>
-<p>Now, with this setup, your Jenkins container will have access to Docker commands, allowing you to run Docker builds, start containers, and manage images as part of your Jenkins jobs or pipeline. Make sure to consider the security implications of allowing Jenkins to access the Docker daemon in this way.</p></div>
+<p>Now, with this setup, your Jenkins container will have access to Docker commands, allowing you to run Docker builds, start containers, and manage images as part of your Jenkins jobs or pipeline. Make sure to consider the security implications of allowing Jenkins to access the Docker daemon in this way.</p>
+<hr>
+<p><mark class="critic">
+Solving
+</mark></p>
+<p>If you want to pull Docker images within your Jenkins Dockerfile without adding the Docker installation steps, you can indeed simplify your Dockerfile. Here's how you can modify it to only pull Docker images:</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>FROM<span class="w"> </span>jenkins/jenkins:lts
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>USER<span class="w"> </span>root
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="c1"># Add Jenkins user to Docker group</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>RUN<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span>jenkins
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>USER<span class="w"> </span>jenkins
+</span></code></pre></div>
+<p>With this Dockerfile, you're starting from the official Jenkins LTS image, switching to the root user to add the Jenkins user to the Docker group, and then switching back to the Jenkins user. This will allow Jenkins to pull Docker images without needing to install Docker within the Jenkins container itself.</p>
+<p>Remember that for this to work, you'll still need to mount the Docker socket from the host machine into the Jenkins container when you run the container. This will allow Jenkins to communicate with the Docker daemon running on the host and pull Docker images. Here's an example of how you can run the container with the Docker socket mounted:</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span>-v<span class="w"> </span>/var/run/docker.sock:/var/run/docker.sock<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span>-p<span class="w"> </span><span class="m">8080</span>:8080<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span>-p<span class="w"> </span><span class="m">50000</span>:50000<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">  </span>--name<span class="w"> </span>jenkins<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span>your_custom_jenkins_image
+</span></code></pre></div>
+<p>Replace <code>your_custom_jenkins_image</code> with the name of your custom Jenkins image built from the Dockerfile. With this setup, your Jenkins container will be able to pull Docker images using the Docker CLI on the host machine.</p></div>
 
 
 
