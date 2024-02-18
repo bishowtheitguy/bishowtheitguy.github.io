@@ -2761,6 +2761,30 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#groups-and-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Groups and id
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Groups and id">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#to-list-all-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      To List all groups
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -2899,6 +2923,30 @@
       File Permissions and Ownership
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#groups-and-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      Groups and id
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Groups and id">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#to-list-all-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      To List all groups
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3117,10 +3165,108 @@ packages, <code>snap</code> bundles all of the dependencies for a package into a
 <li>using <code>symbolic values</code>.</li>
 </ul>
 <hr>
+<h2 id="groups-and-id">Groups and id</h2>
+<ol>
+<li>
+<p>Creating a Group:</p>
+<p>To create a group, you can use the <code>groupadd</code> command followed by the name of the group you want to create. For example:</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>$<span class="w"> </span>sudo<span class="w"> </span>groupadd<span class="w"> </span>developers
+</span></code></pre></div>
+<p>This creates a new group called <code>developers</code>.</p>
+</li>
+<li>
+<p>Adding <code>Users</code> to a <code>Group</code>:</p>
+<p>To add users to a group, you can use the <code>usermod</code> command with the <code>-aG</code> option followed by the group name and username. For example:</p>
+<ul>
+<li>
+<p><code>-a</code>, <code>--append</code>: </p>
+<p>This option tells <code>usermod</code> to append the user to the supplementary group(s). In other words, it adds the user to the specified group(s) without removing the user from any other groups.</p>
+</li>
+<li>
+<p><code>-G</code>, <code>--groups</code>:</p>
+<p>This option specifies a list of supplementary groups which the user should become a member of. This option sets the list of supplementary groups directly, without appending to the current list of supplementary groups.</p>
+</li>
+</ul>
+<p>So, when you use <code>-aG</code> together with usermod, it means you are appending the user to the specified group(s) without removing the user from any other groups, and you're specifying a list of supplementary groups which the user should become a member of.</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>$<span class="w"> </span>sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>developers<span class="w"> </span>alice
+</span></code></pre></div>
+<p>This adds the <strong>user</strong> <code>alice</code> to the <code>developers</code> <strong>group</strong>.</p>
+</li>
+<li>
+<p>Checking Group Membership:</p>
+<p>To see which <code>groups</code> a <code>user</code> belongs to, you can use the <code>id</code> command followed by the username. For example:</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>$<span class="w"> </span>id<span class="w"> </span>alice
+</span></code></pre></div>
+</li>
+</ol>
+<h3 id="to-list-all-groups">To List all groups</h3>
+<p>To list all the groups in Linux, you can use the <code>getent</code> command followed by the <code>group</code> argument:</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>$<span class="w"> </span>getent<span class="w"> </span>group
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="c1"># To check if the "docker" group already exists on your system,</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="c1"># If the group doesn't exist, this command will not produce any output.</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>$<span class="w"> </span>getent<span class="w"> </span>group<span class="w"> </span>docker
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="c1"># This command will display all the groups that the user "bishow" is a member of.</span>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>$<span class="w"> </span>groups<span class="w"> </span>bishow
+</span></code></pre></div>
+<p>Alternatively, you can also view the contents of the <code>/etc/group</code> file, which stores group information. You can use any text editor or commands like <code>cat</code> or <code>less</code> to view its contents:</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>$<span class="w"> </span>cat<span class="w"> </span>/etc/group
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="c1">#</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>$<span class="w"> </span>grep<span class="w"> </span>docker<span class="w"> </span>/etc/group
+</span></code></pre></div>
+<blockquote>
+<p>Notes:</p>
+</blockquote>
+<p>Choose whichever method is more convenient for you.</p>
+<blockquote>
+<p>Issue Solved:</p>
+</blockquote>
+<p>===
+permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock
+===</p>
+<ol>
+<li>
+<p>Check Docker Socket Permissions:</p>
+<p>Ensure that the Docker socket file (<code>/var/run/docker.sock</code>) has appropriate permissions for the "docker" group to read and write to it. You can check and adjust the permissions using the following commands:</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>ls<span class="w"> </span>-l<span class="w"> </span>/var/run/docker.sock
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">666</span><span class="w"> </span>/var/run/docker.sock
+</span></code></pre></div>
+<p>The <strong>first command</strong> (<code>ls -l /var/run/docker.sock</code>) shows the current permissions, and the <strong>second command</strong> (<code>sudo chmod 666 /var/run/docker.sock</code>) grants read and write permissions to all users and groups.</p>
+</li>
+<li>
+<p>Restart Docker Service:</p>
+<p>Restart the Docker service to apply any changes to group memberships or permissions:</p>
+<p>``bash title="bash"
+sudo systemctl restart docker
+```</p>
+</li>
+<li>
+<p>Logout and Log Back In:</p>
+<p>If the above steps don't resolve the issue, try logging out and logging back in to refresh your session and apply any group membership changes:</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nb">logout</span>
+</span></code></pre></div>
+<p>Then log back in and try running <code>docker ps</code> again.</p>
+</li>
+</ol>
+<p>After performing these steps, try running <code>docker ps</code> again without sudo to check if the permission issue has been resolved. If you continue to encounter permission denied errors, further troubleshooting may be needed.</p>
+<hr>
+<p><a class="glightbox" href="https://www.mypspa.org/public/images/article/real/thumbs/alertpic_678345.jpeg" data-type="image" data-width="100%" data-height="auto" data-title="Iceberg Theory" data-desc-position="bottom"><img alt="Iceberg Theory" src="https://www.mypspa.org/public/images/article/real/thumbs/alertpic_678345.jpeg"></a></p>
+<hr>
 <h2 id="reference">Reference</h2>
 <ul>
 <li><a href="https://leanpub.com/shellsamurai-master-the-linux-command-line">Shell Samurai by Stetson Blake</a></li>
 <li><a href="https://www.amazon.com/Linux-Mastery-Exercises-Building-Skills-ebook/dp/B0BTXNW913">Linux Mastery: 100+ Exercises for Building Your Skills by Frank Anemaet</a></li>
+</ul>
+<p>Blog</p>
+<ul>
+<li><a href="https://docs.docker.com/engine/install/ubuntu/">Install Docker Engine on Ubuntu 22.04</a></li>
+</ul>
+<p>Icebere Model</p>
+<ul>
+<li><a href="https://ecochallenge.org/iceberg-model/">a systems thinking model: the iceberg</a></li>
+<li><a href="https://untools.co/iceberg-model/">Iceberg Model</a></li>
 </ul></div>
 
 
