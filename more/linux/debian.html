@@ -11,7 +11,7 @@
       
       
       
-        <link rel="prev" href="../books/tech-books.html">
+        <link rel="prev" href="../books/pocket-devops.html">
       
       
         <link rel="next" href="../tech-stack.html">
@@ -2559,16 +2559,82 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../books/tech-books.html" class="md-nav__link">
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_8" id="__nav_5_8_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Books
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_8">
+            <span class="md-nav__icon md-icon"></span>
+            Books
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../books/tech-books.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tech Books
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../books/pocket-devops.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pocker Devops
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -2680,6 +2746,15 @@
   <a href="#tar-tape-archive" class="md-nav__link">
     <span class="md-ellipsis">
       Tar (Tape Archive)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-permissions-and-ownership" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Permissions and Ownership
     </span>
   </a>
   
@@ -2813,6 +2888,15 @@
   <a href="#tar-tape-archive" class="md-nav__link">
     <span class="md-ellipsis">
       Tar (Tape Archive)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-permissions-and-ownership" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Permissions and Ownership
     </span>
   </a>
   
@@ -3010,6 +3094,27 @@ packages, <code>snap</code> bundles all of the dependencies for a package into a
 <li>‘<code>t</code>’ flag stands for <code>list</code></li>
 <li>‘<code>v</code>’ stands for <code>verbose</code></li>
 <li>‘<code>f</code>’ stands for <code>file</code></li>
+</ul>
+<hr>
+<h2 id="file-permissions-and-ownership">File Permissions and Ownership</h2>
+<p>In Linux, every file and directory has an owner and a set of permissions that determine who can access and modify the file.</p>
+<p><strong>File Permissions</strong></p>
+<p>Each file on a Linux system has <code>three</code> types of permissions:</p>
+<ul>
+<li>read <code>r</code>, </li>
+<li>write <code>w</code>, </li>
+<li>execute <code>x</code></li>
+</ul>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>$<span class="w"> </span>ls<span class="w"> </span>-l<span class="w"> </span>&lt;file-or-folder&gt;
+</span></code></pre></div>
+<p><strong>Changing File Permissions</strong></p>
+<p>The <code>chmod</code> command is used to change the permissions for a file. </p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>$<span class="w"> </span>chmod<span class="w"> </span>mode<span class="w"> </span>&lt;file-or-folder&gt;
+</span></code></pre></div>
+<p>There are two ways to specify the mode: </p>
+<ul>
+<li>using a <code>numeric value</code>, or </li>
+<li>using <code>symbolic values</code>.</li>
 </ul>
 <hr>
 <h2 id="reference">Reference</h2>
