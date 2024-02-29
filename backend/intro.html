@@ -2846,7 +2846,31 @@
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 0C5.375 0 0 5.375 0 12c0 6.627 5.375 12 12 12 6.626 0 12-5.373 12-12 0-6.625-5.373-12-12-12zm-.624 21.62v-7.528H7.19L13.203 2.38v7.528h4.029L11.376 21.62z"></path></svg></span> <strong>FastAPI</strong></p>
 </li>
 </ul>
-</div></div>
+</div>
+<hr>
+<blockquote>
+<p>Solved Error in Ubuntu while instaling <code>mysqlclient</code></p>
+</blockquote>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>python3-dev<span class="w"> </span>default-libmysqlclient-dev<span class="w"> </span>build-essential
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># or</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># pkg-config: not found is a major hint at the problem and the solution - you're missing build # tools and you need to install them.</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>apt-get<span class="w"> </span>install<span class="w"> </span>pkg-config<span class="w"> </span>build-essential<span class="w"> </span>libmysqlclient-dev
+</span></code></pre></div>
+<ul>
+<li>
+<p><a href="https://stackoverflow.com/questions/76585758/mysqlclient-cannot-install-via-pip-cannot-find-pkg-config-name-in-ubuntu">Mysqlclient cannot install via pip, cannot find pkg-config name in Ubuntu</a></p>
+</li>
+<li>
+<p><a href="https://stackoverflow.com/questions/76875507/can-not-install-apache-airflow-providers-mysql-pkg-config-error">Can not install apache-airflow-providers-mysql: pkg-config error</a></p>
+</li>
+</ul>
+<blockquote>
+<p>Use "127.0.0.1", instead of "localhost"</p>
+</blockquote>
+<ul>
+<li><a href="https://stackoverflow.com/questions/18150858/operationalerror-2002-cant-connect-to-local-mysql-server-through-socket-v">2002, "Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)"</a></li>
+</ul></div>
 
 
 
