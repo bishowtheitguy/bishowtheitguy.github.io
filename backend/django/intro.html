@@ -1677,6 +1677,90 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#big-picture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Big Picture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Big Picture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-django-view-is-not-a-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Django View is Not a Controller
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#django-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Django Models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Django Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Databases
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#django-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      Django Views
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#django-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Django Templates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#django-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Django Admin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#django-forms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Django Forms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#django-run-server" class="md-nav__link">
     <span class="md-ellipsis">
       Django Run Server
@@ -3022,6 +3106,90 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#big-picture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Big Picture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Big Picture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-django-view-is-not-a-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Django View is Not a Controller
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#django-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Django Models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Django Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Databases
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#django-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      Django Views
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#django-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Django Templates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#django-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Django Admin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#django-forms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Django Forms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#django-run-server" class="md-nav__link">
     <span class="md-ellipsis">
       Django Run Server
@@ -3059,13 +3227,59 @@
 
   <h1>Intro</h1>
 
-<div><h2 id="djangos-parts">Django’s Parts</h2>
+<div><p>Django really is the <code>framework for perfectionists with deadlines</code>.</p>
+<h2 id="djangos-parts">Django’s Parts</h2>
 <p>Django is built on <strong>three core parts</strong>:</p>
 <ol>
 <li>A <strong>mapper</strong> between URLs and view code</li>
 <li>An <strong>abstraction</strong> for interacting with a database</li>
 <li>A <strong>templating system</strong> to manage your HTML like code</li>
 </ol>
+<hr>
+<h2 id="big-picture"><strong>Big Picture</strong></h2>
+<h3 id="a-django-view-is-not-a-controller">A Django View <strong><em>is Not a</em></strong> Controller</h3>
+<p>Check out <code>Figure 3-1</code> on the next page, does it look familiar?</p>
+<p>This is one of my diagrams, but there are plenty of similar versions out there. A common way of explaining <strong>Django’s architecture</strong> in terms of <strong>MVC</strong> is to describe it as a Model-Template-View (MTV) or Model-View-Template (MVT). </p>
+<p>There’s <mark>no difference between</mark> <strong>MTV</strong> and <strong>MVT</strong>—they’re two different ways to describe the same thing, which adds to the confusion.</p>
+<p><a class="glightbox" href="../../assets/django/figure-1.png" data-type="image" data-width="100%" data-height="auto" data-title="Django figure 1" data-desc-position="bottom"><img alt="Django figure 1" src="../../assets/django/figure-1.png"></a></p>
+<p>The <mark>misleading part of this diagram</mark> is the <strong>view</strong>. The view in Django is most often described as being <mark>equivalent to the</mark> <strong>controller</strong> in MVC, <strong><em>but</em></strong> it’s not—it’s still the <code>view</code>.</p>
+<p><a class="glightbox" href="../../assets/django/figure-2.png" data-type="image" data-width="100%" data-height="auto" data-title="Django figure 2" data-desc-position="bottom"><img alt="Django figure 2" src="../../assets/django/figure-2.png"></a></p>
+<p>Note how I have drawn a line between the client- and server-side. Like all client/server architectures, Django uses request and response objects to communicate between the client and the server. As Django is a web framework, we’re talking about <strong>HTTP request</strong> and <strong>response objects</strong>.</p>
+<p><a class="glightbox" href="../../assets/django/figure-3.png" data-type="image" data-width="100%" data-height="auto" data-title="Django figure 3" data-desc-position="bottom"><img alt="Django figure 3" src="../../assets/django/figure-3.png"></a></p>
+<p>The next point to note is that the Django framework encapsulates the <strong>model</strong>, <strong>view logic</strong> and <strong>business logic</strong>. </p>
+<p>In some tutorials, it’s said that the Django framework is the controller, but that isn’t true either—the <code>Django framework</code> <mark>can do much more</mark> than respond to user input and interact with data.</p>
+<p>A perfect example of this extra power is <strong>Django’s middleware</strong>, which sits between the view and the client-side. Django’s middleware performs critical security and authentication checks before sending the response to the browser.</p>
+<hr>
+<h2 id="django-models"><strong>Django Models</strong></h2>
+<p>In Django, the model is the <strong>object</strong> <mark>mapped</mark> to the database.</p>
+<p><a class="glightbox" href="../../assets/django/django-model.png" data-type="image" data-width="100%" data-height="auto" data-title="Django Model" data-desc-position="bottom"><img alt="Django Model" src="../../assets/django/django-model.png"></a></p>
+<blockquote>
+<p><code>Book</code> : Mastering Django by Nigel George - 2022</p>
+</blockquote>
+<h3 id="supported-databases">Supported Databases</h3>
+<p><code>Django 3.0</code> and higher officially supports <mark>five databases</mark>:</p>
+<ul>
+<li>PostgreSQL</li>
+<li>MySQL</li>
+<li>SQLite</li>
+<li>Oracle</li>
+<li>MariaDB</li>
+</ul>
+<p>There are also several third-party applications available if you need to connect to an unofficially supported database.</p>
+<hr>
+<h2 id="django-views"><strong>Django Views</strong></h2>
+<p>Django’s views are the <mark>information brokers</mark> of a Django application. A view sources data from your database (or an external data source or service) and delivers it to a template. </p>
+<ul>
+<li>For a web application, the view delivers web page content and templates; </li>
+<li>for a RESTful API this content could be formatted JSON data.</li>
+</ul>
+<hr>
+<h2 id="django-templates"><strong>Django Templates</strong></h2>
+<hr>
+<h2 id="django-admin"><strong>Django Admin</strong></h2>
+<p>Django comes with a <strong>built-in</strong> <mark>admin interface</mark>.</p>
+<hr>
+<h2 id="django-forms"><strong>Django Forms</strong></h2>
 <hr>
 <h2 id="django-run-server">Django Run Server</h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>#
@@ -3096,6 +3310,11 @@
 <ul>
 <li><a href="https://github.com/topics/django-apps">django apps : github</a></li>
 <li><a href="https://stackoverflow.com/questions/23639085/django-change-default-runserver-port">django change default runserver port</a></li>
+</ul>
+<hr>
+<ul>
+<li>Books</li>
+<li><a href="Mastering%20Django%20by%20Nigel%20George%20-%202022">Mastering Django by Nigel George</a></li>
 </ul></div>
 
 
