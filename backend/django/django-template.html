@@ -1778,6 +1778,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#static-dir" class="md-nav__link">
+    <span class="md-ellipsis">
+      Static dir
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refernce" class="md-nav__link">
+    <span class="md-ellipsis">
+      Refernce
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3131,6 +3149,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#static-dir" class="md-nav__link">
+    <span class="md-ellipsis">
+      Static dir
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refernce" class="md-nav__link">
+    <span class="md-ellipsis">
+      Refernce
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3224,7 +3260,65 @@
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">Welcome</span> <span class="n">to</span> <span class="n">my</span> <span class="n">website</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
 </span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">{</span><span class="o">%</span> <span class="n">endblock</span> <span class="n">content</span> <span class="o">%</span><span class="p">}</span>
 </span></code></pre></div>
-</div></div>
+</div>
+<h2 id="static-dir">Static <code>dir</code></h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>mkdir<span class="w"> </span>static
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1"># to create a CSS subfolder:</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>mkdir<span class="w"> </span>static/css
+</span></code></pre></div>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># settings.py</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">STATIC_URL</span> <span class="o">=</span> <span class="s2">"static/"</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">STATICFILES_DIRS</span> <span class="o">=</span> <span class="p">[</span><span class="n">BASE_DIR</span> <span class="o">/</span> <span class="s2">"static"</span><span class="p">]</span>
+</span></code></pre></div>
+<hr>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>The difference between the two declarations lies in the method used to construct the path to the <code>static</code> directory:</p>
+<p><strong>1. Using the / Operator:</strong></p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">STATICFILES_DIRS</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    <span class="n">BASE_DIR</span> <span class="o">/</span> <span class="s2">"static"</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="p">]</span>
+</span></code></pre></div>
+<p>This approach uses the <code>/</code> operator for path concatenation. However, this syntax is not standard in Python and may cause an error unless you have overridden the behavior of the <code>/</code> operator to handle path concatenation.</p>
+<p><strong>2. Using os.path.join():</strong></p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">STATICFILES_DIRS</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s1">'static'</span><span class="p">)</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="p">]</span>
+</span></code></pre></div>
+<p>This approach uses the <code>os.path.join()</code> function to construct the path to the static directory. It is the standard and recommended way to join path components in Python, ensuring compatibility across different operating systems.</p>
+<p><strong>In summary</strong>, <mark>the second declaration that uses <code>os.path.join(BASE_DIR, 'static')</code> is correct and standard</mark>. It ensures that the path is constructed correctly regardless of the operating system being used. The first declaration using the / operator may not work as expected and is not a common practice in Python for constructing paths.</p>
+</div>
+<details class="abstract">
+<summary>static folder</summary>
+<p>Yes, that's correct. STATICFILES_DIRS and STATIC_ROOT serve different purposes, so they typically point to different directories.</p>
+<p><strong>1. STATICFILES_DIRS:</strong></p>
+<p>STATICFILES_DIRS is used during development to specify additional directories where Django should look for static files. These directories can contain static files that are not tied to specific apps or are shared across multiple apps. This setting allows you to include third-party static files, custom project-wide static files, or override static files provided by apps or libraries.</p>
+<p>For example:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">STATICFILES_DIRS</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s1">'static'</span><span class="p">),</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    <span class="c1">#   '/path/to/external/static/files/',</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="p">]</span>
+</span></code></pre></div>
+<p><strong>2. STATIC_ROOT:</strong></p>
+<p>STATIC_ROOT is used for deployment purposes. It specifies the directory where Django collects all the static files from your project during the deployment process. These collected static files are meant to be served directly by a web server like Nginx or Apache in a production environment.</p>
+<p>For example:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+</span></code></pre></div>
+<p>After running <mark>collectstatic</mark>, Django gathers static files from both the app-specific static directories and the additional directories specified in <strong>STATICFILES_DIRS</strong>, and places them into the directory specified by <strong>STATIC_ROOT</strong>.</p>
+<p><mark>In summary</mark>, <strong>STATICFILES_DIRS</strong> and <strong>STATIC_ROOT</strong> should point to different directories. S<strong>TATICFILES_DIRS</strong> is for specifying additional directories where Django should look for static files during development, while <strong>STATIC_ROOT</strong> is for specifying the directory where Django should collect all static files for deployment.</p>
+<hr>
+<p><strong>STATIC_URL</strong> is a setting in Django used to specify the base URL from which static files will be served. It defines the URL prefix to access static files in your web application.</p>
+<p>By default, <strong>STATIC_URL</strong> is set to '/static/' in Django projects, but you can customize it to fit your application's requirements. For example, if you want to serve static files from a different URL or path, you can modify STATIC_URL accordingly in your project's settings.</p>
+</details>
+<hr>
+<h2 id="refernce">Refernce</h2>
+<ul>
+<li><a href="https://testdriven.io/blog/django-static-files/">Working with Static and Media Files in Django</a></li>
+<li><a href="https://djangocentral.com/managing-media-files-in-django/">Managing Media Files in Django </a></li>
+<li><a href="https://djangotherightway.com/django-media-files">Django Media Files</a></li>
+</ul></div>
 
 
 
