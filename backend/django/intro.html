@@ -3617,6 +3617,53 @@ In Python, an object's mutability is also defined by the data type that it is. F
 </ul>
 <p>By following this structured approach and <mark>combining</mark> <strong>theoretical understanding with practical application</strong>, you can gradually master Class-Based Views in Django and become proficient in building robust web applications. <mark>Remember that mastery comes with continuous learning, practice, and experimentation</mark>.</p>
 </details>
+<details class="warning">
+<summary>Question about CBVs in django</summary>
+<p>In Django's Class-Based Views (CBVs), the <mark>as_view() method</mark> is a crucial part of the view setup process. <strong>It's used to convert a class-based view into a view function that Django can use to handle HTTP requests.</strong></p>
+<p>When you define a CBV, you're essentially defining a Python class that encapsulates the logic for processing a particular type of HTTP request. <strong>However, Django's URL routing system expects to work with functions rather than classes.</strong> So, to make your CBV compatible with Django's URL routing mechanism, you use the as_view() method.</p>
+<p>Here's how it works:</p>
+<p><strong>1. Defining the CBV:</strong></p>
+<p>First, you define your CBV by creating a subclass of one of Django's built-in CBV classes, such as ListView, DetailView, CreateView, etc. For example:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">from</span> <span class="nn">django.views.generic</span> <span class="kn">import</span> <span class="n">ListView</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">MyModel</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="k">class</span> <span class="nc">MyListView</span><span class="p">(</span><span class="n">ListView</span><span class="p">):</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    <span class="n">model</span> <span class="o">=</span> <span class="n">MyModel</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>    <span class="n">template_name</span> <span class="o">=</span> <span class="s1">'myapp/my_model_list.html'</span>
+</span></code></pre></div>
+<p><strong>2. Using as_view() in URL Configuration:</strong></p>
+<p>When you include your CBV in your URL configuration (usually in urls.py), you use the as_view() method to convert the CBV into a view function that Django's URL dispatcher can work with. For example:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="kn">from</span> <span class="nn">.views</span> <span class="kn">import</span> <span class="n">MyListView</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">'my-list/'</span><span class="p">,</span> <span class="n">MyListView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">'my-list'</span><span class="p">),</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="p">]</span>
+</span></code></pre></div>
+<p><strong>3. Instantiating the CBV:</strong></p>
+<p>When Django's URL dispatcher matches a URL pattern to a view function, it will instantiate the CBV using the as_view() method and call the appropriate method (such as get() or post()) to handle the HTTP request.</p>
+<hr>
+<p><strong>Behind the scenes</strong>, the <mark>as_view() method</mark> creates a function that:</p>
+<ul>
+<li>Instantiates the CBV class.</li>
+<li>Calls the appropriate method (dispatch()) on the instance to handle the HTTP request.</li>
+<li>Returns the HTTP response generated by the CBV.</li>
+</ul>
+<p>This process allows Django's URL routing system to seamlessly work with CBVs, providing a more object-oriented and modular approach to handling HTTP requests compared to traditional function-based views.</p>
+</details>
+<details class="abstract">
+<summary>Detail on routers</summary>
+<p>In traditional Django applications that serve HTML content using Django's built-in views and templates, routers are not typically used. Routers are primarily associated with Django REST Framework (DRF), which is an additional library used for building RESTful APIs in Django.</p>
+<p><strong>In traditional Django applications:</strong></p>
+<p><strong>1. URL Configuration:</strong></p>
+<p>URL patterns are typically defined in the urls.py module of your Django application. You manually specify the URL patterns and map them to corresponding views or view functions.</p>
+<p><strong>2. Views:</strong></p>
+<p>Views in traditional Django applications are typically implemented as functions or class-based views (CBVs) within your Django application. These views are responsible for processing HTTP requests and returning HTTP responses, usually in the form of HTML content generated with Django's template engine.</p>
+<p><strong>3. Templates:</strong></p>
+<p>HTML templates are used to generate the content that is returned to the user's browser. Django's template engine allows you to define dynamic HTML content by embedding Python-like code within HTML templates.</p>
+<p><mark>In summary</mark>, if you are building a traditional Django application that serves HTML content, you won't typically use routers. Routers are specifically designed for building RESTful APIs with Django REST Framework, where URL routing and resource management are different from traditional Django applications.</p>
+<p><mark>However</mark>, if you are building a RESTful API using Django REST Framework, routers provide a convenient and efficient way to define URL patterns for your API endpoints, organize your API resources, and manage URL configurations.</p>
+</details>
 <hr>
 <h2 id="reference">Reference</h2>
 <details class="note">
