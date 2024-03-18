@@ -3186,6 +3186,189 @@
 <p>In this example, User is the entity, and it's represented by the model class User. The attributes username and email define the properties of this entity, which will be stored as columns in the database table representing the User entity.</p>
 <p>Entities play a crucial role in database design and modeling as they represent real-world objects or concepts within the system being developed. They help in organizing and structuring data in a way that reflects the relationships and behaviors of the system's components.</p>
 <hr>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>To rename the model name in the Django admin interface, you can use the <strong>verbose_name</strong> and <strong>verbose_name_plural</strong> <mark>attributes</mark> in the model's Meta class. Here's how you can do it:</p>
+<div class="language-py highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">class</span> <span class="nc">ServiceItem</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">120</span><span class="p">)</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="n">description</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span><span class="n">null</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="n">image</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ImageField</span><span class="p">(</span><span class="n">null</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">upload_to</span><span class="o">=</span><span class="s2">"service/"</span><span class="p">)</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>        <span class="n">db_table</span> <span class="o">=</span> <span class="s2">"bishow_service_item"</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>        <span class="n">verbose_name</span> <span class="o">=</span> <span class="s2">"Custom Service Item"</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        <span class="n">verbose_name_plural</span> <span class="o">=</span> <span class="s2">"Custom Service Items"</span>
+</span></code></pre></div>
+<p>With this setup, in the <strong>Django admin interface</strong>, instead of "Service Items", you'll see "Custom Service Items" as the plural name, and instead of "Service Item", you'll see "Custom Service Item" as the singular name.</p>
+</div>
+<details class="success">
+<summary><code>list_display</code> attribute in a Django ModelAdmin class</summary>
+<p>The <strong>list_display</strong> <mark>attribute</mark> in a Django ModelAdmin class is used to specify which fields of the model should be displayed in the list view of the Django admin interface.</p>
+<p>When you register a model with the Django admin site, it provides a default list view where it shows a list of objects of that model. <mark>By default</mark>, Django admin will display a representation of each object that just says "object" followed by its primary key (e.g., "<code>About object (1)</code>").</p>
+<p>By specifying <code>list_display</code>, you're telling Django admin to customize this default list view by displaying specific fields from your model instead of just the default representation.</p>
+<p>For example, in your AboutAdmin class:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">About</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">class</span> <span class="nc">AboutAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">list_display</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'title'</span><span class="p">,</span> <span class="s1">'description'</span><span class="p">)</span>
+</span></code></pre></div>
+<p>You've specified that in the list view for the About model, Django admin should display the title and description fields of each object.</p>
+<p>This provides a more informative and user-friendly view of the data in the admin interface, making it easier for administrators to browse and manage the data.</p>
+<hr>
+<p><strong>Confirm that the AboutAdmin class is correctly registered with the About model. It should look like this:</strong></p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">About</span><span class="p">,</span> <span class="n">AboutAdmin</span><span class="p">)</span>
+</span></code></pre></div>
+</details>
+<details class="example">
+<summary>how to display a <code>preview</code> of the image directly in the Django admin interface</summary>
+<p>If you want to display a preview of the image directly in the Django admin interface without using an HTML <code>&lt;img&gt;</code> tag, you can utilize <mark>Django's built-in</mark> functionality to generate thumbnail previews of images. Django's ImageField provides a Thumbnail widget that automatically generates a thumbnail preview for images.</p>
+<p>Here's how you can implement it:</p>
+<div class="language-py highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kn">from</span> <span class="nn">django.utils.safestring</span> <span class="kn">import</span> <span class="n">mark_safe</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">About</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="k">class</span> <span class="nc">AboutAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="n">list_display</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'title'</span><span class="p">,</span> <span class="s1">'description'</span><span class="p">,</span> <span class="s1">'display_image'</span><span class="p">)</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    <span class="k">def</span> <span class="nf">display_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>        <span class="k">if</span> <span class="n">obj</span><span class="o">.</span><span class="n">image</span><span class="p">:</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>            <span class="k">return</span> <span class="n">mark_safe</span><span class="p">(</span><span class="s1">'&lt;img src="</span><span class="si">{}</span><span class="s1">" width="100" height="100" /&gt;'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">url</span><span class="p">))</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>        <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>            <span class="k">return</span> <span class="s1">'No Image'</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    <span class="n">display_image</span><span class="o">.</span><span class="n">short_description</span> <span class="o">=</span> <span class="s1">'Image Preview'</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">About</span><span class="p">,</span> <span class="n">AboutAdmin</span><span class="p">)</span>
+</span></code></pre></div>
+<p>In this code:</p>
+<ul>
+<li>We still define the <strong>display_image</strong> <mark>method</mark> to return an image tag.</li>
+<li>We use Django's <strong>mark_safe</strong> <mark>function</mark> to mark the string as safe HTML. This is necessary to prevent Django from escaping the HTML when rendering.</li>
+<li>If there is no image associated with the About object, we return a text saying "No Image".</li>
+<li>The <code>display_image</code> <mark>method</mark> is assigned to the <strong>list_display</strong> <mark>attribute</mark> to display the image preview along with other fields.</li>
+</ul>
+<p>With this setup, the Django admin list view for the <strong>About</strong> model will display a preview of the image (if available) directly in the interface. If there's no image, it will display "No Image". Adjust the width and height attributes as needed to control the size of the displayed images.</p>
+</details>
+<details class="success">
+<summary>what is <code>list_display</code> attribute?</summary>
+<p>In Django, the <strong>list_display</strong> <mark>attribute</mark> in a ModelAdmin class is a sequence (typically a tuple) of field names, specifying which fields of the model should be displayed in the list view of the Django admin interface.</p>
+<p>While you can use either a list or a tuple, it's a convention in Django to use a tuple for <strong>list_display</strong>. This is because <strong>list_display</strong> is not expected to be mutable; it's defining the structure of the admin interface, which should remain consistent.</p>
+<p>However, since Python allows both lists and tuples to be used in most contexts interchangeably, you can technically use either. Here's an example showing <strong>list_display</strong> being defined with both a list and a tuple:</p>
+<div class="language-py highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Using a tuple</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">class</span> <span class="nc">MyModelAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="n">list_display</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'field1'</span><span class="p">,</span> <span class="s1">'field2'</span><span class="p">,</span> <span class="s1">'field3'</span><span class="p">)</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="c1"># Using a list (not recommended, but works)</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="k">class</span> <span class="nc">MyModelAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="n">list_display</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'field1'</span><span class="p">,</span> <span class="s1">'field2'</span><span class="p">,</span> <span class="s1">'field3'</span><span class="p">]</span>
+</span></code></pre></div>
+<p>Both of the above are valid and will achieve the same result. <mark>However, using a tuple is more consistent with Django's style</mark> and intent for <strong>list_display</strong>.</p>
+</details>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<p><mark>To reuse</mark> the <strong>display_image</strong> <mark>method</mark> without duplicating code, you can define it as a <strong>static method</strong> and use it across multiple ModelAdmin classes. Here's how you can refactor your code:</p>
+<div class="language-py highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kn">from</span> <span class="nn">django.utils.safestring</span> <span class="kn">import</span> <span class="n">mark_safe</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">About</span><span class="p">,</span> <span class="n">Project</span><span class="p">,</span> <span class="n">ProjectItem</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="k">class</span> <span class="nc">ImageDisplayMixin</span><span class="p">:</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    <span class="nd">@staticmethod</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    <span class="k">def</span> <span class="nf">display_image</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>        <span class="k">if</span> <span class="n">obj</span><span class="o">.</span><span class="n">image</span><span class="p">:</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>            <span class="k">return</span> <span class="n">mark_safe</span><span class="p">(</span><span class="s1">'&lt;img src="</span><span class="si">{}</span><span class="s1">" width="100" height="100" /&gt;'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">url</span><span class="p">))</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>        <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>            <span class="k">return</span> <span class="s1">'No Image'</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>    <span class="n">display_image</span><span class="o">.</span><span class="n">short_description</span> <span class="o">=</span> <span class="s1">'Image Preview'</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="k">class</span> <span class="nc">AboutAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">,</span> <span class="n">ImageDisplayMixin</span><span class="p">):</span>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>    <span class="n">list_display</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'title'</span><span class="p">,</span> <span class="s1">'description'</span><span class="p">,</span> <span class="s1">'display_image'</span><span class="p">)</span>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="k">class</span> <span class="nc">ProjectAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>    <span class="n">list_display</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'title'</span><span class="p">,</span> <span class="s1">'description'</span><span class="p">)</span>
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="k">class</span> <span class="nc">ProjectItemAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">,</span> <span class="n">ImageDisplayMixin</span><span class="p">):</span>
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>    <span class="n">list_display</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'title'</span><span class="p">,</span> <span class="s1">'description'</span><span class="p">,</span> <span class="s1">'display_image'</span><span class="p">)</span>
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>
+</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">About</span><span class="p">,</span> <span class="n">AboutAdmin</span><span class="p">)</span>
+</span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a><span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">Project</span><span class="p">,</span> <span class="n">ProjectAdmin</span><span class="p">)</span>
+</span><span id="__span-6-25"><a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">ProjectItem</span><span class="p">,</span> <span class="n">ProjectItemAdmin</span><span class="p">)</span>
+</span></code></pre></div>
+<p>In this code:</p>
+<ul>
+<li>We've created a mixin class called ImageDisplayMixin, which contains the display_image method.</li>
+<li>The <strong>display_image</strong> <mark>method</mark> <strong>is decorated with</strong> <mark>@staticmethod</mark> to indicate that it doesn't require access to instance data.</li>
+<li>Both <code>AboutAdmin</code> and <code>ProjectItemAdmin</code> classes inherit from <code>ImageDisplayMixin</code>, allowing them to reuse the <strong>display_image</strong> <mark>method</mark> without duplicating code.</li>
+<li>By using this approach, you avoid redundancy and keep your code DRY (Don't Repeat Yourself).</li>
+</ul>
+</div>
+<details class="success">
+<summary>how to remove add button in admin interface</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Basic</label><label for="__tabbed_1_2">Advanced</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><mark>Yes, you can remove</mark> the "<code>Add About</code>" button <mark>from the Django admin interface</mark> if there is already one item present. This can be achieved by customizing the admin interface using the has_add_permission method in your ModelAdmin class.</p>
+<p>Here's how you can do it:</p>
+<div class="language-py highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">About</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="k">class</span> <span class="nc">AboutAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    <span class="c1"># other configurations for list_display, fields, etc.</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    <span class="k">def</span> <span class="nf">has_add_permission</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>        <span class="c1"># Check if there are any existing About objects</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>        <span class="k">if</span> <span class="n">About</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>            <span class="c1"># Return False to disable the "Add About" button</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>            <span class="k">return</span> <span class="kc">False</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>        <span class="c1"># Return True to enable the "Add About" button</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>        <span class="k">return</span> <span class="kc">True</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">About</span><span class="p">,</span> <span class="n">AboutAdmin</span><span class="p">)</span>
+</span></code></pre></div>
+<p>In this code:</p>
+<ul>
+<li>We define the <strong>has_add_permission</strong> method in the <strong>AboutAdmin</strong> class.</li>
+<li>Inside this method, we check if there are any existing <strong>About</strong> objects in the database using <strong>About.objects.exists()</strong>.</li>
+<li>If there are existing <strong>About</strong> objects, we return <strong>False</strong> to disable the "<code>Add About</code>" button.</li>
+<li>If there are no existing <strong>About</strong> objects, we return <strong>True</strong> to enable the "<code>Add About</code>" button.</li>
+</ul>
+<p>By implementing <strong>has_add_permission</strong> in this way, you can control whether the "<code>Add About</code>" button is displayed based on the presence of existing <strong>About</strong> objects in the database. If there is already an <strong>About</strong> object, the button will be hidden, preventing users from adding more <strong>About</strong> objects.</p>
+</div>
+<div class="tabbed-block">
+<p><mark>The reason why</mark> <strong>HasAddPermissionMixin</strong> <mark>is not working as expected</mark> might be due to the order of inheritance in your <strong>ServiceAdmin</strong> class. <mark>In Python, the order of inheritance matters.</mark></p>
+<p>When you inherit from multiple classes, Python resolves method lookups in the order specified by the inheritance list. This means that if a method is defined in both the child class and one of its parent classes, the version of the method defined in the child class will take precedence.</p>
+<p>In your case, HasAddPermissionMixin should come before admin.ModelAdmin in the inheritance list so that its has_add_permission method overrides the one from admin.ModelAdmin. Here's the corrected version:</p>
+<div class="language-py highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kn">from</span> <span class="nn">django.utils.safestring</span> <span class="kn">import</span> <span class="n">mark_safe</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">About</span><span class="p">,</span> <span class="n">Project</span><span class="p">,</span> <span class="n">ProjectItem</span><span class="p">,</span> <span class="n">Service</span><span class="p">,</span> <span class="n">ServiceItem</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="k">class</span> <span class="nc">HasAddPermissionMixin</span><span class="p">:</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="sd">"""</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="sd">    Mixin class to control the add permission based on the existence of objects.</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="sd">    """</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>    <span class="k">def</span> <span class="nf">has_add_permission</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>        <span class="n">model</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>        <span class="k">return</span> <span class="ow">not</span> <span class="n">model</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="k">class</span> <span class="nc">ServiceAdmin</span><span class="p">(</span><span class="n">HasAddPermissionMixin</span><span class="p">,</span> <span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">    </span><span class="sd">"""</span>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="sd">    Admin class for managing Service objects.</span>
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="sd">    """</span>
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>    <span class="n">list_display</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'title'</span><span class="p">,</span> <span class="s1">'description'</span><span class="p">)</span>
+</span></code></pre></div>
+<p>In this corrected version:</p>
+<ul>
+<li><strong>HasAddPermissionMixin</strong> <mark>is listed before</mark> <strong>admin.ModelAdmin</strong> in the inheritance list of <strong>ServiceAdmin</strong>, ensuring that its <strong>has_add_permission</strong> <mark>method takes precedence</mark>.</li>
+<li>The <strong>ServiceAdmin</strong> class <mark>now inherits from</mark> <strong>HasAddPermissionMixin</strong> and <strong>admin.ModelAdmin</strong> in the correct order.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>With this setup, HasAddPermissionMixin should work as expected in the ServiceAdmin class.</p>
+</details>
+<hr>
 <p><a class="glightbox" href="https://pbs.twimg.com/media/DinARXwWsAEJ36Z?format=jpg&amp;name=medium" data-type="image" data-width="100%" data-height="auto" data-title="https://twitter.com/shabda/status/1020558573011521537" data-desc-position="bottom"><img alt="https://twitter.com/shabda/status/1020558573011521537" src="https://pbs.twimg.com/media/DinARXwWsAEJ36Z?format=jpg&amp;name=medium"></a></p>
 <hr>
 <h2 id="reference">Reference</h2>
