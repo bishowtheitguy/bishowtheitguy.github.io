@@ -1626,24 +1626,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#run-the-serve" class="md-nav__link">
-    <span class="md-ellipsis">
-      Run the serve
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#api-log-in-endpoint" class="md-nav__link">
-    <span class="md-ellipsis">
-      API Log In Endpoint
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -2156,6 +2138,27 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../draft.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    draft
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -3237,24 +3240,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#run-the-serve" class="md-nav__link">
-    <span class="md-ellipsis">
-      Run the serve
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#api-log-in-endpoint" class="md-nav__link">
-    <span class="md-ellipsis">
-      API Log In Endpoint
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -3322,22 +3307,26 @@
 </span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">]</span>
 </span></code></pre></div>
 <p>And we’re done! If you have ever tried to implement your own user authentication endpoints, it is truly amazing how much time and headache <code>dj-rest-auth</code> saves for us. Now we can spin up the server to see what <code>dj-rest-auth</code> has provided.</p>
-<h2 id="run-the-serve">Run the serve</h2>
+<div class="admonition success">
+<p class="admonition-title">Run the server</p>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">runserver</span>
 </span></code></pre></div>
-<h2 id="api-log-in-endpoint">API Log In Endpoint</h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Login
+</div>
+<div class="admonition info">
+<p class="admonition-title">API Log In Endpoint</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Login</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>http://127.0.0.1:8000/api/v1/dj-rest-auth/login/
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>Logout
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># Logout</span>
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>http://127.0.0.1:8000/api/v1/dj-rest-auth/logout/
 </span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>Password Reset
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># Password Reset</span>
 </span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>http://127.0.0.1:8000/api/v1/dj-rest-auth/password/reset
 </span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>Password Reset Confirm
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="c1"># Password Reset Confirm</span>
 </span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>http://127.0.0.1:8000/api/v1/dj-rest-auth/password/reset/confirm
 </span></code></pre></div>
+</div>
 <hr>
 <h2 id="reference">Reference</h2>
 <ul>

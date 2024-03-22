@@ -2072,6 +2072,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="draft.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    draft
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -3144,14 +3165,16 @@
 </ul>
 </div>
 <hr>
-<blockquote>
-<p>Solved Error in Ubuntu while instaling <code>mysqlclient</code></p>
-</blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Solved Error in Ubuntu while instaling <code>mysqlclient</code></p>
 <div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>python3-dev<span class="w"> </span>default-libmysqlclient-dev<span class="w"> </span>build-essential
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># or</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># pkg-config: not found is a major hint at the problem and the solution - you're missing build # tools and you need to install them.</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>apt-get<span class="w"> </span>install<span class="w"> </span>pkg-config<span class="w"> </span>build-essential<span class="w"> </span>libmysqlclient-dev
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># pkg-config: not found is a major hint at the problem and the solution - </span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># you're missing build # tools and you need to install them.</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>apt-get<span class="w"> </span>install<span class="w"> </span>pkg-config<span class="w"> </span>build-essential<span class="w"> </span>libmysqlclient-dev
 </span></code></pre></div>
 <ul>
 <li>
@@ -3161,12 +3184,14 @@
 <p><a href="https://stackoverflow.com/questions/76875507/can-not-install-apache-airflow-providers-mysql-pkg-config-error">Can not install apache-airflow-providers-mysql: pkg-config error</a></p>
 </li>
 </ul>
-<blockquote>
-<p>Use "127.0.0.1", instead of "localhost"</p>
-</blockquote>
+</div>
+<div class="admonition failure">
+<p class="admonition-title">2002, "Can't connect to local MySQL server through socket</p>
+<p><strong>Use "127.0.0.1", instead of "localhost"</strong></p>
 <ul>
 <li><a href="https://stackoverflow.com/questions/18150858/operationalerror-2002-cant-connect-to-local-mysql-server-through-socket-v">2002, "Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)"</a></li>
-</ul></div>
+</ul>
+</div></div>
 
 
 
