@@ -3522,7 +3522,148 @@ Create HTML templates for user registration, login, and logout inside a template
 </span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="err">│</span>   <span class="err">├──</span> <span class="n">urls</span><span class="o">.</span><span class="n">py</span>
 </span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="err">│</span>   <span class="err">└──</span> <span class="o">...</span>
 </span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="err">└──</span> <span class="o">...</span>
-</span></code></pre></div></div>
+</span></code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Efficient Data Presentation in Django Templates: Integrating Multiple Models into Your Index Page</p>
+<p>To display the data from the <mark>models</mark> <code>About</code>, <code>Project</code>, <code>ProjectCategory</code>, <code>ProjectItem</code>, <code>Service</code>, and <code>ServiceItem</code> in your <mark>index.html</mark> template, you'll need to pass the data from these models to the template through your view function or class-based view.</p>
+<p>Here's how you can modify your view to include data from all these models:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">views.py</label><label for="__tabbed_2_2">index.html</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-py highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="kn">from</span> <span class="nn">django.views.generic</span> <span class="kn">import</span> <span class="n">TemplateView</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">About</span><span class="p">,</span> <span class="n">Project</span><span class="p">,</span> <span class="n">ProjectCategory</span><span class="p">,</span> <span class="n">ProjectItem</span><span class="p">,</span> <span class="n">Service</span><span class="p">,</span> <span class="n">ServiceItem</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="k">class</span> <span class="nc">IndexView</span><span class="p">(</span><span class="n">TemplateView</span><span class="p">):</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>    <span class="n">template_name</span> <span class="o">=</span> <span class="s1">'index.html'</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>    <span class="k">def</span> <span class="nf">get_context_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>        <span class="n">context</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">get_context_data</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>        <span class="c1"># Retrieve the About instance</span>
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>        <span class="n">about_info</span> <span class="o">=</span> <span class="n">About</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>        <span class="n">context</span><span class="p">[</span><span class="s1">'about_info'</span><span class="p">]</span> <span class="o">=</span> <span class="n">about_info</span>
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>
+</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>        <span class="c1"># Retrieve all projects</span>
+</span><span id="__span-13-16"><a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>        <span class="n">projects</span> <span class="o">=</span> <span class="n">Project</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</span><span id="__span-13-17"><a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>        <span class="n">context</span><span class="p">[</span><span class="s1">'projects'</span><span class="p">]</span> <span class="o">=</span> <span class="n">projects</span>
+</span><span id="__span-13-18"><a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a>
+</span><span id="__span-13-19"><a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a>        <span class="c1"># Retrieve all project categories</span>
+</span><span id="__span-13-20"><a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a>        <span class="n">project_categories</span> <span class="o">=</span> <span class="n">ProjectCategory</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</span><span id="__span-13-21"><a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a>        <span class="n">context</span><span class="p">[</span><span class="s1">'project_categories'</span><span class="p">]</span> <span class="o">=</span> <span class="n">project_categories</span>
+</span><span id="__span-13-22"><a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a>
+</span><span id="__span-13-23"><a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a>        <span class="c1"># Retrieve all service items</span>
+</span><span id="__span-13-24"><a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a>        <span class="n">service_items</span> <span class="o">=</span> <span class="n">ServiceItem</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</span><span id="__span-13-25"><a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a>        <span class="n">context</span><span class="p">[</span><span class="s1">'service_items'</span><span class="p">]</span> <span class="o">=</span> <span class="n">service_items</span>
+</span><span id="__span-13-26"><a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a>
+</span><span id="__span-13-27"><a id="__codelineno-13-27" name="__codelineno-13-27" href="#__codelineno-13-27"></a>        <span class="k">return</span> <span class="n">context</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-html highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"en"</span><span class="p">&gt;</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"UTF-8"</span><span class="p">&gt;</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">"viewport"</span> <span class="na">content</span><span class="o">=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="p">&gt;</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Index<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>About<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ about_info.title }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ about_info.description }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Projects<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>        {% for project in projects %}
+</span><span id="__span-14-16"><a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-14-17"><a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>                <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>{{ project.title }}<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span><span id="__span-14-18"><a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a>                <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ project.description }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="__span-14-19"><a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a>            <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-14-20"><a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a>        {% endfor %}
+</span><span id="__span-14-21"><a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a>    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span><span id="__span-14-22"><a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a>
+</span><span id="__span-14-23"><a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Project Categories<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span><span id="__span-14-24"><a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a>    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span><span id="__span-14-25"><a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a>        {% for category in project_categories %}
+</span><span id="__span-14-26"><a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a>            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>{{ category.name }}<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-14-27"><a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a>            <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span><span id="__span-14-28"><a id="__codelineno-14-28" name="__codelineno-14-28" href="#__codelineno-14-28"></a>                {% for item in category.items.all %}
+</span><span id="__span-14-29"><a id="__codelineno-14-29" name="__codelineno-14-29" href="#__codelineno-14-29"></a>                    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>{{ item.title }}<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-14-30"><a id="__codelineno-14-30" name="__codelineno-14-30" href="#__codelineno-14-30"></a>                    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ item.description }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="__span-14-31"><a id="__codelineno-14-31" name="__codelineno-14-31" href="#__codelineno-14-31"></a>                {% endfor %}
+</span><span id="__span-14-32"><a id="__codelineno-14-32" name="__codelineno-14-32" href="#__codelineno-14-32"></a>            <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span><span id="__span-14-33"><a id="__codelineno-14-33" name="__codelineno-14-33" href="#__codelineno-14-33"></a>        {% endfor %}
+</span><span id="__span-14-34"><a id="__codelineno-14-34" name="__codelineno-14-34" href="#__codelineno-14-34"></a>    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span><span id="__span-14-35"><a id="__codelineno-14-35" name="__codelineno-14-35" href="#__codelineno-14-35"></a>
+</span><span id="__span-14-36"><a id="__codelineno-14-36" name="__codelineno-14-36" href="#__codelineno-14-36"></a>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Service Items<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span><span id="__span-14-37"><a id="__codelineno-14-37" name="__codelineno-14-37" href="#__codelineno-14-37"></a>    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span><span id="__span-14-38"><a id="__codelineno-14-38" name="__codelineno-14-38" href="#__codelineno-14-38"></a>        {% for item in service_items %}
+</span><span id="__span-14-39"><a id="__codelineno-14-39" name="__codelineno-14-39" href="#__codelineno-14-39"></a>            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-14-40"><a id="__codelineno-14-40" name="__codelineno-14-40" href="#__codelineno-14-40"></a>                <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>{{ item.title }}<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span><span id="__span-14-41"><a id="__codelineno-14-41" name="__codelineno-14-41" href="#__codelineno-14-41"></a>                <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ item.description }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="__span-14-42"><a id="__codelineno-14-42" name="__codelineno-14-42" href="#__codelineno-14-42"></a>            <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-14-43"><a id="__codelineno-14-43" name="__codelineno-14-43" href="#__codelineno-14-43"></a>        {% endfor %}
+</span><span id="__span-14-44"><a id="__codelineno-14-44" name="__codelineno-14-44" href="#__codelineno-14-44"></a>    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span><span id="__span-14-45"><a id="__codelineno-14-45" name="__codelineno-14-45" href="#__codelineno-14-45"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-14-46"><a id="__codelineno-14-46" name="__codelineno-14-46" href="#__codelineno-14-46"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<hr>
+<p>In Django, the <strong>context</strong> variable is a <mark>dictionary</mark> that is passed from the view to the template. It contains data that you want to make available to your template for rendering.</p>
+<p>In the provided code snippet:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">projects</span> <span class="o">=</span> <span class="n">Project</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="n">context</span><span class="p">[</span><span class="s1">'projects'</span><span class="p">]</span> <span class="o">=</span> <span class="n">projects</span>
+</span></code></pre></div>
+<ul>
+<li><strong>Project.objects.all()</strong> retrieves all instances of the Project model from the database.</li>
+<li><strong>projects</strong> is a <mark>queryset</mark> containing all instances of the Project model.</li>
+<li><strong>context['projects'] = projects</strong> assigns the queryset projects to the key 'projects' in the context dictionary.</li>
+</ul>
+<p>The context dictionary is then passed to the template when rendering the view. This allows you to access the data in the template using the keys of the context dictionary. For example, in your template, you would use {{ projects }} to access the list of projects retrieved from the database.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Understanding Queryset Retrieval in Django's Model Views: <strong>all()</strong> <mark>vs</mark> <strong>first()</strong> and Looping in Templates</p>
+<p>The difference between <code>Project.objects.all()</code> and <code>Project.objects.first()</code> lies in the data they retrieve from the database:</p>
+<p><strong>1. Project.objects.all():</strong> This retrieves <strong>all instances</strong> of the Project model from the database. It returns a <mark>queryset</mark>, which is a list-like object containing all the instances.</p>
+<p><strong>2. Project.objects.first():</strong> This retrieves the <strong>first instance</strong> of the Project model from the database. It returns a <mark>single instance</mark> of the model, <strong>not a queryset</strong>.</p>
+<p>So, when you use <code>Project.objects.all()</code>, you get all instances of the Project model, and when you use <code>Project.objects.first()</code>, you get only the first instance.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">all()</label><label for="__tabbed_3_2">first()</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>In the context of your IndexView <strong>class-based view</strong>, if you want to display all projects, you would typically use <code>Project.objects.all()</code> and iterate over them in your template using a loop. For example:</p>
+<div class="language-py highlight"><span class="filename">python</span><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1"># Retrieve all projects</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="n">projects</span> <span class="o">=</span> <span class="n">Project</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="n">context</span><span class="p">[</span><span class="s1">'projects'</span><span class="p">]</span> <span class="o">=</span> <span class="n">projects</span>
+</span></code></pre></div>
+<p>Then in your template, you would loop through projects to display each project:</p>
+<div class="language-html highlight"><span class="filename">html</span><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>{% for project in projects %}
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>{{ project.title }}<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ project.description }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>{% endfor %}
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>On the other hand, if you only need to display information about a <strong>single project</strong> (for instance, the first project), you could use <code>Project.objects.first()</code>:</p>
+<div class="language-py highlight"><span class="filename">python</span><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1"># Retrieve the first project</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="n">first_project</span> <span class="o">=</span> <span class="n">Project</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="n">context</span><span class="p">[</span><span class="s1">'first_project'</span><span class="p">]</span> <span class="o">=</span> <span class="n">first_project</span>
+</span></code></pre></div>
+<p>And then in your template, you would display information about this single project:</p>
+<div class="language-html highlight"><span class="filename">html</span><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>{{ first_project.title }}<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ first_project.description }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<p>So, to summarize:</p>
+<ul>
+<li>Use <code>Project.objects.all()</code> when you want to retrieve and display all instances of the Project model.</li>
+<li>Use <code>Project.objects.first()</code> when you only need to retrieve and display information about the first instance of the Project model.</li>
+<li>If you use <code>Project.objects.all()</code>, you typically need to loop through the queryset in your template to display each project.</li>
+</ul>
+</div></div>
 
 
 
