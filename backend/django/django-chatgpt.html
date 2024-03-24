@@ -2012,6 +2012,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#django-built-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      Django Built-in
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3331,6 +3340,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#django-built-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      Django Built-in
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3411,7 +3429,100 @@
 </span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="n">image</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ImageField</span><span class="p">(</span><span class="n">upload_to</span><span class="o">=</span><span class="s1">'images/'</span><span class="p">)</span>
 </span></code></pre></div>
 </li>
-</ul></div>
+</ul>
+<h2 id="django-built-in">Django Built-in</h2>
+<details class="example">
+<summary>Django <code>accounts</code></summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Introduction</label><label for="__tabbed_1_2">Practical</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Django accounts typically refers to the user authentication system built using Django, a high-level Python web framework. In web development, user authentication is a common requirement where users need to register, log in, log out, and manage their accounts.</p>
+<p>Django provides a <code>built-in</code> authentication system that includes features such as user <mark>registration</mark>, <mark>login</mark>, <mark>logout</mark>, <mark>password management</mark>, and more. This system is highly customizable and can be extended to meet the specific requirements of different projects.</p>
+<p>When developers refer to "Django accounts," they are often discussing the implementation and customization of these authentication features within a Django web application. This can include designing user registration forms, login views, password reset functionality, user profile pages, and other related features.</p>
+<p>Django accounts are an essential component of many web applications, as they allow users to securely access and interact with the application's features and data. By using Django's built-in authentication system, developers can streamline the development process and ensure that user accounts are managed securely and efficiently.</p>
+</div>
+<div class="tabbed-block">
+<p>Certainly! Below, I'll guide you through the process of setting up a basic Django project with user authentication. This will include creating a new Django project, setting up user authentication, and creating basic views and templates for user registration, login, and logout.</p>
+<p><strong>Install Django:</strong>
+If you haven't already installed Django, you can do so using pip, Python's package manager:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">pip</span> <span class="n">install</span> <span class="n">django</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="c1"># Create a new Django project:</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">django</span><span class="o">-</span><span class="n">admin</span> <span class="n">startproject</span> <span class="n">myproject</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="c1"># Navigate to the project directory:</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="n">cd</span> <span class="n">myproject</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="c1"># Django's built-in authentication system is part of the django.contrib.auth module</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="c1"># Create a new Django app for user authentication:</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">startapp</span> <span class="n">accounts</span>
+</span></code></pre></div>
+<p><strong>Create URL patterns:</strong>
+Define URL patterns for user authentication views in your project's urls.py file:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span><span class="p">,</span> <span class="n">include</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">'admin/'</span><span class="p">,</span> <span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">urls</span><span class="p">),</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">'accounts/'</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s1">'accounts.urls'</span><span class="p">)),</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="p">]</span>
+</span></code></pre></div>
+<p><strong>Create URL patterns in accounts app:</strong>
+Create a new file called urls.py in the accounts app directory, and define URL patterns for authentication views:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">views</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">'signup/'</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">signup</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'signup'</span><span class="p">),</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">'login/'</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">login</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'login'</span><span class="p">),</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">'logout/'</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">logout</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'logout'</span><span class="p">),</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="p">]</span>
+</span></code></pre></div>
+<p><strong>Create views:</strong>
+Create view functions for user registration, login, and logout in the views.py file inside the accounts app:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="k">def</span> <span class="nf">signup</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="c1"># Implement user registration logic here</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">'accounts/signup.html'</span><span class="p">)</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="k">def</span> <span class="nf">login</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>    <span class="c1"># Implement login logic here</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">'accounts/login.html'</span><span class="p">)</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="k">def</span> <span class="nf">logout</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>    <span class="c1"># Implement logout logic here</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">'accounts/logout.html'</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong>Create templates:</strong>
+Create HTML templates for user registration, login, and logout inside a templates/accounts directory in your app. Name these templates signup.html, login.html, and logout.html, respectively. You can design these templates as per your project's requirements.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># Migrate the database:</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">migrate</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="c1"># Run the development server:</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">runserver</span>
+</span></code></pre></div>
+<p>Now, you should be able to access the user authentication views at URLs like <code>/accounts/signup/</code>, <code>/accounts/login/</code>, and <code>/accounts/logout/</code>. You can customize the views, templates, and functionality further based on your project's requirements. Additionally, you may want to implement features like password reset, user profile management, etc., as needed.</p>
+</div>
+</div>
+</div>
+</details>
+<div class="language-py highlight"><span class="filename">folder structure of accounts</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">myproject</span><span class="o">/</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="err">├──</span> <span class="n">accounts</span><span class="o">/</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="err">│</span>   <span class="err">├──</span> <span class="n">templates</span><span class="o">/</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="err">│</span>   <span class="err">│</span>   <span class="err">├──</span> <span class="n">accounts</span><span class="o">/</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="err">│</span>   <span class="err">│</span>   <span class="err">│</span>   <span class="err">├──</span> <span class="n">signup</span><span class="o">.</span><span class="n">html</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="err">│</span>   <span class="err">│</span>   <span class="err">│</span>   <span class="err">├──</span> <span class="n">login</span><span class="o">.</span><span class="n">html</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="err">│</span>   <span class="err">│</span>   <span class="err">│</span>   <span class="err">└──</span> <span class="n">logout</span><span class="o">.</span><span class="n">html</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="err">│</span>   <span class="err">├──</span> <span class="n">views</span><span class="o">.</span><span class="n">py</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="err">│</span>   <span class="err">├──</span> <span class="n">urls</span><span class="o">.</span><span class="n">py</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="err">├──</span> <span class="n">myproject</span><span class="o">/</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="err">│</span>   <span class="err">├──</span> <span class="n">settings</span><span class="o">.</span><span class="n">py</span>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="err">│</span>   <span class="err">├──</span> <span class="n">urls</span><span class="o">.</span><span class="n">py</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="err">│</span>   <span class="err">└──</span> <span class="o">...</span>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="err">└──</span> <span class="o">...</span>
+</span></code></pre></div></div>
 
 
 
