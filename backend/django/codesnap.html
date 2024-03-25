@@ -3340,7 +3340,23 @@
 <ul>
 <li><a href="https://jamiecounsell.me/posts/sort-apps-in-the-django-admin/">Sort Apps in the Django Admin</a></li>
 </ul>
-</details></div>
+</details>
+<div class="admonition info">
+<p class="admonition-title">Reuse HasAddPermissionMixin in Django Admin for Blogs App</p>
+<p>Yes, you can reuse the <code>HasAddPermissionMixin</code> class in your <code>blogs</code> app's <code>admin.py</code> file, provided that you have access to it. You can either import it directly or place it in a module that both apps can access.</p>
+<p>Here's how you can reuse the <code>HasAddPermissionMixin</code> class in your <code>blogs</code> app's <code>admin.py</code> file:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">YourModel</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="kn">from</span> <span class="nn">websites.apps.admin</span> <span class="kn">import</span> <span class="n">HasAddPermissionMixin</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="k">class</span> <span class="nc">YourModelAdmin</span><span class="p">(</span><span class="n">HasAddPermissionMixin</span><span class="p">,</span> <span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="k">pass</span>  <span class="c1"># Add other admin customization as needed</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">YourModel</span><span class="p">,</span> <span class="n">YourModelAdmin</span><span class="p">)</span>
+</span></code></pre></div>
+<p>In the above code, replace <code>YourModel</code> with the model you want to apply this mixin to. This will apply the <code>HasAddPermissionMixin</code> to your model admin, allowing you to control the add permission based on the existence of objects.</p>
+<p>Make sure that the <code>websites.apps.admin</code> module is importable from your <code>blogs</code> app. If it's not directly accessible, you may need to reorganize your code or import the mixin from a different location that both apps can access.</p>
+</div></div>
 
 
 
