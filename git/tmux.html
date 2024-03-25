@@ -2318,27 +2318,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sessions" class="md-nav__link">
+  <a href="#sessions-windows-panes" class="md-nav__link">
     <span class="md-ellipsis">
-      Sessions
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
-    <span class="md-ellipsis">
-      Windows
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#panes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Panes
+      Sessions, Windows, Panes
     </span>
   </a>
   
@@ -2348,6 +2330,15 @@
   <a href="#manipulating-text" class="md-nav__link">
     <span class="md-ellipsis">
       Manipulating Text
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tmux-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tmux Modes
     </span>
   </a>
   
@@ -2386,6 +2377,30 @@
       Plugins
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Plugins">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tmux-resurrect" class="md-nav__link">
+    <span class="md-ellipsis">
+      tmux-resurrect
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tmux-continuum" class="md-nav__link">
+    <span class="md-ellipsis">
+      tmux-continuum
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3357,27 +3372,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sessions" class="md-nav__link">
+  <a href="#sessions-windows-panes" class="md-nav__link">
     <span class="md-ellipsis">
-      Sessions
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
-    <span class="md-ellipsis">
-      Windows
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#panes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Panes
+      Sessions, Windows, Panes
     </span>
   </a>
   
@@ -3387,6 +3384,15 @@
   <a href="#manipulating-text" class="md-nav__link">
     <span class="md-ellipsis">
       Manipulating Text
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tmux-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tmux Modes
     </span>
   </a>
   
@@ -3426,6 +3432,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Plugins">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tmux-resurrect" class="md-nav__link">
+    <span class="md-ellipsis">
+      tmux-resurrect
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tmux-continuum" class="md-nav__link">
+    <span class="md-ellipsis">
+      tmux-continuum
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3463,122 +3493,162 @@ one screen.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a># tmux prefix command
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>&lt;Ctrl&gt; and b
 </span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Getting Help with tmux by Reviewing Keyboard Shortcuts</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Prefix + ?
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a># listing all tmux session
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>$ tmux list-sessions
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a># shorcurt
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>$ tmux ls
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a># To resize the pane
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>&lt;Prefix&gt;, arrow down (hold)
+</span></code></pre></div>
+</div>
 <p><a class="glightbox" href="../../assets/tmux-working-diagram.png" data-type="image" data-width="100%" data-height="auto" data-title="https://thevaluable.dev/tmux-config-mouseless/" data-desc-position="bottom"><img alt="https://thevaluable.dev/tmux-config-mouseless/" src="../../assets/tmux-working-diagram.png"></a></p>
 <h2 id="installation">Installation</h2>
-<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>tmux
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>tmux
 </span></code></pre></div>
-<h2 id="sessions">Sessions</h2>
-<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># To list all sessions (from outside tmux)</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>$<span class="w"> </span>tmux<span class="w"> </span>ls
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># To create new session</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>$<span class="w"> </span>tmux<span class="w"> </span>new-session<span class="w"> </span>-s<span class="w"> </span>work
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1"># To detach the session: (d for detach)</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>&lt;Prefix&gt;,<span class="w"> </span>d
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="c1"># To rename a session</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>$<span class="w"> </span>tmux<span class="w"> </span>rename-session<span class="w"> </span>-t<span class="w">  </span>old_name<span class="w">  </span>new_name
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="c1"># To select a session</span>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>:choose-session
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="c1"># Move to next session</span>
-</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>&lt;P&gt;,<span class="w"> </span><span class="o">(</span>
-</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>
-</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="c1"># Move to previous session</span>
-</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>&lt;P&gt;,<span class="w"> </span><span class="o">)</span>
-</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>
-</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="c1"># To kill a session</span>
-</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="c1"># You can type exit within a session to destroy the session</span>
-</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="nb">exit</span>
-</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="c1">#or</span>
-</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>​tmux​<span class="w"> </span>​kill-session<span class="w"> </span>​<span class="w"> </span>​-t​<span class="w"> </span>​<span class="w"> </span>basic<span class="w"> </span>​
-</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>tmux​<span class="w"> </span>​kill-session<span class="w"> </span>​<span class="w"> </span>​-t​<span class="w"> </span>​<span class="w"> </span>second_session
-</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>
-</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="c1"># Kill the tmux server and, as a result, every session</span>
-</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>$<span class="w"> </span>tmux<span class="w"> </span>kill-server​
-</span></code></pre></div>
-<h2 id="windows">Windows</h2>
-<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># To create new window: (c for create)</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>&lt;Prefix&gt;,<span class="w"> </span>c
+</div>
+<h2 id="sessions-windows-panes">Sessions, Windows, Panes</h2>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Sessions</label><label for="__tabbed_1_2">Windows</label><label for="__tabbed_1_3">Panes</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># To list all sessions (from outside tmux)</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>$<span class="w"> </span>tmux<span class="w"> </span>ls
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># To rename a window</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>&lt;Prefix&gt;<span class="w"> </span>,
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># To create new session</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>$<span class="w"> </span>tmux<span class="w"> </span>new-session<span class="w"> </span>-s<span class="w"> </span>work
 </span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1"># To move between windows</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="c1"># By default, windows in tmux each have a number, starting at 0</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>&lt;Prefix&gt;,<span class="w"> </span><span class="m">0</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>&lt;Prefix&gt;,<span class="w"> </span><span class="m">1</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="c1"># To find a window </span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>&lt;Prefix&gt;,<span class="w"> </span>f
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="c1"># To display a visual menu of your windows </span>
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>&lt;Prefix&gt;,<span class="w"> </span>w
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="c1"># To close a window</span>
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="nb">type</span><span class="w"> </span><span class="nb">exit</span>
-</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="c1"># or</span>
-</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>&lt;Prefix&gt;,<span class="w"> </span><span class="p">&amp;</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1"># To detach the session: (d for detach)</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>&lt;Prefix&gt;,<span class="w"> </span>d
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="c1"># To rename a session</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>$<span class="w"> </span>tmux<span class="w"> </span>rename-session<span class="w"> </span>-t<span class="w">  </span>old_name<span class="w">  </span>new_name
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="c1"># To select a session</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>:choose-session
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="c1"># Move to next session</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>&lt;P&gt;,<span class="w"> </span><span class="o">(</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="c1"># Move to previous session</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>&lt;P&gt;,<span class="w"> </span><span class="o">)</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="c1"># To kill a session</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="c1"># You can type exit within a session to destroy the session</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="nb">exit</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="c1">#or</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>​tmux​<span class="w"> </span>​kill-session<span class="w"> </span>​<span class="w"> </span>​-t​<span class="w"> </span>​<span class="w"> </span>basic<span class="w"> </span>​
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>tmux​<span class="w"> </span>​kill-session<span class="w"> </span>​<span class="w"> </span>​-t​<span class="w"> </span>​<span class="w"> </span>second_session
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="c1"># Kill the tmux server and, as a result, every session</span>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>$<span class="w"> </span>tmux<span class="w"> </span>kill-server​
 </span></code></pre></div>
-<h2 id="panes">Panes</h2>
-<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># To split the window vertically</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>&lt;Prefix&gt;,<span class="w"> </span>%
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># To create new window: (c for create)</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>&lt;Prefix&gt;,<span class="w"> </span>c
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># To split the pane horizontally</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="c1"># &lt;Prefix&gt;, "</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># To rename a window</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>&lt;Prefix&gt;<span class="w"> </span>,
 </span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># To kill pane</span>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>&lt;Prefix&gt;,<span class="w"> </span>x
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="c1"># To zoom the pane</span>
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>&lt;Prefix&gt;,<span class="w"> </span>z
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="c1"># To move the cursor to the pane to the right, left, down, or up</span>
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>&lt;Prefix&gt;<span class="w"> </span>and<span class="w"> </span>the<span class="w"> </span>right<span class="w"> </span>arrow<span class="w"> </span>key,
-</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>&lt;Prefix&gt;<span class="w"> </span>and<span class="w"> </span>the<span class="w"> </span>left<span class="w"> </span>arrow<span class="w"> </span>key,
-</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>&lt;Prefix&gt;<span class="w"> </span>and<span class="w"> </span>the<span class="w"> </span>down<span class="w"> </span>arrow<span class="w"> </span>key,
-</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>&lt;Prefix&gt;<span class="w"> </span>and<span class="w"> </span>the<span class="w"> </span>up<span class="w"> </span>arrow<span class="w"> </span>key
-</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>
-</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="c1"># Pane Layouts</span>
-</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="c1"># To cycle through these layouts by pressing &lt;PREFIX&gt; SPACEBAR </span>
-</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>&lt;PREFIX&gt;<span class="w"> </span>SPACEBAR<span class="w"> </span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># To move between windows</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="c1"># By default, windows in tmux each have a number, starting at 0</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>&lt;Prefix&gt;,<span class="w"> </span><span class="m">0</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>&lt;Prefix&gt;,<span class="w"> </span><span class="m">1</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="c1"># To find a window </span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>&lt;Prefix&gt;,<span class="w"> </span>f
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="c1"># To display a visual menu of your windows </span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>&lt;Prefix&gt;,<span class="w"> </span>w
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="c1"># To close a window</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="nb">type</span><span class="w"> </span><span class="nb">exit</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="c1"># or</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>&lt;Prefix&gt;,<span class="w"> </span><span class="p">&amp;</span>
 </span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># To split the window vertically</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>&lt;Prefix&gt;,<span class="w"> </span>%
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># To split the pane horizontally</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="c1"># &lt;Prefix&gt;, "</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="c1"># To kill pane</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>&lt;Prefix&gt;,<span class="w"> </span>x
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="c1"># To zoom the pane</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>&lt;Prefix&gt;,<span class="w"> </span>z
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="c1"># To move the cursor to the pane to the right, left, down, or up</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>&lt;Prefix&gt;<span class="w"> </span>and<span class="w"> </span>the<span class="w"> </span>right<span class="w"> </span>arrow<span class="w"> </span>key,
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>&lt;Prefix&gt;<span class="w"> </span>and<span class="w"> </span>the<span class="w"> </span>left<span class="w"> </span>arrow<span class="w"> </span>key,
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>&lt;Prefix&gt;<span class="w"> </span>and<span class="w"> </span>the<span class="w"> </span>down<span class="w"> </span>arrow<span class="w"> </span>key,
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>&lt;Prefix&gt;<span class="w"> </span>and<span class="w"> </span>the<span class="w"> </span>up<span class="w"> </span>arrow<span class="w"> </span>key
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="c1"># Pane Layouts</span>
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="c1"># To cycle through these layouts by pressing &lt;PREFIX&gt; SPACEBAR </span>
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>&lt;PREFIX&gt;<span class="w"> </span>SPACEBAR<span class="w"> </span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+</div>
 <hr>
 <h2 id="manipulating-text">Manipulating Text</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>There are <strong>two important components of tmux</strong></p>
 <ul>
 <li>Copy mode</li>
 <li>paste buffers</li>
 </ul>
-<p><strong>Explaining the Window history</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1"><strong>Explaining the Window history</strong></label><label for="__tabbed_2_2"><strong>paste buffer</strong></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p>In order to work its magic and keep everything in a single terminal window, tmux
 has to hide all of the text that won't fit in the currently viewed pane. It keeps all of
 this text stored in something called <mark>Window history</mark>.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a># copy mode
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a># To enter copy mode
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>&lt;Prefix&gt;, [
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a># To copy text into the paste buffer. 
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a># This sets the start point of the selection.
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>press Ctrl + Space bar (Space bar)
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a># When you are satisfied with your selection,
-</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>simply press Meta + w (Enter) 
-</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a># to copythe text and you will leave Copy mode immediately
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a># copy mode
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a># To enter copy mode
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>&lt;Prefix&gt;, [
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a># To copy text into the paste buffer. 
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a># This sets the start point of the selection.
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>press Ctrl + Space bar (Space bar)
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a># When you are satisfied with your selection,
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>simply press Meta + w (Enter) 
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a># to copythe text and you will leave Copy mode immediately
 </span></code></pre></div>
 <p>Interacting with the paste buffer</p>
 <p>The paste buffer is a holding bucket for all of the text you will copy. It is actually a stack, so each item copied from Copy mode is added at the top of the stack.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a># Pasting text from the paste buffer
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>&lt;Prefix&gt;, ]
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a># Choosing items from the paste buffer
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>&lt;Prefix&gt;, =
+</div>
+<div class="tabbed-block">
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a># Pasting text from the paste buffer
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>&lt;Prefix&gt;, ]
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a># Choosing items from the paste buffer
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>&lt;Prefix&gt;, =
 </span></code></pre></div>
-<p><strong>Explaining the different tmux modes</strong></p>
-<ul>
+</div>
+</div>
+</div>
+</div>
+<h2 id="tmux-modes">Tmux Modes</h2>
+<div class="admonition tip">
+<p class="admonition-title">Explaining the different tmux modes</p>
+<ol>
 <li>
 <p><strong>Default</strong> mode:</p>
 <p>You are in <code>Default mode</code> <mark>by default</mark>, and if you go into any other mode and then exit it, you'll end up back in Default mode.</p>
@@ -3599,56 +3669,54 @@ this text stored in something called <mark>Window history</mark>.</p>
 <p><strong>Control</strong> mode:</p>
 <p>This mode allows third-party applications to interact with tmux through a text-only protocol.</p>
 </li>
-</ul>
+</ol>
+</div>
 <hr>
 <h2 id="-shorcuts-alias">- Shorcuts <code>alias</code></h2>
-<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>​$<span class="w"> </span>tmux​<span class="w"> </span>​list-sessions
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="c1"># alias</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>$<span class="w"> </span>​tmux​<span class="w"> </span>​ls<span class="w"> </span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>​$<span class="w"> </span>tmux​<span class="w"> </span>​new-session<span class="w"> </span>​<span class="w"> </span>​-s<span class="w"> </span>​<span class="w"> </span>​basic​
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="c1"># alias</span>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>$<span class="w"> </span>​tmux​<span class="w"> </span>​new​<span class="w"> </span>​-s<span class="w"> </span>​<span class="w"> </span>​basic
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="c1"># By using the -n flag, we tell tmux to name the first window so we can identify it easily.</span>
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>​$<span class="w"> </span>tmux​<span class="w"> </span>​new​<span class="w"> </span>​-s<span class="w"> </span>​<span class="w"> </span>​windows<span class="w"> </span>​<span class="w"> </span>​-n<span class="w"> </span>​<span class="w"> </span>​shell<span class="w"> </span>
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>
-</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>$<span class="w"> </span>tmux<span class="w"> </span>rename-session<span class="w"> </span>-t<span class="w"> </span>old_name<span class="w"> </span>new_name
-</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="c1"># alias</span>
-</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>$<span class="w"> </span>tmux<span class="w"> </span>rename<span class="w"> </span>-t<span class="w"> </span>old_name<span class="w"> </span>new_name.​
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>​$<span class="w"> </span>tmux​<span class="w"> </span>​list-sessions
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="c1"># alias</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>$<span class="w"> </span>​tmux​<span class="w"> </span>​ls<span class="w"> </span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>​$<span class="w"> </span>tmux​<span class="w"> </span>​new-session<span class="w"> </span>​<span class="w"> </span>​-s<span class="w"> </span>​<span class="w"> </span>​basic​
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="c1"># alias</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>$<span class="w"> </span>​tmux​<span class="w"> </span>​new​<span class="w"> </span>​-s<span class="w"> </span>​<span class="w"> </span>​basic
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="c1"># By using the -n flag, we tell tmux to name the first window so we can identify it easily.</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>​$<span class="w"> </span>tmux​<span class="w"> </span>​new​<span class="w"> </span>​-s<span class="w"> </span>​<span class="w"> </span>​windows<span class="w"> </span>​<span class="w"> </span>​-n<span class="w"> </span>​<span class="w"> </span>​shell<span class="w"> </span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>$<span class="w"> </span>tmux<span class="w"> </span>rename-session<span class="w"> </span>-t<span class="w"> </span>old_name<span class="w"> </span>new_name
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="c1"># alias</span>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>$<span class="w"> </span>tmux<span class="w"> </span>rename<span class="w"> </span>-t<span class="w"> </span>old_name<span class="w"> </span>new_name.​
 </span></code></pre></div>
+</div>
 <hr>
 <h2 id="-easter-eggs">- Easter Eggs</h2>
-<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># To display clock on the screen.</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>&lt;Prefix&gt;,<span class="w"> </span>t
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="c1"># list of sessions and select any of them.</span>
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>&lt;Prefix&gt;,<span class="w"> </span>s<span class="w"> </span>
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="c1"># To attach last session, after you detach session</span>
-</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>$<span class="w"> </span>tmux<span class="w"> </span>attach
-</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>
-</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="c1"># display tmux keyboard shortcuts</span>
-</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>&lt;Prefix&gt;,<span class="w"> </span>?
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># To display clock on the screen.</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>&lt;Prefix&gt;,<span class="w"> </span>t
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="c1"># list of sessions and select any of them.</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>&lt;Prefix&gt;,<span class="w"> </span>s<span class="w"> </span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="c1"># To attach last session, after you detach session</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>$<span class="w"> </span>tmux<span class="w"> </span>attach
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="c1"># display tmux keyboard shortcuts</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>&lt;Prefix&gt;,<span class="w"> </span>?
 </span></code></pre></div>
+</div>
 <hr>
 <h2 id="-commands">- Commands</h2>
-<p>Default Commands for Sessions, Windows, and Panes</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>&lt;Prefix&gt;, n: Moves to the next window.
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>&lt;Prefix&gt;, p: Moves to the previous window.
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>&lt;Prefix&gt;, 0 ... 9:Selects windows by number.
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
-</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>&lt;Prefix&gt;, w: Displays a selectable list of windows in the current session.
-</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>&lt;Prefix&gt;, &amp;: Closes the current window after prompting for confirmation.
-</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>
-</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>&lt;Prefix&gt;, q: Momentarily displays pane numbers in each pane.
-</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>&lt;Preix&gt;, x: Closes the current pane after prompting for confirmation.
-</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>
-</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>&lt;Prefix&gt;, space: Cycles through the various pane layouts.
-</span></code></pre></div>
-<p>Sessions Commands</p>
+<p>Default Commands for <code>Sessions</code>, <code>Windows</code>, and <code>Panes</code></p>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Sessions Commands</label><label for="__tabbed_3_2">Windows Commands</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Prefix + (  Switch to the previous session
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>Prefix + )  Switch to the next session
 </span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>Prefix + s  Display an interactive session list
@@ -3662,7 +3730,8 @@ this text stored in something called <mark>Window history</mark>.</p>
 </span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a># Destroy all sessions and kill all processes
 </span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>tmux kill-server
 </span></code></pre></div>
-<p>Windows Commands</p>
+</div>
+<div class="tabbed-block">
 <div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Prefix + c  Create a new window
 </span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>Prefix + p  Switch to the previous window
 </span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>Prefix + n  Switch to the next window
@@ -3676,47 +3745,30 @@ this text stored in something called <mark>Window history</mark>.</p>
 </span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>Prefix + “  Split windows vertically
 </span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>
 </span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>exit    Close a window
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>---
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>&lt;Prefix&gt;, n: Moves to the next window.
+</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>&lt;Prefix&gt;, p: Moves to the previous window.
+</span><span id="__span-11-19"><a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>
+</span><span id="__span-11-20"><a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>&lt;Prefix&gt;, 0 ... 9:Selects windows by number.
+</span><span id="__span-11-21"><a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>
+</span><span id="__span-11-22"><a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a>&lt;Prefix&gt;, w: Displays a selectable list of windows in the current session.
+</span><span id="__span-11-23"><a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a>&lt;Prefix&gt;, &amp;: Closes the current window after prompting for confirmation.
+</span><span id="__span-11-24"><a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a>
+</span><span id="__span-11-25"><a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a>&lt;Prefix&gt;, q: Momentarily displays pane numbers in each pane.
+</span><span id="__span-11-26"><a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a>&lt;Preix&gt;, x: Closes the current pane after prompting for confirmation.
+</span><span id="__span-11-27"><a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a>
+</span><span id="__span-11-28"><a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a>&lt;Prefix&gt;, space: Cycles through the various pane layouts.
 </span></code></pre></div>
-<p>Getting Help with tmux by Reviewing Keyboard Shortcuts</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Prefix + ?
-</span></code></pre></div>
+</div>
+</div>
+</div>
+</div>
 <hr>
 <p><a class="glightbox" href="../../assets/tmux-cheatsheet.png" data-type="image" data-width="100%" data-height="auto" data-title="https://www.rffuste.com/2023/04/17/oh-my-tmux-mapheet/" data-desc-position="bottom"><img alt="https://www.rffuste.com/2023/04/17/oh-my-tmux-mapheet/" src="../../assets/tmux-cheatsheet.png"></a></p>
-<hr>
-<h2 id="plugins">Plugins</h2>
-<details class="example">
-<summary>tmux <code>multiplexer</code></summary>
-<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># listing all tmux session</span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>$<span class="w"> </span>tmux<span class="w"> </span>list-sessions
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
-</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="c1"># shorcurt</span>
-</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>$<span class="w"> </span>tmux<span class="w"> </span>ls
-</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
-</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="c1"># To resize the pane</span>
-</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>&lt;Prefix&gt;,<span class="w"> </span>arrow<span class="w"> </span>down<span class="w"> </span><span class="o">(</span>hold<span class="o">)</span>
-</span></code></pre></div>
-<p>Installing: <a href="https://github.com/tmux-plugins/tpm">Tmux Plugin Manager</a> - <code>TPM</code></p>
-<div class="language-text highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-</span></code></pre></div>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1"># Here's how you can create a .tmux directory if you need it:</span>
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>mkdir<span class="w"> </span>~/.tmux
-</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
-</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="c1"># To create a basic configuration file, you can do the following:</span>
-</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>touch<span class="w"> </span>~/.tmux.conf
-</span></code></pre></div>
-<ul>
-<li>
-<p><strong>One way</strong></p>
-<p>While in tmux session, press <code>prefix</code> + <code>I</code> (capital <code>i</code>, as in Install) to fetch the plugin.</p>
-<p><code>Notes</code>: The default prefix to tmux is <code>Ctrl+b</code>.</p>
-</li>
-<li>
-<p><strong>Other way</strong></p>
-<p>You can also reload the Tmux configuration file by running the following command to add the plugin.</p>
-<div class="language-sh highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>tmux<span class="w"> </span><span class="nb">source</span><span class="w"> </span>~/.tmux.conf
-</span></code></pre></div>
-</li>
-</ul>
+<details class="note">
+<summary>tmux command mode</summary>
 <p>tmux <code>command</code> mode:</p>
 <p>In tmux, <mark>command mode</mark> allows you to interact with tmux commands without prefixing them with the tmux prefix key (by default, it's <code>Ctrl+b</code>). This can be convenient for executing a series of tmux commands quickly.</p>
 <p>To enter command mode in tmux, you can use the tmux prompt key, which is <code>:</code> (colon) by default. Pressing this key will bring up the tmux command prompt at the bottom of the terminal window.</p>
@@ -3727,67 +3779,145 @@ this text stored in something called <mark>Window history</mark>.</p>
 <li>Enter the tmux command you want to execute, for example, <code>split-window</code> to split the current window.</li>
 <li>Press Enter to execute the command.</li>
 </ul>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1"># Create a new window</span>
-</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>:new-window
-</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>
-</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="c1"># Split the current window into multiple panes.</span>
-</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>:split-window
-</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>
-</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="c1"># Split the current window into panes horizontally.</span>
-</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>:split-window<span class="w"> </span>-h
-</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>
-</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="c1"># Detach from the tmux session.</span>
-</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>:detach-client
-</span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>
-</span><span id="__span-17-13"><a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="c1"># List all tmux sessions.</span>
-</span><span id="__span-17-14"><a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>:list-sessions
-</span><span id="__span-17-15"><a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>
-</span><span id="__span-17-16"><a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a><span class="c1"># Reload the tmux configuration file.</span>
-</span><span id="__span-17-17"><a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a>:source-file<span class="w"> </span>~/.tmux.confS
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># Create a new window</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>:new-window
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="c1"># Split the current window into multiple panes.</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>:split-window
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="c1"># Split the current window into panes horizontally.</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>:split-window<span class="w"> </span>-h
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="c1"># Detach from the tmux session.</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>:detach-client
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="c1"># List all tmux sessions.</span>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>:list-sessions
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="c1"># Reload the tmux configuration file.</span>
+</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>:source-file<span class="w"> </span>~/.tmux.confS
 </span></code></pre></div>
-<p>Blog</p>
+</details>
+<hr>
+<h2 id="plugins">Plugins</h2>
+<div class="admonition example">
+<p class="admonition-title">tmux plugin manager: <code>tpm</code></p>
+<p>Installing: <a href="https://github.com/tmux-plugins/tpm">Tmux Plugin Manager</a> - <code>TPM</code></p>
+<div class="language-text highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+</span></code></pre></div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># Here's how you can create a .tmux directory if you need it:</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>mkdir<span class="w"> </span>~/.tmux
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="c1"># To create a basic configuration file, you can do the following:</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>touch<span class="w"> </span>~/.tmux.conf
+</span></code></pre></div>
 <ul>
+<li>
+<p><strong>One way</strong></p>
+<p>While in tmux session, press <code>prefix</code> + <code>I</code> (capital <code>i</code>, as in Install) to fetch the plugin.</p>
+<p><code>Notes</code>: The default prefix to tmux is <code>Ctrl+b</code>.</p>
+</li>
+<li>
+<p><strong>Other way</strong></p>
+<p>You can also reload the Tmux configuration file by running the following command to add the plugin.</p>
+<div class="language-sh highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>tmux<span class="w"> </span><span class="nb">source</span><span class="w"> </span>~/.tmux.conf
+</span></code></pre></div>
+</li>
+</ul>
+</div>
+<h3 id="tmux-resurrect">tmux-resurrect</h3>
+<p>a plugin that allows to easily <strong>save and restore tmux environment</strong> <mark>after system restarts</mark>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">Usage</label><label for="__tabbed_4_2">Installation</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Default key bindings: </p>
+<ul>
+<li><span class="keys"><kbd>prefix</kbd><span>+</span><kbd>Ctrl-s</kbd></span> :  <strong>save</strong></li>
+<li><span class="keys"><kbd>prefix</kbd><span>+</span><kbd>Ctrl-r</kbd></span> :  <strong>restore</strong></li>
+</ul>
+</div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<p>Add plugin to the list of TPM plugins in <code>.tmux.conf</code>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>set -g @plugin 'tmux-plugins/tmux-resurrect'
+</span></code></pre></div>
+<p>Hit <code>prefix + I</code> to fetch the plugin and source it. You should now be able to use the plugin.</p>
+</div>
+<h3 id="tmux-continuum">tmux-continuum</h3>
+<p>a plugin that <strong>automates the saving and restoring</strong> of the tmux environment.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">Usage</label><label for="__tabbed_5_2">Installation</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><strong>Continuous saving</strong></p>
+<p>Tmux environment will be saved at the interval of 15 minutes. All the saving happens in the background without the impact to your workflow. This action starts automatically when the plugin is installed.</p>
+<p><strong>Automatic tmux start</strong></p>
+<p>Tmux is automatically started after the computer/server is turned on.</p>
+<p><strong>Automatic restore</strong></p>
+<p>Last saved environment is automatically restored when tmux is started. To enable this, put the following in the <code>.tmux.conf</code>:</p>
+<hr>
+<div class="language-text highlight"><span class="filename">tmux.conf</span><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>set -g @continuum-restore 'on'
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>Installation with Tmux Plugin Manager (recommended)</p>
+<p><mark>Please make sure you have <code>tmux-resurrect</code> installed</mark>.</p>
+<p>Add plugin to the list of TPM plugins in <code>.tmux.conf</code>:</p>
+<div class="language-text highlight"><span class="filename">tmux.conf</span><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>set -g @plugin 'tmux-plugins/tmux-resurrect'
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>set -g @plugin 'tmux-plugins/tmux-continuum'
+</span></code></pre></div>
+<p>Hit <code>prefix + I</code> to fetch the plugin and source it. The plugin will automatically start "working" in the background, no action required.</p>
+</div>
+</div>
+</div>
+</div>
+<hr>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><mark>Site Reference</mark></li>
+<li>
+<p><a href="https://www.linode.com/docs/guides/persistent-terminal-sessions-with-tmux/">tmux</a></p>
+</li>
+<li>
+<p><mark>Books</mark></p>
+</li>
+<li><a href="https://www.amazon.com/Getting-Started-tmux-Victor-Quinn-ebook/dp/B00NW474T6">Getting Started with tmux by Victor Quinn, J.D.</a></li>
+<li><a href="https://www.oreilly.com/library/view/tmux-taster/9781484207758/">tmux Taster by Mark McDonnell</a></li>
+<li>
+<p><a href="https://pragprog.com/titles/bhtmux2/tmux-2/">tmux 2: Productive Mouse-Free Development by Brian P. Hogan</a></p>
+</li>
+<li>
+<p><mark>Blog</mark></p>
+</li>
 <li><a href="https://ostechnix.com/install-tmux-plugin-manager/">Installing TPM</a></li>
 <li><a href="https://dev.to/iggredible/useful-tmux-configuration-examples-k3g">usefull tmux configuration</a></li>
 <li><a href="https://hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/">customizing tmux configuration</a></li>
 <li><a href="https://www.hostinger.com/tutorials/tmux-config">tmux config</a></li>
 <li><a href="https://dev.to/iggredible/useful-tmux-configuration-examples-k3g">Useful Tmux Configuration</a></li>
 <li><a href="https://dev.to/andrenbrandao/terminal-setup-with-zsh-tmux-dracula-theme-48lm">Terminal Setup with Zsh + Tmux + Dracula Theme</a></li>
-<li><a href="https://www.youtube.com/watch?v=78FjNkrPn5Y">Replicate My Tmux Setup in Less Than 5 Minutes [Beginner Friendly!]</a></li>
-</ul>
-<p>Github</p>
-<ul>
+<li>
+<p><a href="https://www.youtube.com/watch?v=78FjNkrPn5Y">Replicate My Tmux Setup in Less Than 5 Minutes [Beginner Friendly!]</a></p>
+</li>
+<li>
+<p><mark>Github</mark></p>
+</li>
 <li><a href="https://github.com/tmux-plugins/tpm#installation">tmux plugins: github</a></li>
 <li><a href="https://github.com/rothgar/awesome-tmux?tab=readme-ov-file#plugins">list of awesome tmux: github</a></li>
 <li><a href="https://github.com/dracula/tmux?tab=readme-ov-file">dracula tmux plugins: github</a></li>
 <li><a href="https://draculatheme.com/tmux">draculatheme offical site</a></li>
-</ul>
-<p>Stackoverflow</p>
-<ul>
+<li><a href="https://arcolinux.com/everything-you-need-to-know-about-tmux-reconstructing-tmux-sessions-after-restarts/">EVERYTHING YOU NEED TO KNOW ABOUT TMUX – Reconstructing Tmux Sessions After Restarts</a></li>
+<li><a href="https://wiki.gentoo.org/wiki/Tmux/plugins/resurrect">Tmux/plugins/resurrect</a></li>
+<li>
+<p><a href="https://github.com/tmux-plugins/tmux-continuum">tmux-continuum: github</a></p>
+</li>
+<li>
+<p><mark>Stackoverflow</mark></p>
+</li>
 <li><a href="https://unix.stackexchange.com/questions/744304/how-to-press-ctrl-b-capital-i-trying-to-install-plugins-in-tmux">How to press Ctrl + b + capital I (trying to install plugins in tmux)?</a></li>
-</ul>
-</details>
-<hr>
-<h2 id="reference">Reference</h2>
-<blockquote>
-<p>Site Reference</p>
-</blockquote>
-<ul>
-<li><a href="https://www.linode.com/docs/guides/persistent-terminal-sessions-with-tmux/">tmux</a></li>
-</ul>
-<blockquote>
-<p>Books</p>
-</blockquote>
-<ul>
-<li>
-<p><a href="https://www.amazon.com/Getting-Started-tmux-Victor-Quinn-ebook/dp/B00NW474T6">Getting Started with tmux by Victor Quinn, J.D.</a></p>
-</li>
-<li>
-<p><a href="https://www.oreilly.com/library/view/tmux-taster/9781484207758/">tmux Taster by Mark McDonnell</a></p>
-</li>
-<li>
-<p><a href="https://pragprog.com/titles/bhtmux2/tmux-2/">tmux 2: Productive Mouse-Free Development by Brian P. Hogan</a></p>
-</li>
 </ul></div>
 
 
