@@ -3807,6 +3807,96 @@ packages, <code>snap</code> bundles all of the dependencies for a package into a
 <hr>
 <p><a class="glightbox" href="https://www.mypspa.org/public/images/article/real/thumbs/alertpic_678345.jpeg" data-type="image" data-width="100%" data-height="auto" data-title="Iceberg Theory" data-desc-position="bottom"><img alt="Iceberg Theory" src="https://www.mypspa.org/public/images/article/real/thumbs/alertpic_678345.jpeg"></a></p>
 <hr>
+<div class="admonition question">
+<p class="admonition-title">Linux</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Pass (<code>ubuntu</code>)</p>
+<p>pass is a very simple password store that keeps passwords inside <code>gpg</code>. It stores, retrieves, generates, and synchronizes passwords securely.</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>pass
+</span></code></pre></div>
+</div>
+<details class="example">
+<summary><code>service</code> vs <code>systemctl</code></summary>
+<p>The commands sudo <code>service</code> and <code>systemctl</code> are both used for managing system services in Unix-like operating systems, but they have different purposes and usage patterns.</p>
+<ol>
+<li>
+<p><strong>sudo service</strong>:</p>
+<p><code>sudo service</code> is a command-line tool used for managing services on Unix-like systems, <mark>particularly those using <strong>SysVinit</strong> as the init     system</mark>. It provides a simple and consistent interface for starting, stopping, restarting, and querying the status of services.</p>
+<p>Usage:</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="c1"># syntax</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>$<span class="w"> </span>sudo<span class="w"> </span>service<span class="w"> </span>&lt;service_name&gt;<span class="w"> </span>&lt;action&gt;
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="c1">#example</span>
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>$<span class="w"> </span>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>apache2
+</span></code></pre></div>
+<p>The service command is often used in older Linux distributions that still use SysVinit as the init system.</p>
+</li>
+<li>
+<p><strong>systemctl</strong>:</p>
+<p><code>systemctl</code> is a command-line tool used for controlling the systemd system and service manager. <mark><code>Systemd</code> is a modern init system</mark> used by many     Linux distributions. systemctl allows you to manage services, units, targets, sockets, and more.</p>
+<p>Usage:</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>$<span class="w"> </span>sudo<span class="w"> </span>systemctl<span class="w"> </span>&lt;action&gt;<span class="w"> </span>&lt;service_name&gt;
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>$<span class="w"> </span>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>apache2
+</span></code></pre></div>
+<p><code>systemctl</code> provides more features and capabilities compared to <code>service</code>, and it's the preferred method for managing services on systems that use     systemd.</p>
+</li>
+</ol>
+<p>In summary, if your system is using SysVinit as the init system, you would typically use <code>sudo service</code> to manage services. If your system is using systemd, <code>systemctl</code> is the preferred tool for service management. However, some distributions may provide compatibility layers or aliases to ensure compatibility between the two commands.</p>
+</details>
+<details class="example">
+<summary>Creating a <code>User</code> <mark>without password</mark></summary>
+<p>Yes, you can add the <code>jenkins</code> user without setting a password. This is often done for system users that don't require interactive login, such as the     <code>jenkins</code> user used for automation tasks.</p>
+<p>To add the <code>jenkins</code> user without setting a password, you can use the useradd command with the <code>-r</code> (or <code>--system</code>) option, which creates a system user     without a password or home directory. Here's the command:</p>
+<div class="language-sh highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>sudo<span class="w"> </span>useradd<span class="w"> </span>-r<span class="w"> </span>jenkins
+</span></code></pre></div>
+<p>This command creates the <code>jenkins</code> user as a system user. <mark>System users are typically used for services and daemons and do not have passwords or home     directories by default</mark>.</p>
+<p>After adding the user, you can proceed to grant the necessary permissions to the <code>jenkins</code> user, such as adding it to the 'docker' group if needed, to allow it to perform specific tasks without requiring a password.</p>
+</details>
+<details class="example">
+<summary>groups &amp; id in unix</summary>
+<p>To see the permissions of a user on a Unix-like system, you can use the <code>groups</code> command or <code>id</code> command.</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="c1"># Syntax</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>$<span class="w"> </span>groups<span class="w"> </span>&lt;username&gt;
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>$<span class="w"> </span>id<span class="w"> </span>&lt;username&gt;
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>
+</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="c1"># Example: ($USER refer to the currently logged-in user.)</span>
+</span><span id="__span-26-6"><a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>$<span class="w"> </span>groups<span class="w"> </span><span class="nv">$USER</span>
+</span></code></pre></div>
+</details>
+<details class="example">
+<summary><a href="https://phoenixnap.com/kb/how-to-install-xampp-on-ubuntu">Installing Xampp</a> in Linux</summary>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="c1"># To Launch XAMPP</span>
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>sudo<span class="w"> </span>/opt/lampp/./manager-linux-x64.run
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="c1"># To Unistall</span>
+</span><span id="__span-27-5"><a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>sudo<span class="w"> </span>/opt/lampp/./uninstall
+</span><span id="__span-27-6"><a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>
+</span><span id="__span-27-7"><a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>
+</span><span id="__span-27-8"><a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a><span class="c1"># After uninstall, remove the directory</span>
+</span><span id="__span-27-9"><a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a>sudo<span class="w"> </span>rm<span class="w"> </span>-r<span class="w"> </span>/opt/lamp
+</span></code></pre></div>
+<p><code>sudo visudo</code> is a command used in Linux to edit the sudoers file, which determines who has administrative privileges on the system and what commands they can run with elevated permissions using the <code>sudo</code> command. The <mark>sudoers</mark> file is crucial for system security, as it controls access to sensitive operations.</p>
+<p>Here's what each part of the command does:</p>
+<ul>
+<li>
+<p><code>sudo</code>:</p>
+<div class="language-text highlight"><pre><span></span><code>This is a command used in Unix-like operating systems to allow users to run programs with the security privileges of another user (usually the `superuser`, or "`root`"). It stands for "superuser do."
+</code></pre></div>
+</li>
+<li>
+<p><code>visudo</code>:</p>
+<div class="language-text highlight"><pre><span></span><code>This is a command-line utility specifically designed for editing the ==sudoers file==. It opens the sudoers file in a text editor, but it performs some syntax checking before saving changes to ensure that the file remains in a valid state. This helps prevent accidental misconfigurations that could lock users out of administrative access or potentially compromise system security.
+</code></pre></div>
+</li>
+</ul>
+<p>In summary, <code>sudo visudo</code> is used to safely edit the sudoers file, which is critical for managing user privileges and access control on a Linux system.</p>
+<ul>
+<li><a href="https://itsfoss.com/install-xampp-ubuntu/">How to Install and Use XAMPP on Ubuntu</a></li>
+</ul>
+</details>
+<hr>
 <h2 id="reference">Reference</h2>
 <ul>
 <li><a href="https://leanpub.com/shellsamurai-master-the-linux-command-line">Shell Samurai by Stetson Blake</a></li>

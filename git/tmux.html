@@ -2381,6 +2381,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plugins
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -3411,6 +3420,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plugins
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -3664,6 +3682,91 @@ this text stored in something called <mark>Window history</mark>.</p>
 </span></code></pre></div>
 <hr>
 <p><a class="glightbox" href="../../assets/tmux-cheatsheet.png" data-type="image" data-width="100%" data-height="auto" data-title="https://www.rffuste.com/2023/04/17/oh-my-tmux-mapheet/" data-desc-position="bottom"><img alt="https://www.rffuste.com/2023/04/17/oh-my-tmux-mapheet/" src="../../assets/tmux-cheatsheet.png"></a></p>
+<hr>
+<h2 id="plugins">Plugins</h2>
+<details class="example">
+<summary>tmux <code>multiplexer</code></summary>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># listing all tmux session</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>$<span class="w"> </span>tmux<span class="w"> </span>list-sessions
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="c1"># shorcurt</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>$<span class="w"> </span>tmux<span class="w"> </span>ls
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="c1"># To resize the pane</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>&lt;Prefix&gt;,<span class="w"> </span>arrow<span class="w"> </span>down<span class="w"> </span><span class="o">(</span>hold<span class="o">)</span>
+</span></code></pre></div>
+<p>Installing: <a href="https://github.com/tmux-plugins/tpm">Tmux Plugin Manager</a> - <code>TPM</code></p>
+<div class="language-text highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+</span></code></pre></div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1"># Here's how you can create a .tmux directory if you need it:</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>mkdir<span class="w"> </span>~/.tmux
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="c1"># To create a basic configuration file, you can do the following:</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>touch<span class="w"> </span>~/.tmux.conf
+</span></code></pre></div>
+<ul>
+<li>
+<p><strong>One way</strong></p>
+<p>While in tmux session, press <code>prefix</code> + <code>I</code> (capital <code>i</code>, as in Install) to fetch the plugin.</p>
+<p><code>Notes</code>: The default prefix to tmux is <code>Ctrl+b</code>.</p>
+</li>
+<li>
+<p><strong>Other way</strong></p>
+<p>You can also reload the Tmux configuration file by running the following command to add the plugin.</p>
+<div class="language-sh highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>tmux<span class="w"> </span><span class="nb">source</span><span class="w"> </span>~/.tmux.conf
+</span></code></pre></div>
+</li>
+</ul>
+<p>tmux <code>command</code> mode:</p>
+<p>In tmux, <mark>command mode</mark> allows you to interact with tmux commands without prefixing them with the tmux prefix key (by default, it's <code>Ctrl+b</code>). This can be convenient for executing a series of tmux commands quickly.</p>
+<p>To enter command mode in tmux, you can use the tmux prompt key, which is <code>:</code> (colon) by default. Pressing this key will bring up the tmux command prompt at the bottom of the terminal window.</p>
+<p>Here's how you can use command mode:</p>
+<ul>
+<li>Press <mark>Ctrl+b</mark> (default prefix key) to enter tmux command mode.</li>
+<li>Type <mark>:</mark> (colon). This will bring up the tmux command prompt at the bottom of the terminal window.</li>
+<li>Enter the tmux command you want to execute, for example, <code>split-window</code> to split the current window.</li>
+<li>Press Enter to execute the command.</li>
+</ul>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1"># Create a new window</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>:new-window
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="c1"># Split the current window into multiple panes.</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>:split-window
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="c1"># Split the current window into panes horizontally.</span>
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>:split-window<span class="w"> </span>-h
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>
+</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="c1"># Detach from the tmux session.</span>
+</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>:detach-client
+</span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>
+</span><span id="__span-17-13"><a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="c1"># List all tmux sessions.</span>
+</span><span id="__span-17-14"><a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>:list-sessions
+</span><span id="__span-17-15"><a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>
+</span><span id="__span-17-16"><a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a><span class="c1"># Reload the tmux configuration file.</span>
+</span><span id="__span-17-17"><a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a>:source-file<span class="w"> </span>~/.tmux.confS
+</span></code></pre></div>
+<p>Blog</p>
+<ul>
+<li><a href="https://ostechnix.com/install-tmux-plugin-manager/">Installing TPM</a></li>
+<li><a href="https://dev.to/iggredible/useful-tmux-configuration-examples-k3g">usefull tmux configuration</a></li>
+<li><a href="https://hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/">customizing tmux configuration</a></li>
+<li><a href="https://www.hostinger.com/tutorials/tmux-config">tmux config</a></li>
+<li><a href="https://dev.to/iggredible/useful-tmux-configuration-examples-k3g">Useful Tmux Configuration</a></li>
+<li><a href="https://dev.to/andrenbrandao/terminal-setup-with-zsh-tmux-dracula-theme-48lm">Terminal Setup with Zsh + Tmux + Dracula Theme</a></li>
+<li><a href="https://www.youtube.com/watch?v=78FjNkrPn5Y">Replicate My Tmux Setup in Less Than 5 Minutes [Beginner Friendly!]</a></li>
+</ul>
+<p>Github</p>
+<ul>
+<li><a href="https://github.com/tmux-plugins/tpm#installation">tmux plugins: github</a></li>
+<li><a href="https://github.com/rothgar/awesome-tmux?tab=readme-ov-file#plugins">list of awesome tmux: github</a></li>
+<li><a href="https://github.com/dracula/tmux?tab=readme-ov-file">dracula tmux plugins: github</a></li>
+<li><a href="https://draculatheme.com/tmux">draculatheme offical site</a></li>
+</ul>
+<p>Stackoverflow</p>
+<ul>
+<li><a href="https://unix.stackexchange.com/questions/744304/how-to-press-ctrl-b-capital-i-trying-to-install-plugins-in-tmux">How to press Ctrl + b + capital I (trying to install plugins in tmux)?</a></li>
+</ul>
+</details>
 <hr>
 <h2 id="reference">Reference</h2>
 <blockquote>
