@@ -3901,6 +3901,80 @@ How to Use Namespaced URLs?</p>
 <hr>
 </details>
 <hr>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">redirect</span>
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="k">class</span> <span class="nc">IndexView</span><span class="p">(</span><span class="n">TemplateView</span><span class="p">):</span>
+</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>    <span class="n">template_name</span> <span class="o">=</span> <span class="s1">'index.html'</span>
+</span><span id="__span-29-5"><a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>
+</span><span id="__span-29-6"><a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>    <span class="k">def</span> <span class="nf">get_context_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span><span id="__span-29-7"><a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a>        <span class="n">context</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">get_context_data</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</span><span id="__span-29-8"><a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a>        <span class="n">context</span><span class="p">[</span><span class="s1">'form'</span><span class="p">]</span> <span class="o">=</span> <span class="n">ContactForm</span><span class="p">()</span>
+</span><span id="__span-29-9"><a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a>        <span class="k">return</span> <span class="n">context</span>
+</span><span id="__span-29-10"><a id="__codelineno-29-10" name="__codelineno-29-10" href="#__codelineno-29-10"></a>
+</span><span id="__span-29-11"><a id="__codelineno-29-11" name="__codelineno-29-11" href="#__codelineno-29-11"></a>    <span class="k">def</span> <span class="nf">post</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span><span id="__span-29-12"><a id="__codelineno-29-12" name="__codelineno-29-12" href="#__codelineno-29-12"></a>        <span class="n">form</span> <span class="o">=</span> <span class="n">ContactForm</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">)</span>
+</span><span id="__span-29-13"><a id="__codelineno-29-13" name="__codelineno-29-13" href="#__codelineno-29-13"></a>        <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
+</span><span id="__span-29-14"><a id="__codelineno-29-14" name="__codelineno-29-14" href="#__codelineno-29-14"></a>            <span class="n">name</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">cleaned_data</span><span class="p">[</span><span class="s1">'name'</span><span class="p">]</span>
+</span><span id="__span-29-15"><a id="__codelineno-29-15" name="__codelineno-29-15" href="#__codelineno-29-15"></a>            <span class="n">email</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">cleaned_data</span><span class="p">[</span><span class="s1">'email'</span><span class="p">]</span>
+</span><span id="__span-29-16"><a id="__codelineno-29-16" name="__codelineno-29-16" href="#__codelineno-29-16"></a>            <span class="n">message</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">cleaned_data</span><span class="p">[</span><span class="s1">'message'</span><span class="p">]</span>
+</span><span id="__span-29-17"><a id="__codelineno-29-17" name="__codelineno-29-17" href="#__codelineno-29-17"></a>            <span class="n">contact_message</span> <span class="o">=</span> <span class="n">ContactMessage</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">email</span><span class="o">=</span><span class="n">email</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="n">message</span><span class="p">)</span>
+</span><span id="__span-29-18"><a id="__codelineno-29-18" name="__codelineno-29-18" href="#__codelineno-29-18"></a>            <span class="c1"># Redirect to contact success URL</span>
+</span><span id="__span-29-19"><a id="__codelineno-29-19" name="__codelineno-29-19" href="#__codelineno-29-19"></a>            <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">'contact_success'</span><span class="p">)</span>
+</span><span id="__span-29-20"><a id="__codelineno-29-20" name="__codelineno-29-20" href="#__codelineno-29-20"></a>        <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">template_name</span><span class="p">,</span> <span class="p">{</span><span class="s1">'form'</span><span class="p">:</span> <span class="n">form</span><span class="p">})</span>
+</span></code></pre></div>
+</div>
+<div class="admonition bugs">
+<p class="admonition-title">Bugs</p>
+<p>In the ContactIndexView, context['form'] = ContactForm() and context['contact_messages'] = ContactMessage.objects.all() are two separate lines that serve different purposes:</p>
+<ul>
+<li>
+<p><strong>context['form'] = ContactForm():</strong> This line creates an instance of the ContactForm class and assigns it to the key <code>form</code> in the context dictionary. This <mark>form instance</mark> will be used in the template to render the contact form.</p>
+</li>
+<li>
+<p><strong>context['contact_messages'] = ContactMessage.objects.all():</strong> This line fetches all instances of the <mark>ContactMessage model</mark> using <code>ContactMessage.objects.all()</code> and assigns them to the key <code>contact_messages</code> in the context dictionary. These contact messages will be used in the template to display the existing messages.</p>
+</li>
+</ul>
+<p><strong>In summary:</strong></p>
+<p><code>context['form']</code> is used to pass a <mark>form instance</mark> to the template for rendering the form.</p>
+<p><code>context['contact_messages']</code> is used to pass a <mark>queryset</mark> of ContactMessage instances to the template for displaying existing messages.</p>
+<p>Both are important for rendering the complete view in the template: the form for users to submit new messages and the existing messages for users to view.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Whether to use the model or the form in the context depends on what you want to achieve in your view and template.</p>
+<p>Here's a breakdown:</p>
+<p><strong>1. Model (ContactMessage.objects.all()):</strong></p>
+<ul>
+<li>If you want to display existing contact messages in your template, you would typically use the model queryset (ContactMessage.objects.all()). This allows you to access all instances of the <code>ContactMessage model</code> from your database.</li>
+<li>You would use the model queryset to iterate over existing messages and display them in your template.</li>
+</ul>
+<p><strong>2.Form (ContactForm()):</strong></p>
+<ul>
+<li>If you want to include a form in your template for users to submit new contact messages, you would use the form instance (<code>ContactForm()</code>).</li>
+<li>You would use the form instance to render the form fields in your template and handle user input (<code>submission</code>) when the form is submitted.</li>
+</ul>
+<hr>
+<p>In most cases, you would want to include both the model queryset and the form in your context:</p>
+<ul>
+<li><mark>Use the model queryset</mark> to display existing messages.</li>
+<li><mark>Use the form instance</mark> to render the form for users to submit new messages.</li>
+</ul>
+<p>This allows your template to provide both functionalities: displaying existing messages and enabling users to submit new messages.</p>
+<p>Here's how you might include both in your view:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="k">class</span> <span class="nc">ContactIndexView</span><span class="p">(</span><span class="n">TemplateView</span><span class="p">):</span>
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="n">template_name</span> <span class="o">=</span> <span class="s1">'index.html'</span>
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>
+</span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a><span class="k">def</span> <span class="nf">get_context_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span><span id="__span-30-5"><a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>    <span class="n">context</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">get_context_data</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</span><span id="__span-30-6"><a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>    <span class="n">context</span><span class="p">[</span><span class="s1">'form'</span><span class="p">]</span> <span class="o">=</span> <span class="n">ContactForm</span><span class="p">()</span>  <span class="c1"># Form for user submission</span>
+</span><span id="__span-30-7"><a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a>    <span class="n">context</span><span class="p">[</span><span class="s1">'contact_messages'</span><span class="p">]</span> <span class="o">=</span> <span class="n">ContactMessage</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>  <span class="c1"># Existing messages</span>
+</span><span id="__span-30-8"><a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a>    <span class="k">return</span> <span class="n">context</span>
+</span></code></pre></div>
+<p>And in your template, you would use <code>{{ form }}</code> to render the form fields and iterate over <code>{{ contact_messages }}</code> to display existing messages.</p>
+</div>
+<hr>
 <h2 id="reference">Reference</h2></div></div>
 
 
