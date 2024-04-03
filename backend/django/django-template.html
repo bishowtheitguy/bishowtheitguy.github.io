@@ -3500,6 +3500,26 @@
 <hr>
 <h2 id="templates"><a href="https://docs.djangoproject.com/en/5.0/ref/templates/">Templates</a></h2>
 <hr>
+<div class="admonition question">
+<p class="admonition-title">Choosing Between Direct Slug Usage and Named URL Patterns in Django Templates</p>
+<p>Both approaches have their advantages and use cases:</p>
+<p><strong>1. <code>&lt;a href="{{ blog.slug }}"&gt;{{ blog.title }}&lt;/a&gt;</code>:</strong></p>
+<ul>
+<li>This approach directly uses the value stored in the slug field of your BlogItem model to generate the URL.</li>
+<li>It's simpler and more straightforward.</li>
+<li>You don't need to define URL patterns or use the <code>{% url %}</code> template tag.</li>
+<li>However, it's less flexible if you ever need to change the URL structure or if you want to handle URLs differently in different parts of your website.</li>
+</ul>
+<p><strong>2. <code>&lt;a href="{% url 'blog:inner' slug=blog.slug %}"&gt;{{ blog.title }}&lt;/a&gt;</code>:</strong></p>
+<ul>
+<li>This approach uses the <code>{% url %}</code> template tag to generate the URL based on the specified view name (<code>'blog:inner'</code>) and the provided parameters (<code>slug=blog.slug</code>).</li>
+<li>It's more flexible and maintainable. If you ever need to change the URL structure or if you want to reuse the same URL pattern in different parts of your website, you only need to update the URL pattern in your urls.py file.</li>
+<li>It ensures consistency and helps prevent errors in URL generation.</li>
+<li>However, it requires you to define URL patterns in your <code>urls.py</code> file and use the <code>{% url %}</code> template tag, which adds some complexity.</li>
+</ul>
+<p>In general, if your URL structure is simple and unlikely to change, and if you don't need the flexibility provided by named URL patterns and the <code>{% url %}</code> template tag, you can use the first approach (<code>&lt;a href="{{ blog.slug }}"&gt;{{ blog.title }}&lt;/a&gt;</code>). Otherwise, if you want more flexibility and maintainability, especially for larger or more complex projects, the second approach (<code>&lt;a href="{% url 'blog:inner' slug=blog.slug %}"&gt;{{ blog.title }}&lt;/a&gt;</code>) is recommended.</p>
+</div>
+<hr>
 <h2 id="reference">Reference</h2>
 <ul>
 <li><a href="https://testdriven.io/blog/django-static-files/">Working with Static and Media Files in Django</a></li>
