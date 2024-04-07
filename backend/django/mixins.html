@@ -11,25 +11,25 @@
       
       
       
-        <link rel="prev" href="rtk-guide.html">
+        <link rel="prev" href="django-tools.html">
       
       
-        <link rel="next" href="../backend/intro.html">
+        <link rel="next" href="chatgpt.html">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
     
     
       
-        <title>redux middleware - Bishow IT Guy</title>
+        <title>Mixins - Bishow IT Guy</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,14 +50,14 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -68,7 +68,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -86,11 +86,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#redux-thunk-gives-redux-side-effects" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -101,7 +96,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Bishow IT Guy" class="md-header__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
+    <a href="../.." title="Bishow IT Guy" class="md-header__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -121,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              redux middleware
+              Mixins
             
           </span>
         </div>
@@ -240,10 +235,28 @@
     
     
       <li class="md-tabs__item">
-        <a href="typescript/typescript-installation.html" class="md-tabs__link">
+        <a href="../../frontend/typescript/typescript-installation.html" class="md-tabs__link">
           
   
   Typescript
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../frontend/react/intro.html" class="md-tabs__link">
+          
+  
+  React
 
         </a>
       </li>
@@ -260,25 +273,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="react/intro.html" class="md-tabs__link">
-          
-  
-  React
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../backend/intro.html" class="md-tabs__link">
+        <a href="../intro.html" class="md-tabs__link">
           
   
   Backend
@@ -296,7 +291,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../git/intro.html" class="md-tabs__link">
+        <a href="../../git/intro.html" class="md-tabs__link">
           
   
   Git
@@ -314,7 +309,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../career/developer-plan.html" class="md-tabs__link">
+        <a href="../../career/developer-plan.html" class="md-tabs__link">
           
   
   Career
@@ -332,7 +327,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../interviewquestion/terminology.html" class="md-tabs__link">
+        <a href="../../interviewquestion/terminology.html" class="md-tabs__link">
           
   
   Interview Question
@@ -350,7 +345,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../more/intro.html" class="md-tabs__link">
+        <a href="../../more/intro.html" class="md-tabs__link">
           
   
   More
@@ -383,7 +378,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Bishow IT Guy" class="md-nav__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
+    <a href="../.." title="Bishow IT Guy" class="md-nav__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -453,7 +448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="typescript/typescript-installation.html" class="md-nav__link">
+      <a href="../../frontend/typescript/typescript-installation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -474,7 +469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="typescript/typescript-compiler.html" class="md-nav__link">
+      <a href="../../frontend/typescript/typescript-compiler.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -499,8 +494,6 @@
       
   
   
-    
-  
   
   
     
@@ -511,12 +504,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -530,7 +523,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             React
@@ -544,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="react/intro.html" class="md-nav__link">
+      <a href="../../frontend/react/intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -602,7 +595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pattern/react-pattern-intro.html" class="md-nav__link">
+      <a href="../../frontend/pattern/react-pattern-intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -623,7 +616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pattern/hoc-pattern.html" class="md-nav__link">
+      <a href="../../frontend/pattern/hoc-pattern.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -644,7 +637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pattern/compound-pattern.html" class="md-nav__link">
+      <a href="../../frontend/pattern/compound-pattern.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -665,7 +658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pattern/render-props.html" class="md-nav__link">
+      <a href="../../frontend/pattern/render-props.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -686,7 +679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="pattern/misc.html" class="md-nav__link">
+      <a href="../../frontend/pattern/misc.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -752,7 +745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="react/useEffect-technique.html" class="md-nav__link">
+      <a href="../../frontend/react/useEffect-technique.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -773,7 +766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="react/useEffect-technique-used.html" class="md-nav__link">
+      <a href="../../frontend/react/useEffect-technique-used.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -794,7 +787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="react/useEffect-cleanup.html" class="md-nav__link">
+      <a href="../../frontend/react/useEffect-cleanup.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -815,7 +808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="react/useCallback.html" class="md-nav__link">
+      <a href="../../frontend/react/useCallback.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -836,7 +829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="react/useRef.html" class="md-nav__link">
+      <a href="../../frontend/react/useRef.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -857,7 +850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="react/react-context-api.html" class="md-nav__link">
+      <a href="../../frontend/react/react-context-api.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -878,7 +871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="react/react-router.html" class="md-nav__link">
+      <a href="../../frontend/react/react-router.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -899,7 +892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="react/migrating-cra-vite.html" class="md-nav__link">
+      <a href="../../frontend/react/migrating-cra-vite.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -920,7 +913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="react/guides.html" class="md-nav__link">
+      <a href="../../frontend/react/guides.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -986,7 +979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="package/intro.html" class="md-nav__link">
+      <a href="../../frontend/package/intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1044,7 +1037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="package/antd/index.html" class="md-nav__link">
+      <a href="../../frontend/package/antd/index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1065,7 +1058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="package/antd/controlled-components.html" class="md-nav__link">
+      <a href="../../frontend/package/antd/controlled-components.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1086,7 +1079,7 @@
   
   
     <li class="md-nav__item">
-      <a href="package/antd/antd-form.html" class="md-nav__link">
+      <a href="../../frontend/package/antd/antd-form.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1107,7 +1100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="package/antd/antd-form-validator.html" class="md-nav__link">
+      <a href="../../frontend/package/antd/antd-form-validator.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1173,7 +1166,7 @@
   
   
     <li class="md-nav__item">
-      <a href="package/tinymce/tinymce.html" class="md-nav__link">
+      <a href="../../frontend/package/tinymce/tinymce.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1239,7 +1232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="package/lodash/debounce.html" class="md-nav__link">
+      <a href="../../frontend/package/lodash/debounce.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1273,21 +1266,19 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
         
           
           <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
@@ -1301,7 +1292,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             Redux
@@ -1315,7 +1306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="rtk-guide.html" class="md-nav__link">
+      <a href="../../frontend/rtk-guide.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1333,28 +1324,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    redux middleware
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="redux-middleware.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../frontend/redux-middleware.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1363,51 +1336,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#redux-thunk-gives-redux-side-effects" class="md-nav__link">
-    <span class="md-ellipsis">
-      Redux Thunk Gives Redux Side-Effects
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      Summary
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reference" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reference
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1432,8 +1360,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -1442,12 +1372,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -1461,7 +1391,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Backend
@@ -1475,7 +1405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../backend/intro.html" class="md-nav__link">
+      <a href="../intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1533,7 +1463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../backend/package/python-dotenv.html" class="md-nav__link">
+      <a href="../package/python-dotenv.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1554,7 +1484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../backend/package/python-mysqlclient.html" class="md-nav__link">
+      <a href="../package/python-mysqlclient.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1575,7 +1505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../backend/package/tinymce.html" class="md-nav__link">
+      <a href="../package/tinymce.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1596,7 +1526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../backend/package/jwt-guide.html" class="md-nav__link">
+      <a href="../package/jwt-guide.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1617,7 +1547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../backend/package/jwt-installation.html" class="md-nav__link">
+      <a href="../package/jwt-installation.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1638,7 +1568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../backend/package/dj-rest-auth.html" class="md-nav__link">
+      <a href="../package/dj-rest-auth.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1659,7 +1589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../backend/package/django-allauth.html" class="md-nav__link">
+      <a href="../package/django-allauth.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1680,7 +1610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../backend/package/django-autoslug.html" class="md-nav__link">
+      <a href="../package/django-autoslug.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1701,7 +1631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../backend/package/django-debug-toolbar.html" class="md-nav__link">
+      <a href="../package/django-debug-toolbar.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1722,7 +1652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../backend/package/0.draft.html" class="md-nav__link">
+      <a href="../package/0.draft.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1748,19 +1678,21 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -1774,7 +1706,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             Django
@@ -1788,7 +1720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../backend/django/intro.html" class="md-nav__link">
+      <a href="intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1809,7 +1741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../backend/django/codesnap.html" class="md-nav__link">
+      <a href="codesnap.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1830,7 +1762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../backend/django/django-view.html" class="md-nav__link">
+      <a href="django-view.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1851,7 +1783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../backend/django/django-form.html" class="md-nav__link">
+      <a href="django-form.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1872,7 +1804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../backend/django/django-model.html" class="md-nav__link">
+      <a href="django-model.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1893,7 +1825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../backend/django/django-template.html" class="md-nav__link">
+      <a href="django-template.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1914,7 +1846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../backend/django/django-admin.html" class="md-nav__link">
+      <a href="django-admin.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1935,7 +1867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../backend/django/django-middleware.html" class="md-nav__link">
+      <a href="django-middleware.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1956,7 +1888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../backend/django/django-secretkey.html" class="md-nav__link">
+      <a href="django-secretkey.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1977,7 +1909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../backend/django/django-tools.html" class="md-nav__link">
+      <a href="django-tools.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1995,10 +1927,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../backend/django/mixins.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="mixins.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2007,6 +1946,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -2019,7 +1959,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../backend/django/chatgpt.html" class="md-nav__link">
+      <a href="chatgpt.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2085,7 +2025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../backend/drf/drf-functionbasedviews.html" class="md-nav__link">
+      <a href="../drf/drf-functionbasedviews.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2106,7 +2046,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../backend/drf/drf-viewsets.html" class="md-nav__link">
+      <a href="../drf/drf-viewsets.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2127,7 +2067,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../backend/drf/python-microservices.html" class="md-nav__link">
+      <a href="../drf/python-microservices.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2193,7 +2133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../backend/fastAPI/fast-api.html" class="md-nav__link">
+      <a href="../fastAPI/fast-api.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2222,7 +2162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../backend/draft.html" class="md-nav__link">
+      <a href="../draft.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2290,7 +2230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../git/intro.html" class="md-nav__link">
+      <a href="../../git/intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2311,7 +2251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../git/git.html" class="md-nav__link">
+      <a href="../../git/git.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2332,7 +2272,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../git/vite.html" class="md-nav__link">
+      <a href="../../git/vite.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2353,7 +2293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../git/tmux.html" class="md-nav__link">
+      <a href="../../git/tmux.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2374,7 +2314,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../git/gitlab.html" class="md-nav__link">
+      <a href="../../git/gitlab.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2442,7 +2382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../career/developer-plan.html" class="md-nav__link">
+      <a href="../../career/developer-plan.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2463,7 +2403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../career/study-technique.html" class="md-nav__link">
+      <a href="../../career/study-technique.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2484,7 +2424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../career/python-certification.html" class="md-nav__link">
+      <a href="../../career/python-certification.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2505,7 +2445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../career/tech-stack.html" class="md-nav__link">
+      <a href="../../career/tech-stack.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2573,7 +2513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../interviewquestion/terminology.html" class="md-nav__link">
+      <a href="../../interviewquestion/terminology.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2594,7 +2534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../interviewquestion/javascript.html" class="md-nav__link">
+      <a href="../../interviewquestion/javascript.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2615,7 +2555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../interviewquestion/react.html" class="md-nav__link">
+      <a href="../../interviewquestion/react.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2636,7 +2576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../interviewquestion/django.html" class="md-nav__link">
+      <a href="../../interviewquestion/django.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2704,7 +2644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../more/intro.html" class="md-nav__link">
+      <a href="../../more/intro.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2762,7 +2702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../more/mkdocs/01-advanced-mkdocs.html" class="md-nav__link">
+      <a href="../../more/mkdocs/01-advanced-mkdocs.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2783,7 +2723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../more/mkdocs/02-advanced-mkdocs.html" class="md-nav__link">
+      <a href="../../more/mkdocs/02-advanced-mkdocs.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2849,7 +2789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="slides.html" class="md-nav__link">
+      <a href="../../frontend/slides.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2870,7 +2810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../backend/slides.html" class="md-nav__link">
+      <a href="../slides.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2936,7 +2876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../more/books/tech-books.html" class="md-nav__link">
+      <a href="../../more/books/tech-books.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2957,7 +2897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../more/books/pocket-devops.html" class="md-nav__link">
+      <a href="../../more/books/pocket-devops.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2978,7 +2918,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../more/books/jenkins-guide.html" class="md-nav__link">
+      <a href="../../more/books/jenkins-guide.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2999,7 +2939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../more/books/docker-compose.html" class="md-nav__link">
+      <a href="../../more/books/docker-compose.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3065,7 +3005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../more/research/ai.html" class="md-nav__link">
+      <a href="../../more/research/ai.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3086,7 +3026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../more/research/bootstrap.html" class="md-nav__link">
+      <a href="../../more/research/bootstrap.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3107,7 +3047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../more/research/wordpress.html" class="md-nav__link">
+      <a href="../../more/research/wordpress.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3128,7 +3068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../more/research/micro-frontend.html" class="md-nav__link">
+      <a href="../../more/research/micro-frontend.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3149,7 +3089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../more/research/js-prevent-default.html" class="md-nav__link">
+      <a href="../../more/research/js-prevent-default.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3170,7 +3110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../more/research/tricks.html" class="md-nav__link">
+      <a href="../../more/research/tricks.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3191,7 +3131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../more/research/rabbitmq.html" class="md-nav__link">
+      <a href="../../more/research/rabbitmq.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3212,7 +3152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../more/research/rabbitmq-celery.html" class="md-nav__link">
+      <a href="../../more/research/rabbitmq-celery.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3233,7 +3173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../more/research/redis.html" class="md-nav__link">
+      <a href="../../more/research/redis.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3254,7 +3194,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../more/research/reference.html" class="md-nav__link">
+      <a href="../../more/research/reference.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3283,7 +3223,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../more/linux/debian.html" class="md-nav__link">
+      <a href="../../more/linux/debian.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3322,41 +3262,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#redux-thunk-gives-redux-side-effects" class="md-nav__link">
-    <span class="md-ellipsis">
-      Redux Thunk Gives Redux Side-Effects
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      Summary
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reference" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reference
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -3373,54 +3278,9 @@
   
 
 
-  <h1>redux middleware</h1>
+  <h1>Mixins</h1>
 
-<div><p><strong>Redux Middleware is code that lets us intercept redux actions before they reach the reducer.</strong> <code>redux-thunk</code> is an example of Redux Middleware, along with other popular <code>redux</code> libraries like <code>redux-logger</code> , <code>redux-promise-middleware</code> , and <code>redux-saga</code> (an alternative to <code>redux-thunk</code> ).</p>
-<p><a class="glightbox" href="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*vBeR3yXWcukp_yZpNBtHlg.png" data-type="image" data-width="100%" data-height="auto" data-title="Redux Middleware" data-desc-position="bottom"><img alt="Redux Middleware" src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*vBeR3yXWcukp_yZpNBtHlg.png"></a></p>
-<h2 id="redux-thunk-gives-redux-side-effects">Redux Thunk Gives Redux Side-Effects</h2>
-<p>In <code>redux</code>, <strong>actions creators</strong> are functions that return an <strong>action</strong>, which is a plain javascript objects with a <code>type</code> property.</p>
-<ul>
-<li><code>redux-thunk</code> is a <strong>Redux Middleware</strong> that lets your action creators return a function called a thunk, instead of an action. </li>
-<li>This <strong>thunk</strong> can return an action when invoked but it also has access to the <strong>Redux store's</strong> <code>dispatch</code> function, meaning it can also <strong>dispatch</strong> other <strong>actions</strong>. </li>
-<li>Typically, API calls are invoked inside these <strong>thunks</strong> and different <strong>actions</strong> are <strong>dispatched</strong> depending on these API responses.</li>
-</ul>
-<p>For example, below are two <strong>action creators</strong>, the first returns a plain <strong>redux action</strong>. The second returns a <code>thunk</code>, thanks to <code>redux-thunk</code>.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>// action creators
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>// Action Creator returns action
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>loadUser = (userData) =&gt; ({
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  type: "LOAD_USER_DATA", userData
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>})
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>/* 
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  Action Creator which returns function which dispatches other actions
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>*/
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>fetchUser = (usersUrl) =&gt; (dispatch) =&gt; {
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>  dispatch({ type: "DISPLAY_LOADING_SCREEN" })
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>  return fetch(usersUrl)
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    .then(response =&gt; response.json())
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    .then((json) =&gt; {
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>      if (json.success) {
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>        dispatch({ type: "LOAD_USER_DATA", json.userData })
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>      } else {
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>        dispatch({ type: "LOAD_USER_FAILED" })
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>      }
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    })
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>}
-</span></code></pre></div>
-<h2 id="summary">Summary</h2>
-<ul>
-<li><code>redux-thunk</code> lets us create actions which are functions that can dispatch other functions instead of just objects.</li>
-<li><code>redux-thunk</code> is an example of Redux Middleware and as such, needs to adhere to the Redux Middleware signature of <code>validMiddleware =&gt; (store) =&gt; (next) =&gt; (action)</code></li>
-<li>The core logic of <code>redux-thunk</code> is essentially a simple if statement that checks if the action is a <strong>thunk</strong> (ie. a function) and invokes it if it is. By default, it exports the <strong>Middleware</strong> with no <code>extraArgument</code> but it then attaches the <code>createThunkMiddleware</code> function onto the exported Middleware to be used if needed.</li>
-</ul>
-<hr>
-<h2 id="reference">Reference</h2>
-<ul>
-<li><a href="https://user3141592.medium.com/understanding-the-redux-thunk-source-code-b3f8b930faf6">Understanding redux thunk</a></li>
-<li><a href="https://www.geeksforgeeks.org/what-is-the-use-of-middleware-redux-thunk/">What is the use of middleware Redux thunk ?</a></li>
-</ul></div>
+<p>mixins</p>
 
 
 
@@ -3467,10 +3327,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "navigation.tabs"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>

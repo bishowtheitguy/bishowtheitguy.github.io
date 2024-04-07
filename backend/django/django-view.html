@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#django-views" class="md-skip">
+        <a href="#basic" class="md-skip">
           Skip to content
         </a>
       
@@ -1809,9 +1809,51 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#basic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#django-views" class="md-nav__link">
     <span class="md-ellipsis">
       Django Views
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-topic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Topic
     </span>
   </a>
   
@@ -1989,11 +2031,32 @@
   
   
     <li class="md-nav__item">
-      <a href="django-chatgpt.html" class="md-nav__link">
+      <a href="mixins.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    django chatgpt
+    Mixins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="chatgpt.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chatgpt
   </span>
   
 
@@ -3299,9 +3362,51 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#basic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#django-views" class="md-nav__link">
     <span class="md-ellipsis">
       Django Views
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-topic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Topic
     </span>
   </a>
   
@@ -3336,7 +3441,9 @@
 
   <h1>django view</h1>
 
-<div><h2 id="django-views"><strong>Django Views</strong></h2>
+<div><p><a class="glightbox" href="https://media.geeksforgeeks.org/wp-content/uploads/20200123160947/djang-views-types-1024x631.jpg" data-type="image" data-width="100%" data-height="auto" data-title="Django views" data-desc-position="bottom"><img alt="Django views" src="https://media.geeksforgeeks.org/wp-content/uploads/20200123160947/djang-views-types-1024x631.jpg"></a></p>
+<h2 id="basic">Basic</h2>
+<h3 id="django-views"><strong>Django Views</strong></h3>
 <p>Django’s views are the <mark>information brokers</mark> of a Django application. A view sources data from your database (or an external data source or service) and delivers it to a template. </p>
 <ul>
 <li>For a web application, the view delivers web page content and templates; </li>
@@ -3362,8 +3469,11 @@
 <p><strong>A view function is a Python function that takes a Web request and returns a Web response.</strong> This response can be the HTML contents of a Web page, or a redirect, or a 404 error, or an XML document, or an image, anything that a web browser can display.</p>
 <p><a class="glightbox" href="https://media.geeksforgeeks.org/wp-content/uploads/20210606092225/image.png" data-type="image" data-width="100%" data-height="auto" data-title="django mvt structure" data-desc-position="bottom"><img alt="django mvt structure" src="https://media.geeksforgeeks.org/wp-content/uploads/20210606092225/image.png"></a></p>
 <p><strong>Django views roughly correspond to controllers in MVC, and Django templates to views in MVC.</strong></p>
-<p><a class="glightbox" href="https://media.geeksforgeeks.org/wp-content/uploads/20200124153519/django-views.jpg" data-type="image" data-width="100%" data-height="auto" data-title="Djano View" data-desc-position="bottom"><img alt="Djano View" src="https://media.geeksforgeeks.org/wp-content/uploads/20200124153519/django-views.jpg"></a></p>
-<p><a class="glightbox" href="https://media.geeksforgeeks.org/wp-content/uploads/20200123160947/djang-views-types-1024x631.jpg" data-type="image" data-width="100%" data-height="auto" data-title="Django views" data-desc-position="bottom"><img alt="Django views" src="https://media.geeksforgeeks.org/wp-content/uploads/20200123160947/djang-views-types-1024x631.jpg"></a></p>
+<p><a class="glightbox" href="https://media.geeksforgeeks.org/wp-content/uploads/20200124153519/django-views.jpg" data-type="image" data-width="100%" data-height="auto" data-title="Django View" data-desc-position="bottom"><img alt="Django View" src="https://media.geeksforgeeks.org/wp-content/uploads/20200124153519/django-views.jpg"></a></p>
+<hr>
+<h2 id="advanced">Advanced</h2>
+<hr>
+<h2 id="example">Example</h2>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">views.py</label><label for="__tabbed_1_2">app: <code>urls.py</code></label><label for="__tabbed_1_3">about.html</label></div>
@@ -3464,6 +3574,7 @@
 </div>
 </div>
 </div>
+<h2 id="other-topic">Other Topic</h2>
 <details class="note">
 <summary>get_context_data()</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Introduction</label><label for="__tabbed_2_2">In Depth</label><label for="__tabbed_2_3"><code>**kwargs</code></label></div>
@@ -3608,6 +3719,7 @@
 <li><a href="https://www.geeksforgeeks.org/class-based-generic-views-django-create-retrieve-update-delete/">Django crud: class based views</a></li>
 <li><a href="https://www.geeksforgeeks.org/django-project-mvt-structure/">Django project MVT structure</a></li>
 <li><a href="https://realpython.com/tutorials/django/">Django Tutorial: realPython</a></li>
+<li><a href="https://www.dennisivy.com/django-class-based-views">What are Django class based views &amp; should you use them?</a></li>
 </ul></div>
 
 

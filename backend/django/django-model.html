@@ -1957,6 +1957,57 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#advanced-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods-that-return-querysets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods that return QuerySets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods-that-dont-return-querysets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods that Don't return QuerySets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-managers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Managers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Methods
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -2086,11 +2137,32 @@
   
   
     <li class="md-nav__item">
-      <a href="django-chatgpt.html" class="md-nav__link">
+      <a href="mixins.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    django chatgpt
+    Mixins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="chatgpt.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chatgpt
   </span>
   
 
@@ -3500,6 +3572,57 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#advanced-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods-that-return-querysets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods that return QuerySets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods-that-dont-return-querysets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods that Don't return QuerySets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-managers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Managers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Methods
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -3747,6 +3870,28 @@ model instance, rather than act as a function. </p>
 <li>list_per_page</li>
 </ol>
 </div>
+<hr>
+<h2 id="advanced-model">Advanced Model</h2>
+<p><code>Mastering Django by Nigel George 2022, chapter 9</code></p>
+<p>Django’s QuerySet API provides a comprehensive array of methods and functions for working with data.</p>
+<h3 id="methods-that-return-querysets">Methods that return QuerySets</h3>
+<h3 id="methods-that-dont-return-querysets">Methods that <mark>Don't</mark> return QuerySets</h3>
+<h3 id="model-managers">Model Managers</h3>
+<p>A Manager is a Django class that provides the interface between database query operations and a Django model. Each Django model is provided with a <mark>default Manager</mark> named <code>objects</code>.</p>
+<div class="admonition tips">
+<p class="admonition-title">Tips</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nv">newevent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>Event.objects.get<span class="o">(</span><span class="nv">name</span><span class="o">=</span><span class="s2">"Xmas Barbeque"</span><span class="o">)</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nv">joneses</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>MyClubUser.objects.filter<span class="o">(</span><span class="nv">last_name</span><span class="o">=</span><span class="s1">'Jones'</span><span class="o">)</span>
+</span></code></pre></div>
+<p>In each example, <code>objects</code> is the default <code>Manager</code> for the model instance.</p>
+</div>
+<h3 id="model-methods">Model Methods</h3>
+<p>Django’s Model class comes with many built-in methods. We have already used some of them — <code>save()</code>, <code>delete()</code>, <code>__str__()</code> and others. Where <strong>manager methods</strong> add table-level functionality to Django’s models, <strong>model methods</strong> add row-level functions that act on individual instances of the model.</p>
+<p>There are two common cases where you want to play with model methods:</p>
+<ol>
+<li>When you want to add business logic to the model by adding custom model methods; and</li>
+<li>When you want to override the default behavior of a built-in model method.</li>
+</ol>
 <hr>
 <h2 id="reference">Reference</h2>
 <blockquote>

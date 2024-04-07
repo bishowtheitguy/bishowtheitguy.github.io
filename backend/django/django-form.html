@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#the-django-forms-library" class="md-skip">
+        <a href="#basic" class="md-skip">
           Skip to content
         </a>
       
@@ -1830,6 +1830,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#basic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#the-django-forms-library" class="md-nav__link">
     <span class="md-ellipsis">
       The Django Forms library
@@ -1837,11 +1847,43 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#working-with-form-views" class="md-nav__link">
     <span class="md-ellipsis">
       Working with form views
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-topic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Topic
     </span>
   </a>
   
@@ -1998,11 +2040,32 @@
   
   
     <li class="md-nav__item">
-      <a href="django-chatgpt.html" class="md-nav__link">
+      <a href="mixins.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    django chatgpt
+    Mixins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="chatgpt.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chatgpt
   </span>
   
 
@@ -3308,6 +3371,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#basic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#the-django-forms-library" class="md-nav__link">
     <span class="md-ellipsis">
       The Django Forms library
@@ -3315,11 +3388,43 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#working-with-form-views" class="md-nav__link">
     <span class="md-ellipsis">
       Working with form views
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-topic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Topic
     </span>
   </a>
   
@@ -3354,7 +3459,8 @@
 
   <h1>django form</h1>
 
-<div><div class="admonition abstract">
+<div><h2 id="basic">Basic</h2>
+<div class="admonition abstract">
 <p class="admonition-title">Types of Form in Django</p>
 <p><strong>1. Form</strong></p>
 <p>Django Forms (<code>django.forms.Form</code>)</p>
@@ -3384,7 +3490,7 @@
 <p><a class="glightbox" href="../../assets/django-form-field.png" data-type="image" data-width="100%" data-height="auto" data-title="Django Form Field" data-desc-position="bottom"><img alt="Django Form Field" src="../../assets/django-form-field.png"></a></p>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">#from django.forms import Form, ModelForm</span>
 </span></code></pre></div>
-<h2 id="working-with-form-views">Working with <code>form views</code></h2>
+<h3 id="working-with-form-views">Working with <code>form views</code></h3>
 <p>A form view is just like any other view class, except that a form view class is designed to process and handle form objects and form submissions. </p>
 <p>Django offers <mark>four main form view classes</mark>, listed here:</p>
 <ul>
@@ -3395,6 +3501,9 @@
 </ul>
 <p>These can all be found in the <code>django.views.generic.edit</code> library.</p>
 <hr>
+<h2 id="advanced">Advanced</h2>
+<hr>
+<h2 id="example">Example</h2>
 <div class="admonition example">
 <p class="admonition-title">Website Contact Section</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><input id="__tabbed_1_5" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">views</label><label for="__tabbed_1_2">models</label><label for="__tabbed_1_3">contact</label><label for="__tabbed_1_4">contact success</label><label for="__tabbed_1_5">url Conf</label></div>
@@ -3492,6 +3601,8 @@ Here's how you can do it:</p>
 </ul>
 <p>With this setup, you can now access and manage contact form submissions in the Django admin dashboard. When you run your Django server and navigate to the admin site (<code>/admin</code> by default), you should see the Contact Messages section where you can view, search, and manage contact form submissions.</p>
 </div>
+<hr>
+<h2 id="other-topic">Other Topic</h2>
 <details class="abstract">
 <summary>Registering a Model with the Django Admin Interface</summary>
 <p>Both <strong>admin.site.register(ContactMessage)</strong> and <strong>@admin.register(ContactMessage)</strong> are used to register a model with the Django admin interface, but they differ in syntax and usage style. Here's a breakdown of each:</p>
