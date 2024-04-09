@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ask-chatgpt" class="md-skip">
+        <a href="#paginator" class="md-skip">
           Skip to content
         </a>
       
@@ -1752,8 +1752,17 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    codesnap
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="codesnap.html" class="md-nav__link md-nav__link--active">
         
@@ -1764,6 +1773,41 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#paginator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paginator
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ask-chatgpt" class="md-nav__link">
+    <span class="md-ellipsis">
+      ask chatgpt:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1971,6 +2015,27 @@
   
   <span class="md-ellipsis">
     chatgpt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="migration.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    django migrations
   </span>
   
 
@@ -3268,8 +3333,32 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#paginator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paginator
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ask-chatgpt" class="md-nav__link">
+    <span class="md-ellipsis">
+      ask chatgpt:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -3287,7 +3376,59 @@
   
 
 
-<div><div class="admonition warning">
+<div><div class="admonition example">
+<p class="admonition-title">pip freeze</p>
+<p>If you want to freeze a newly installed package only to your <code>prod-requirements.txt</code> file and not the <code>dev-requirements.txt</code>, you can manually add it to <code>prod-requirements.txt</code> after installation. Here's how you can do it:</p>
+<ol>
+<li>
+<p>First, install the package using <strong>pip install <code>&lt;package_name&gt;</code></strong>.</p>
+</li>
+<li>
+<p>After installation, run <strong>pip freeze</strong> <mark>to see the list of installed packages</mark>.</p>
+</li>
+<li>
+<p>Identify the newly installed package in the output of <strong>pip freeze</strong>.</p>
+</li>
+<li>
+<p>Copy the line corresponding to the newly installed package, including its version, from the output of <strong>pip freeze</strong>.</p>
+</li>
+<li>
+<p>Open your <code>prod-requirements.txt</code> file in a text editor.</p>
+</li>
+<li>
+<p>Paste the copied line into your <code>prod-requirements.txt</code> file.</p>
+</li>
+<li>
+<p>Save the <code>prod-requirements.txt</code> file.</p>
+</li>
+</ol>
+<p>By following these steps, you're ensuring that the newly installed package is frozen only in your <code>prod-requirements.txt</code> file and not in your <code>dev-requirements.txt</code> file. This keeps the development and production environments separate and ensures that only production dependencies are specified in the <code>prod-requirements.txt</code>.</p>
+</div>
+<hr>
+<div class="admonition success">
+<p class="admonition-title">Best WYSIWYG editor for website</p>
+<p><strong>1. <a href="https://www.tiny.cloud/">TinyMCE</a></strong></p>
+<p><strong>2. <a href="https://ckeditor.com/">CKEditor</a></strong></p>
+<hr>
+<ul>
+<li><a href="https://www.g2.com/categories/wysiwyg-editors">Best WYSIWYG Editors</a></li>
+<li><a href="https://blog.hubspot.com/website/best-wysiwyg-html-editor">20 Best WYSIWYG HTML Editors for 2024</a></li>
+<li><a href="https://www.reddit.com/r/webdev/comments/11jskmh/what_is_your_goto_wysiwyg_editor/">What is your goto WYSIWYG Editor? </a></li>
+</ul>
+</div>
+<hr>
+<h2 id="paginator"><a href="https://docs.djangoproject.com/en/5.0/ref/paginator/">Paginator</a></h2>
+<p><a href="https://docs.djangoproject.com/en/5.0/topics/pagination/">pagination</a></p>
+<ul>
+<li>
+<p><a href="https://www.agiliq.com/blog/2017/12/when-and-how-use-django-listview/">What is the difference between TemplateView <code>vs</code> ListView</a></p>
+</li>
+<li>
+<p>list view vs tempate view</p>
+</li>
+</ul>
+<hr>
+<div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <h1 id="ask-chatgpt">ask chatgpt:</h1>
 <p>how does the seniort programmer writes this code:</p>

@@ -1965,6 +1965,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#templates_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      templates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -2099,6 +2108,27 @@
   
   <span class="md-ellipsis">
     chatgpt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="migration.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    django migrations
   </span>
   
 
@@ -3497,6 +3527,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#templates_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      templates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -3740,7 +3779,77 @@
 <hr>
 <ul>
 <li><a href="https://valerymelou.com/blog/2020-05-04-how-to-highlight-active-links-in-your-django-website">highlight active links in your django website</a></li>
+<li><a href="https://django-active-link.readthedocs.io/en/latest/readme.html#documentation">django-active-link package</a></li>
 </ul>
+</div>
+<hr>
+<h2 id="templates_1"><a href="https://docs.djangoproject.com/en/5.0/ref/templates/builtins/">templates</a></h2>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Outputs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>openblock</code></td>
+<td><code>{%</code></td>
+</tr>
+<tr>
+<td><code>closeblock</code></td>
+<td><code>%}</code></td>
+</tr>
+<tr>
+<td><code>openvariable</code></td>
+<td><code>{{</code></td>
+</tr>
+<tr>
+<td><code>closevariable</code></td>
+<td><code>}}</code></td>
+</tr>
+<tr>
+<td><code>openbrace</code></td>
+<td><code>{</code></td>
+</tr>
+<tr>
+<td><code>closebrace</code></td>
+<td><code>}</code></td>
+</tr>
+<tr>
+<td><code>opencomment</code></td>
+<td><code>{#</code></td>
+</tr>
+<tr>
+<td><code>closecomment</code></td>
+<td><code>#}</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<div class="admonition example">
+<p class="admonition-title">url template tag</p>
+<p>Yes, that's correct. When using the <code>{% url %}</code> template tag in Django templates, you specify the name of the URL pattern, not the name of the view function or class-based view.</p>
+<p>The name parameter you provide in the URL pattern definition (<code>name='...'</code>) is what you use to refer to that URL pattern in the <code>{% url %}</code> template tag.</p>
+<p>Here's an example to clarify:</p>
+<div class="language-py highlight"><span class="filename">urls.py</span><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="kn">from</span> <span class="nn">.views</span> <span class="kn">import</span> <span class="n">my_view_function</span><span class="p">,</span> <span class="n">MyViewClass</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">'home/'</span><span class="p">,</span> <span class="n">my_view_function</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'home_view_function'</span><span class="p">),</span>  <span class="c1"># Function-Based View</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">'about/'</span><span class="p">,</span> <span class="n">MyViewClass</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">'about_view_class'</span><span class="p">),</span>  <span class="c1"># Class-Based View</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="p">]</span>
+</span></code></pre></div>
+<p>In the above <code>urls.py</code> example:</p>
+<ul>
+<li><code>home_view_function</code> is the name of the URL pattern associated with the <strong>function-based view</strong> <code>my_view_function</code>.</li>
+<li><code>about_view_class</code> is the name of the URL pattern associated with the <strong>class-based view</strong> <code>MyViewClass</code>.</li>
+</ul>
+<p>Now, when referencing these URL patterns in your templates using the <code>{% url %}</code> template tag, you would use their respective names:</p>
+<div class="language-html highlight"><span class="filename">html</span><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"{% url 'home_view_function' %}"</span><span class="p">&gt;</span>Link to Home (Function)<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"{% url 'about_view_class' %}"</span><span class="p">&gt;</span>Link to About (Class)<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<p>So, you specify the name of the URL pattern, not the name of the view function or <code>class-based view</code>.</p>
 </div>
 <hr>
 <h2 id="reference">Reference</h2>
