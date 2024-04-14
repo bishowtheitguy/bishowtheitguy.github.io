@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#image-validation-in-the-django" class="md-skip">
+        <a href="#using-mixins-for-class-based-views" class="md-skip">
           Skip to content
         </a>
       
@@ -1977,6 +1977,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#using-mixins-for-class-based-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using mixins for class-based views
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#image-validation-in-the-django" class="md-nav__link">
     <span class="md-ellipsis">
       Image Validation in the django
@@ -2234,6 +2243,27 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../celery.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    celery
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -3353,6 +3383,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#using-mixins-for-class-based-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using mixins for class-based views
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#image-validation-in-the-django" class="md-nav__link">
     <span class="md-ellipsis">
       Image Validation in the django
@@ -3381,7 +3420,19 @@
 
   <h1>Mixins</h1>
 
-<div><p>mixins</p>
+<div><p>When you need to provide a specific behavior for several class-based views, it is recommended that you use <code>mixins</code>.</p>
+<h2 id="using-mixins-for-class-based-views">Using mixins for class-based views</h2>
+<p>Mixins are a special kind of multiple inheritance for a class. You can use them to provide common discrete functionality that, when added to other <code>mixins</code>, allows you to define the behavior of a class.</p>
+<p>There are two main situations to use mixins:</p>
+<ul>
+<li>You want to provide multiple optional features for a class</li>
+<li>You want to use a particular feature in several classes</li>
+</ul>
+<p>Django comes with several mixins that provide additional functionality to your class-based views.</p>
+<p>You can learn more about mixins at <code>https://docs.djangoproject.com/en/4.1/topics/class-based-views/mixins/</code>.</p>
+<blockquote>
+<p>Django by Example <code>pg: 542</code></p>
+</blockquote>
 <h2 id="image-validation-in-the-django">Image Validation in the django</h2>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
