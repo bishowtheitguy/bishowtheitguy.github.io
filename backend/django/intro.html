@@ -2085,6 +2085,27 @@
   
   
     <li class="md-nav__item">
+      <a href="context-processors.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Context Processors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="chatgpt.html" class="md-nav__link">
         
   
@@ -3530,6 +3551,44 @@
 
 <div><p>Django really is the <code>framework for perfectionists with deadlines</code>.</p>
 <p><a href="https://testdriven.io/blog/django-static-files/">Django</a> is an opinionated, full-stack web application framework. It comes with many batteries that you can use to build a fully functional web application, including static and media file management.</p>
+<hr>
+<div class="admonition danger">
+<p class="admonition-title"><a href="https://docs.djangoproject.com/en/5.0/faq/install/">What Python version can I use with Django?</a></p>
+<table>
+<thead>
+<tr>
+<th>Django version</th>
+<th>Python versions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>3.2</code></td>
+<td>3.6, 3.7, 3.8, 3.9, 3.10 (added in 3.2.9)</td>
+</tr>
+<tr>
+<td><code>4.0</code></td>
+<td>3.8, 3.9, 3.10</td>
+</tr>
+<tr>
+<td><code>4.1</code></td>
+<td>3.8, 3.9, 3.10, 3.11 (added in 4.1.3)</td>
+</tr>
+<tr>
+<td><code>4.2</code></td>
+<td>3.8, 3.9, 3.10, 3.11, 3.12 (added in 4.2.8)</td>
+</tr>
+<tr>
+<td><code>5.0</code></td>
+<td>3.10, 3.11, 3.12</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>For each version of Python, only the latest micro release (A.B.C) is officially supported. You can find the latest micro version for each series on the Python download page.</p>
+<p>Typically, we will support a Python version up to and including the first Django LTS release whose security support ends after security support for that version of Python ends. For example, Python <code>3.9</code> security support ends in October 2025 and Django <code>4.2</code> LTS security support ends in April 2026. Therefore Django <code>4.2</code> is the last version to support Python 3.9.</p>
+<p><a class="glightbox" href="https://static.djangoproject.com/img/release-roadmap.4cf783b31fbe.png" data-type="image" data-width="100%" data-height="auto" data-title="https://endoflife.date/django" data-desc-position="bottom"><img alt="https://endoflife.date/django" src="https://static.djangoproject.com/img/release-roadmap.4cf783b31fbe.png"></a></p>
+<hr>
 <h2 id="basic">Basic</h2>
 <h3 id="django-3-core-parts">Django <code>3</code> core parts</h3>
 <div class="admonition note">
