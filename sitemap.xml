@@ -46,6 +46,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishowtheitguy.github.io/backend/django/django-builtin/</loc>
+         <lastmod>2024-05-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishowtheitguy.github.io/backend/django/django-form/</loc>
          <lastmod>2024-05-01</lastmod>
          <changefreq>daily</changefreq>
@@ -92,6 +97,11 @@
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/django/mixins/</loc>
+         <lastmod>2024-05-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishowtheitguy.github.io/backend/django/builtin/auth-app/</loc>
          <lastmod>2024-05-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
