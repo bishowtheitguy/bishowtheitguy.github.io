@@ -96,6 +96,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishowtheitguy.github.io/backend/django/designpatterns/intro/</loc>
+         <lastmod>2024-05-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishowtheitguy.github.io/backend/drf/drf-functionbasedviews/</loc>
          <lastmod>2024-05-01</lastmod>
          <changefreq>daily</changefreq>
