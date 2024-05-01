@@ -216,6 +216,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishowtheitguy.github.io/blog/2024/05/07/creating-a-blog-model-in-django/</loc>
+         <lastmod>2024-05-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/01/05/django-cors/</loc>
          <lastmod>2024-05-01</lastmod>
          <changefreq>daily</changefreq>
@@ -232,6 +237,11 @@
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/04/18/django-images-not-showing-in-the-cpanel-or-shared-hosting/</loc>
+         <lastmod>2024-05-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishowtheitguy.github.io/blog/2024/05/08/customizing-how-models-are-displayed/</loc>
          <lastmod>2024-05-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
