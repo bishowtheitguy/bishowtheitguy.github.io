@@ -2,362 +2,367 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://bishowtheitguy.github.io/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/tags/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/celery/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/draft/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/intro/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/django/chatgpt/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/django/context-processors/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/django/decorator/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/django/django-admin/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/django/django-builtin/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/django/django-form/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/django/django-middleware/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/django/django-model/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/django/django-secretkey/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/django/django-template/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/django/django-tools/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/django/django-view/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/django/intro/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/django/migration/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/django/mixins/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/django/builtin/auth-app/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/django/designpatterns/intro/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/drf/drf-functionbasedviews/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/drf/drf-viewsets/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/drf/python-microservices/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/fastAPI/fast-api/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/package/0.draft/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/package/dj-rest-auth/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/package/django-allauth/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/package/django-autoslug/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/package/django-debug-toolbar/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/package/intro/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/package/jwt-guide/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/package/jwt-installation/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/package/python-dotenv/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/package/python-mysqlclient/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/package/tinymce/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/05/06/active-link-in-django/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/05/02/ensuring-admin-access-control-in-django-models/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/04/27/understanding-args-and-kwargs-in-python-functions/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/04/23/strengthening-your-django-applications-with-defensive-programming/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/04/27/difference-between-templateview-listview-and-view/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/01/05/viewset-vs-apiview/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/05/07/creating-a-blog-model-in-django/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/01/05/django-cors/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/05/03/a-guide-to-csrf-cookie-settings/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/01/01/managing-development-env-in-django/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/04/18/django-images-not-showing-in-the-cpanel-or-shared-hosting/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishowtheitguy.github.io/blog/2024/05/09/django-admin-forms-with-formfield_overrides/</loc>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/05/08/customizing-how-models-are-displayed/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/01/06/drf-yasg-swagger/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/05/06/django-with-ajax/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/01/03/blog-crud-application-using-drf--viewsets/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/04/23/enhancing-django-development-with-model-help_text/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/04/20/m-is-bigger-than-v-and-c-in-django/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/04/17/managing-settings-for-multiple-environments-in-django/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/04/24/how-to-handle-nullable--non-nullable-fields-in-django/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/05/01/preventing-unintended-form-resubmission-in-web-applications/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/01/18/how-to-set-up-a-virtual-environment-in-python/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/04/16/unveiling-pythons-hidden-gems-exploring-the-secrets-module/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/01/02/how-to-implement-tokenization-using-jwt-and-django/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/04/29/exploring-static-and-dynamic-model-choices-in-django/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/04/25/a-peek-into-str-method-in-django/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/04/26/navigating-tmux-a-quick-guide-to-swapping-windows/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/04/26/understanding-django-query-methods-objectsall-vs-get_object_or_404/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/python/args/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/archive/2024/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/page/2/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/page/3/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/archive/2024/page/2/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/archive/2024/page/3/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/tags/</loc>
-         <lastmod>2024-05-01</lastmod>
+         <lastmod>2024-05-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
