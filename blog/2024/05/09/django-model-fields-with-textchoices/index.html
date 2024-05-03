@@ -10,13 +10,11 @@
         <meta name="author" content="it guy">
       
       
-        <link rel="canonical" href="https://bishowtheitguy.github.io/blog/2024/05/09/django-admin-forms-with-formfield_overrides/">
+        <link rel="canonical" href="https://bishowtheitguy.github.io/blog/2024/05/09/django-model-fields-with-textchoices/">
       
       
-        <link rel="prev" href="../../08/customizing-how-models-are-displayed/">
+        <link rel="prev" href="../django-admin-forms-with-formfield_overrides/">
       
-      
-        <link rel="next" href="../django-model-fields-with-textchoices/">
       
       
       <link rel="icon" href="../../../../../assets/logo/favicon.ico">
@@ -24,7 +22,7 @@
     
     
       
-        <title>Django Admin Forms with formfield_overrides - Bishow IT Guy</title>
+        <title>Django Model Fields with TextChoices - Bishow IT Guy</title>
       
     
     
@@ -87,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#django-admin-forms-with-formfield_overrides" class="md-skip">
+        <a href="#django-model-fields-with-textchoices" class="md-skip">
           Skip to content
         </a>
       
@@ -122,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Django Admin Forms with formfield_overrides
+              Django Model Fields with TextChoices
             
           </span>
         </div>
@@ -1623,37 +1621,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#lets-demonstrate-both-approaches-using-an-example" class="md-nav__link">
+  <a href="#benefits-of-textchoices" class="md-nav__link">
     <span class="md-ellipsis">
-      Let's demonstrate both approaches using an example:
+      Benefits of TextChoices:
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Let's demonstrate both approaches using an example:">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#life-before-textchoices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Life Before TextChoices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Life Before TextChoices">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-directly-using-htmlfield-in-the-model" class="md-nav__link">
+  <a href="#1-tuples-of-tuples-old-style" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Directly Using HTMLField in the Model:
+      1. Tuples of Tuples (Old Style):
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-using-formfield_overrides-in-the-admin" class="md-nav__link">
+  <a href="#2-namedtuples" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Using formfield_overrides in the Admin:
+      2. NamedTuples:
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#3-class-based-choices-textchoices" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      3. Class-Based Choices (TextChoices):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-dynamic-choices" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Dynamic Choices:
     </span>
   </a>
   
@@ -1661,15 +1686,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reference" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reference
-    </span>
-  </a>
   
 </li>
       
@@ -1786,78 +1802,103 @@
 
 
 
-<div><h1 id="django-admin-forms-with-formfield_overrides">Django Admin Forms with formfield_overrides</h1>
-<p><code>formfield_overrides</code> is a nifty attribute available in Django's <code>admin.ModelAdmin</code> class that allows developers to customize the form fields used in the admin interface for specific model fields. This feature enables you to enhance the user experience, integrate third-party widgets, and streamline data entry without the need for extensive customizations.</p>
+<div><h1 id="django-model-fields-with-textchoices">Django Model Fields with TextChoices</h1>
+<p>Before Django <code>3.0</code>, defining choices for model fields typically involved using tuples of tuples, which could be cumbersome and error-prone. With the introduction of TextChoices, Django provides a more elegant and Pythonic way to define choices using class-based syntax.</p>
 <!-- more -->
 
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">from</span> <span class="nn">myapp.models</span> <span class="kn">import</span> <span class="n">Article</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">class</span> <span class="nc">ArticleAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">formfield_overrides</span> <span class="o">=</span> <span class="p">{</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">:</span> <span class="p">{</span><span class="s1">'widget'</span><span class="p">:</span> <span class="n">TinyMCE</span><span class="p">},</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="p">}</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">django.utils.translation</span> <span class="kn">import</span> <span class="n">gettext_lazy</span> <span class="k">as</span> <span class="n">_</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">class</span> <span class="nc">MyModel</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="k">class</span> <span class="nc">Status</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">TextChoices</span><span class="p">):</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        <span class="n">DRAFT</span> <span class="o">=</span> <span class="s1">'draft'</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s1">'Draft'</span><span class="p">)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="n">PUBLISHED</span> <span class="o">=</span> <span class="s1">'published'</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s1">'Published'</span><span class="p">)</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="n">ARCHIVED</span> <span class="o">=</span> <span class="s1">'archived'</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s1">'Archived'</span><span class="p">)</span>
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">Article</span><span class="p">,</span> <span class="n">ArticleAdmin</span><span class="p">)</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="n">status</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        <span class="n">max_length</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        <span class="n">choices</span><span class="o">=</span><span class="n">Status</span><span class="o">.</span><span class="n">choices</span><span class="p">,</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        <span class="n">default</span><span class="o">=</span><span class="n">Status</span><span class="o">.</span><span class="n">DRAFT</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="p">)</span>
 </span></code></pre></div>
-<p>In this example, we've <mark>overridden</mark> the form field for TextField model fields to use the <strong>TinyMCE</strong> widget. Now, whenever administrators access the content field in the admin interface, they'll be greeted with a feature-rich editor, allowing them to format and style the article content effortlessly.</p>
+<p>In this example:</p>
+<ul>
+<li>We define a Status class as a subclass of TextChoices.</li>
+<li>Each choice is defined as a class attribute, with the first value representing the database representation and the second value providing a human-readable name.</li>
+<li>The status field of the MyModel model uses Status.choices for its choices.</li>
+</ul>
+<h2 id="benefits-of-textchoices">Benefits of TextChoices:</h2>
+<ol>
+<li>Improved Readability: Using TextChoices enhances the readability of your code by providing a clear and concise way to define choices within your model definitions.</li>
+<li>Enhanced Maintenance: With TextChoices, managing and updating the list of choices becomes more straightforward, reducing the chances of errors and inconsistencies.</li>
+<li>Autocomplete Support: Modern code editors often provide autocomplete support for class-based definitions, making it easier to work with TextChoices compared to tuples of tuples.</li>
+<li>Integration with Localization: TextChoices seamlessly integrates with Django's internationalization (i18n) and localization (l10n) features, allowing for easy translation of choice labels.</li>
+</ol>
+<h2 id="conclusion">Conclusion:</h2>
+<p>In conclusion, TextChoices is a valuable addition to Django's feature set, offering a more elegant and Pythonic way to define choices for model fields. By leveraging class-based syntax, TextChoices improves the readability, maintainability, and usability of Django models, making them easier to understand and maintain.</p>
+<p>Whether you're working on a small project or a large-scale application, consider incorporating TextChoices into your Django models to streamline your development workflow and enhance the quality of your code.</p>
 <hr>
-<h2 id="lets-demonstrate-both-approaches-using-an-example">Let's demonstrate both approaches using an example:</h2>
-<p>Using <strong>HTMLField</strong> directly from a third-party package like <code>tinymce.models</code> in your model has a similar effect to using <code>formfield_overrides</code> in the admin. However, there are some differences in how they work and their implications:</p>
-<h3 id="1-directly-using-htmlfield-in-the-model">1. Directly Using HTMLField in the Model:</h3>
+<h2 id="life-before-textchoices">Life Before <code>TextChoices</code></h2>
+<h3 id="1-tuples-of-tuples-old-style">1. Tuples of Tuples (Old Style):</h3>
 <ul>
-<li>This approach directly modifies the model field itself. Any form using this model will automatically render the content field using the specified HTML editor, in this case, TinyMCE.</li>
-<li>It affects all forms and views that use the NewsItem model, not just the admin interface. So if you have forms outside the admin that use the content field, they will also render with the HTML editor.</li>
-<li>It couples the model tightly with the specific HTML editor implementation. If you later decide to switch to a different HTML editor or remove it altogether, you'll need to update the model field definition and potentially refactor any related code.</li>
+<li>This is the traditional way of defining choices in Django.</li>
+<li>Choices are defined as tuples of tuples, where each inner tuple contains the value stored in the database and its human-readable representation.</li>
 </ul>
-<div class="language-python highlight"><span class="filename">models.py</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span> <span class="nn">tinymce.models</span> <span class="kn">import</span> <span class="n">HTMLField</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">class</span> <span class="nc">NewsItem</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">120</span><span class="p">)</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="n">content</span> <span class="o">=</span> <span class="n">HTMLField</span><span class="p">()</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">STATUS_CHOICES</span> <span class="o">=</span> <span class="p">(</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="p">(</span><span class="s1">'draft'</span><span class="p">,</span> <span class="s1">'Draft'</span><span class="p">),</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="p">(</span><span class="s1">'published'</span><span class="p">,</span> <span class="s1">'Published'</span><span class="p">),</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="p">(</span><span class="s1">'archived'</span><span class="p">,</span> <span class="s1">'Archived'</span><span class="p">),</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">)</span>
 </span></code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>In this approach, we're directly using HTMLField from <strong>tinymce.models</strong> as the field type for the content field in the NewsItem model. This means that whenever this model is used in a form, whether in the admin or elsewhere in your application, the content field will render with the TinyMCE HTML editor.</p>
-</div>
-<h3 id="2-using-formfield_overrides-in-the-admin">2. Using formfield_overrides in the Admin:</h3>
+<p><strong>Use Case:</strong></p>
+<p>This approach is suitable for simple cases where the list of choices is small and does not change frequently.</p>
+<h3 id="2-namedtuples">2. NamedTuples:</h3>
 <ul>
-<li>This approach provides more flexibility and separation of concerns. It allows you to customize the form field used in the admin interface without directly modifying the model field.</li>
-<li>It only affects the admin interface. Other forms and views using the same model will continue to use the default form field unless explicitly overridden.</li>
-<li>It provides a cleaner separation between data models and presentation concerns. The model definition remains focused on data structure, while the admin customization is handled separately.</li>
+<li>NamedTuples provide a more structured approach compared to tuples of tuples.</li>
+<li>Choices are defined using NamedTuples, which allows for better readability and maintainability.</li>
 </ul>
-<div class="language-python highlight"><span class="filename">admin.py</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kn">from</span> <span class="nn">myapp.models</span> <span class="kn">import</span> <span class="n">NewsItem</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="kn">from</span> <span class="nn">tinymce.widgets</span> <span class="kn">import</span> <span class="n">TinyMCE</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="k">class</span> <span class="nc">NewsItemAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="n">formfield_overrides</span> <span class="o">=</span> <span class="p">{</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">:</span> <span class="p">{</span><span class="s1">'widget'</span><span class="p">:</span> <span class="n">TinyMCE</span><span class="p">()},</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    <span class="p">}</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">NewsItem</span><span class="p">,</span> <span class="n">NewsItemAdmin</span><span class="p">)</span>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>from collections import namedtuple
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Status = namedtuple('Status', ['value', 'display_name'])
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>STATUS_CHOICES = [
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    Status('draft', 'Draft'),
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    Status('published', 'Published'),
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    Status('archived', 'Archived'),
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>]
 </span></code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>In this approach, we're using <strong>formfield_overrides</strong> within the <strong>NewsItemAdmin</strong> class to specify that any TextField form fields in the admin interface should use the TinyMCE widget. This means that only in the admin interface will the content field render with the TinyMCE HTML editor. Outside of the admin, such as in custom forms or views, the default behavior of rendering a text input field for TextField will be preserved.</p>
-</div>
-<h3 id="summary">Summary</h3>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
+<p><strong>Use Case:</strong></p>
+<p>NamedTuples are useful when you want a more organized and maintainable way to define choices compared to tuples of tuples.</p>
+<h3 id="3-class-based-choices-textchoices">3. Class-Based Choices (TextChoices):</h3>
 <ul>
-<li><strong>Directly Using HTMLField in the Model</strong>: Simple and straightforward, but affects all forms and views using the model, including those outside the admin.</li>
-<li><strong>Using <code>formfield_overrides</code> in the Admin</strong>: Provides more flexibility and separation of concerns, allowing customization specifically for the admin interface without affecting other parts of the application.</li>
+<li>Introduced in Django 3.0, TextChoices provides a modern and Pythonic way to define choices using class-based syntax.</li>
+<li>Choices are defined as class attributes within a subclass of TextChoices.</li>
 </ul>
-</div>
-<p>Choose the approach that best fits your project's requirements, considering factors such as reusability, maintainability, and the need for customization in different parts of your application. </p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">from</span> <span class="nn">django.utils.translation</span> <span class="kn">import</span> <span class="n">gettext_lazy</span> <span class="k">as</span> <span class="n">_</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">class</span> <span class="nc">Status</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">TextChoices</span><span class="p">):</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="n">DRAFT</span> <span class="o">=</span> <span class="s1">'draft'</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s1">'Draft'</span><span class="p">)</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="n">PUBLISHED</span> <span class="o">=</span> <span class="s1">'published'</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s1">'Published'</span><span class="p">)</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="n">ARCHIVED</span> <span class="o">=</span> <span class="s1">'archived'</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s1">'Archived'</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong>Use Case:</strong></p>
+<p>TextChoices is recommended for new projects or when you want to refactor existing code to improve readability and maintainability. It offers benefits such as autocomplete support and integration with localization.</p>
+<h3 id="4-dynamic-choices">4. Dynamic Choices:</h3>
+<ul>
+<li>Sometimes, you may need to dynamically generate choices based on certain conditions.</li>
+<li>Choices can be generated dynamically using a function or by querying a database.</li>
+</ul>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">def</span> <span class="nf">get_status_choices</span><span class="p">():</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="c1"># Logic to generate choices dynamically</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="k">return</span> <span class="p">[(</span><span class="s1">'draft'</span><span class="p">,</span> <span class="s1">'Draft'</span><span class="p">),</span> <span class="p">(</span><span class="s1">'published'</span><span class="p">,</span> <span class="s1">'Published'</span><span class="p">)]</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="k">class</span> <span class="nc">MyModel</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="n">status</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">choices</span><span class="o">=</span><span class="n">get_status_choices</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong>Use Case:</strong></p>
+<p>Dynamic choices are suitable when the list of choices depends on runtime conditions or needs to be fetched from external sources like a database.</p>
 <hr>
-<h2 id="reference">Reference</h2>
-<ul>
-<li><a href=""></a></li>
-</ul></div>
+<p>When choosing the appropriate method for defining choices, consider factors such as readability, maintainability, flexibility, and the specific requirements of your project. For new projects, TextChoices is recommended for its modern syntax and additional features, but the other methods still have their place depending on the complexity and context of your application.</p></div>
 
 
 
@@ -1900,7 +1941,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../08/customizing-how-models-are-displayed/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Customizing how models are displayed">
+          <a href="../django-admin-forms-with-formfield_overrides/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Django Admin Forms with formfield_overrides">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1910,27 +1951,11 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Customizing how models are displayed
+                Django Admin Forms with formfield_overrides
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../django-model-fields-with-textchoices/" class="md-footer__link md-footer__link--next" aria-label="Next: Django Model Fields with TextChoices">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Django Model Fields with TextChoices
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
         
       </nav>
     
