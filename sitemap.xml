@@ -246,6 +246,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishowtheitguy.github.io/blog/2024/05/10/django-image-manipulation/</loc>
+         <lastmod>2024-05-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/04/18/django-images-not-showing-in-the-cpanel-or-shared-hosting/</loc>
          <lastmod>2024-05-03</lastmod>
          <changefreq>daily</changefreq>
@@ -322,11 +327,6 @@
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/04/25/a-peek-into-str-method-in-django/</loc>
-         <lastmod>2024-05-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishowtheitguy.github.io/blog/2024/04/26/navigating-tmux-a-quick-guide-to-swapping-windows/</loc>
          <lastmod>2024-05-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
