@@ -246,6 +246,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishowtheitguy.github.io/blog/2024/05/10/django-easy-thumbnails-package/</loc>
+         <lastmod>2024-05-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/01/01/managing-development-env-in-django/</loc>
          <lastmod>2024-05-04</lastmod>
          <changefreq>daily</changefreq>
@@ -256,12 +261,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://bishowtheitguy.github.io/blog/2024/05/10/django-image-manipulation/</loc>
+         <loc>https://bishowtheitguy.github.io/blog/2024/05/14/difference-between-django-httprequest-vs-requests-package/</loc>
          <lastmod>2024-05-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/04/18/django-images-not-showing-in-the-cpanel-or-shared-hosting/</loc>
+         <lastmod>2024-05-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishowtheitguy.github.io/blog/2024/05/14/django-model-inheritance/</loc>
          <lastmod>2024-05-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
