@@ -266,6 +266,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishowtheitguy.github.io/blog/2024/05/12/understanding-slugify-and-slugfield-in-django/</loc>
+         <lastmod>2024-05-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/01/06/drf-yasg-swagger/</loc>
          <lastmod>2024-05-04</lastmod>
          <changefreq>daily</changefreq>
