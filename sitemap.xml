@@ -81,6 +81,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishowtheitguy.github.io/backend/django/django-utility-functions/</loc>
+         <lastmod>2024-05-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishowtheitguy.github.io/backend/django/django-view/</loc>
          <lastmod>2024-05-04</lastmod>
          <changefreq>daily</changefreq>
@@ -246,6 +251,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishowtheitguy.github.io/blog/2024/05/12/simplifying-django-views-with-get_object_or_404/</loc>
+         <lastmod>2024-05-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/05/10/django-image-manipulation/</loc>
          <lastmod>2024-05-04</lastmod>
          <changefreq>daily</changefreq>
@@ -361,12 +371,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishowtheitguy.github.io/blog/page/4/</loc>
+         <lastmod>2024-05-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishowtheitguy.github.io/blog/archive/2024/page/2/</loc>
          <lastmod>2024-05-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/archive/2024/page/3/</loc>
+         <lastmod>2024-05-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishowtheitguy.github.io/blog/archive/2024/page/4/</loc>
          <lastmod>2024-05-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
