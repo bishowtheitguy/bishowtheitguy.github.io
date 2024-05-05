@@ -161,7 +161,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishowtheitguy.github.io/backend/package/django-cors-headers/</loc>
+         <lastmod>2024-05-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishowtheitguy.github.io/backend/package/django-debug-toolbar/</loc>
+         <lastmod>2024-05-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishowtheitguy.github.io/backend/package/django-environ/</loc>
+         <lastmod>2024-05-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishowtheitguy.github.io/backend/package/django-extensions/</loc>
+         <lastmod>2024-05-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishowtheitguy.github.io/backend/package/django-simple-history/</loc>
          <lastmod>2024-05-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
