@@ -10,28 +10,26 @@
         <meta name="author" content="it guy">
       
       
-        <link rel="canonical" href="https://bishowtheitguy.github.io/backend/django/django-builtin/">
+        <link rel="canonical" href="https://bishowtheitguy.github.io/blog/2024/05/15/separating-business-logic-and-presentation-in-django/">
       
       
-        <link rel="prev" href="../intro/">
+        <link rel="prev" href="../../14/difference-between-django-httprequest-vs-requests-package/">
       
       
-        <link rel="next" href="../django-form/">
       
-      
-      <link rel="icon" href="../../../assets/logo/favicon.ico">
+      <link rel="icon" href="../../../../../assets/logo/favicon.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
     
     
       
-        <title>django built-in - Bishow IT Guy</title>
+        <title>Separating Business Logic and Presentation in Django - Bishow IT Guy</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,14 +48,14 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -68,7 +66,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -87,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#django-built-in" class="md-skip">
+        <a href="#separating-business-logic-and-presentation-in-django" class="md-skip">
           Skip to content
         </a>
       
@@ -103,9 +101,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Bishow IT Guy" class="md-header__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
+    <a href="../../../../.." title="Bishow IT Guy" class="md-header__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
       
-  <img src="../../../assets/logo/internet.png" alt="logo">
+  <img src="../../../../../assets/logo/internet.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -122,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              django built-in
+              Separating Business Logic and Presentation in Django
             
           </span>
         </div>
@@ -219,11 +217,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../blog/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../" class="md-tabs__link">
           
   
   Blog
@@ -237,13 +237,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../intro/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../../../backend/django/intro/" class="md-tabs__link">
           
   
   Django
@@ -261,7 +259,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../intro/" class="md-tabs__link">
+        <a href="../../../../../backend/intro/" class="md-tabs__link">
           
   
   Backend
@@ -279,7 +277,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../python/args/" class="md-tabs__link">
+        <a href="../../../../../python/args/" class="md-tabs__link">
           
   
   Python
@@ -307,7 +305,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -318,9 +318,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Bishow IT Guy" class="md-nav__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
+    <a href="../../../../.." title="Bishow IT Guy" class="md-nav__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
       
-  <img src="../../../assets/logo/internet.png" alt="logo">
+  <img src="../../../../../assets/logo/internet.png" alt="logo">
 
     </a>
     Bishow IT Guy
@@ -332,8 +332,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -342,12 +344,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
@@ -361,7 +363,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Blog
@@ -372,12 +374,14 @@
                 
   
   
+    
+  
   
     
   
   
-    <li class="md-nav__item">
-      <a href="../../../blog/" class="md-nav__link">
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../../../../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -437,7 +441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/archive/2024/" class="md-nav__link">
+      <a href="../../../../archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -470,8 +474,6 @@
       
   
   
-    
-  
   
   
     
@@ -482,12 +484,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -501,7 +503,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Django
@@ -515,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../intro/" class="md-nav__link">
+      <a href="../../../../../backend/django/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -533,30 +535,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    django built-in
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../../../backend/django/django-builtin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -565,53 +547,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#packages" class="md-nav__link">
-    <span class="md-ellipsis">
-      packages
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#class-based-view-vs-function-based-view" class="md-nav__link">
-    <span class="md-ellipsis">
-      Class-based view vs Function-based view
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reference" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reference
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -624,7 +559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-form/" class="md-nav__link">
+      <a href="../../../../../backend/django/django-form/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -645,7 +580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-view/" class="md-nav__link">
+      <a href="../../../../../backend/django/django-view/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -666,7 +601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-model/" class="md-nav__link">
+      <a href="../../../../../backend/django/django-model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -687,7 +622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-template/" class="md-nav__link">
+      <a href="../../../../../backend/django/django-template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -708,7 +643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-urlsconf/" class="md-nav__link">
+      <a href="../../../../../backend/django/django-urlsconf/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -729,7 +664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-admin/" class="md-nav__link">
+      <a href="../../../../../backend/django/django-admin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -750,7 +685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-middleware/" class="md-nav__link">
+      <a href="../../../../../backend/django/django-middleware/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -771,7 +706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../migration/" class="md-nav__link">
+      <a href="../../../../../backend/django/migration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -792,7 +727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../decorator/" class="md-nav__link">
+      <a href="../../../../../backend/django/decorator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -813,7 +748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mixins/" class="md-nav__link">
+      <a href="../../../../../backend/django/mixins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -834,7 +769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../context-processors/" class="md-nav__link">
+      <a href="../../../../../backend/django/context-processors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -855,7 +790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-tools/" class="md-nav__link">
+      <a href="../../../../../backend/django/django-tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -876,7 +811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-utility-functions/" class="md-nav__link">
+      <a href="../../../../../backend/django/django-utility-functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -897,7 +832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-hardening/" class="md-nav__link">
+      <a href="../../../../../backend/django/django-hardening/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -918,7 +853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-secretkey/" class="md-nav__link">
+      <a href="../../../../../backend/django/django-secretkey/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -939,7 +874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chatgpt/" class="md-nav__link">
+      <a href="../../../../../backend/django/chatgpt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -997,7 +932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../builtin/auth-app/" class="md-nav__link">
+      <a href="../../../../../backend/django/builtin/auth-app/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1018,7 +953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../builtin/class-based-views/" class="md-nav__link">
+      <a href="../../../../../backend/django/builtin/class-based-views/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1039,7 +974,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../builtin/django-paginator/" class="md-nav__link">
+      <a href="../../../../../backend/django/builtin/django-paginator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1105,7 +1040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../designpatterns/intro/" class="md-nav__link">
+      <a href="../../../../../backend/django/designpatterns/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1126,7 +1061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../designpatterns/template-patterns/" class="md-nav__link">
+      <a href="../../../../../backend/django/designpatterns/template-patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1192,7 +1127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../package/intro/" class="md-nav__link">
+      <a href="../../../../../backend/package/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1213,7 +1148,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../package/python-dotenv/" class="md-nav__link">
+      <a href="../../../../../backend/package/python-dotenv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1234,7 +1169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../package/python-mysqlclient/" class="md-nav__link">
+      <a href="../../../../../backend/package/python-mysqlclient/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1255,7 +1190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../package/tinymce/" class="md-nav__link">
+      <a href="../../../../../backend/package/tinymce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1276,7 +1211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../package/jwt-guide/" class="md-nav__link">
+      <a href="../../../../../backend/package/jwt-guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1297,7 +1232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../package/jwt-installation/" class="md-nav__link">
+      <a href="../../../../../backend/package/jwt-installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1318,7 +1253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../package/dj-rest-auth/" class="md-nav__link">
+      <a href="../../../../../backend/package/dj-rest-auth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1339,7 +1274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../package/django-allauth/" class="md-nav__link">
+      <a href="../../../../../backend/package/django-allauth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1360,7 +1295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../package/django-autoslug/" class="md-nav__link">
+      <a href="../../../../../backend/package/django-autoslug/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1381,7 +1316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../package/django-debug-toolbar/" class="md-nav__link">
+      <a href="../../../../../backend/package/django-debug-toolbar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1402,7 +1337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../package/django-simple-history/" class="md-nav__link">
+      <a href="../../../../../backend/package/django-simple-history/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1423,7 +1358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../package/django-cors-headers/" class="md-nav__link">
+      <a href="../../../../../backend/package/django-cors-headers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1444,7 +1379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../package/django-environ/" class="md-nav__link">
+      <a href="../../../../../backend/package/django-environ/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1465,7 +1400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../package/django-extensions/" class="md-nav__link">
+      <a href="../../../../../backend/package/django-extensions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1486,7 +1421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../package/0.draft/" class="md-nav__link">
+      <a href="../../../../../backend/package/0.draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1562,7 +1497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intro/" class="md-nav__link">
+      <a href="../../../../../backend/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1620,7 +1555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../drf/drf-functionbasedviews/" class="md-nav__link">
+      <a href="../../../../../backend/drf/drf-functionbasedviews/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1641,7 +1576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../drf/drf-viewsets/" class="md-nav__link">
+      <a href="../../../../../backend/drf/drf-viewsets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1662,7 +1597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../drf/python-microservices/" class="md-nav__link">
+      <a href="../../../../../backend/drf/python-microservices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1728,7 +1663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fastAPI/fast-api/" class="md-nav__link">
+      <a href="../../../../../backend/fastAPI/fast-api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1757,7 +1692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../celery/" class="md-nav__link">
+      <a href="../../../../../backend/celery/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1778,7 +1713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../draft/" class="md-nav__link">
+      <a href="../../../../../backend/draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1846,7 +1781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../python/args/" class="md-nav__link">
+      <a href="../../../../../python/args/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1875,6 +1810,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -1894,27 +1831,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#packages" class="md-nav__link">
+  <a href="#1-using-class-based-views-cbvs" class="md-nav__link">
     <span class="md-ellipsis">
-      packages
+      1. Using Class-Based Views (CBVs):
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#class-based-view-vs-function-based-view" class="md-nav__link">
+  <a href="#2-thin-views-fat-models" class="md-nav__link">
     <span class="md-ellipsis">
-      Class-based view vs Function-based view
+      2. Thin Views, Fat Models:
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#reference" class="md-nav__link">
+  <a href="#3-service-layers" class="md-nav__link">
     <span class="md-ellipsis">
-      Reference
+      3. Service Layers:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-template-tags-and-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Template Tags and Filters:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-separate-apps-and-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Separate Apps and Modules:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-dry-dont-repeat-yourself" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. DRY (Don't Repeat Yourself):
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Tests:
     </span>
   </a>
   
@@ -1929,163 +1902,163 @@
             
           
           
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
-                
-                  
-
-
-<div><h1 id="django-built-in">Django built-in</h1>
-<h2 id="packages">packages</h2>
-<div class="grid cards">
-<ul>
-<li>
-<p>An <strong>administration</strong> site</p>
-<hr>
-<p><a href="#"><code>django.contrib.admin</code></a></p>
-<hr>
-<p><a href="#"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span> Reference</a></p>
-</li>
-<li>
-<p>An <strong>authentication</strong> framework</p>
-<hr>
-<p><a href="#"><code>django.contrib.auth</code></a></p>
-<hr>
-<p><a href="#"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span> Reference</a></p>
-</li>
-<li>
-<p>A framework for handling <strong>content types</strong></p>
-<hr>
-<p><a href="#"><code>django.contrib.contenttypes</code></a></p>
-<hr>
-<p><a href="#"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span> Reference</a></p>
-</li>
-<li>
-<p>A <strong>session</strong> framework</p>
-<hr>
-<p><a href="#"><code>django.contrib.sessions</code></a></p>
-<hr>
-<p><a href="#"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span> Reference</a></p>
-</li>
-<li>
-<p>A <strong>messaging</strong> framework</p>
-<hr>
-<p><a href="#"><code>django.contrib.messages</code></a></p>
-<hr>
-<p><a href="#"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span> Reference</a></p>
-</li>
-<li>
-<p>A framework for managing <strong>static files</strong> </p>
-<hr>
-<p><a href="#"><code>django.contrib.staticfiles</code></a></p>
-<hr>
-<p><a href="#"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span> Reference</a></p>
-</li>
-</ul>
-</div>
-<hr>
-<h2 id="class-based-view-vs-function-based-view">Class-based view vs Function-based view</h2>
-<p><a class="glightbox" href="https://simpleisbetterthancomplex.com/media/2017/03/featured-views.jpg" data-type="image" data-width="100%" data-height="auto" data-title="FBV vs CBV" data-desc-position="bottom"><img alt="FBV vs CBV" src="https://simpleisbetterthancomplex.com/media/2017/03/featured-views.jpg"></a></p>
-<p>Those are the main differences between <code>function-based views</code> and <code>class-based views</code>. Now, Django’s <strong>generic</strong> <code>class-based views</code> are a different story.</p>
-<div class="admonition tip">
-<p class="admonition-title">Generic Class-Based Views</p>
-<p>The generic <code>class-based-views was</code> introduced to address the common use cases in a Web application, such as creating new objects, form handling, list views, pagination, archive views and so on.</p>
-<ul>
-<li>They come in the Django core, and you can implement them from the module <code>django.views.generic</code>.</li>
-<li>They are great and can speed up the development process.</li>
-</ul>
-<p>Here is an overview of the available views:</p>
-<div class="grid cards" markdown>
-<ul>
-<li>
-<p><strong>GENERIC BASE</strong></p>
-<hr>
-<ul>
-<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.views.generic.base/View/">View</a></li>
-<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.views.generic.base/TemplateView/">TemplateView</a></li>
-<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.views.generic.base/RedirectView/">RedirectView</a></li>
-</ul>
-</li>
-<li>
-<p><strong>GENERIC DETAIL</strong></p>
-<hr>
-<ul>
-<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.views.generic.detail/DetailView/">DetailView</a></li>
-</ul>
-</li>
-<li>
-<p><strong>GENERIC LIST</strong></p>
-<hr>
-<ul>
-<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.views.generic.list/ListView/">ListView</a></li>
-</ul>
-</li>
-<li>
-<p><strong>GENERIC EDIT</strong></p>
-<hr>
-<ul>
-<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.views.generic.edit/FormView/">FormView</a></li>
-<li>CreateView</li>
-<li>UpdateView</li>
-<li>DeleteView</li>
-</ul>
-</li>
-<li>
-<p><strong>GENERIC DATES</strong></p>
-<hr>
-<ul>
-<li>ArchiveIndexView</li>
-<li>YearArchiveView</li>
-<li>MonthArchiveView</li>
-<li>WeekArchiveView</li>
-<li>DayArchiveView</li>
-<li>TodayArchiveView</li>
-<li>DateDetailView</li>
-</ul>
-</li>
-<li>
-<p><strong>AUTH VIEWS</strong></p>
-<hr>
-<ul>
-<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.contrib.auth.views/LoginView/">LoginView</a></li>
-<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.contrib.auth.views/LogoutView/">LogoutView</a></li>
-<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.contrib.auth.views/PasswordChangeDoneView/">PasswordChangeDoneView</a></li>
-<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.contrib.auth.views/PasswordChangeView/">PasswordChangeView</a></li>
-<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.contrib.auth.views/PasswordResetCompleteView/">PasswordResetCompleteView</a></li>
-<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.contrib.auth.views/PasswordResetConfirmView/">PasswordResetConfirmView</a></li>
-<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.contrib.auth.views/PasswordResetDoneView/">PasswordResetDoneView</a></li>
-<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.contrib.auth.views/PasswordResetView/">PasswordResetView</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<hr>
-<ul>
-<li><a href="https://simpleisbetterthancomplex.com/article/2017/03/21/class-based-views-vs-function-based-views.html">Class-Based Views vs. Function-Based Views</a></li>
-<li><a href="https://ccbv.co.uk/">Classy Class-Based Views.</a></li>
-</ul>
-</div>
-<hr>
-<h2 id="reference">Reference</h2>
-<ul>
-<li><a href="https://www.amazon.com/Django-Example-powerful-reliable-applications/dp/1801813051">Django 4 By Example Fourth Edition by Antonio Melé: pg-12</a></li>
-</ul></div>
-
-
-
-
-
-
-
-
-
-
-
-
-                
-              </article>
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
             </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
+                        <time datetime="2024-05-15 00:00:00" class="md-ellipsis">May 15, 2024</time>
+                      </div>
+                    </li>
+                    
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              3 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+          </nav>
           
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+
+
+<div><h1 id="separating-business-logic-and-presentation-in-django">Separating Business Logic and Presentation in Django</h1>
+<p>In Django web development, maintaining a clear separation of concerns between business logic and presentation logic is essential for building scalable, maintainable, and reusable applications. By adhering to best practices and following established patterns, developers can ensure that their code remains organized, flexible, and easy to maintain.</p>
+<!-- more -->
+
+<h2 id="1-using-class-based-views-cbvs">1. Using Class-Based Views (CBVs):</h2>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Django's class-based views provide a structured approach to handling HTTP requests and responses. By defining views as classes, developers can encapsulate related functionality and separate concerns more effectively. For instance, ListView and DetailView are commonly used to display lists of objects and detailed views respectively, while keeping the presentation logic separate from the business logic.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">django.views.generic</span> <span class="kn">import</span> <span class="n">ListView</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Product</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">class</span> <span class="nc">ProductListView</span><span class="p">(</span><span class="n">ListView</span><span class="p">):</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">model</span> <span class="o">=</span> <span class="n">Product</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">template_name</span> <span class="o">=</span> <span class="s1">'products/product_list.html'</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">context_object_name</span> <span class="o">=</span> <span class="s1">'products'</span>
+</span></code></pre></div>
+<p>In this example, the ProductListView class-based view retrieves a list of products from the database using the Product model and renders them in a template called <code>product_list.html</code>.</p>
+</div>
+<h2 id="2-thin-views-fat-models">2. Thin Views, Fat Models:</h2>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Following the "thin views, fat models" principle encourages developers to keep views lightweight by moving most of the business logic into model methods. Models represent the application's data and are the ideal place to encapsulate business logic related to data manipulation, validation, and operations. This approach enhances code readability and maintainability by keeping views focused on handling HTTP requests and responses.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">class</span> <span class="nc">Product</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="n">name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="n">price</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DecimalField</span><span class="p">(</span><span class="n">max_digits</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">decimal_places</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="k">def</span> <span class="nf">calculate_discounted_price</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">discount_percent</span><span class="p">):</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">price</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">discount_percent</span> <span class="o">/</span> <span class="mi">100</span><span class="p">)</span>
+</span></code></pre></div>
+<p>In the Product model, we define a method called <code>calculate_discounted_price()</code> to encapsulate the logic for calculating the discounted price of a product. This keeps the view simple while moving the business logic to the model layer.</p>
+</div>
+<h2 id="3-service-layers">3. Service Layers:</h2>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Introducing service layers allows developers to encapsulate complex business logic that doesn't fit naturally into models or views. Service classes provide a dedicated place to house business logic that operates on multiple models or involves complex operations. This approach promotes code reusability and modularity by separating the concerns of data manipulation and business logic from the presentation layer.</p>
+<div class="language-python highlight"><span class="filename">services.py</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">class</span> <span class="nc">ProductService</span><span class="p">:</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="nd">@staticmethod</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="k">def</span> <span class="nf">get_discounted_price</span><span class="p">(</span><span class="n">product</span><span class="p">,</span> <span class="n">discount_percent</span><span class="p">):</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        <span class="k">return</span> <span class="n">product</span><span class="o">.</span><span class="n">price</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">discount_percent</span> <span class="o">/</span> <span class="mi">100</span><span class="p">)</span>
+</span></code></pre></div>
+<p>In a service class called <code>ProductService</code>, we define a method <code>get_discounted_price()</code> to encapsulate the logic for calculating the discounted price of a product. This service class can be used in views or other parts of the application to access the business logic.</p>
+</div>
+<h2 id="4-template-tags-and-filters">4. Template Tags and Filters:</h2>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Django's template system supports custom template tags and filters, which enable developers to encapsulate presentation logic in templates. Custom template tags and filters can be used to format data, perform conditional checks, or execute custom logic directly within templates. This approach enhances template readability and maintainability by keeping presentation-related logic separate from business logic.</p>
+<div class="language-python highlight"><span class="filename">custom_filters.py</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># templatetags/custom_filters.py</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kn">from</span> <span class="nn">django</span> <span class="kn">import</span> <span class="n">template</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">register</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="n">Library</span><span class="p">()</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="nd">@register</span><span class="o">.</span><span class="n">filter</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="k">def</span> <span class="nf">format_price</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="k">return</span> <span class="sa">f</span><span class="s2">"$</span><span class="si">{</span><span class="n">value</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span>
+</span></code></pre></div>
+<p>In a custom template filter called <code>format_price</code>, we define a filter to format a numeric value as a currency string with two decimal places. This filter can be used in templates to format prices.</p>
+</div>
+<h2 id="5-separate-apps-and-modules">5. Separate Apps and Modules:</h2>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Organize your Django project into separate apps, each focusing on a specific functional area. For example, you might have separate apps for <strong>products</strong>, <strong>orders</strong>, <strong>users</strong>, etc., each containing models, views, and templates related to that area.</p>
+</div>
+<h2 id="6-dry-dont-repeat-yourself">6. DRY (Don't Repeat Yourself):</h2>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Identify repeated logic across views, models, and templates, and refactor it into reusable components. For example, if you find similar querysets being used in multiple views, consider creating a custom manager or utility function to encapsulate the logic.</p>
+</div>
+<h2 id="7-tests">7. Tests:</h2>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Write comprehensive unit tests for your business logic, ensuring that it behaves as expected and remains consistent across changes. For example, you might write tests to validate the behavior of model methods, view functions, and template tags.</p>
+</div>
+<p>By applying these principles and practices in your Django projects, you can achieve a clear separation of concerns between business logic and presentation logic, leading to cleaner, more maintainable code.</p></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
@@ -2102,10 +2075,12 @@
   
     
       
+        
+      
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../intro/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Intro">
+          <a href="../../14/difference-between-django-httprequest-vs-requests-package/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Difference between Django HttpRequest vs requests package">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -2115,27 +2090,11 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Intro
+                Difference between Django HttpRequest vs requests package
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../django-form/" class="md-footer__link md-footer__link--next" aria-label="Next: django form">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                django form
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
         
       </nav>
     
@@ -2166,10 +2125,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tabs.sticky", "header.autohide", "navigation.footer", "content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tabs.sticky", "header.autohide", "navigation.footer", "content.code.copy", "content.code.select"], "search": "../../../../../assets/javascripts/workers/search.f886a092.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>

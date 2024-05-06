@@ -121,7 +121,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishowtheitguy.github.io/backend/django/builtin/class-based-views/</loc>
+         <lastmod>2024-05-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishowtheitguy.github.io/backend/django/builtin/django-paginator/</loc>
+         <lastmod>2024-05-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishowtheitguy.github.io/backend/django/designpatterns/intro/</loc>
+         <lastmod>2024-05-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishowtheitguy.github.io/backend/django/designpatterns/template-patterns/</loc>
          <lastmod>2024-05-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -367,6 +382,11 @@
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/04/16/unveiling-pythons-hidden-gems-exploring-the-secrets-module/</loc>
+         <lastmod>2024-05-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishowtheitguy.github.io/blog/2024/05/15/separating-business-logic-and-presentation-in-django/</loc>
          <lastmod>2024-05-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
