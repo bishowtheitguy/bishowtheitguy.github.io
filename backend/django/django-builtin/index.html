@@ -16,7 +16,7 @@
         <link rel="prev" href="../intro/">
       
       
-        <link rel="next" href="../django-view/">
+        <link rel="next" href="../django-form/">
       
       
       <link rel="icon" href="../../../assets/logo/favicon.ico">
@@ -591,6 +591,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#class-based-view-vs-function-based-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class-based view vs Function-based view
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -603,27 +612,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../django-view/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    django view
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -657,11 +645,32 @@
   
   
     <li class="md-nav__item">
+      <a href="../django-view/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    django view (controller)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../django-model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    django model
+    django model (orm)
   </span>
   
 
@@ -682,7 +691,7 @@
         
   
   <span class="md-ellipsis">
-    django template
+    django template (view)
   </span>
   
 
@@ -1810,6 +1819,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#class-based-view-vs-function-based-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class-based view vs Function-based view
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -1882,6 +1900,88 @@
 </ul>
 </div>
 <hr>
+<h2 id="class-based-view-vs-function-based-view">Class-based view vs Function-based view</h2>
+<p><a class="glightbox" href="https://simpleisbetterthancomplex.com/media/2017/03/featured-views.jpg" data-type="image" data-width="100%" data-height="auto" data-title="FBV vs CBV" data-desc-position="bottom"><img alt="FBV vs CBV" src="https://simpleisbetterthancomplex.com/media/2017/03/featured-views.jpg"></a></p>
+<p>Those are the main differences between <code>function-based views</code> and <code>class-based views</code>. Now, Django’s <strong>generic</strong> <code>class-based views</code> are a different story.</p>
+<div class="admonition tip">
+<p class="admonition-title">Generic Class-Based Views</p>
+<p>The generic <code>class-based-views was</code> introduced to address the common use cases in a Web application, such as creating new objects, form handling, list views, pagination, archive views and so on.</p>
+<ul>
+<li>They come in the Django core, and you can implement them from the module <code>django.views.generic</code>.</li>
+<li>They are great and can speed up the development process.</li>
+</ul>
+<p>Here is an overview of the available views:</p>
+<div class="grid cards" markdown>
+<ul>
+<li>
+<p><strong>GENERIC BASE</strong></p>
+<hr>
+<ul>
+<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.views.generic.base/View/">View</a></li>
+<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.views.generic.base/TemplateView/">TemplateView</a></li>
+<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.views.generic.base/RedirectView/">RedirectView</a></li>
+</ul>
+</li>
+<li>
+<p><strong>GENERIC DETAIL</strong></p>
+<hr>
+<ul>
+<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.views.generic.detail/DetailView/">DetailView</a></li>
+</ul>
+</li>
+<li>
+<p><strong>GENERIC LIST</strong></p>
+<hr>
+<ul>
+<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.views.generic.list/ListView/">ListView</a></li>
+</ul>
+</li>
+<li>
+<p><strong>GENERIC EDIT</strong></p>
+<hr>
+<ul>
+<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.views.generic.edit/FormView/">FormView</a></li>
+<li>CreateView</li>
+<li>UpdateView</li>
+<li>DeleteView</li>
+</ul>
+</li>
+<li>
+<p><strong>GENERIC DATES</strong></p>
+<hr>
+<ul>
+<li>ArchiveIndexView</li>
+<li>YearArchiveView</li>
+<li>MonthArchiveView</li>
+<li>WeekArchiveView</li>
+<li>DayArchiveView</li>
+<li>TodayArchiveView</li>
+<li>DateDetailView</li>
+</ul>
+</li>
+<li>
+<p><strong>AUTH VIEWS</strong></p>
+<hr>
+<ul>
+<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.contrib.auth.views/LoginView/">LoginView</a></li>
+<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.contrib.auth.views/LogoutView/">LogoutView</a></li>
+<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.contrib.auth.views/PasswordChangeDoneView/">PasswordChangeDoneView</a></li>
+<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.contrib.auth.views/PasswordChangeView/">PasswordChangeView</a></li>
+<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.contrib.auth.views/PasswordResetCompleteView/">PasswordResetCompleteView</a></li>
+<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.contrib.auth.views/PasswordResetConfirmView/">PasswordResetConfirmView</a></li>
+<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.contrib.auth.views/PasswordResetDoneView/">PasswordResetDoneView</a></li>
+<li><a href="https://ccbv.co.uk/projects/Django/5.0/django.contrib.auth.views/PasswordResetView/">PasswordResetView</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<hr>
+<ul>
+<li><a href="https://simpleisbetterthancomplex.com/article/2017/03/21/class-based-views-vs-function-based-views.html">Class-Based Views vs. Function-Based Views</a></li>
+<li><a href="https://ccbv.co.uk/">Classy Class-Based Views.</a></li>
+</ul>
+</div>
+<hr>
 <h2 id="reference">Reference</h2>
 <ul>
 <li><a href="https://www.amazon.com/Django-Example-powerful-reliable-applications/dp/1801813051">Django 4 By Example Fourth Edition by Antonio Melé: pg-12</a></li>
@@ -1938,13 +2038,13 @@
         
         
           
-          <a href="../django-view/" class="md-footer__link md-footer__link--next" aria-label="Next: django view">
+          <a href="../django-form/" class="md-footer__link md-footer__link--next" aria-label="Next: django form">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                django view
+                django form
               </div>
             </div>
             <div class="md-footer__button md-icon">
