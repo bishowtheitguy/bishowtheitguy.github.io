@@ -131,17 +131,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://bishowtheitguy.github.io/backend/django/builtin/auth-app/</loc>
-         <lastmod>2024-05-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://bishowtheitguy.github.io/backend/django/builtin/class-based-views/</loc>
          <lastmod>2024-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishowtheitguy.github.io/backend/django/builtin/django-contrib-auth/</loc>
+         <lastmod>2024-05-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishowtheitguy.github.io/backend/django/builtin/django-contrib-contenttypes/</loc>
+         <lastmod>2024-05-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishowtheitguy.github.io/backend/django/builtin/django-paginator/</loc>
+         <lastmod>2024-05-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishowtheitguy.github.io/backend/django/builtin/intro/</loc>
          <lastmod>2024-05-10</lastmod>
          <changefreq>daily</changefreq>
     </url>

@@ -10,10 +10,10 @@
         <meta name="author" content="it guy">
       
       
-        <link rel="canonical" href="https://bishowtheitguy.github.io/backend/django/builtin/auth-app/">
+        <link rel="canonical" href="https://bishowtheitguy.github.io/backend/django/builtin/django-contrib-contenttypes/">
       
       
-        <link rel="prev" href="../../chatgpt/">
+        <link rel="prev" href="../django-contrib-auth/">
       
       
         <link rel="next" href="../class-based-views/">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Auth app - Bishow IT Guy</title>
+        <title>django contrib contenttypes - Bishow IT Guy</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#auth-app" class="md-skip">
+        <a href="#djangocontribcontenttypes" class="md-skip">
           Skip to content
         </a>
       
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Auth app
+              django contrib contenttypes
             
           </span>
         </div>
@@ -992,6 +992,48 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../django-contrib-auth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    django contrib auth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1008,7 +1050,7 @@
           
   
   <span class="md-ellipsis">
-    Auth app
+    django contrib contenttypes
   </span>
   
 
@@ -1019,7 +1061,7 @@
         
   
   <span class="md-ellipsis">
-    Auth app
+    django contrib contenttypes
   </span>
   
 
@@ -1041,9 +1083,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#auth-urls-and-views" class="md-nav__link">
+  <a href="#the-contenttypes-framework" class="md-nav__link">
     <span class="md-ellipsis">
-      Auth URLs and Views
+      The contenttypes framework
     </span>
   </a>
   
@@ -1971,9 +2013,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#auth-urls-and-views" class="md-nav__link">
+  <a href="#the-contenttypes-framework" class="md-nav__link">
     <span class="md-ellipsis">
-      Auth URLs and Views
+      The contenttypes framework
     </span>
   </a>
   
@@ -2003,53 +2045,29 @@
                   
 
 
-<div><h1 id="auth-app">Auth App</h1>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># django_project/settings.py</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="s2">"django.contrib.admin"</span><span class="p">,</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="s2">"django.contrib.auth"</span><span class="p">,</span> <span class="c1"># Yoohoo!!!!</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="s2">"django.contrib.contenttypes"</span><span class="p">,</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="s2">"django.contrib.sessions"</span><span class="p">,</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="s2">"django.contrib.messages"</span><span class="p">,</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="s2">"django.contrib.staticfiles"</span><span class="p">,</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="c1"># Local</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="s2">"accounts.apps.AccountsConfig"</span><span class="p">,</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="s2">"pages.apps.PagesConfig"</span><span class="p">,</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p">]</span>
+<div><h1 id="djangocontribcontenttypes">django.contrib.contenttypes</h1>
+<h2 id="the-contenttypes-framework"><a href="https://docs.djangoproject.com/en/5.0/ref/contrib/contenttypes/">The contenttypes framework</a></h2>
+<p>Django includes a contenttypes application that can track all of the models installed in your Django-powered project, providing a high-level, generic interface for working with your models.</p>
+<p><code>django.contrib.contenttypes</code> is a Django app that provides a framework for content types. It allows you to create relationships between different models without having to hardcode the model classes. Instead of directly referring to a model class, you can use the ContentType framework to get the model's metadata, such as the app label and the model's name. This is particularly useful for generic relationships where you want to associate an object with any type of model without specifying the model directly.</p>
+<p>For example, let's say you have a <code>Tag</code> model and you want to associate it with any other model in your project. You can use ContentType to create a generic foreign key:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">django.contrib.contenttypes.fields</span> <span class="kn">import</span> <span class="n">GenericForeignKey</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">django.contrib.contenttypes.models</span> <span class="kn">import</span> <span class="n">ContentType</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">class</span> <span class="nc">TaggedItem</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">content_type</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">ContentType</span><span class="p">,</span> <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">object_id</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">PositiveIntegerField</span><span class="p">()</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">content_object</span> <span class="o">=</span> <span class="n">GenericForeignKey</span><span class="p">(</span><span class="s1">'content_type'</span><span class="p">,</span> <span class="s1">'object_id'</span><span class="p">)</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">tag</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="c1"># Other fields and methods</span>
 </span></code></pre></div>
-<p>There are, in fact, 6 apps already there that Django provides for us which power the site. The first is <code>admin</code> and the second is <code>auth</code>. This is how we know the auth app is already present in our Django project.</p>
-<p>When we earlier ran the migrate command for the first time all of these apps were linked together in the initial database. And remember that we used the <strong>AUTH_USER_MODEL</strong> setting to tell Django to use our <mark>custom user model</mark>, not the default User model here. This is why we had to wait until that configuration was complete before running migrate for the first time.</p>
-<h2 id="auth-urls-and-views">Auth URLs and Views</h2>
-<p>To use Django’s built-in auth app we must explicitly add it to our <code>config/urls.py</code> file. The easiest approach is to use <strong>accounts/</strong> as the prefix since that is commonly used in the Django community.</p>
-<p>Make the one line change below. Note that as our <code>urls.py</code> file grows in length, adding comments for each type of URL–admin, user management, local apps, etc.–helps with readability.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># django_project/urls.py</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span><span class="p">,</span> <span class="n">include</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="c1"># Django admin</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="n">path</span><span class="p">(</span><span class="s2">"admin/"</span><span class="p">,</span> <span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">urls</span><span class="p">),</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="c1"># User management</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="n">path</span><span class="p">(</span><span class="s2">"accounts/"</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s2">"django.contrib.auth.urls"</span><span class="p">)),</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="c1"># new</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="c1"># Local apps</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    <span class="n">path</span><span class="p">(</span><span class="s2">""</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s2">"pages.urls"</span><span class="p">)),</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="p">]</span>
-</span></code></pre></div>
-<p>What’s included in the auth app? A lot it turns out. First off, there are a number of associated urls.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">accounts</span><span class="o">/</span><span class="n">login</span><span class="o">/</span> <span class="p">[</span><span class="n">name</span><span class="o">=</span><span class="s2">"login"</span><span class="p">]</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">accounts</span><span class="o">/</span><span class="n">logout</span><span class="o">/</span> <span class="p">[</span><span class="n">name</span><span class="o">=</span><span class="s2">"logout"</span><span class="p">]</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">accounts</span><span class="o">/</span><span class="n">password_change</span><span class="o">/</span> <span class="p">[</span><span class="n">name</span><span class="o">=</span><span class="s2">"password_change"</span><span class="p">]</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">accounts</span><span class="o">/</span><span class="n">password_change</span><span class="o">/</span><span class="n">done</span><span class="o">/</span> <span class="p">[</span><span class="n">name</span><span class="o">=</span><span class="s2">"password_change_done"</span><span class="p">]</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">accounts</span><span class="o">/</span><span class="n">password_reset</span><span class="o">/</span> <span class="p">[</span><span class="n">name</span><span class="o">=</span><span class="s2">"password_reset"</span><span class="p">]</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">accounts</span><span class="o">/</span><span class="n">password_reset</span><span class="o">/</span><span class="n">done</span><span class="o">/</span> <span class="p">[</span><span class="n">name</span><span class="o">=</span><span class="s2">"password_reset_done"</span><span class="p">]</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">accounts</span><span class="o">/</span><span class="n">reset</span><span class="o">/&lt;</span><span class="n">uidb64</span><span class="o">&gt;/&lt;</span><span class="n">token</span><span class="o">&gt;/</span> <span class="p">[</span><span class="n">name</span><span class="o">=</span><span class="s2">"password_reset_confirm"</span><span class="p">]</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="n">accounts</span><span class="o">/</span><span class="n">reset</span><span class="o">/</span><span class="n">done</span><span class="o">/</span> <span class="p">[</span><span class="n">name</span><span class="o">=</span><span class="s2">"password_reset_complete"</span><span class="p">]</span>
-</span></code></pre></div>
+<p>With this setup, you can associate any model instance with a tag without explicitly defining a foreign key for each model.</p>
+<p><code>django.contrib.contenttypes</code> also provides utilities for working with content types programmatically, such as retrieving the model class for a given content type, getting all related objects for a given object, and so on. It's a powerful tool for building flexible and reusable Django applications.</p>
 <hr>
 <h2 id="reference">Reference</h2>
 <ul>
-<li><a href="">Django for Professionals by William S. Vincent</a></li>
+<li><a href="https://stackoverflow.com/questions/20895429/how-exactly-do-django-content-types-work">how does django content types work? stackoverflow</a></li>
 </ul></div>
 
 
@@ -2086,7 +2104,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../chatgpt/" class="md-footer__link md-footer__link--prev" aria-label="Previous: chatgpt">
+          <a href="../django-contrib-auth/" class="md-footer__link md-footer__link--prev" aria-label="Previous: django contrib auth">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -2096,7 +2114,7 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                chatgpt
+                django contrib auth
               </div>
             </div>
           </a>
