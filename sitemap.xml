@@ -171,6 +171,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishowtheitguy.github.io/backend/drf/intro/</loc>
+         <lastmod>2024-05-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishowtheitguy.github.io/backend/drf/python-microservices/</loc>
          <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
