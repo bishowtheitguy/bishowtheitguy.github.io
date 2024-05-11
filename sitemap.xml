@@ -116,11 +116,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://bishowtheitguy.github.io/backend/django/mixins/</loc>
-         <lastmod>2024-05-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://bishowtheitguy.github.io/backend/django/builtin/class-based-views/</loc>
          <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
@@ -157,6 +152,11 @@
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/django/designpatterns/template-patterns/</loc>
+         <lastmod>2024-05-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishowtheitguy.github.io/backend/django/mixins/intro/</loc>
          <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
