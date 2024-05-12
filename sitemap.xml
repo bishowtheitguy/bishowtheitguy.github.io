@@ -406,6 +406,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishowtheitguy.github.io/blog/2024/05/16/get-related-blogs-using-django-taggit/</loc>
+         <lastmod>2024-05-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/05/06/django-with-ajax/</loc>
          <lastmod>2024-05-12</lastmod>
          <changefreq>daily</changefreq>
