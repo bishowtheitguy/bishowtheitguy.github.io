@@ -10,28 +10,28 @@
         <meta name="author" content="it guy">
       
       
-        <link rel="canonical" href="https://bishowtheitguy.github.io/blog/2024/04/17/managing-settings-for-multiple-environments-in-django/">
+        <link rel="canonical" href="https://bishowtheitguy.github.io/backend/package/django-taggit/">
       
       
-        <link rel="prev" href="../../16/unveiling-pythons-hidden-gems-exploring-the-secrets-module/">
+        <link rel="prev" href="../django-simple-history/">
       
       
-        <link rel="next" href="../../18/django-images-not-showing-in-the-cpanel-or-shared-hosting/">
+        <link rel="next" href="../0.draft/">
       
       
-      <link rel="icon" href="../../../../../assets/logo/favicon.ico">
+      <link rel="icon" href="../../../assets/logo/favicon.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
     
     
       
-        <title>Managing settings for multiple environments in django - Bishow IT Guy</title>
+        <title>django taggit - Bishow IT Guy</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,14 +50,14 @@
       
     
     
-    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -68,7 +68,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#managing-settings-for-multiple-environments-in-django" class="md-skip">
+        <a href="#installation" class="md-skip">
           Skip to content
         </a>
       
@@ -103,9 +103,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../../.." title="Bishow IT Guy" class="md-header__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
+    <a href="../../.." title="Bishow IT Guy" class="md-header__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
       
-  <img src="../../../../../assets/logo/internet.png" alt="logo">
+  <img src="../../../assets/logo/internet.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Managing settings for multiple environments in django
+              django taggit
             
           </span>
         </div>
@@ -219,13 +219,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../blog/" class="md-tabs__link">
           
   
   Blog
@@ -239,11 +237,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../../../backend/django/intro/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../django/intro/" class="md-tabs__link">
           
   
   Django
@@ -261,7 +261,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../backend/drf/intro/" class="md-tabs__link">
+        <a href="../../drf/intro/" class="md-tabs__link">
           
   
   drf
@@ -279,7 +279,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../backend/intro/" class="md-tabs__link">
+        <a href="../../intro/" class="md-tabs__link">
           
   
   Backend
@@ -297,7 +297,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../python/args/" class="md-tabs__link">
+        <a href="../../../python/args/" class="md-tabs__link">
           
   
   Python
@@ -325,9 +325,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -338,9 +336,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../.." title="Bishow IT Guy" class="md-nav__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
+    <a href="../../.." title="Bishow IT Guy" class="md-nav__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
       
-  <img src="../../../../../assets/logo/internet.png" alt="logo">
+  <img src="../../../assets/logo/internet.png" alt="logo">
 
     </a>
     Bishow IT Guy
@@ -352,8 +350,6 @@
       
   
   
-    
-  
   
   
     
@@ -364,12 +360,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
@@ -383,7 +379,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Blog
@@ -394,14 +390,12 @@
                 
   
   
-    
-  
   
     
   
   
-    <li class="md-nav__item md-nav__item--active">
-      <a href="../../../../" class="md-nav__link">
+    <li class="md-nav__item">
+      <a href="../../../blog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -461,7 +455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archive/2024/" class="md-nav__link">
+      <a href="../../../blog/archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -494,8 +488,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -504,12 +500,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -523,7 +519,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Django
@@ -537,7 +533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/intro/" class="md-nav__link">
+      <a href="../../django/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -558,7 +554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-form/" class="md-nav__link">
+      <a href="../../django/django-form/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -579,7 +575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-view/" class="md-nav__link">
+      <a href="../../django/django-view/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -600,7 +596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-model/" class="md-nav__link">
+      <a href="../../django/django-model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -621,7 +617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-template/" class="md-nav__link">
+      <a href="../../django/django-template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -642,7 +638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-urlconf/" class="md-nav__link">
+      <a href="../../django/django-urlconf/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -663,7 +659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-middleware/" class="md-nav__link">
+      <a href="../../django/django-middleware/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -684,7 +680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/migration/" class="md-nav__link">
+      <a href="../../django/migration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -705,7 +701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-404/" class="md-nav__link">
+      <a href="../../django/django-404/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -726,7 +722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-mail/" class="md-nav__link">
+      <a href="../../django/django-mail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -747,7 +743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-reset-password/" class="md-nav__link">
+      <a href="../../django/django-reset-password/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -768,7 +764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/decorator/" class="md-nav__link">
+      <a href="../../django/decorator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -789,7 +785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/context-processors/" class="md-nav__link">
+      <a href="../../django/context-processors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -810,7 +806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-tools/" class="md-nav__link">
+      <a href="../../django/django-tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -831,7 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-utility-functions/" class="md-nav__link">
+      <a href="../../django/django-utility-functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -852,7 +848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-hardening/" class="md-nav__link">
+      <a href="../../django/django-hardening/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -873,7 +869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-secretkey/" class="md-nav__link">
+      <a href="../../django/django-secretkey/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -894,7 +890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/chatgpt/" class="md-nav__link">
+      <a href="../../django/chatgpt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -952,7 +948,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/intro/" class="md-nav__link">
+      <a href="../../django/mixins/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -973,7 +969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/context-processors/" class="md-nav__link">
+      <a href="../../django/mixins/context-processors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -994,7 +990,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/custom-char-field-widget/" class="md-nav__link">
+      <a href="../../django/mixins/custom-char-field-widget/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1015,7 +1011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/custom-text-field-widget/" class="md-nav__link">
+      <a href="../../django/mixins/custom-text-field-widget/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1036,7 +1032,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/image-display-mixins/" class="md-nav__link">
+      <a href="../../django/mixins/image-display-mixins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1057,7 +1053,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/image-size-validators/" class="md-nav__link">
+      <a href="../../django/mixins/image-size-validators/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1078,7 +1074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/image-type-validators/" class="md-nav__link">
+      <a href="../../django/mixins/image-type-validators/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1099,7 +1095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/permission-mixins/" class="md-nav__link">
+      <a href="../../django/mixins/permission-mixins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1165,7 +1161,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/builtin/intro/" class="md-nav__link">
+      <a href="../../django/builtin/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1186,7 +1182,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/builtin/django-contrib-admin/" class="md-nav__link">
+      <a href="../../django/builtin/django-contrib-admin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1207,7 +1203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/builtin/django-contrib-auth/" class="md-nav__link">
+      <a href="../../django/builtin/django-contrib-auth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1228,7 +1224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/builtin/django-contrib-contenttypes/" class="md-nav__link">
+      <a href="../../django/builtin/django-contrib-contenttypes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1249,7 +1245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/builtin/class-based-views/" class="md-nav__link">
+      <a href="../../django/builtin/class-based-views/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1270,7 +1266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/builtin/django-paginator/" class="md-nav__link">
+      <a href="../../django/builtin/django-paginator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1336,7 +1332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/designpatterns/intro/" class="md-nav__link">
+      <a href="../../django/designpatterns/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1357,7 +1353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/designpatterns/template-patterns/" class="md-nav__link">
+      <a href="../../django/designpatterns/template-patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1383,19 +1379,21 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_22" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_22" checked>
         
           
           <label class="md-nav__link" for="__nav_2_22" id="__nav_2_22_label" tabindex="0">
@@ -1409,7 +1407,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_22_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_22_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_22">
             <span class="md-nav__icon md-icon"></span>
             Package
@@ -1423,7 +1421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/intro/" class="md-nav__link">
+      <a href="../intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1444,7 +1442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/python-dotenv/" class="md-nav__link">
+      <a href="../python-dotenv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1465,7 +1463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/python-mysqlclient/" class="md-nav__link">
+      <a href="../python-mysqlclient/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1486,7 +1484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/tinymce/" class="md-nav__link">
+      <a href="../tinymce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1507,7 +1505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/jwt-guide/" class="md-nav__link">
+      <a href="../jwt-guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1528,7 +1526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/jwt-installation/" class="md-nav__link">
+      <a href="../jwt-installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1549,7 +1547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/dj-rest-auth/" class="md-nav__link">
+      <a href="../dj-rest-auth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1570,7 +1568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-allauth/" class="md-nav__link">
+      <a href="../django-allauth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1591,7 +1589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-autoslug/" class="md-nav__link">
+      <a href="../django-autoslug/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1612,7 +1610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-cors-headers/" class="md-nav__link">
+      <a href="../django-cors-headers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1633,7 +1631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-debug-toolbar/" class="md-nav__link">
+      <a href="../django-debug-toolbar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1654,7 +1652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-environ/" class="md-nav__link">
+      <a href="../django-environ/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1675,7 +1673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-extensions/" class="md-nav__link">
+      <a href="../django-extensions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1696,7 +1694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-simple-history/" class="md-nav__link">
+      <a href="../django-simple-history/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1714,10 +1712,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-taggit/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    django taggit
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1726,6 +1742,42 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1738,7 +1790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/0.draft/" class="md-nav__link">
+      <a href="../0.draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1814,7 +1866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/drf/intro/" class="md-nav__link">
+      <a href="../../drf/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1835,7 +1887,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/drf/drf-functionbasedviews/" class="md-nav__link">
+      <a href="../../drf/drf-functionbasedviews/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1856,7 +1908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/drf/drf-viewsets/" class="md-nav__link">
+      <a href="../../drf/drf-viewsets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1877,7 +1929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/drf/python-microservices/" class="md-nav__link">
+      <a href="../../drf/python-microservices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1945,7 +1997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/intro/" class="md-nav__link">
+      <a href="../../intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2003,7 +2055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/fastAPI/fast-api/" class="md-nav__link">
+      <a href="../../fastAPI/fast-api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2032,7 +2084,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/celery/" class="md-nav__link">
+      <a href="../../celery/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2053,7 +2105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/draft/" class="md-nav__link">
+      <a href="../../draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2121,7 +2173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/args/" class="md-nav__link">
+      <a href="../../../python/args/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2142,7 +2194,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/content-management-system/" class="md-nav__link">
+      <a href="../../../python/content-management-system/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2171,8 +2223,6 @@
             
             
               
-                
-              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -2182,8 +2232,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2192,27 +2240,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#local-environment-settings" class="md-nav__link">
+  <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
-      Local environment settings
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#defining-environment-variable" class="md-nav__link">
-    <span class="md-ellipsis">
-      Defining environment variable
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#production-environment-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      Production environment settings
+      Installation
     </span>
   </a>
   
@@ -2236,220 +2266,32 @@
             
           
           
-  <div class="md-content md-content--post" data-md-component="content">
-    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
-      <div class="md-sidebar__scrollwrap">
-        <div class="md-sidebar__inner md-post">
-          <nav class="md-nav md-nav--primary">
-            <div class="md-post__back">
-              <div class="md-nav__title md-nav__container">
-                <a href="../../../../" class="md-nav__link">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-                  <span class="md-ellipsis">
-                    Back to index
-                  </span>
-                </a>
-              </div>
-            </div>
-            
-              <div class="md-post__authors md-typeset">
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
-                  <div class="md-profile md-post__profile">
-                    <span class="md-author md-author--long">
-                      <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-                    </span>
-                    <span class="md-profile__description">
-                      <strong>
-                        
-                          Bishow Thapa
-                        
-                      </strong>
-                      <br>
-                      Creator
-                    </span>
-                  </div>
-                
-              </div>
-            
-            <ul class="md-post__meta md-nav__list">
-              <li class="md-nav__item md-nav__item--section">
-                <div class="md-post__title">
-                  <span class="md-ellipsis">
-                    Metadata
-                  </span>
-                </div>
-                <nav class="md-nav">
-                  <ul class="md-nav__list">
-                    <li class="md-nav__item">
-                      <div class="md-nav__link">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2024-04-17 00:00:00" class="md-ellipsis">April 17, 2024</time>
-                      </div>
-                    </li>
-                    
-                    
-                    
-                      
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
-                          <span class="md-ellipsis">
-                            
-                              3 min read
-                            
-                          </span>
-                        </div>
-                      </li>
-                    
-                  </ul>
-                </nav>
-              </li>
-            </ul>
-          </nav>
-          
-        </div>
-      </div>
-    </div>
-    <article class="md-content__inner md-typeset">
-      
-        
-  
-  
-
-<nav class="md-tags" >
-  
-    
-    
-      
-      
-    
-    
-      <a href="../../../../../tags/#programming" class="md-tag md-tag-icon">Programming</a>
-    
-  
-    
-    
-      
-      
-    
-    
-      <a href="../../../../../tags/#django" class="md-tag md-tag-icon">Django</a>
-    
-  
-</nav>
+                  
 
 
+  <h1>django taggit</h1>
 
-<div><h1 id="managing-settings-for-multiple-environments-in-django">Managing settings for multiple environments in django</h1>
-<p>In real-world projects, you will have to deal with multiple environments. we have at least a local environment for development and a production environment for serving your application. </p>
-<p>we will use a base file that defines common settings, and a settings file per environment that overrides any necessary settings and defines additional ones.</p>
-<!-- more -->
-
-<p>Create a <code>settings/</code> directory next to the <code>settings.py</code> file of the your project. Rename the <code>settings.py</code> file to <code>base.py</code> and move it into the new <code>settings/</code> directory.</p>
-<p>Create the following additional files inside the <code>settings/</code> folder so that the new directory looks as follows:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>settings/
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    __init__.py
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    base.py
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    local.py
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    prod.py
+<div><h2 id="installation">Installation</h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>django-taggit
 </span></code></pre></div>
-<p>These files are as follows:</p>
-<ul>
-<li><code>base.py</code>: The base settings file that contains common settings (<mark>previously</mark> <code>settings.py</code>)</li>
-<li><code>local.py</code>: Custom settings for your local environment</li>
-<li><code>prod.py</code>: Custom settings for the production environment</li>
-</ul>
-<p>You have moved the settings files to a directory one level below, so you need to update the <strong>BASE_DIR</strong> setting in the <code>settings/base.py</code> file to point to the main project directory.</p>
-<p>When handling multiple environments, create a base settings file and a settings file for each environment. Environment settings files should inherit the common settings and override environment-specific settings.</p>
-<p>Edit the <code>settings/base.py</code> file and replace the following line:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>BASE_DIR = Path(__file__).resolve().parent.parent
+<p>Add <code>taggit</code> to your project’s <mark>INSTALLED_APPS</mark> setting.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">from</span> <span class="nn">taggit.managers</span> <span class="kn">import</span> <span class="n">TaggableManager</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">class</span> <span class="nc">Food</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="c1"># ... fields here</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="n">tags</span> <span class="o">=</span> <span class="n">TaggableManager</span><span class="p">()</span>
 </span></code></pre></div>
-<p><mark>with the following one:</mark></p>
-<div class="admonition success">
-<p class="admonition-title">settings/base.py</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>BASE_DIR = Path(__file__).resolve().parent.parent.parent
-</span></code></pre></div>
-</div>
-<p>You point to one directory above by adding .parent to the BASE_DIR path. Let’s configure the settings for the local environment.</p>
-<hr>
-<h2 id="local-environment-settings">Local environment settings</h2>
-<p>Instead of using a default configuration for the <strong>DEBUG</strong> and <strong>DATABASES</strong> settings, you will define them for each environment explicitly. These settings will be environment specific. Edit the <code>settings/local.py</code> file and add the following lines:</p>
-<div class="language-py highlight"><span class="filename">local.py</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span> <span class="nn">.base</span> <span class="kn">import</span> <span class="o">*</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">DEBUG</span> <span class="o">=</span> <span class="kc">True</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="s1">'default'</span><span class="p">:</span> <span class="p">{</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>        <span class="s1">'ENGINE'</span><span class="p">:</span> <span class="s1">'django.db.backends.sqlite3'</span><span class="p">,</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        <span class="s1">'NAME'</span><span class="p">:</span> <span class="n">BASE_DIR</span> <span class="o">/</span> <span class="s1">'db.sqlite3'</span><span class="p">,</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="p">}</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="p">}</span>
-</span></code></pre></div>
-<p>This is the settings file for your local environment. In this file, you import all settings defined in the <code>base.py</code> file, and you define the <strong>DEBUG</strong> and <strong>DATABASES</strong> settings for this environment. The <strong>DEBUG</strong> and <strong>DATABASES</strong> settings remain the same as you have been using for development.</p>
-<p><mark>Now remove the <strong>DATABASES</strong> and <strong>DEBUG</strong> settings from the <code>base.py</code> settings file.</mark></p>
-<p>Django management commands won’t automatically detect the settings file to use because the project settings file is not the default <code>settings.py</code> file. When running management commands, you need to indicate the <strong>settings module</strong> to use by adding a <code>--settings</code> <strong>option</strong>, as follows:</p>
-<div class="admonition tip">
-<p class="admonition-title">Python</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>python<span class="w"> </span>manage.py<span class="w"> </span>runserver<span class="w"> </span>--settings<span class="o">=</span>educa.settings.local
-</span></code></pre></div>
-</div>
-<p>Next, we are going to validate the project and the local environment configuration.</p>
-<hr>
-<h2 id="defining-environment-variable">Defining environment variable</h2>
-<p>If don’t want to pass the <code>--settings</code> option every time you run a management command, you can define the <strong>DJANGO_SETTINGS_MODULE</strong> environment variable. Django will use it to identify the settings module to use. </p>
-<p>If you are using <strong>Linux</strong> or <strong>macOS</strong>, you can define the environment variable by executing the following command in the shell:</p>
-<div class="admonition tip">
-<p class="admonition-title">Linux</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>export DJANGO_SETTINGS_MODULE=educa.settings.local
-</span></code></pre></div>
-</div>
-<p>To remove an environment variable in Linux, including one set with the syntax <code>export VARIABLE="value"</code>, you can <strong>unset</strong> it using the unset command. </p>
-<div class="admonition tip">
-<p class="admonition-title">Linux</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">unset</span><span class="w"> </span>VARIABLE
-</span></code></pre></div>
-</div>
-<hr>
-<p>If you are using <strong>Windows</strong>, you can execute the following command in the shell:</p>
-<div class="admonition note">
-<p class="admonition-title">Windows</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>set DJANGO_SETTINGS_MODULE=educa.settings.local
-</span></code></pre></div>
-</div>
-<p>Any management command you execute after will use the settings defined in the <strong>DJANGO_SETTINGS_MODULE</strong> environment variable.</p>
-<hr>
-<h2 id="production-environment-settings">Production environment settings</h2>
-<p>Let’s start by adding initial settings for the production environment. Edit the <code>settings/prod.py</code> file and make it look as follows:</p>
-<div class="language-py highlight"><span class="filename">prod.py</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">from</span> <span class="nn">.base</span> <span class="kn">import</span> <span class="o">*</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">DEBUG</span> <span class="o">=</span> <span class="kc">False</span>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="n">ADMINS</span> <span class="o">=</span> <span class="p">[</span>
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    <span class="p">(</span><span class="s1">'Antonio M'</span><span class="p">,</span> <span class="s1">'email@mydomain.com'</span><span class="p">),</span>
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="p">]</span>
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
-</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="n">ALLOWED_HOSTS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'*'</span><span class="p">]</span>
-</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>
-</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
-</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>    <span class="s1">'default'</span><span class="p">:</span> <span class="p">{</span>
-</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>    <span class="p">}</span>
-</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="p">}</span>
-</span></code></pre></div>
-<p>These are the settings for the production environment:</p>
-<ul>
-<li><code>DEBUG</code>: Setting <strong>DEBUG</strong> to <strong>False</strong> is necessary for any production environment. Failing to do so will result in the traceback information and sensitive configuration data being exposed to everyone.</li>
-<li><code>ADMINS</code>: When DEBUG is False and a view raises an exception, all information will be sent by email to the people listed in the <strong>ADMINS</strong> setting. Make sure that you replace the name/email tuple with your own information.</li>
-<li><code>ALLOWED_HOSTS</code>: For security reasons, Django will only allow the hosts included in this list to serve the project. For now, you allow all hosts by using the asterisk symbol, <code>*</code>. You will limit the hosts that can be used for serving the project later.</li>
-<li><code>DATABASES</code>: You keep default database settings empty because you will configure the production database later.</li>
-</ul>
 <hr>
 <h2 id="reference">Reference</h2>
 <ul>
-<li><a href="https://djangostars.com/blog/configuring-django-settings-best-practices/">Configuring Django Settings: Best Practices </a></li>
-<li><a href="https://esketchers.com/configuring-django-settings-best-practices/">Configuring Django Settings: Best Practices: 2 </a></li>
-<li><a href="https://www.packtpub.com/product/django-4-by-example-fourth-edition/9781801813051">Django 4 By Example Fourth Edition: pg-672</a></li>
-</ul>
-<hr></div>
+<li><a href="https://django-taggit.readthedocs.io/en/latest/getting_started.html">django-taggit</a></li>
+</ul></div>
 
 
 
@@ -2457,20 +2299,15 @@
 
 
 
-  
-  
 
 
 
 
-  
 
-
-
-      
-    </article>
-  </div>
-
+                
+              </article>
+            </div>
+          
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
@@ -2487,12 +2324,10 @@
   
     
       
-        
-      
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../16/unveiling-pythons-hidden-gems-exploring-the-secrets-module/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Unveiling Python&#39;s Hidden Gems: Exploring the Secrets Module">
+          <a href="../django-simple-history/" class="md-footer__link md-footer__link--prev" aria-label="Previous: django simple history">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -2502,20 +2337,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Unveiling Python's Hidden Gems: Exploring the Secrets Module
+                django simple history
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../18/django-images-not-showing-in-the-cpanel-or-shared-hosting/" class="md-footer__link md-footer__link--next" aria-label="Next: Django Images not showing in the Cpanel or Shared Hosting">
+          <a href="../0.draft/" class="md-footer__link md-footer__link--next" aria-label="Next: Draft Package">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Django Images not showing in the Cpanel or Shared Hosting
+                Draft Package
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2553,10 +2388,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tabs.sticky", "header.autohide", "navigation.footer", "content.code.copy", "content.code.select"], "search": "../../../../../assets/javascripts/workers/search.f886a092.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tabs.sticky", "header.autohide", "navigation.footer", "content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
