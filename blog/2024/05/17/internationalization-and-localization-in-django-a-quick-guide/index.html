@@ -10,28 +10,26 @@
         <meta name="author" content="it guy">
       
       
-        <link rel="canonical" href="https://bishowtheitguy.github.io/blog/archive/2024/">
+        <link rel="canonical" href="https://bishowtheitguy.github.io/blog/2024/05/17/internationalization-and-localization-in-django-a-quick-guide/">
       
       
-        <link rel="prev" href="../../">
+        <link rel="prev" href="../../16/get-related-blogs-using-django-taggit/">
       
       
-        <link rel="next" href="../../../backend/django/intro/">
       
-      
-      <link rel="icon" href="../../../assets/logo/favicon.ico">
+      <link rel="icon" href="../../../../../assets/logo/favicon.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
     
     
       
-        <title>2024 - Bishow IT Guy</title>
+        <title>Internationalization and Localization in Django: A Quick Guide - Bishow IT Guy</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,14 +48,14 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -68,7 +66,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -87,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#2024" class="md-skip">
+        <a href="#internationalization-and-localization-in-django-a-quick-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -103,9 +101,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Bishow IT Guy" class="md-header__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
+    <a href="../../../../.." title="Bishow IT Guy" class="md-header__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
       
-  <img src="../../../assets/logo/internet.png" alt="logo">
+  <img src="../../../../../assets/logo/internet.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -122,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2024
+              Internationalization and Localization in Django: A Quick Guide
             
           </span>
         </div>
@@ -225,7 +223,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../" class="md-tabs__link">
+        <a href="../../../../" class="md-tabs__link">
           
   
   Blog
@@ -243,7 +241,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../backend/django/intro/" class="md-tabs__link">
+        <a href="../../../../../backend/django/intro/" class="md-tabs__link">
           
   
   Django
@@ -261,7 +259,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../backend/drf/intro/" class="md-tabs__link">
+        <a href="../../../../../backend/drf/intro/" class="md-tabs__link">
           
   
   drf
@@ -279,7 +277,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../backend/intro/" class="md-tabs__link">
+        <a href="../../../../../backend/intro/" class="md-tabs__link">
           
   
   Backend
@@ -297,7 +295,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../python/args/" class="md-tabs__link">
+        <a href="../../../../../python/args/" class="md-tabs__link">
           
   
   Python
@@ -325,7 +323,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -336,9 +336,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Bishow IT Guy" class="md-nav__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
+    <a href="../../../../.." title="Bishow IT Guy" class="md-nav__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
       
-  <img src="../../../assets/logo/internet.png" alt="logo">
+  <img src="../../../../../assets/logo/internet.png" alt="logo">
 
     </a>
     Bishow IT Guy
@@ -392,12 +392,14 @@
                 
   
   
+    
+  
   
     
   
   
-    <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../../../../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -415,21 +417,19 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
         
           
           <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
@@ -443,7 +443,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1_2">
             <span class="md-nav__icon md-icon"></span>
             Archive
@@ -454,23 +454,12 @@
                 
   
   
-    
-  
   
     
-      
-    
   
   
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../../archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -479,7 +468,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -547,7 +535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/django/intro/" class="md-nav__link">
+      <a href="../../../../../backend/django/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -568,7 +556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/django/django-form/" class="md-nav__link">
+      <a href="../../../../../backend/django/django-form/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -589,7 +577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/django/django-view/" class="md-nav__link">
+      <a href="../../../../../backend/django/django-view/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -610,7 +598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/django/django-model/" class="md-nav__link">
+      <a href="../../../../../backend/django/django-model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -631,7 +619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/django/django-template/" class="md-nav__link">
+      <a href="../../../../../backend/django/django-template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -652,7 +640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/django/django-urlconf/" class="md-nav__link">
+      <a href="../../../../../backend/django/django-urlconf/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -673,7 +661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/django/django-middleware/" class="md-nav__link">
+      <a href="../../../../../backend/django/django-middleware/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -694,7 +682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/django/migration/" class="md-nav__link">
+      <a href="../../../../../backend/django/migration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -715,7 +703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/django/django-404/" class="md-nav__link">
+      <a href="../../../../../backend/django/django-404/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -736,7 +724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/django/django-mail/" class="md-nav__link">
+      <a href="../../../../../backend/django/django-mail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -757,7 +745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/django/django-reset-password/" class="md-nav__link">
+      <a href="../../../../../backend/django/django-reset-password/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -778,7 +766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/django/decorator/" class="md-nav__link">
+      <a href="../../../../../backend/django/decorator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -799,7 +787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/django/context-processors/" class="md-nav__link">
+      <a href="../../../../../backend/django/context-processors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -820,7 +808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/django/django-tools/" class="md-nav__link">
+      <a href="../../../../../backend/django/django-tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -841,7 +829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/django/django-utility-functions/" class="md-nav__link">
+      <a href="../../../../../backend/django/django-utility-functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -862,7 +850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/django/django-hardening/" class="md-nav__link">
+      <a href="../../../../../backend/django/django-hardening/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -883,7 +871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/django/django-secretkey/" class="md-nav__link">
+      <a href="../../../../../backend/django/django-secretkey/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -904,7 +892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/django/chatgpt/" class="md-nav__link">
+      <a href="../../../../../backend/django/chatgpt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -962,7 +950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/django/mixins/intro/" class="md-nav__link">
+      <a href="../../../../../backend/django/mixins/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -983,7 +971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/django/mixins/context-processors/" class="md-nav__link">
+      <a href="../../../../../backend/django/mixins/context-processors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1004,7 +992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/django/mixins/custom-char-field-widget/" class="md-nav__link">
+      <a href="../../../../../backend/django/mixins/custom-char-field-widget/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1025,7 +1013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/django/mixins/custom-text-field-widget/" class="md-nav__link">
+      <a href="../../../../../backend/django/mixins/custom-text-field-widget/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1046,7 +1034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/django/mixins/image-display-mixins/" class="md-nav__link">
+      <a href="../../../../../backend/django/mixins/image-display-mixins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1067,7 +1055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/django/mixins/image-size-validators/" class="md-nav__link">
+      <a href="../../../../../backend/django/mixins/image-size-validators/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1088,7 +1076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/django/mixins/image-type-validators/" class="md-nav__link">
+      <a href="../../../../../backend/django/mixins/image-type-validators/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1109,7 +1097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/django/mixins/permission-mixins/" class="md-nav__link">
+      <a href="../../../../../backend/django/mixins/permission-mixins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1175,7 +1163,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/django/builtin/intro/" class="md-nav__link">
+      <a href="../../../../../backend/django/builtin/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1196,7 +1184,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/django/builtin/django-contrib-admin/" class="md-nav__link">
+      <a href="../../../../../backend/django/builtin/django-contrib-admin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1217,7 +1205,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/django/builtin/django-contrib-auth/" class="md-nav__link">
+      <a href="../../../../../backend/django/builtin/django-contrib-auth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1238,7 +1226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/django/builtin/django-contrib-contenttypes/" class="md-nav__link">
+      <a href="../../../../../backend/django/builtin/django-contrib-contenttypes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1259,7 +1247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/django/builtin/class-based-views/" class="md-nav__link">
+      <a href="../../../../../backend/django/builtin/class-based-views/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1280,7 +1268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/django/builtin/django-paginator/" class="md-nav__link">
+      <a href="../../../../../backend/django/builtin/django-paginator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1346,7 +1334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/django/designpatterns/intro/" class="md-nav__link">
+      <a href="../../../../../backend/django/designpatterns/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1367,7 +1355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/django/designpatterns/template-patterns/" class="md-nav__link">
+      <a href="../../../../../backend/django/designpatterns/template-patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1433,7 +1421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/package/intro/" class="md-nav__link">
+      <a href="../../../../../backend/package/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1454,7 +1442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/package/python-dotenv/" class="md-nav__link">
+      <a href="../../../../../backend/package/python-dotenv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1475,7 +1463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/package/python-mysqlclient/" class="md-nav__link">
+      <a href="../../../../../backend/package/python-mysqlclient/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1496,7 +1484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/package/tinymce/" class="md-nav__link">
+      <a href="../../../../../backend/package/tinymce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1517,7 +1505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/package/jwt-guide/" class="md-nav__link">
+      <a href="../../../../../backend/package/jwt-guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1538,7 +1526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/package/jwt-installation/" class="md-nav__link">
+      <a href="../../../../../backend/package/jwt-installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1559,7 +1547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/package/dj-rest-auth/" class="md-nav__link">
+      <a href="../../../../../backend/package/dj-rest-auth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1580,7 +1568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/package/django-allauth/" class="md-nav__link">
+      <a href="../../../../../backend/package/django-allauth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1601,7 +1589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/package/django-autoslug/" class="md-nav__link">
+      <a href="../../../../../backend/package/django-autoslug/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1622,7 +1610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/package/django-cors-headers/" class="md-nav__link">
+      <a href="../../../../../backend/package/django-cors-headers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1643,7 +1631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/package/django-debug-toolbar/" class="md-nav__link">
+      <a href="../../../../../backend/package/django-debug-toolbar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1664,7 +1652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/package/django-environ/" class="md-nav__link">
+      <a href="../../../../../backend/package/django-environ/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1685,7 +1673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/package/django-extensions/" class="md-nav__link">
+      <a href="../../../../../backend/package/django-extensions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1706,7 +1694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/package/django-simple-history/" class="md-nav__link">
+      <a href="../../../../../backend/package/django-simple-history/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1727,7 +1715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/package/django-taggit/" class="md-nav__link">
+      <a href="../../../../../backend/package/django-taggit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1748,7 +1736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/package/0.draft/" class="md-nav__link">
+      <a href="../../../../../backend/package/0.draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1824,7 +1812,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/drf/intro/" class="md-nav__link">
+      <a href="../../../../../backend/drf/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1845,7 +1833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/drf/drf-functionbasedviews/" class="md-nav__link">
+      <a href="../../../../../backend/drf/drf-functionbasedviews/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1866,7 +1854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/drf/drf-viewsets/" class="md-nav__link">
+      <a href="../../../../../backend/drf/drf-viewsets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1887,7 +1875,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/drf/python-microservices/" class="md-nav__link">
+      <a href="../../../../../backend/drf/python-microservices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1955,7 +1943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/intro/" class="md-nav__link">
+      <a href="../../../../../backend/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2013,7 +2001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/fastAPI/fast-api/" class="md-nav__link">
+      <a href="../../../../../backend/fastAPI/fast-api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2042,7 +2030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/celery/" class="md-nav__link">
+      <a href="../../../../../backend/celery/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2063,7 +2051,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backend/draft/" class="md-nav__link">
+      <a href="../../../../../backend/draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2131,7 +2119,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../python/args/" class="md-nav__link">
+      <a href="../../../../../python/args/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2152,7 +2140,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../python/content-management-system/" class="md-nav__link">
+      <a href="../../../../../python/content-management-system/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2181,6 +2169,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -2193,6 +2183,92 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-internationalization-i18n-and-localization-l10n" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Internationalization (i18n) and Localization (l10n)?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps-to-implement-i18n-and-l10n-in-django" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps to Implement i18n and l10n in Django
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps to Implement i18n and l10n in Django">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-enable-internationalization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Enable Internationalization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-mark-text-for-translation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Mark Text for Translation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-create-and-edit-message-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Create and Edit Message Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-switching-languages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Switching Languages
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2200,383 +2276,241 @@
             
           
           
-  <div class="md-content" data-md-component="content">
-    <div class="md-content__inner">
-      <header class="md-typeset">
-        <h1 id="2024">2024</h1>
-      </header>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-17 00:00:00">May 17, 2024</time></li>
-        
-        
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          Bishow Thapa
+                        
+                      </strong>
+                      <br>
+                      Creator
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
+                        <time datetime="2024-05-17 00:00:00" class="md-ellipsis">May 17, 2024</time>
+                      </div>
+                    </li>
+                    
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              3 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+          </nav>
           
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-      </ul>
-      
+        </div>
+      </div>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="internationalization-and-localization-in-django-a-quick-guide"><a class="toclink" href="../../2024/05/17/internationalization-and-localization-in-django-a-quick-guide/">Internationalization and Localization in Django: A Quick Guide</a></h2>
-<p>In today’s globalized world, reaching a diverse audience means making your web application accessible in multiple languages. Django, a popular web framework, provides robust support for internationalization (i18n) and localization (l10n). In this blog, we’ll explore how to set up your Django project to support multiple languages and adapt it to different cultural contexts.</p>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+  
 
-    <nav class="md-post__action">
-      <a href="../../2024/05/17/internationalization-and-localization-in-django-a-quick-guide/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
+<nav class="md-tags" >
+  
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-16 00:00:00">May 16, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              4 min read
-            
-          </li>
-        
-      </ul>
       
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="get-related-blogs-using-django-taggit"><a class="toclink" href="../../2024/05/16/get-related-blogs-using-django-taggit/">Get related blogs using <code>django-taggit</code></a></h2>
-<p>To display the title of the other suggested blogs as clickable links in your NewsDetailsView, you can modify the template to include links to the suggested blog items. Here's how you can do it:</p>
-
-    <nav class="md-post__action">
-      <a href="../../2024/05/16/get-related-blogs-using-django-taggit/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
       
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-15 00:00:00">May 15, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="separating-business-logic-and-presentation-in-django"><a class="toclink" href="../../2024/05/15/separating-business-logic-and-presentation-in-django/">Separating Business Logic and Presentation in Django</a></h2>
-<p>In Django web development, maintaining a clear separation of concerns between business logic and presentation logic is essential for building scalable, maintainable, and reusable applications. By adhering to best practices and following established patterns, developers can ensure that their code remains organized, flexible, and easy to maintain.</p>
-
-    <nav class="md-post__action">
-      <a href="../../2024/05/15/separating-business-logic-and-presentation-in-django/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-14 00:00:00">May 14, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              2 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="difference-between-django-httprequest-vs-requests-package"><a class="toclink" href="../../2024/05/14/difference-between-django-httprequest-vs-requests-package/">Difference between Django HttpRequest vs requests package</a></h2>
-<p>The HttpRequest object in Django and the requests package serve different purposes and operate at different levels within a web application:</p>
-
-    <nav class="md-post__action">
-      <a href="../../2024/05/14/difference-between-django-httprequest-vs-requests-package/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
+      <a href="../../../../../tags/#django" class="md-tag md-tag-icon">Django</a>
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-14 00:00:00">May 14, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="django-model-inheritance"><a class="toclink" href="../../2024/05/14/django-model-inheritance/">Django Model Inheritance</a></h2>
-<p>Polymorphism is the provision of a single interface to entities of different types. You need a versatile data model that allows you to store diverse content that is accessible through a single interface.</p>
-
-    <nav class="md-post__action">
-      <a href="../../2024/05/14/django-model-inheritance/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-12 00:00:00">May 12, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="simplifying-django-views-with-get_object_or_404"><a class="toclink" href="../../2024/05/12/simplifying-django-views-with-get_object_or_404/">Simplifying Django Views with get_object_or_404</a></h2>
-<p>In the realm of Django development, building views that retrieve and display specific objects from the database is a common task. However, ensuring that these views gracefully handle scenarios where the requested object does not exist can be a bit cumbersome. This is where Django's <code>get_object_or_404</code> comes to the rescue, offering a simple yet powerful solution.</p>
-
-    <nav class="md-post__action">
-      <a href="../../2024/05/12/simplifying-django-views-with-get_object_or_404/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-12 00:00:00">May 12, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="understanding-slugify-and-slugfield-in-django"><a class="toclink" href="../../2024/05/12/understanding-slugify-and-slugfield-in-django/">Understanding Slugify and SlugField in Django</a></h2>
-<p>In the world of web development with Django, creating clean and SEO-friendly URLs is crucial for enhancing user experience and search engine visibility. Two essential tools in achieving this are slugify and SlugField. Let's delve into what they are and how they play their roles in Django applications.</p>
-
-    <nav class="md-post__action">
-      <a href="../../2024/05/12/understanding-slugify-and-slugfield-in-django/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-10 00:00:00">May 10, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="django-easy-thumbnails-package"><a class="toclink" href="../../2024/05/10/django-easy-thumbnails-package/">Django <code>easy-thumbnails</code> package</a></h2>
-
-    <nav class="md-post__action">
-      <a href="../../2024/05/10/django-easy-thumbnails-package/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-09 00:00:00">May 9, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="django-model-fields-with-textchoices"><a class="toclink" href="../../2024/05/09/django-model-fields-with-textchoices/">Django Model Fields with TextChoices</a></h2>
-<p>Before Django <code>3.0</code>, defining choices for model fields typically involved using tuples of tuples, which could be cumbersome and error-prone. With the introduction of TextChoices, Django provides a more elegant and Pythonic way to define choices using class-based syntax.</p>
-
-    <nav class="md-post__action">
-      <a href="../../2024/05/09/django-model-fields-with-textchoices/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-09 00:00:00">May 9, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="django-admin-forms-with-formfield_overrides"><a class="toclink" href="../../2024/05/09/django-admin-forms-with-formfield_overrides/">Django Admin Forms with formfield_overrides</a></h2>
-<p><code>formfield_overrides</code> is a nifty attribute available in Django's <code>admin.ModelAdmin</code> class that allows developers to customize the form fields used in the admin interface for specific model fields. This feature enables you to enhance the user experience, integrate third-party widgets, and streamline data entry without the need for extensive customizations.</p>
-
-    <nav class="md-post__action">
-      <a href="../../2024/05/09/django-admin-forms-with-formfield_overrides/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-      
-        
-          
-
-
-
-<nav class="md-pagination">
-  <span class="md-pagination__current">1</span> <a class="md-pagination__link" href="page/2/">2</a> <a class="md-pagination__link" href="page/3/">3</a> <a class="md-pagination__link" href="page/4/">4</a>
+  
 </nav>
-        
+
+
+
+<div><h1 id="internationalization-and-localization-in-django-a-quick-guide">Internationalization and Localization in Django: A Quick Guide</h1>
+<p>In today’s globalized world, reaching a diverse audience means making your web application accessible in multiple languages. Django, a popular web framework, provides robust support for internationalization (i18n) and localization (l10n). In this blog, we’ll explore how to set up your Django project to support multiple languages and adapt it to different cultural contexts.</p>
+<!-- more -->
+
+<h2 id="what-is-internationalization-i18n-and-localization-l10n">What is Internationalization (<code>i18n</code>) and Localization (l10n)?</h2>
+<p>Internationalization (i18n) refers to designing your application in a way that makes it easy to adapt to various languages and regions. This involves preparing your codebase to handle different languages without requiring major changes.</p>
+<p>Localization (l10n) is the process of adapting your application to a specific locale. This includes translating text and adjusting formats (dates, currency, etc.) to meet regional requirements.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>To resolve this issue, you need to install the GNU <code>gettext</code> package. Here are the instructions for installing it on different operating systems:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Ubuntu</label><label for="__tabbed_1_2">For Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>gettext
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>choco<span class="w"> </span>install<span class="w"> </span>gettext
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<blockquote>
+<p>After Installation:</p>
+</blockquote>
+<p>After installing <code>gettext</code>, you should be able to run the <code>makemessages</code> command without encountering the <mark>msguniq</mark> error.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>django-admin<span class="w"> </span>makemessages<span class="w"> </span>-l<span class="w"> </span>es
+</span></code></pre></div>
+</div>
+<h2 id="steps-to-implement-i18n-and-l10n-in-django">Steps to Implement i18n and l10n in Django</h2>
+<h3 id="step-1-enable-internationalization">Step 1: Enable Internationalization</h3>
+<p>First, enable internationalization in your Django project’s <code>settings.py</code>:</p>
+<div class="admonition tip">
+<p class="admonition-title">settings.py</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">LANGUAGE_CODE</span> <span class="o">=</span> <span class="s1">'en-us'</span>  <span class="c1"># Default language</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">USE_I18N</span> <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># Enable translation system</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">USE_L10N</span> <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># Enable localized formatting</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">USE_TZ</span> <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># Enable timezone support</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="c1"># Supported languages</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="n">LANGUAGES</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="p">(</span><span class="s1">'en'</span><span class="p">,</span> <span class="s1">'English'</span><span class="p">),</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="p">(</span><span class="s1">'es'</span><span class="p">,</span> <span class="s1">'Spanish'</span><span class="p">),</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    <span class="p">(</span><span class="s1">'fr'</span><span class="p">,</span> <span class="s1">'French'</span><span class="p">),</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    <span class="c1"># Add more languages as needed</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="p">]</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="c1"># Path to locale directory</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="n">LOCALE_PATHS</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s1">'locale'</span><span class="p">),</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="p">]</span>
+</span></code></pre></div>
+</div>
+<h3 id="step-2-mark-text-for-translation">Step 2: Mark Text for Translation</h3>
+<p>Mark the text you want to translate in your templates and Python code.</p>
+<p>In templates:</p>
+<div class="language-html highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>{% load i18n %}
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{% trans "Hello, world!" %}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<p>In Python code:</p>
+<div class="language-python highlight"><span class="filename">python</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">django.utils.translation</span> <span class="kn">import</span> <span class="n">gettext</span> <span class="k">as</span> <span class="n">_</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">def</span> <span class="nf">my_view</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="n">output</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s2">"Welcome to my site."</span><span class="p">)</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="step-3-create-and-edit-message-files">Step 3: Create and Edit Message Files</h3>
+<p>Generate message files using the makemessages command:</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>django-admin<span class="w"> </span>makemessages<span class="w"> </span>-l<span class="w"> </span>es<span class="w">  </span><span class="c1"># For Spanish</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>django-admin<span class="w"> </span>makemessages<span class="w"> </span>-l<span class="w"> </span>fr<span class="w">  </span><span class="c1"># For French</span>
+</span></code></pre></div>
+<p>Edit the generated <code>.po</code> files in the <code>locale</code> directory to provide translations:</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">#: path/to/your/file.py:line_number</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>msgid<span class="w"> </span><span class="s2">"Welcome to my site."</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>msgstr<span class="w"> </span><span class="s2">"Bienvenido a mi sitio."</span>
+</span></code></pre></div>
+<p>Compile the message files with:</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>django-admin<span class="w"> </span>compilemessages
+</span></code></pre></div>
+<h3 id="step-4-switching-languages">Step 4: Switching Languages</h3>
+<p>Ensure LocaleMiddleware is enabled in your MIDDLEWARE setting:</p>
+<div class="language-python highlight"><span class="filename">python</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">MIDDLEWARE</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="s1">'django.middleware.security.SecurityMiddleware'</span><span class="p">,</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    <span class="s1">'django.contrib.sessions.middleware.SessionMiddleware'</span><span class="p">,</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="s1">'django.middleware.common.CommonMiddleware'</span><span class="p">,</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    <span class="s1">'django.middleware.locale.LocaleMiddleware'</span><span class="p">,</span>  <span class="c1"># Enable LocaleMiddleware</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    <span class="s1">'django.middleware.csrf.CsrfViewMiddleware'</span><span class="p">,</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    <span class="s1">'django.contrib.auth.middleware.AuthenticationMiddleware'</span><span class="p">,</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>    <span class="s1">'django.contrib.messages.middleware.MessageMiddleware'</span><span class="p">,</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>    <span class="s1">'django.middleware.clickjacking.XFrameOptionsMiddleware'</span><span class="p">,</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="p">]</span>
+</span></code></pre></div>
+<p>Manage language preferences in views or templates. Here’s an example of setting the language via a URL parameter in a view:</p>
+<div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">from</span> <span class="nn">django.utils</span> <span class="kn">import</span> <span class="n">translation</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="k">def</span> <span class="nf">set_language</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="n">user_language</span> <span class="o">=</span> <span class="s1">'fr'</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    <span class="n">translation</span><span class="o">.</span><span class="n">activate</span><span class="p">(</span><span class="n">user_language</span><span class="p">)</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>    <span class="n">request</span><span class="o">.</span><span class="n">session</span><span class="p">[</span><span class="n">translation</span><span class="o">.</span><span class="n">LANGUAGE_SESSION_KEY</span><span class="p">]</span> <span class="o">=</span> <span class="n">user_language</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)</span>
+</span></code></pre></div>
+<p>And in your template, provide a language selection form:</p>
+<div class="language-html highlight"><span class="filename">html</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">"{% url 'set_language' %}"</span> <span class="na">method</span><span class="o">=</span><span class="s">"post"</span><span class="p">&gt;</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>  {% csrf_token %}
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">"next"</span> <span class="na">type</span><span class="o">=</span><span class="s">"hidden"</span> <span class="na">value</span><span class="o">=</span><span class="s">"{{ redirect_to }}"</span><span class="p">&gt;</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>  <span class="p">&lt;</span><span class="nt">select</span> <span class="na">name</span><span class="o">=</span><span class="s">"language"</span><span class="p">&gt;</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    {% for lang in LANGUAGES %}
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>      <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">"{{ lang.0 }}"</span><span class="p">&gt;</span>{{ lang.1 }}<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>    {% endfor %}
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>  <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"submit"</span> <span class="na">value</span><span class="o">=</span><span class="s">"Go"</span><span class="p">&gt;</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<h2 id="conclusion">Conclusion</h2>
+<p>Internationalizing and localizing your Django application opens it up to a global audience, making it more accessible and user-friendly. By following these steps, you can efficiently manage multiple languages and ensure that your application meets the cultural and linguistic needs of its users. Embrace the world of <mark>i18n</mark> and <mark>l10n</mark> in Django and take your web applications to the next level!</p>
+<hr>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://dzone.com/articles/a-quick-guide-to-django-i18n">a quick guide to django i18n</a></li>
+</ul></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
       
-    </div>
+    </article>
   </div>
 
           
@@ -2595,10 +2529,12 @@
   
     
       
+        
+      
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Index">
+          <a href="../../16/get-related-blogs-using-django-taggit/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Get related blogs using django-taggit">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -2608,27 +2544,11 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Index
+                Get related blogs using django-taggit
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../../../backend/django/intro/" class="md-footer__link md-footer__link--next" aria-label="Next: Intro">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Intro
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
         
       </nav>
     
@@ -2659,10 +2579,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tabs.sticky", "header.autohide", "navigation.footer", "content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tabs.sticky", "header.autohide", "navigation.footer", "content.code.copy", "content.code.select"], "search": "../../../../../assets/javascripts/workers/search.f886a092.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
