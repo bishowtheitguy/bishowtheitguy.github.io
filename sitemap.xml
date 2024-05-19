@@ -381,6 +381,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishowtheitguy.github.io/blog/2024/05/19/django-in-production/</loc>
+         <lastmod>2024-05-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/05/17/internationalization-and-localization-in-django-a-quick-guide/</loc>
          <lastmod>2024-05-19</lastmod>
          <changefreq>daily</changefreq>
