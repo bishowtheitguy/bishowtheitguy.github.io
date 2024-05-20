@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reference" class="md-skip">
+        <a href="#a-primer-on-middlewares" class="md-skip">
           Skip to content
         </a>
       
@@ -699,6 +699,42 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-primer-on-middlewares" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Primer on Middlewares
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authenticationmiddleware-" class="md-nav__link">
+    <span class="md-ellipsis">
+      AuthenticationMiddleware -
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#securitymiddleware-" class="md-nav__link">
+    <span class="md-ellipsis">
+      SecurityMiddleware -
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commonmiddleware-" class="md-nav__link">
+    <span class="md-ellipsis">
+      CommonMiddleware -
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
@@ -2295,6 +2331,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#a-primer-on-middlewares" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Primer on Middlewares
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authenticationmiddleware-" class="md-nav__link">
+    <span class="md-ellipsis">
+      AuthenticationMiddleware -
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#securitymiddleware-" class="md-nav__link">
+    <span class="md-ellipsis">
+      SecurityMiddleware -
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commonmiddleware-" class="md-nav__link">
+    <span class="md-ellipsis">
+      CommonMiddleware -
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -2322,9 +2394,25 @@
 
 <div><p><strong>Middleware is a framework of hooks into Django’s request/response processing.</strong> It’s a light, low-level “plugin” system for globally altering Django’s input or output.</p>
 <hr>
+<h2 id="a-primer-on-middlewares">A Primer on Middlewares</h2>
+<p>Middlewares are one of the core concepts of Django. Just like ogres and onions, Django also has layers that your request and response goes through when they enter and exit your application. The centerpiece of this layered system is the view function and the class based view itself. Consider Figure 2-6.</p>
+<p><a class="glightbox" href="../../../assets/django/django-middleware.png" data-type="image" data-width="100%" data-height="auto" data-title="django middleware" data-desc-position="bottom"><img alt="django middleware" src="../../../assets/django/django-middleware.png"></a></p>
+<p>Here you can see that when a request comes into your application, it enters the various middleware layers that can do plenty of things with them. A couple of examples for middlewares:</p>
+<h2 id="authenticationmiddleware-">AuthenticationMiddleware -</h2>
+<div class="language-text highlight"><pre><span></span><code>Ensures that the request.user object exists and you can access it. If the user is logged in then it will be populated with the user object. If not, then an anonymous user will be sitting on this attribute. Oftentimes it is sery convenient to subclass this middleware and extend it with other user related data, such as from the UserProfile which we mentioned earlier.
+</code></pre></div>
+<h2 id="securitymiddleware-">SecurityMiddleware -</h2>
+<div class="language-text highlight"><pre><span></span><code>Provides various security related features, such as HTTPS redirects, redirect blocking, xss protection.
+</code></pre></div>
+<h2 id="commonmiddleware-">CommonMiddleware -</h2>
+<div class="language-text highlight"><pre><span></span><code>Provides some basic functionalities that are chores to implement. Such as sending away banned user-agents and making sure that the URL ends with a slash.
+</code></pre></div>
+<p>As you can see, middlewares have a wide variety of uses, be cautious with what you put in the codebase of a middleware, though. Since all requests in your service will enter that middleware, computation intensive and network operations might slow down your application significantly.</p>
+<hr>
 <h2 id="reference">Reference</h2>
 <ul>
 <li><a href="https://docs.djangoproject.com/en/5.0/topics/http/middleware/">Django Middleware</a></li>
+<li><a href="#">Designing Microservices with Django by Akos Hochrein</a></li>
 </ul></div>
 
 
