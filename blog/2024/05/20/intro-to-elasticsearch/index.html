@@ -10,13 +10,13 @@
         <meta name="author" content="it guy">
       
       
-        <link rel="canonical" href="https://bishowtheitguy.github.io/blog/2024/05/19/django-in-production/">
+        <link rel="canonical" href="https://bishowtheitguy.github.io/blog/2024/05/20/intro-to-elasticsearch/">
       
       
-        <link rel="prev" href="../../17/internationalization-and-localization-in-django-a-quick-guide/">
+        <link rel="prev" href="../../19/django-in-production/">
       
       
-        <link rel="next" href="../../20/intro-to-elasticsearch/">
+        <link rel="next" href="../using-elasticsearch-with-django-and-drf/">
       
       
       <link rel="icon" href="../../../../../assets/logo/favicon.ico">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Django in production - Bishow IT Guy</title>
+        <title>Intro to Elasticsearch - Bishow IT Guy</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#django-in-production" class="md-skip">
+        <a href="#intro-to-elasticsearch" class="md-skip">
           Skip to content
         </a>
       
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Django in production
+              Intro to Elasticsearch
             
           </span>
         </div>
@@ -2258,9 +2258,156 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#reference" class="md-nav__link">
+  <a href="#what-is-elasticsearch" class="md-nav__link">
     <span class="md-ellipsis">
-      Reference
+      What is Elasticsearch?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is Elasticsearch?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-do-we-need-elasticsearch-in-django" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Do We Need Elasticsearch in Django?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-elasticsearch-in-django" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Use Elasticsearch in Django?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-not-to-use-elasticsearch-in-django" class="md-nav__link">
+    <span class="md-ellipsis">
+      When Not to Use Elasticsearch in Django?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrating-elasticsearch-with-django" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrating Elasticsearch with Django
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-with-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical with Example
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical with Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-install-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Install Dependencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-configure-elasticsearch-in-django-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Configure Elasticsearch in Django Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-define-your-django-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Define Your Django Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-create-an-elasticsearch-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Create an Elasticsearch Document
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-indexing-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Indexing Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-perform-a-search-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6: Perform a Search Query
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-7-create-a-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 7: Create a Template
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-8-add-url-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 8: Add URL Pattern
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
     </span>
   </a>
   
@@ -2291,6 +2438,25 @@
               </div>
             </div>
             
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          Bishow Thapa
+                        
+                      </strong>
+                      <br>
+                      Creator
+                    </span>
+                  </div>
+                
+              </div>
+            
             <ul class="md-post__meta md-nav__list">
               <li class="md-nav__item md-nav__item--section">
                 <div class="md-post__title">
@@ -2303,7 +2469,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2024-05-19 00:00:00" class="md-ellipsis">May 19, 2024</time>
+                        <time datetime="2024-05-20 00:00:00" class="md-ellipsis">May 20, 2024</time>
                       </div>
                     </li>
                     
@@ -2315,7 +2481,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
                           <span class="md-ellipsis">
                             
-                              2 min read
+                              5 min read
                             
                           </span>
                         </div>
@@ -2353,161 +2519,310 @@
       
     
     
-      <a href="../../../../../tags/#production" class="md-tag md-tag-icon">Production</a>
+      <a href="../../../../../tags/#drf" class="md-tag md-tag-icon">Drf</a>
+    
+  
+    
+    
+      
+      
+    
+    
+      <a href="../../../../../tags/#elasticsearch" class="md-tag md-tag-icon">elasticsearch</a>
     
   
 </nav>
 
 
 
-<div><h1 id="django-in-production">Django in production</h1>
-<p>Deploying a Django project with multiple settings files, such as <code>base.py</code>, <code>local.py</code>, and <code>prod.py</code>, to a shared cPanel environment involves several steps. Below is a step-by-step guide to help you with this process:</p>
+<div><h1 id="intro-to-elasticsearch">Intro to Elasticsearch</h1>
+<p>Elasticsearch is a powerful search and analytics engine that can be integrated with Django to enhance the search capabilities of a Django application. </p>
 <!-- more -->
 
+<p>Here's a detailed look at what Elasticsearch is, why you might need it, when to use it, and when not to use it in the context of a Django project:</p>
+<h2 id="what-is-elasticsearch">What is Elasticsearch?</h2>
+<p>Elasticsearch is an open-source, distributed, RESTful search engine built on top of Apache Lucene. It is designed to handle large volumes of data and provides real-time search and analytics capabilities. It is often used for full-text search, log and event data analysis, and as a general-purpose data store.</p>
+<h3 id="why-do-we-need-elasticsearch-in-django">Why Do We Need Elasticsearch in Django?</h3>
+<p>Django's default search capabilities are limited, especially when dealing with complex queries, large datasets, and requirements for real-time search results. Elasticsearch addresses these limitations by providing:</p>
 <ol>
 <li>
-<p>Prepare Your Django Project for Deployment:</p>
-<ul>
-<li>Ensure your <code>prod.py</code> settings file is properly configured for a production environment. This includes setting <code>DEBUG</code> to <code>False</code>,configuring the allowed hosts, and setting up the database, static files, and other production-specific settings.</li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<div class="language-python highlight"><span class="filename">prod.py</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">.base</span> <span class="kn">import</span> <span class="o">*</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">DEBUG</span> <span class="o">=</span> <span class="kc">False</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">ALLOWED_HOSTS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'yourdomain.com'</span><span class="p">]</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># Database</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="s1">'default'</span><span class="p">:</span> <span class="p">{</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        <span class="s1">'ENGINE'</span><span class="p">:</span> <span class="s1">'django.db.backends.postgresql'</span><span class="p">,</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        <span class="s1">'NAME'</span><span class="p">:</span> <span class="s1">'your_db_name'</span><span class="p">,</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        <span class="s1">'USER'</span><span class="p">:</span> <span class="s1">'your_db_user'</span><span class="p">,</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        <span class="s1">'PASSWORD'</span><span class="p">:</span> <span class="s1">'your_db_password'</span><span class="p">,</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        <span class="s1">'HOST'</span><span class="p">:</span> <span class="s1">'localhost'</span><span class="p">,</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        <span class="s1">'PORT'</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="p">}</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="p">}</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="c1"># Static files (CSS, JavaScript, Images)</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="n">STATIC_URL</span> <span class="o">=</span> <span class="s1">'/static/'</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="n">STATIC_ROOT</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s1">'static'</span><span class="p">)</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="c1"># Media files</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="n">MEDIA_URL</span> <span class="o">=</span> <span class="s1">'/media/'</span>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="n">MEDIA_ROOT</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s1">'media'</span><span class="p">)</span>
-</span></code></pre></div>
-</div>
+<p>Full-Text Search:</p>
+<p>Efficiently handle large amounts of text data, enabling advanced search features like stemming, synonyms, and relevancy ranking.</p>
 </li>
 <li>
-<p>Prepare Your Environment:</p>
-<ul>
-<li>Ensure you have Python installed on your <mark>cPanel</mark>. You might need to use the <strong>Python Selector</strong> <mark>or</mark> <strong>Setup Python App</strong> feature if available.</li>
-</ul>
+<p>Performance:</p>
+<p>High-speed querying and indexing capabilities, making it suitable for applications with substantial data and high query volume.</p>
 </li>
 <li>
-<p>Upload Your Django Project:</p>
-<ul>
-<li>Use the cPanel File Manager or an FTP client to upload your Django project files to your hosting account. Typically, you'll place these in the <code>public_html</code> directory or a subdirectory.</li>
-</ul>
+<p>Scalability:</p>
+<p>Distributed architecture allows it to scale horizontally, managing large datasets across multiple nodes.</p>
 </li>
 <li>
-<p>Install Dependencies:</p>
-<ul>
-<li>Use SSH to access your cPanel account or use the cPanel terminal.</li>
-<li>Navigate to your project directory and create a virtual environment:</li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>myenv
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">source</span><span class="w"> </span>myenv/bin/activate
-</span></code></pre></div>
-</div>
-<ul>
-<li>Install your project dependencies:</li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
-</span></code></pre></div>
-</div>
+<p>Advanced Queries:</p>
+<p>Supports complex queries, aggregations, and analytics that go beyond the capabilities of Django’s ORM and basic database searches.</p>
 </li>
 <li>
-<p>Configure WSGI:</p>
-<ul>
-<li>Ensure your project has a wsgi.py file configured correctly. It should look something like this:</li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span> <span class="nn">os</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">from</span> <span class="nn">django.core.wsgi</span> <span class="kn">import</span> <span class="n">get_wsgi_application</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">'DJANGO_SETTINGS_MODULE'</span><span class="p">,</span> <span class="s1">'myproject.settings.prod'</span><span class="p">)</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="n">application</span> <span class="o">=</span> <span class="n">get_wsgi_application</span><span class="p">()</span>
-</span></code></pre></div>
-</div>
-</li>
-<li>
-<p>Setup the cPanel Application:</p>
-<ul>
-<li>In cPanel, go to the <code>Setup Python App</code> section.</li>
-<li>Create a new application and point it to your project’s directory and virtual environment.</li>
-<li>Set the <code>Application startup file</code> to the location of your <code>wsgi.py</code> file and the <code>Application entry point</code> to <code>application</code>.</li>
-<li>Set the <code>Environment variables</code> to include <mark>DJANGO_SETTINGS_MODULE=myproject.settings.prod</mark>.</li>
-</ul>
-</li>
-<li>
-<p>Configure Static and Media Files:</p>
-<ul>
-<li>Ensure your <code>prod.py</code> settings handle static and media files correctly.</li>
-<li>In cPanel, use the <code>File Manager</code> to create the <code>static</code> and <code>media</code> directories if they don't exist.</li>
-<li>Collect static files by running:</li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>python<span class="w"> </span>manage.py<span class="w"> </span>collectstatic
-</span></code></pre></div>
-</div>
-</li>
-<li>
-<p>Configure Database:</p>
-<ul>
-<li>If you are using a PostgreSQL or MySQL database, ensure that it is created in cPanel.</li>
-<li>Update your <code>prod.py</code> settings with the correct database credentials.</li>
-</ul>
-</li>
-<li>
-<p>Run Migrations:</p>
-<ul>
-<li>Apply the database migrations by running:</li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>python<span class="w"> </span>manage.py<span class="w"> </span>migrate
-</span></code></pre></div>
-</div>
-</li>
-<li>
-<p>Security and Permissions:</p>
-<ul>
-<li>Ensure that your media and static files have the correct permissions.</li>
-<li>Secure your database credentials and secret key.</li>
-</ul>
-</li>
-<li>
-<p>Testing:</p>
-<ul>
-<li>Access your domain to verify the deployment. Debug any issues that arise by checking the cPanel error logs and your application logs.</li>
-</ul>
+<p>Real-Time Data:</p>
+<p>Provides near real-time search capabilities, ensuring that data is quickly searchable after being indexed.</p>
 </li>
 </ol>
-<p>By following these steps, you should be able to successfully deploy your Django project on a shared cPanel hosting environment with the production settings from <code>prod.py</code>.</p>
+<h3 id="when-to-use-elasticsearch-in-django">When to Use Elasticsearch in Django?</h3>
+<ol>
+<li>
+<p>Complex Search Requirements:</p>
+<p>When you need advanced search features like full-text search, autocomplete, fuzzy search, or custom scoring.</p>
+</li>
+<li>
+<p>Large Datasets:</p>
+<p>If your application involves a significant amount of data that needs to be searched quickly.</p>
+</li>
+<li>
+<p>Real-Time Searching:</p>
+<p>When you need search results to be updated in real-time or near real-time.</p>
+</li>
+<li>
+<p>Analytics and Aggregations:</p>
+<p>When you require complex aggregations and analytics over your data.</p>
+</li>
+<li>
+<p>High Query Volume:</p>
+<p>Applications that need to handle a high volume of search queries efficiently.</p>
+</li>
+</ol>
+<h3 id="when-not-to-use-elasticsearch-in-django">When Not to Use Elasticsearch in Django?</h3>
+<ol>
+<li>
+<p>Simple Applications:</p>
+<p>If your search requirements are basic and can be handled by Django’s ORM or a simple database index, Elasticsearch might be overkill.</p>
+</li>
+<li>
+<p>Small Datasets:</p>
+<p>For applications with minimal data, the overhead of setting up and maintaining Elasticsearch might not be justified.</p>
+</li>
+<li>
+<p>Resource Constraints:</p>
+<p>Elasticsearch requires additional resources and maintenance. If your project has limited infrastructure or operational capacity, it might be better to stick with simpler solutions.</p>
+</li>
+<li>
+<p>Learning Curve and Complexity:</p>
+<p>Elasticsearch introduces additional complexity and has a steeper learning curve. If your team lacks the expertise or the time to learn and manage it, it might not be a good fit.</p>
+</li>
+</ol>
+<h2 id="integrating-elasticsearch-with-django">Integrating Elasticsearch with Django</h2>
+<p>To integrate Elasticsearch with Django, you typically use libraries such as django-elasticsearch-dsl or elasticsearch-dsl. These libraries provide Django-friendly tools to define Elasticsearch indices, document types, and manage indexing operations. Here’s a high-level overview of how to set it up:</p>
+<ol>
+<li>
+<p>Install Dependencies:</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="language-text highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip install elasticsearch-dsl django-elasticsearch-dsl
+</span></code></pre></div>
+</div>
+</li>
+<li>
+<p>Define Elasticsearch Settings: Configure your Elasticsearch connection in your Django settings.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="language-python highlight"><span class="filename">settings.py</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># settings.py</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">ELASTICSEARCH_DSL</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="s1">'default'</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>        <span class="s1">'hosts'</span><span class="p">:</span> <span class="s1">'localhost:9200'</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="p">},</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">}</span>
+</span></code></pre></div>
+</div>
+</li>
+<li>
+<p>Create Document Classes: Define your Elasticsearch document structure using Django models.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="language-python highlight"><span class="filename">documents.py</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># documents.py</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">from</span> <span class="nn">django_elasticsearch_dsl</span> <span class="kn">import</span> <span class="n">Document</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kn">from</span> <span class="nn">django_elasticsearch_dsl.registries</span> <span class="kn">import</span> <span class="n">registry</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="kn">from</span> <span class="nn">myapp.models</span> <span class="kn">import</span> <span class="n">MyModel</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="nd">@registry</span><span class="o">.</span><span class="n">register_document</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="k">class</span> <span class="nc">MyModelDocument</span><span class="p">(</span><span class="n">Document</span><span class="p">):</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    <span class="k">class</span> <span class="nc">Index</span><span class="p">:</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>        <span class="n">name</span> <span class="o">=</span> <span class="s1">'mymodel_index'</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    <span class="k">class</span> <span class="nc">Django</span><span class="p">:</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>        <span class="n">model</span> <span class="o">=</span> <span class="n">MyModel</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>        <span class="n">fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'field1'</span><span class="p">,</span> <span class="s1">'field2'</span><span class="p">]</span>
+</span></code></pre></div>
+</div>
+</li>
+<li>
+<p>Indexing Data: Ensure your data is indexed in Elasticsearch. You can create signals to automatically update the index when data changes.</p>
+</li>
+<li>
+<p>Search Queries: Use Elasticsearch DSL to perform search queries on your indexed data.</p>
+</li>
+</ol>
+<h2 id="conclusion">Conclusion</h2>
+<p>Elasticsearch can significantly enhance the search functionality of a Django application, especially for projects that require complex search capabilities, handle large datasets, or need real-time data indexing and retrieval. However, it is important to assess the specific needs of your project to determine if the added complexity and resource requirements are justified. For simpler applications or those with minimal search requirements, Django’s built-in search capabilities or a simpler solution may suffice.</p>
 <hr>
-<h2 id="reference">Reference</h2>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=h2w8oNw_W80">How To Deploy Django Application In CPANEL 2022 | SIMPLE :youtube vid</a></li>
-</ul></div>
+<h2 id="practical-with-example">Practical with Example</h2>
+<h3 id="step-1-install-dependencies">Step 1: Install Dependencies</h3>
+<p>First, install the necessary libraries using pip:</p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pip<span class="w"> </span>install<span class="w"> </span>elasticsearch-dsl<span class="w"> </span>django-elasticsearch-dsl
+</span></code></pre></div>
+</div>
+<h3 id="step-2-configure-elasticsearch-in-django-settings">Step 2: Configure Elasticsearch in Django Settings</h3>
+<p>Add your Elasticsearch configuration to your Django settings file (<code>settings.py</code>):</p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<div class="language-python highlight"><span class="filename">settings.py</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># settings.py</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">ELASTICSEARCH_DSL</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="s1">'default'</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>        <span class="s1">'hosts'</span><span class="p">:</span> <span class="s1">'localhost:9200'</span>  <span class="c1"># Update if your Elasticsearch is hosted elsewhere</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="p">},</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="p">}</span>
+</span></code></pre></div>
+</div>
+<h3 id="step-3-define-your-django-model">Step 3: Define Your Django Model</h3>
+<p>Create a Django model that you want to index. For example, let’s create a simple <code>Book</code> model:</p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># models.py</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">class</span> <span class="nc">Book</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">255</span><span class="p">)</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="n">author</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">255</span><span class="p">)</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="n">published_date</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateField</span><span class="p">()</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    <span class="n">summary</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">()</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">title</span>
+</span></code></pre></div>
+</div>
+<h3 id="step-4-create-an-elasticsearch-document">Step 4: Create an Elasticsearch Document</h3>
+<p>Define a document that maps to the Book model using <code>django-elasticsearch-dsl</code>:</p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># documents.py</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kn">from</span> <span class="nn">django_elasticsearch_dsl</span> <span class="kn">import</span> <span class="n">Document</span><span class="p">,</span> <span class="n">fields</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="kn">from</span> <span class="nn">django_elasticsearch_dsl.registries</span> <span class="kn">import</span> <span class="n">registry</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Book</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="nd">@registry</span><span class="o">.</span><span class="n">register_document</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="k">class</span> <span class="nc">BookDocument</span><span class="p">(</span><span class="n">Document</span><span class="p">):</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    <span class="k">class</span> <span class="nc">Index</span><span class="p">:</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>        <span class="c1"># Name of the Elasticsearch index</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>        <span class="n">name</span> <span class="o">=</span> <span class="s1">'books'</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>        <span class="c1"># See Elasticsearch Indices API reference for available settings</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>        <span class="n">settings</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>            <span class="s1">'number_of_shards'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>            <span class="s1">'number_of_replicas'</span><span class="p">:</span> <span class="mi">0</span>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>        <span class="p">}</span>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>    <span class="k">class</span> <span class="nc">Django</span><span class="p">:</span>
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>        <span class="n">model</span> <span class="o">=</span> <span class="n">Book</span>  <span class="c1"># The model associated with this Document</span>
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>        <span class="c1"># The fields of the model you want to be indexed in Elasticsearch</span>
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>        <span class="n">fields</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>            <span class="s1">'title'</span><span class="p">,</span>
+</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>            <span class="s1">'author'</span><span class="p">,</span>
+</span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>            <span class="s1">'published_date'</span><span class="p">,</span>
+</span><span id="__span-6-25"><a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>            <span class="s1">'summary'</span><span class="p">,</span>
+</span><span id="__span-6-26"><a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a>        <span class="p">]</span>
+</span></code></pre></div>
+</div>
+<h3 id="step-5-indexing-data">Step 5: Indexing Data</h3>
+<p>To ensure your data is indexed, you can create signals to automatically update the index when a <code>Book</code> instance is created, updated, or deleted.</p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># signals.py</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kn">from</span> <span class="nn">django.db.models.signals</span> <span class="kn">import</span> <span class="n">post_save</span><span class="p">,</span> <span class="n">post_delete</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="kn">from</span> <span class="nn">django.dispatch</span> <span class="kn">import</span> <span class="n">receiver</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Book</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="kn">from</span> <span class="nn">.documents</span> <span class="kn">import</span> <span class="n">BookDocument</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="nd">@receiver</span><span class="p">(</span><span class="n">post_save</span><span class="p">,</span> <span class="n">sender</span><span class="o">=</span><span class="n">Book</span><span class="p">)</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="k">def</span> <span class="nf">update_document</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    <span class="n">BookDocument</span><span class="p">()</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">instance</span><span class="p">)</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="nd">@receiver</span><span class="p">(</span><span class="n">post_delete</span><span class="p">,</span> <span class="n">sender</span><span class="o">=</span><span class="n">Book</span><span class="p">)</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="k">def</span> <span class="nf">delete_document</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>    <span class="n">BookDocument</span><span class="p">()</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">instance</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<p>Connect the signals in your app’s <code>apps.py</code>:</p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># apps.py</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kn">from</span> <span class="nn">django.apps</span> <span class="kn">import</span> <span class="n">AppConfig</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="k">class</span> <span class="nc">MyAppConfig</span><span class="p">(</span><span class="n">AppConfig</span><span class="p">):</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    <span class="n">name</span> <span class="o">=</span> <span class="s1">'myapp'</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    <span class="k">def</span> <span class="nf">ready</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>        <span class="kn">import</span> <span class="nn">myapp.signals</span>  <span class="c1"># Import signals to ensure they are registered</span>
+</span></code></pre></div>
+</div>
+<h3 id="step-6-perform-a-search-query">Step 6: Perform a Search Query</h3>
+<p>Now you can perform a search query using the <code>BookDocument</code>. For example, you can create a simple search view in Django:</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># views.py</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="kn">from</span> <span class="nn">.documents</span> <span class="kn">import</span> <span class="n">BookDocument</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="k">def</span> <span class="nf">search</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    <span class="n">query</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">GET</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'q'</span><span class="p">)</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    <span class="k">if</span> <span class="n">query</span><span class="p">:</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>        <span class="n">books</span> <span class="o">=</span> <span class="n">BookDocument</span><span class="o">.</span><span class="n">search</span><span class="p">()</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">"multi_match"</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="n">query</span><span class="p">,</span> <span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s1">'title'</span><span class="p">,</span> <span class="s1">'author'</span><span class="p">,</span> <span class="s1">'summary'</span><span class="p">])</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>        <span class="n">books</span> <span class="o">=</span> <span class="n">BookDocument</span><span class="o">.</span><span class="n">search</span><span class="p">()</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">'search_results.html'</span><span class="p">,</span> <span class="p">{</span><span class="s1">'books'</span><span class="p">:</span> <span class="n">books</span><span class="p">})</span>
+</span></code></pre></div>
+</div>
+<h3 id="step-7-create-a-template">Step 7: Create a Template</h3>
+<p>Create a template to display the search results (<code>search_results.html</code>):</p>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="cm">&lt;!-- templates/search_results.html --&gt;</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Search Results<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Search Results<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>    <span class="p">&lt;</span><span class="nt">form</span> <span class="na">method</span><span class="o">=</span><span class="s">"GET"</span> <span class="na">action</span><span class="o">=</span><span class="s">"{% url 'search' %}"</span><span class="p">&gt;</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="na">name</span><span class="o">=</span><span class="s">"q"</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">"Search for books..."</span> <span class="na">value</span><span class="o">=</span><span class="s">"{{ request.GET.q }}"</span><span class="p">&gt;</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"submit"</span><span class="p">&gt;</span>Search<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>    <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>        {% for book in books %}
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>{{ book.title }} by {{ book.author }} ({{ book.published_date }})<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>        {% empty %}
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>No results found.<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>        {% endfor %}
+</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></code></pre></div>
+</div>
+<h3 id="step-8-add-url-pattern">Step 8: Add URL Pattern</h3>
+<p>Finally, add a URL pattern to route to the search view (<code>urls.py</code>):</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># urls.py</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="kn">from</span> <span class="nn">.views</span> <span class="kn">import</span> <span class="n">search</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">'search/'</span><span class="p">,</span> <span class="n">search</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'search'</span><span class="p">),</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="p">]</span>
+</span></code></pre></div>
+</div>
+<h2 id="conclusion_1">Conclusion</h2>
+<p>With these steps, you have integrated Elasticsearch with your Django application. You have defined a Book model, created an Elasticsearch document for it, set up signals to index the data, and implemented a basic search view and template. This setup will allow you to perform efficient full-text searches on your book data.</p></div>
 
 
 
@@ -2550,7 +2865,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../17/internationalization-and-localization-in-django-a-quick-guide/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Internationalization and Localization in Django: A Quick Guide">
+          <a href="../../19/django-in-production/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Django in production">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -2560,20 +2875,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Internationalization and Localization in Django: A Quick Guide
+                Django in production
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../20/intro-to-elasticsearch/" class="md-footer__link md-footer__link--next" aria-label="Next: Intro to Elasticsearch">
+          <a href="../using-elasticsearch-with-django-and-drf/" class="md-footer__link md-footer__link--next" aria-label="Next: Using Elasticsearch with Django and DRF">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Intro to Elasticsearch
+                Using Elasticsearch with Django and DRF
               </div>
             </div>
             <div class="md-footer__button md-icon">
