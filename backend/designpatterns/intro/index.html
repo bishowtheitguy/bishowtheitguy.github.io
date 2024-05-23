@@ -10,28 +10,28 @@
         <meta name="author" content="it guy">
       
       
-        <link rel="canonical" href="https://bishowtheitguy.github.io/blog/2024/04/20/m-is-bigger-than-v-and-c-in-django/">
+        <link rel="canonical" href="https://bishowtheitguy.github.io/backend/designpatterns/intro/">
       
       
-        <link rel="prev" href="../../18/django-images-not-showing-in-the-cpanel-or-shared-hosting/">
+        <link rel="prev" href="../../drf/python-microservices/">
       
       
-        <link rel="next" href="../../23/enhancing-django-development-with-model-help_text/">
+        <link rel="next" href="../template-patterns/">
       
       
-      <link rel="icon" href="../../../../../assets/logo/favicon.ico">
+      <link rel="icon" href="../../../assets/logo/favicon.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
     
     
       
-        <title>M is bigger than V and C in Django - Bishow IT Guy</title>
+        <title>Intro - Bishow IT Guy</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,14 +50,14 @@
       
     
     
-    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -68,7 +68,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#m-is-bigger-than-v-and-c-in-django" class="md-skip">
+        <a href="#design-pattern" class="md-skip">
           Skip to content
         </a>
       
@@ -103,9 +103,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../../.." title="Bishow IT Guy" class="md-header__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
+    <a href="../../.." title="Bishow IT Guy" class="md-header__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
       
-  <img src="../../../../../assets/logo/internet.png" alt="logo">
+  <img src="../../../assets/logo/internet.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              M is bigger than V and C in Django
+              Intro
             
           </span>
         </div>
@@ -219,13 +219,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../blog/" class="md-tabs__link">
           
   
   Blog
@@ -243,61 +241,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../backend/django/intro/" class="md-tabs__link">
-          
-  
-  Django
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../../../backend/drf/intro/" class="md-tabs__link">
-          
-  
-  drf
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../../../backend/intro/" class="md-tabs__link">
-          
-  
-  Backend
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../../../python/args/" class="md-tabs__link">
+        <a href="../../../python/args/" class="md-tabs__link">
           
   
   Python
@@ -315,7 +259,81 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../interview/intro/" class="md-tabs__link">
+        <a href="../../intro/" class="md-tabs__link">
+          
+  
+  Backend
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../django/intro/" class="md-tabs__link">
+          
+  
+  Django
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../drf/intro/" class="md-tabs__link">
+          
+  
+  drf
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  Design Pattern
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../interview/intro/" class="md-tabs__link">
           
   
   Interview
@@ -343,9 +361,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -356,9 +372,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../.." title="Bishow IT Guy" class="md-nav__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
+    <a href="../../.." title="Bishow IT Guy" class="md-nav__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
       
-  <img src="../../../../../assets/logo/internet.png" alt="logo">
+  <img src="../../../assets/logo/internet.png" alt="logo">
 
     </a>
     Bishow IT Guy
@@ -370,8 +386,6 @@
       
   
   
-    
-  
   
   
     
@@ -382,12 +396,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
@@ -401,7 +415,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Blog
@@ -412,14 +426,12 @@
                 
   
   
-    
-  
   
     
   
   
-    <li class="md-nav__item md-nav__item--active">
-      <a href="../../../../" class="md-nav__link">
+    <li class="md-nav__item">
+      <a href="../../../blog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -479,7 +491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archive/2024/" class="md-nav__link">
+      <a href="../../../blog/archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -534,7 +546,7 @@
             
   
   <span class="md-ellipsis">
-    Django
+    Python
   </span>
   
 
@@ -544,7 +556,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Django
+            Python
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -555,11 +567,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/intro/" class="md-nav__link">
+      <a href="../../../python/args/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Intro
+    Args
   </span>
   
 
@@ -576,1269 +588,15 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-form/" class="md-nav__link">
+      <a href="../../../python/content-management-system/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    django form
+    CMS
   </span>
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-view/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    django view (controller)
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-model/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    django model (orm)
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-template/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    django template (view)
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-urlconf/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    django URLconf
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-middleware/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    django middleware
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/django/migration/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    django migrations
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-404/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    django 404
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-mail/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    django mail
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-reset-password/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    django reset password
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/django/decorator/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    decorators
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/django/context-processors/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Context Processors
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-tools/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Django Tool
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-utility-functions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Django Utility Function
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-hardening/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Django Hardening
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-secretkey/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Generate Secretkey
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/django/chatgpt/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    chatgpt
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_19" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_19" id="__nav_2_19_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Mixins
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_19_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_19">
-            <span class="md-nav__icon md-icon"></span>
-            Mixins
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/intro/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Intro
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/context-processors/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    context processors
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/custom-char-field-widget/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    custom char field widget
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/custom-text-field-widget/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    custom text field widget
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/image-display-mixins/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    image display mixins
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/image-size-validators/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    image size validators
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/image-type-validators/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    image type validators
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/permission-mixins/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    permission mixins
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_20" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_20" id="__nav_2_20_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Built-in
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_20_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_20">
-            <span class="md-nav__icon md-icon"></span>
-            Built-in
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/django/builtin/intro/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Intro
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/django/builtin/django-contrib-admin/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    django contrib admin
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/django/builtin/django-contrib-auth/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    django contrib auth
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/django/builtin/django-contrib-contenttypes/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    django contrib contenttypes
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/django/builtin/class-based-views/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    generic views
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/django/builtin/django-paginator/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Django Paginator
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_21" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_21" id="__nav_2_21_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Design Pattern
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_21_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_21">
-            <span class="md-nav__icon md-icon"></span>
-            Design Pattern
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/django/designpatterns/intro/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Intro
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/django/designpatterns/template-patterns/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Template Patterns
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_22" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_22" id="__nav_2_22_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Package
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_22_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_22">
-            <span class="md-nav__icon md-icon"></span>
-            Package
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/package/intro/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Intro
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/package/python-dotenv/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    python dotenv
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/package/python-mysqlclient/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    mysqlclient
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/package/tinymce/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    tinymce
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/package/jwt-guide/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    jwt installation
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/package/jwt-installation/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    jwt guide
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/package/dj-rest-auth/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    dj rest auth
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-allauth/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    django allauth
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-autoslug/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    django autoslug
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-cors-headers/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    django cors headers
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-debug-toolbar/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    django debug toolbar
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-environ/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    django environ
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-extensions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    django extensions
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-simple-history/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    django simple history
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-taggit/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    django taggit
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/package/0.draft/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Draft Package
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_23" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_23" id="__nav_2_23_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Projects
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_23_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_23">
-            <span class="md-nav__icon md-icon"></span>
-            Projects
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/django/projects/intro/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Intro
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -1877,7 +635,7 @@
             
   
   <span class="md-ellipsis">
-    drf
+    Backend
   </span>
   
 
@@ -1887,7 +645,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            drf
+            Backend
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1898,7 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/drf/intro/" class="md-nav__link">
+      <a href="../../intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1918,12 +676,78 @@
   
   
   
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    fastAPI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            fastAPI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../../../../backend/drf/drf-functionbasedviews/" class="md-nav__link">
+      <a href="../../fastAPI/fast-api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    drf fbv
+    Fast API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../celery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    celery
   </span>
   
 
@@ -1940,32 +764,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/drf/drf-viewsets/" class="md-nav__link">
+      <a href="../../draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    drf viewsets
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../backend/drf/python-microservices/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    python microservices
+    draft
   </span>
   
 
@@ -2008,7 +811,7 @@
             
   
   <span class="md-ellipsis">
-    Backend
+    Django
   </span>
   
 
@@ -2018,7 +821,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            Backend
+            Django
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2029,11 +832,368 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/intro/" class="md-nav__link">
+      <a href="../../django/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Intro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../django/django-form/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    django form
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../django/django-view/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    django view (controller)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../django/django-model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    django model (orm)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../django/django-template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    django template (view)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../django/django-urlconf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    django URLconf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../django/django-middleware/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    django middleware
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../django/migration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    django migrations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../django/django-404/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    django 404
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../django/django-mail/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    django mail
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../django/django-reset-password/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    django reset password
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../django/decorator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    decorators
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../django/context-processors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Context Processors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../django/django-tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django Tool
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../django/django-utility-functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django Utility Function
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../django/django-hardening/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django Hardening
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../django/django-secretkey/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generate Secretkey
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../django/chatgpt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chatgpt
   </span>
   
 
@@ -2059,24 +1219,24 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_19" >
         
           
-          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_19" id="__nav_4_19_label" tabindex="0">
             
   
   <span class="md-ellipsis">
-    fastAPI
+    Mixins
   </span>
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_19">
             <span class="md-nav__icon md-icon"></span>
-            fastAPI
+            Mixins
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2087,11 +1247,158 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/fastAPI/fast-api/" class="md-nav__link">
+      <a href="../../django/mixins/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Fast API
+    Intro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../django/mixins/context-processors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    context processors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../django/mixins/custom-char-field-widget/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    custom char field widget
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../django/mixins/custom-text-field-widget/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    custom text field widget
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../django/mixins/image-display-mixins/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    image display mixins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../django/mixins/image-size-validators/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    image size validators
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../django/mixins/image-type-validators/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    image type validators
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../django/mixins/permission-mixins/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    permission mixins
   </span>
   
 
@@ -2115,12 +1422,49 @@
   
   
   
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_20" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_20" id="__nav_4_20_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Built-in
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_20_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_20">
+            <span class="md-nav__icon md-icon"></span>
+            Built-in
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../../../../backend/celery/" class="md-nav__link">
+      <a href="../../django/builtin/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    celery
+    Intro
   </span>
   
 
@@ -2137,15 +1481,554 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/draft/" class="md-nav__link">
+      <a href="../../django/builtin/django-contrib-admin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    draft
+    django contrib admin
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../django/builtin/django-contrib-auth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    django contrib auth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../django/builtin/django-contrib-contenttypes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    django contrib contenttypes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../django/builtin/class-based-views/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    generic views
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../django/builtin/django-paginator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django Paginator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_21" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_21" id="__nav_4_21_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Package
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_21">
+            <span class="md-nav__icon md-icon"></span>
+            Package
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../package/intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../package/python-dotenv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    python dotenv
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../package/python-mysqlclient/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    mysqlclient
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../package/tinymce/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    tinymce
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../package/jwt-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jwt installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../package/jwt-installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jwt guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../package/dj-rest-auth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dj rest auth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../package/django-allauth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    django allauth
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../package/django-autoslug/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    django autoslug
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../package/django-cors-headers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    django cors headers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../package/django-debug-toolbar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    django debug toolbar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../package/django-environ/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    django environ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../package/django-extensions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    django extensions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../package/django-simple-history/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    django simple history
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../package/django-taggit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    django taggit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../package/0.draft/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Draft Package
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_22" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_22" id="__nav_4_22_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_22_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_22">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../django/projects/intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -2184,7 +2067,7 @@
             
   
   <span class="md-ellipsis">
-    Python
+    drf
   </span>
   
 
@@ -2194,7 +2077,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            Python
+            drf
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2205,11 +2088,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/args/" class="md-nav__link">
+      <a href="../../drf/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Args
+    Intro
   </span>
   
 
@@ -2226,11 +2109,175 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/content-management-system/" class="md-nav__link">
+      <a href="../../drf/drf-functionbasedviews/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    CMS
+    drf fbv
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../drf/drf-viewsets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    drf viewsets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../drf/python-microservices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    python microservices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Design Pattern
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Design Pattern
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Intro
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../template-patterns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Template Patterns
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model-mixins-patterns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Model Mixins Pattern
   </span>
   
 
@@ -2266,10 +2313,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -2280,8 +2327,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Interview
           </label>
@@ -2294,7 +2341,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../interview/intro/" class="md-nav__link">
+      <a href="../../../interview/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2315,7 +2362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../interview/draft/" class="md-nav__link">
+      <a href="../../../interview/draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2344,8 +2391,6 @@
             
             
               
-                
-              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -2358,32 +2403,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#splitting-modelspy-into-multiple-files" class="md-nav__link">
-    <span class="md-ellipsis">
-      Splitting models.py into multiple files
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reference" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reference
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -2391,148 +2410,29 @@
             
           
           
-  <div class="md-content md-content--post" data-md-component="content">
-    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
-      <div class="md-sidebar__scrollwrap">
-        <div class="md-sidebar__inner md-post">
-          <nav class="md-nav md-nav--primary">
-            <div class="md-post__back">
-              <div class="md-nav__title md-nav__container">
-                <a href="../../../../" class="md-nav__link">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-                  <span class="md-ellipsis">
-                    Back to index
-                  </span>
-                </a>
-              </div>
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="design-pattern">Design Pattern</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
             </div>
-            
-              <div class="md-post__authors md-typeset">
-                
-                  <div class="md-profile md-post__profile">
-                    <span class="md-author md-author--long">
-                      <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-                    </span>
-                    <span class="md-profile__description">
-                      <strong>
-                        
-                          Bishow Thapa
-                        
-                      </strong>
-                      <br>
-                      Creator
-                    </span>
-                  </div>
-                
-              </div>
-            
-            <ul class="md-post__meta md-nav__list">
-              <li class="md-nav__item md-nav__item--section">
-                <div class="md-post__title">
-                  <span class="md-ellipsis">
-                    Metadata
-                  </span>
-                </div>
-                <nav class="md-nav">
-                  <ul class="md-nav__list">
-                    <li class="md-nav__item">
-                      <div class="md-nav__link">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2024-04-20 00:00:00" class="md-ellipsis">April 20, 2024</time>
-                      </div>
-                    </li>
-                    
-                    
-                    
-                      
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
-                          <span class="md-ellipsis">
-                            
-                              1 min read
-                            
-                          </span>
-                        </div>
-                      </li>
-                    
-                  </ul>
-                </nav>
-              </li>
-            </ul>
-          </nav>
           
-        </div>
-      </div>
-    </div>
-    <article class="md-content__inner md-typeset">
-      
-        
-  
-  
-
-<nav class="md-tags" >
-  
-    
-    
-      
-      
-    
-    
-      <a href="../../../../../tags/#python" class="md-tag md-tag-icon">Python</a>
-    
-  
-</nav>
-
-
-
-<div><h1 id="m-is-bigger-than-v-and-c-in-django">M is bigger than V and C in Django</h1>
-<p>In Django, models are classes that provide an object-oriented way of dealing with databases. Typically, each class refers to a database table and each attribute refers to a database column. You can make queries to these tables using an automatically generated API.</p>
-<!-- more -->
-
-<h2 id="splitting-modelspy-into-multiple-files">Splitting models.py into multiple files</h2>
-<p>Like most components of Django, a large <code>models.py</code> file can be split up into multiple files within a package. A package is implemented as a directory, which can contain multiple files, one of which must be a specially named file called <code>__init__.py</code>. This file can be empty, but should exist.</p>
-<p>All definitions that can be exposed at package level must be defined in <code>__init__.py</code> with global scope. For example, if we split models.py into individual classes, in corresponding files inside the models subdirectory such as <code>postable.py</code>, <code>post.py</code>, and <code>comment.py</code>, then the directory structure would look as follows:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>models/
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── comment.py
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── __init__.py
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>├── postable.py
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>└── post.py
-</span></code></pre></div>
-<p>To ensure that all the models are imported correctly, <code>__init__.py</code>  should have the following lines.</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">postable</span> <span class="kn">import</span> <span class="n">Postable</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span> <span class="nn">post</span> <span class="kn">import</span> <span class="n">Post</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">from</span> <span class="nn">comment</span> <span class="kn">import</span> <span class="n">Comment</span>
-</span></code></pre></div>
-<p>Now you can import <code>models.Post</code> as previously.</p>
-<p>Any other code in the <code>__init__.py</code> file will be run when the package is imported. Hence, it is the ideal place for any <mark>package-level</mark> initialization code.</p>
-<hr>
-<h2 id="reference">Reference</h2>
-<ul>
-<li><a href="https://www.amazon.com/Django-Design-Patterns-Practices-Industry-standard/dp/1788831349">Django Design Patterns and Best Practices  by Arun Ravindran : Second Edition - pg 39</a></li>
-</ul>
-<hr></div>
-
-
-
-
-
-
-
-  
-  
-
-
-
-
-  
-
-
-
-      
-    </article>
-  </div>
-
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
@@ -2549,12 +2449,10 @@
   
     
       
-        
-      
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../18/django-images-not-showing-in-the-cpanel-or-shared-hosting/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Django Images not showing in the Cpanel or Shared Hosting">
+          <a href="../../drf/python-microservices/" class="md-footer__link md-footer__link--prev" aria-label="Previous: python microservices">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -2564,20 +2462,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Django Images not showing in the Cpanel or Shared Hosting
+                python microservices
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../23/enhancing-django-development-with-model-help_text/" class="md-footer__link md-footer__link--next" aria-label="Next: Enhancing Django Development with Model help_text">
+          <a href="../template-patterns/" class="md-footer__link md-footer__link--next" aria-label="Next: Template Patterns">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Enhancing Django Development with Model help_text
+                Template Patterns
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2615,10 +2513,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tabs.sticky", "header.autohide", "navigation.footer", "content.code.copy", "content.code.select"], "search": "../../../../../assets/javascripts/workers/search.f886a092.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tabs.sticky", "header.autohide", "navigation.footer", "content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
