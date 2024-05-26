@@ -10,28 +10,28 @@
         <meta name="author" content="it guy">
       
       
-        <link rel="canonical" href="https://bishowtheitguy.github.io/backend/package/jwt-installation/">
+        <link rel="canonical" href="https://bishowtheitguy.github.io/backend/django/advanced/django-signals/">
       
       
-        <link rel="prev" href="../jwt-guide/">
+        <link rel="prev" href="../../builtin/django-paginator/">
       
       
-        <link rel="next" href="../dj-rest-auth/">
+        <link rel="next" href="../../../package/intro/">
       
       
-      <link rel="icon" href="../../../assets/logo/favicon.ico">
+      <link rel="icon" href="../../../../assets/logo/favicon.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
     
     
       
-        <title>jwt guide - Bishow IT Guy</title>
+        <title>django signals - Bishow IT Guy</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,14 +50,14 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -68,7 +68,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#jwt" class="md-skip">
+        <a href="#reference" class="md-skip">
           Skip to content
         </a>
       
@@ -103,9 +103,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Bishow IT Guy" class="md-header__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
+    <a href="../../../.." title="Bishow IT Guy" class="md-header__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
       
-  <img src="../../../assets/logo/internet.png" alt="logo">
+  <img src="../../../../assets/logo/internet.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              jwt guide
+              django signals
             
           </span>
         </div>
@@ -223,7 +223,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../blog/" class="md-tabs__link">
+        <a href="../../../../blog/" class="md-tabs__link">
           
   
   Blog
@@ -241,7 +241,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../python/args/" class="md-tabs__link">
+        <a href="../../../../python/args/" class="md-tabs__link">
           
   
   Python
@@ -259,7 +259,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../intro/" class="md-tabs__link">
+        <a href="../../../intro/" class="md-tabs__link">
           
   
   Backend
@@ -279,7 +279,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../django/intro/" class="md-tabs__link">
+        <a href="../../intro/" class="md-tabs__link">
           
   
   Django
@@ -297,7 +297,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../drf/intro/" class="md-tabs__link">
+        <a href="../../../drf/intro/" class="md-tabs__link">
           
   
   drf
@@ -315,7 +315,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../designpatterns/intro/" class="md-tabs__link">
+        <a href="../../../designpatterns/intro/" class="md-tabs__link">
           
   
   Design Pattern
@@ -333,7 +333,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../interview/intro/" class="md-tabs__link">
+        <a href="../../../../interview/intro/" class="md-tabs__link">
           
   
   Interview
@@ -372,9 +372,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Bishow IT Guy" class="md-nav__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
+    <a href="../../../.." title="Bishow IT Guy" class="md-nav__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
       
-  <img src="../../../assets/logo/internet.png" alt="logo">
+  <img src="../../../../assets/logo/internet.png" alt="logo">
 
     </a>
     Bishow IT Guy
@@ -431,7 +431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/" class="md-nav__link">
+      <a href="../../../../blog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -491,7 +491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/archive/2024/" class="md-nav__link">
+      <a href="../../../../blog/archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -567,7 +567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../python/args/" class="md-nav__link">
+      <a href="../../../../python/args/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -588,7 +588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../python/content-management-system/" class="md-nav__link">
+      <a href="../../../../python/content-management-system/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -656,7 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intro/" class="md-nav__link">
+      <a href="../../../intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -714,7 +714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fastAPI/fast-api/" class="md-nav__link">
+      <a href="../../../fastAPI/fast-api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -743,7 +743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../celery/" class="md-nav__link">
+      <a href="../../../celery/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -764,7 +764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../draft/" class="md-nav__link">
+      <a href="../../../draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -834,7 +834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/intro/" class="md-nav__link">
+      <a href="../../intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -855,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/django-form/" class="md-nav__link">
+      <a href="../../django-form/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -876,7 +876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/django-view/" class="md-nav__link">
+      <a href="../../django-view/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -897,7 +897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/django-model/" class="md-nav__link">
+      <a href="../../django-model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -918,7 +918,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/django-template/" class="md-nav__link">
+      <a href="../../django-template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -939,7 +939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/django-urlconf/" class="md-nav__link">
+      <a href="../../django-urlconf/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -960,7 +960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/django-middleware/" class="md-nav__link">
+      <a href="../../django-middleware/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -981,7 +981,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/migration/" class="md-nav__link">
+      <a href="../../migration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1002,7 +1002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/django-404/" class="md-nav__link">
+      <a href="../../django-404/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1023,7 +1023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/django-mail/" class="md-nav__link">
+      <a href="../../django-mail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1044,7 +1044,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/django-reset-password/" class="md-nav__link">
+      <a href="../../django-reset-password/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1065,7 +1065,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/decorator/" class="md-nav__link">
+      <a href="../../decorator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1086,7 +1086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/context-processors/" class="md-nav__link">
+      <a href="../../context-processors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1107,7 +1107,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/django-tools/" class="md-nav__link">
+      <a href="../../django-tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1128,7 +1128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/django-utility-functions/" class="md-nav__link">
+      <a href="../../django-utility-functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1149,7 +1149,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/django-hardening/" class="md-nav__link">
+      <a href="../../django-hardening/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1170,7 +1170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/django-secretkey/" class="md-nav__link">
+      <a href="../../django-secretkey/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1191,7 +1191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/chatgpt/" class="md-nav__link">
+      <a href="../../chatgpt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1249,7 +1249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/mixins/intro/" class="md-nav__link">
+      <a href="../../mixins/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1270,7 +1270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/mixins/context-processors/" class="md-nav__link">
+      <a href="../../mixins/context-processors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1291,7 +1291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/mixins/custom-char-field-widget/" class="md-nav__link">
+      <a href="../../mixins/custom-char-field-widget/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1312,7 +1312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/mixins/custom-text-field-widget/" class="md-nav__link">
+      <a href="../../mixins/custom-text-field-widget/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1333,7 +1333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/mixins/image-display-mixins/" class="md-nav__link">
+      <a href="../../mixins/image-display-mixins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1354,7 +1354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/mixins/image-size-validators/" class="md-nav__link">
+      <a href="../../mixins/image-size-validators/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1375,7 +1375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/mixins/image-type-validators/" class="md-nav__link">
+      <a href="../../mixins/image-type-validators/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1396,7 +1396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/mixins/permission-mixins/" class="md-nav__link">
+      <a href="../../mixins/permission-mixins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1462,7 +1462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/builtin/intro/" class="md-nav__link">
+      <a href="../../builtin/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1483,7 +1483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/builtin/django-contrib-admin/" class="md-nav__link">
+      <a href="../../builtin/django-contrib-admin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1504,7 +1504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/builtin/django-contrib-auth/" class="md-nav__link">
+      <a href="../../builtin/django-contrib-auth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1525,7 +1525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/builtin/django-contrib-contenttypes/" class="md-nav__link">
+      <a href="../../builtin/django-contrib-contenttypes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1546,7 +1546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/builtin/class-based-views/" class="md-nav__link">
+      <a href="../../builtin/class-based-views/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1567,77 +1567,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/builtin/django-paginator/" class="md-nav__link">
+      <a href="../../builtin/django-paginator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Django Paginator
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_21" >
-        
-          
-          <label class="md-nav__link" for="__nav_4_21" id="__nav_4_21_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Django Advanced
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_21_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_21">
-            <span class="md-nav__icon md-icon"></span>
-            Django Advanced
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../django/advanced/django-signals/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    django signals
   </span>
   
 
@@ -1673,7 +1607,118 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_22" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_21" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_21" id="__nav_4_21_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Django Advanced
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_21_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_21">
+            <span class="md-nav__icon md-icon"></span>
+            Django Advanced
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    django signals
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    django signals
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_22" >
         
           
           <label class="md-nav__link" for="__nav_4_22" id="__nav_4_22_label" tabindex="0">
@@ -1687,7 +1732,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_22_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_22_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_22">
             <span class="md-nav__icon md-icon"></span>
             Package
@@ -1701,7 +1746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../intro/" class="md-nav__link">
+      <a href="../../../package/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1722,7 +1767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python-dotenv/" class="md-nav__link">
+      <a href="../../../package/python-dotenv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1743,7 +1788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../python-mysqlclient/" class="md-nav__link">
+      <a href="../../../package/python-mysqlclient/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1764,7 +1809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tinymce/" class="md-nav__link">
+      <a href="../../../package/tinymce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1785,7 +1830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../jwt-guide/" class="md-nav__link">
+      <a href="../../../package/jwt-guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1803,30 +1848,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    jwt guide
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../package/jwt-installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1835,92 +1860,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#django" class="md-nav__link">
-    <span class="md-ellipsis">
-      Django
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#django-rest-framework" class="md-nav__link">
-    <span class="md-ellipsis">
-      Django REST framework
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Django REST framework">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#installed-apps" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installed Apps
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#simple-jwt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Simple JWT
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Simple JWT">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#project-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Project Configuration
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1933,7 +1872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dj-rest-auth/" class="md-nav__link">
+      <a href="../../../package/dj-rest-auth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1954,7 +1893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-allauth/" class="md-nav__link">
+      <a href="../../../package/django-allauth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1975,7 +1914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-autoslug/" class="md-nav__link">
+      <a href="../../../package/django-autoslug/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1996,7 +1935,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-cors-headers/" class="md-nav__link">
+      <a href="../../../package/django-cors-headers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2017,7 +1956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-debug-toolbar/" class="md-nav__link">
+      <a href="../../../package/django-debug-toolbar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2038,7 +1977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-environ/" class="md-nav__link">
+      <a href="../../../package/django-environ/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2059,7 +1998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-extensions/" class="md-nav__link">
+      <a href="../../../package/django-extensions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2080,7 +2019,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-simple-history/" class="md-nav__link">
+      <a href="../../../package/django-simple-history/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2101,7 +2040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-taggit/" class="md-nav__link">
+      <a href="../../../package/django-taggit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2122,7 +2061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../0.draft/" class="md-nav__link">
+      <a href="../../../package/0.draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2188,7 +2127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django/projects/intro/" class="md-nav__link">
+      <a href="../../projects/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2264,7 +2203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../drf/intro/" class="md-nav__link">
+      <a href="../../../drf/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2285,7 +2224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../drf/drf-functionbasedviews/" class="md-nav__link">
+      <a href="../../../drf/drf-functionbasedviews/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2306,7 +2245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../drf/drf-viewsets/" class="md-nav__link">
+      <a href="../../../drf/drf-viewsets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2327,7 +2266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../drf/python-microservices/" class="md-nav__link">
+      <a href="../../../drf/python-microservices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2395,7 +2334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../designpatterns/intro/" class="md-nav__link">
+      <a href="../../../designpatterns/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2416,7 +2355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../designpatterns/template-patterns/" class="md-nav__link">
+      <a href="../../../designpatterns/template-patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2437,7 +2376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../designpatterns/model-mixins-patterns/" class="md-nav__link">
+      <a href="../../../designpatterns/model-mixins-patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2458,7 +2397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../designpatterns/user-profile-patterns/" class="md-nav__link">
+      <a href="../../../designpatterns/user-profile-patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2526,7 +2465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../interview/intro/" class="md-nav__link">
+      <a href="../../../../interview/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2547,7 +2486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../interview/draft/" class="md-nav__link">
+      <a href="../../../../interview/draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2585,8 +2524,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2595,68 +2532,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#django" class="md-nav__link">
+  <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
-      Django
+      Reference
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#django-rest-framework" class="md-nav__link">
-    <span class="md-ellipsis">
-      Django REST framework
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Django REST framework">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#installed-apps" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installed Apps
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#simple-jwt" class="md-nav__link">
-    <span class="md-ellipsis">
-      Simple JWT
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Simple JWT">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#project-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Project Configuration
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2675,72 +2555,177 @@
                   
 
 
-<div><h1 id="jwt">JWT</h1>
-<h2 id="django">Django</h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>// Installation
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>$ pip install django
-</span></code></pre></div>
-<h2 id="django-rest-framework">Django REST framework</h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>// Installation
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>$ pip install djangorestframework
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>$ pip install markdown
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>$ pip install django-filter 
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>$ pip install djangorestframework, markdown, django-filter
-</span></code></pre></div>
-<h3 id="installed-apps">Installed Apps</h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>// you have to add 'rest_framework' to your INSTALLED_APPS setting.
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>INSTALLED_APPS = [
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    ...
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    'rest_framework',
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>]
-</span></code></pre></div>
-<h2 id="simple-jwt">Simple JWT</h2>
-<p>Simple JWT provides a JSON Web Token authentication backend for the Django REST Framework.
-A JSON Web Token authentication plugin for the Django REST Framework.</p>
-<h3 id="_1"></h3>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>// Installation
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>$ pip install djangorestframework-simplejwt
-</span></code></pre></div>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>// add rest_framework_simplejwt to INSTALLED_APPS.
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>INSTALLED_APPS = [
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    ...
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    'rest_framework_simplejwt',
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    ...
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>]
-</span></code></pre></div>
-<h3 id="project-configuration">Project Configuration</h3>
-<p>Then, your django project must be configured to use the library. In <code>settings.py</code>, add <code>rest_framework_simplejwt.authentication.JWTAuthentication</code> to the list of authentication classes:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>REST_FRAMEWORK = {
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    ...
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    'DEFAULT_AUTHENTICATION_CLASSES': (
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>        ...
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>        'rest_framework_simplejwt.authentication.JWTAuthentication',
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    )
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    ...
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>}
-</span></code></pre></div>
-<p>Also, in your root <code>urls.py</code> file (or any other url config), include routes for Simple JWT’s <code>TokenObtainPairView</code> and <code>TokenRefreshView</code> views:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>from rest_framework_simplejwt.views import (
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    TokenObtainPairView,
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    TokenRefreshView,
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>)
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>urlpatterns = [
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    ...
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>    ...
-</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>]
-</span></code></pre></div>
-<hr>
+  <h1>django signals</h1>
+
+<div><p>Signals are a <code>built-in</code> <mark>feature</mark> of the Django framework. </p>
+<p><a class="glightbox" href="https://miro.medium.com/v2/resize:fit:640/format:webp/1*NqkATyRHwhvfOiGM8FGsKw.jpeg" data-type="image" data-width="100%" data-height="auto" data-title="What is signals?" data-desc-position="bottom"><img alt="What is signals?" src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*NqkATyRHwhvfOiGM8FGsKw.jpeg"></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><input id="__tabbed_1_5" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Basic</label><label for="__tabbed_1_2">When to use it?</label><label for="__tabbed_1_3">When not to use it?</label><label for="__tabbed_1_4">Best Practices</label><label for="__tabbed_1_5">Example</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>There are <mark>three types</mark> of signals as follows:</p>
 <ul>
-<li><a href="https://django-rest-framework-simplejwt.readthedocs.io/en/latest/getting_started.html#installation">Simple JWT</a></li>
+<li><strong>preserve</strong> and <strong>postsave</strong>: These signals execute before and after the <code>save()</code> method.</li>
+<li><strong>predelete</strong> and <strong>postdelete</strong>: These signals execute before and after the <code>delete()</code> method.</li>
+<li><strong>preinit</strong> and <strong>postinit</strong>: These signals execute before and after instantiating the model.</li>
+</ul>
+<hr>
+<p>Django’s <a href="https://docs.djangoproject.com/en/5.0/ref/signals/">built-in</a> signals let user code get notified of certain actions.</p>
+</div>
+<div class="tabbed-block">
+<p>Django Signals are useful in scenarios where you want to decouple certain behaviors from your main application logic. Here are some common scenarios where signals can be beneficial:</p>
+<ol>
+<li>
+<p>User Registration and Authentication:</p>
+<ul>
+<li>Welcome Emails: Automatically send a welcome email when a new user registers.</li>
+<li>Profile Creation: Create a user profile automatically when a new user account is created.</li>
+</ul>
+</li>
+<li>
+<p>Logging and Auditing:</p>
+<ul>
+<li>Activity Logs: Log user activities, such as login/logout events or changes to important models.</li>
+<li>Audit Trails: Track changes to critical data for compliance or debugging purposes.</li>
+</ul>
+</li>
+<li>
+<p>Notifications:</p>
+<ul>
+<li>Real-Time Updates: Send notifications when certain events occur, such as new messages, comments, or task assignments.</li>
+<li>Email/SMS Alerts: Notify administrators or users of significant events like system errors or account issues.</li>
+</ul>
+</li>
+<li>
+<p>Data Integrity and Consistency:</p>
+<ul>
+<li>Related Models: Ensure consistency between related models. For example, updating related records when a primary record changes.</li>
+<li>Automatic Calculations: Automatically update aggregate values, such as recalculating a user’s total points when they complete a task.</li>
+</ul>
+</li>
+<li>
+<p>Background Tasks:</p>
+<ul>
+<li>Delayed Processing: Trigger background tasks using Celery or another task queue to handle resource-intensive operations without blocking the main application.</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>While signals are powerful, they can introduce complexity and hidden dependencies if not used carefully. Here are scenarios where it might be better to avoid signals:</p>
+<ol>
+<li>
+<p>Complex Business Logic:</p>
+<ul>
+<li>Readability: If the logic within your signal handlers becomes complex, it can make your code harder to understand and maintain. Consider keeping complex business logic within views or services.</li>
+</ul>
+</li>
+<li>
+<p>Performance-Critical Tasks:</p>
+<ul>
+<li>Overhead: Signals add an extra layer of function calls, which might introduce performance overhead. For high-performance applications, inline processing might be more efficient.</li>
+<li>Synchronous Execution: By default, signal handlers execute synchronously. For tasks that can slow down your request-response cycle, consider using Celery for asynchronous processing.</li>
+</ul>
+</li>
+<li>
+<p>Tight Coupling:</p>
+<ul>
+<li>Dependencies: Signals can lead to tight coupling between different parts of your application if overused. This can make it harder to track dependencies and debug issues.</li>
+<li>Testing Complexity: Signals can make unit testing more difficult because they introduce side effects. Ensure you have thorough tests for any signal-related functionality.</li>
+</ul>
+</li>
+<li>
+<p>Event-Driven Architecture:</p>
+<ul>
+<li>Event Systems: For large applications requiring extensive event-driven architecture, a dedicated event system like Apache Kafka or RabbitMQ might be more appropriate than Django’s signals.</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>Summary: Best Practices</p>
+<ul>
+<li><strong>Keep It Simple</strong>: Use signals for straightforward tasks like sending notifications or logging events.</li>
+<li><strong>Maintain Readability</strong>: Avoid putting complex business logic in signal handlers. Keep handlers small and focused.</li>
+<li><strong>Use Asynchronous Processing</strong>: Offload heavy or long-running tasks to a task queue like Celery.</li>
+<li><strong>Ensure Decoupling</strong>: Be mindful of creating hidden dependencies. Ensure that the application remains easy to understand and maintain.</li>
+<li><strong>Thorough Testing</strong>: Write comprehensive tests for signal handlers to ensure they work as expected and handle edge cases.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>Example Scenario: When to Use and Not Use Signals</p>
+<p><strong>Use Signals:</strong></p>
+<ul>
+<li>Automatically sending a welcome email when a new user registers.</li>
+<li>Logging when a user logs in or logs out.</li>
+</ul>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># myapp/signals.py</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">django.db.models.signals</span> <span class="kn">import</span> <span class="n">post_save</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">from</span> <span class="nn">django.contrib.auth.models</span> <span class="kn">import</span> <span class="n">User</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kn">from</span> <span class="nn">django.dispatch</span> <span class="kn">import</span> <span class="n">receiver</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kn">from</span> <span class="nn">django.core.mail</span> <span class="kn">import</span> <span class="n">send_mail</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nd">@receiver</span><span class="p">(</span><span class="n">post_save</span><span class="p">,</span> <span class="n">sender</span><span class="o">=</span><span class="n">User</span><span class="p">)</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">def</span> <span class="nf">send_welcome_email</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">created</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="k">if</span> <span class="n">created</span><span class="p">:</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        <span class="n">send_mail</span><span class="p">(</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>            <span class="s1">'Welcome to Our Site'</span><span class="p">,</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>            <span class="s1">'Thank you for registering!'</span><span class="p">,</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>            <span class="s1">'from@example.com'</span><span class="p">,</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>            <span class="p">[</span><span class="n">instance</span><span class="o">.</span><span class="n">email</span><span class="p">],</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>            <span class="n">fail_silently</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>        <span class="p">)</span>
+</span></code></pre></div>
+<p><strong>Avoid Signals:</strong></p>
+<ul>
+<li>Complex business rules for calculating user scores based on multiple criteria.</li>
+<li>Performance-intensive tasks like generating large reports on data updates.</li>
+</ul>
+<p>For complex logic or performance-intensive tasks, encapsulate the logic in a service layer or use a background task queue like Celery:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Use Celery for background tasks</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># tasks.py</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">from</span> <span class="nn">celery</span> <span class="kn">import</span> <span class="n">shared_task</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kn">from</span> <span class="nn">django.core.mail</span> <span class="kn">import</span> <span class="n">send_mail</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nd">@shared_task</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">def</span> <span class="nf">send_welcome_email</span><span class="p">(</span><span class="n">user_email</span><span class="p">):</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="n">send_mail</span><span class="p">(</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>        <span class="s1">'Welcome to Our Site'</span><span class="p">,</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>        <span class="s1">'Thank you for registering!'</span><span class="p">,</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        <span class="s1">'from@example.com'</span><span class="p">,</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>        <span class="p">[</span><span class="n">user_email</span><span class="p">],</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>        <span class="n">fail_silently</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    <span class="p">)</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="c1"># Call the task from a view or another part of your application</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="n">send_welcome_email</span><span class="o">.</span><span class="n">delay</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">email</span><span class="p">)</span>
+</span></code></pre></div>
+<p>By following these guidelines, you can effectively use Django Signals to enhance your application while avoiding common pitfalls.</p>
+</div>
+</div>
+</div>
+</div>
+<p><a class="glightbox" href="https://seddonym.me/assets/img/posts/content/signals/signal_send.png" data-type="image" data-width="100%" data-height="auto" data-title="How do Django signals work? " data-desc-position="bottom"><img alt="How do Django signals work? " src="https://seddonym.me/assets/img/posts/content/signals/signal_send.png"></a></p>
+<hr>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://docs.djangoproject.com/en/5.0/topics/signals/">Signals Topics: Official</a></li>
+<li>
+<p><a href="https://docs.djangoproject.com/en/5.0/ref/signals/">Signals Ref: Official</a></p>
+</li>
+<li>
+<p><a href="https://dev.to/yokwejuste/django-signals-mastery-144d">Django Signals mastery </a></p>
+</li>
+<li><a href="https://seddonym.me/2018/05/04/django-signals/">When to Use Django Signals</a></li>
+<li><a href="https://www.sitepoint.com/understanding-signals-in-django/">Understanding Signals in Django</a></li>
+<li><a href="https://maniabhishek05.medium.com/django-signals-fdfa840eea11">Django Signals</a></li>
+<li>
+<p><a href="https://www.educba.com/django-signals/">Introduction to Django Signals: educba.com</a></p>
+</li>
+<li>
+<p><a href="https://chatgpt.com/share/a903ef25-ed8e-4cab-8cad-7dd9a5312a5b">chatgpt</a></p>
+</li>
 </ul></div>
 
 
@@ -2777,7 +2762,7 @@ A JSON Web Token authentication plugin for the Django REST Framework.</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../jwt-guide/" class="md-footer__link md-footer__link--prev" aria-label="Previous: jwt installation">
+          <a href="../../builtin/django-paginator/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Django Paginator">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -2787,20 +2772,20 @@ A JSON Web Token authentication plugin for the Django REST Framework.</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                jwt installation
+                Django Paginator
               </div>
             </div>
           </a>
         
         
           
-          <a href="../dj-rest-auth/" class="md-footer__link md-footer__link--next" aria-label="Next: dj rest auth">
+          <a href="../../../package/intro/" class="md-footer__link md-footer__link--next" aria-label="Next: Intro">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                dj rest auth
+                Intro
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2838,10 +2823,10 @@ A JSON Web Token authentication plugin for the Django REST Framework.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tabs.sticky", "header.autohide", "navigation.footer", "content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tabs.sticky", "header.autohide", "navigation.footer", "content.code.copy", "content.code.select"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
