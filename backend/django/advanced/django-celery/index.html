@@ -10,28 +10,28 @@
         <meta name="author" content="it guy">
       
       
-        <link rel="canonical" href="https://bishowtheitguy.github.io/backend/django/django-404/">
+        <link rel="canonical" href="https://bishowtheitguy.github.io/backend/django/advanced/django-celery/">
       
       
-        <link rel="prev" href="../migration/">
+        <link rel="prev" href="../django-signals/">
       
       
-        <link rel="next" href="../django-mail/">
+        <link rel="next" href="../django-channels/">
       
       
-      <link rel="icon" href="../../../assets/logo/favicon.ico">
+      <link rel="icon" href="../../../../assets/logo/favicon.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
     
     
       
-        <title>django 404 - Bishow IT Guy</title>
+        <title>django celery - Bishow IT Guy</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,14 +50,14 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -68,7 +68,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reference" class="md-skip">
+        <a href="#example-scenarios-for-using-celery" class="md-skip">
           Skip to content
         </a>
       
@@ -103,9 +103,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Bishow IT Guy" class="md-header__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
+    <a href="../../../.." title="Bishow IT Guy" class="md-header__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
       
-  <img src="../../../assets/logo/internet.png" alt="logo">
+  <img src="../../../../assets/logo/internet.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              django 404
+              django celery
             
           </span>
         </div>
@@ -223,7 +223,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../blog/" class="md-tabs__link">
+        <a href="../../../../blog/" class="md-tabs__link">
           
   
   Blog
@@ -241,7 +241,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../python/args/" class="md-tabs__link">
+        <a href="../../../../python/args/" class="md-tabs__link">
           
   
   Python
@@ -259,7 +259,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../intro/" class="md-tabs__link">
+        <a href="../../../intro/" class="md-tabs__link">
           
   
   Backend
@@ -279,7 +279,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../intro/" class="md-tabs__link">
+        <a href="../../intro/" class="md-tabs__link">
           
   
   Django
@@ -297,7 +297,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../drf/intro/" class="md-tabs__link">
+        <a href="../../../drf/intro/" class="md-tabs__link">
           
   
   drf
@@ -315,7 +315,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../designpatterns/intro/" class="md-tabs__link">
+        <a href="../../../designpatterns/intro/" class="md-tabs__link">
           
   
   Design Pattern
@@ -333,7 +333,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../interview/intro/" class="md-tabs__link">
+        <a href="../../../../interview/intro/" class="md-tabs__link">
           
   
   Interview
@@ -372,9 +372,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Bishow IT Guy" class="md-nav__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
+    <a href="../../../.." title="Bishow IT Guy" class="md-nav__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
       
-  <img src="../../../assets/logo/internet.png" alt="logo">
+  <img src="../../../../assets/logo/internet.png" alt="logo">
 
     </a>
     Bishow IT Guy
@@ -431,7 +431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/" class="md-nav__link">
+      <a href="../../../../blog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -491,7 +491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/archive/2024/" class="md-nav__link">
+      <a href="../../../../blog/archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -567,7 +567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../python/args/" class="md-nav__link">
+      <a href="../../../../python/args/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -588,7 +588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../python/content-management-system/" class="md-nav__link">
+      <a href="../../../../python/content-management-system/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -656,7 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intro/" class="md-nav__link">
+      <a href="../../../intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -714,7 +714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fastAPI/fast-api/" class="md-nav__link">
+      <a href="../../../fastAPI/fast-api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -743,7 +743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../celery/" class="md-nav__link">
+      <a href="../../../celery/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -764,7 +764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../draft/" class="md-nav__link">
+      <a href="../../../draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -834,7 +834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../intro/" class="md-nav__link">
+      <a href="../../intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -855,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-form/" class="md-nav__link">
+      <a href="../../django-form/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -876,7 +876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-view/" class="md-nav__link">
+      <a href="../../django-view/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -897,7 +897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-model/" class="md-nav__link">
+      <a href="../../django-model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -918,7 +918,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-template/" class="md-nav__link">
+      <a href="../../django-template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -939,7 +939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-urlconf/" class="md-nav__link">
+      <a href="../../django-urlconf/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -960,7 +960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-middleware/" class="md-nav__link">
+      <a href="../../django-middleware/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -981,7 +981,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../migration/" class="md-nav__link">
+      <a href="../../migration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -999,28 +999,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    django 404
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../django-404/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1029,33 +1011,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#reference" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reference
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1068,7 +1023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-mail/" class="md-nav__link">
+      <a href="../../django-mail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1089,7 +1044,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-reset-password/" class="md-nav__link">
+      <a href="../../django-reset-password/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1110,7 +1065,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../decorator/" class="md-nav__link">
+      <a href="../../decorator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1131,7 +1086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../context-processors/" class="md-nav__link">
+      <a href="../../context-processors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1152,7 +1107,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-tools/" class="md-nav__link">
+      <a href="../../django-tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1173,7 +1128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-utility-functions/" class="md-nav__link">
+      <a href="../../django-utility-functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1194,7 +1149,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-hardening/" class="md-nav__link">
+      <a href="../../django-hardening/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1215,7 +1170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-secretkey/" class="md-nav__link">
+      <a href="../../django-secretkey/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1236,7 +1191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chatgpt/" class="md-nav__link">
+      <a href="../../chatgpt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1294,7 +1249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mixins/intro/" class="md-nav__link">
+      <a href="../../mixins/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1315,7 +1270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mixins/context-processors/" class="md-nav__link">
+      <a href="../../mixins/context-processors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1336,7 +1291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mixins/custom-char-field-widget/" class="md-nav__link">
+      <a href="../../mixins/custom-char-field-widget/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1357,7 +1312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mixins/custom-text-field-widget/" class="md-nav__link">
+      <a href="../../mixins/custom-text-field-widget/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1378,7 +1333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mixins/image-display-mixins/" class="md-nav__link">
+      <a href="../../mixins/image-display-mixins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1399,7 +1354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mixins/image-size-validators/" class="md-nav__link">
+      <a href="../../mixins/image-size-validators/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1420,7 +1375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mixins/image-type-validators/" class="md-nav__link">
+      <a href="../../mixins/image-type-validators/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1441,7 +1396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mixins/permission-mixins/" class="md-nav__link">
+      <a href="../../mixins/permission-mixins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1507,7 +1462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../builtin/intro/" class="md-nav__link">
+      <a href="../../builtin/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1528,7 +1483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../builtin/django-contrib-admin/" class="md-nav__link">
+      <a href="../../builtin/django-contrib-admin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1549,7 +1504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../builtin/django-contrib-auth/" class="md-nav__link">
+      <a href="../../builtin/django-contrib-auth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1570,7 +1525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../builtin/django-contrib-contenttypes/" class="md-nav__link">
+      <a href="../../builtin/django-contrib-contenttypes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1591,7 +1546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../builtin/class-based-views/" class="md-nav__link">
+      <a href="../../builtin/class-based-views/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1612,7 +1567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../builtin/django-paginator/" class="md-nav__link">
+      <a href="../../builtin/django-paginator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1638,19 +1593,21 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_21" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_21" checked>
         
           
           <label class="md-nav__link" for="__nav_4_21" id="__nav_4_21_label" tabindex="0">
@@ -1664,7 +1621,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_21_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_21_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_21">
             <span class="md-nav__icon md-icon"></span>
             Django Advanced
@@ -1678,7 +1635,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/intro/" class="md-nav__link">
+      <a href="../intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1699,7 +1656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/django-signals/" class="md-nav__link">
+      <a href="../django-signals/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1717,10 +1674,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../advanced/django-celery/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    django celery
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1729,6 +1704,33 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example-scenarios-for-using-celery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Scenarios for Using Celery
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1741,7 +1743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/django-channels/" class="md-nav__link">
+      <a href="../django-channels/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1807,7 +1809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../package/intro/" class="md-nav__link">
+      <a href="../../../package/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1828,7 +1830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../package/python-dotenv/" class="md-nav__link">
+      <a href="../../../package/python-dotenv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1849,7 +1851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../package/python-mysqlclient/" class="md-nav__link">
+      <a href="../../../package/python-mysqlclient/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1870,7 +1872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../package/tinymce/" class="md-nav__link">
+      <a href="../../../package/tinymce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1891,7 +1893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../package/jwt-guide/" class="md-nav__link">
+      <a href="../../../package/jwt-guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1912,7 +1914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../package/jwt-installation/" class="md-nav__link">
+      <a href="../../../package/jwt-installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1933,7 +1935,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../package/dj-rest-auth/" class="md-nav__link">
+      <a href="../../../package/dj-rest-auth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1954,7 +1956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../package/django-allauth/" class="md-nav__link">
+      <a href="../../../package/django-allauth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1975,7 +1977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../package/django-autoslug/" class="md-nav__link">
+      <a href="../../../package/django-autoslug/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1996,7 +1998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../package/django-cors-headers/" class="md-nav__link">
+      <a href="../../../package/django-cors-headers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2017,7 +2019,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../package/django-debug-toolbar/" class="md-nav__link">
+      <a href="../../../package/django-debug-toolbar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2038,7 +2040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../package/django-environ/" class="md-nav__link">
+      <a href="../../../package/django-environ/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2059,7 +2061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../package/django-extensions/" class="md-nav__link">
+      <a href="../../../package/django-extensions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2080,7 +2082,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../package/django-simple-history/" class="md-nav__link">
+      <a href="../../../package/django-simple-history/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2101,7 +2103,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../package/django-taggit/" class="md-nav__link">
+      <a href="../../../package/django-taggit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2122,7 +2124,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../package/0.draft/" class="md-nav__link">
+      <a href="../../../package/0.draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2188,7 +2190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../projects/intro/" class="md-nav__link">
+      <a href="../../projects/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2264,7 +2266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../drf/intro/" class="md-nav__link">
+      <a href="../../../drf/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2285,7 +2287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../drf/drf-functionbasedviews/" class="md-nav__link">
+      <a href="../../../drf/drf-functionbasedviews/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2306,7 +2308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../drf/drf-viewsets/" class="md-nav__link">
+      <a href="../../../drf/drf-viewsets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2327,7 +2329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../drf/python-microservices/" class="md-nav__link">
+      <a href="../../../drf/python-microservices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2395,7 +2397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../designpatterns/intro/" class="md-nav__link">
+      <a href="../../../designpatterns/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2416,7 +2418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../designpatterns/template-patterns/" class="md-nav__link">
+      <a href="../../../designpatterns/template-patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2437,7 +2439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../designpatterns/model-mixins-patterns/" class="md-nav__link">
+      <a href="../../../designpatterns/model-mixins-patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2458,7 +2460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../designpatterns/user-profile-patterns/" class="md-nav__link">
+      <a href="../../../designpatterns/user-profile-patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2526,7 +2528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../interview/intro/" class="md-nav__link">
+      <a href="../../../../interview/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2547,7 +2549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../interview/draft/" class="md-nav__link">
+      <a href="../../../../interview/draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2593,9 +2595,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#reference" class="md-nav__link">
+  <a href="#example-scenarios-for-using-celery" class="md-nav__link">
     <span class="md-ellipsis">
-      Reference
+      Example Scenarios for Using Celery
     </span>
   </a>
   
@@ -2616,67 +2618,103 @@
                   
 
 
-  <h1>django 404</h1>
+  <h1>django celery</h1>
 
-<div><p>Sure, I can guide you through how an experienced Django developer might implement a custom 404 page using class-based views. In Django, you can customize error pages like 404 (page not found), 500 (server error), etc., to match the look and feel of your website.</p>
-<p>Here's how you could do it using class-based views:</p>
-<p>Create a Custom 404 View Class: First, you'll need to create a view class for handling the 404 error. You can do this by subclassing Django's TemplateView or any other relevant class-based view.
-Override the get() Method: In the custom view class, override the get() method to customize what happens when the view is accessed. You can render a specific template or perform any other actions you want.
-Set Up URL Configuration: You'll need to wire up this custom view to the URL pattern for 404 errors in your Django project's URL configuration.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">views.py</label><label for="__tabbed_1_2">urls.py</label></div>
+<div><div class="admonition tip">
+<p class="admonition-title">Install Celery and Redis</p>
+<p><strong>Celery</strong> requires a <mark>message broker</mark> to send and receive messages. <strong>Redis</strong> is a common choice. Install Celery and Redis using pip:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>celery<span class="w"> </span>redis
+</span></code></pre></div>
+</div>
+<h2 id="example-scenarios-for-using-celery">Example Scenarios for Using <code>Celery</code></h2>
+<details class="note" open="open">
+<summary>Example</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Example 1</label><label for="__tabbed_1_2">Example 2</label><label for="__tabbed_1_3">Monitoring Celery Tasks</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">django.views.generic</span> <span class="kn">import</span> <span class="n">TemplateView</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">class</span> <span class="nc">Custom404View</span><span class="p">(</span><span class="n">TemplateView</span><span class="p">):</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">template_name</span> <span class="o">=</span> <span class="s1">'404.html'</span>  <span class="c1"># Path to your custom 404 template</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="n">context</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_context_data</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="c1"># You can add additional context data here if needed</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">render_to_response</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+<p>Example 1: Sending an Email Notification</p>
+<p>When a user signs up on your platform, you might want to send them a welcome email. Sending the email can take some time, especially if the email server is slow or the network is congested. Using Celery, you can offload the email sending process to a background task:</p>
+<div class="language-python highlight"><span class="filename">tasks.py</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">celery</span> <span class="kn">import</span> <span class="n">shared_task</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span> <span class="nn">django.core.mail</span> <span class="kn">import</span> <span class="n">send_mail</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nd">@shared_task</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">def</span> <span class="nf">send_welcome_email</span><span class="p">(</span><span class="n">user_id</span><span class="p">):</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="kn">from</span> <span class="nn">django.contrib.auth.models</span> <span class="kn">import</span> <span class="n">User</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">user_id</span><span class="p">)</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="n">send_mail</span><span class="p">(</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>        <span class="s1">'Welcome!'</span><span class="p">,</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>        <span class="s1">'Thank you for signing up, </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">username</span><span class="p">),</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        <span class="s1">'from@example.com'</span><span class="p">,</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>        <span class="p">[</span><span class="n">user</span><span class="o">.</span><span class="n">email</span><span class="p">],</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>        <span class="n">fail_silently</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    <span class="p">)</span>
+</span></code></pre></div>
+<div class="language-python highlight"><span class="filename">views.py</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span><span class="p">,</span> <span class="n">redirect</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">from</span> <span class="nn">django.contrib.auth.models</span> <span class="kn">import</span> <span class="n">User</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kn">from</span> <span class="nn">.tasks</span> <span class="kn">import</span> <span class="n">send_welcome_email</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">def</span> <span class="nf">signup</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">'POST'</span><span class="p">:</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>        <span class="n">username</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">[</span><span class="s1">'username'</span><span class="p">]</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        <span class="n">email</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">[</span><span class="s1">'email'</span><span class="p">]</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>        <span class="n">password</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">[</span><span class="s1">'password'</span><span class="p">]</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>        <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create_user</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>        <span class="n">send_welcome_email</span><span class="o">.</span><span class="n">delay</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">'home'</span><span class="p">)</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">'signup.html'</span><span class="p">)</span>
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span> <span class="nn">.views</span> <span class="kn">import</span> <span class="n">Custom404View</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Other URL patterns...</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1"># Define the custom 404 page URL</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="c1"># Other URL patterns...</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">'404/'</span><span class="p">,</span> <span class="n">Custom404View</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">'404'</span><span class="p">),</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">]</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="c1"># or</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="kn">from</span> <span class="nn">django.conf.urls</span> <span class="kn">import</span> <span class="n">handler404</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="kn">from</span> <span class="nn">yourapp.views</span> <span class="kn">import</span> <span class="n">Custom404View</span>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>    <span class="c1"># Your other URL patterns...</span>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="p">]</span>
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="n">handler404</span> <span class="o">=</span> <span class="n">Custom404View</span><span class="o">.</span><span class="n">as_view</span><span class="p">()</span>
+<p>Example 2: Generating a Report</p>
+<p>Generating a detailed report based on user data can be time-consuming. Using Celery, you can generate the report in the background and notify the user when it's ready:</p>
+<p>```python "tasks.py"
+from celery import shared_task
+import time</p>
+<p>@shared_task
+def generate_report(user_id):
+    # Simulate a long-running task
+    time.sleep(10)
+    return 'Report for user {}'.format(user_id)
+</p><div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>```python title="views.py"
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>from django.shortcuts import render
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>from django.http import JsonResponse
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>from .tasks import generate_report
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>def request_report(request):
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    if request.method == 'POST':
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        user_id = request.user.id
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>        result = generate_report.delay(user_id)
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>        return JsonResponse({'task_id': result.id})
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    return render(request, 'request_report.html')
 </span></code></pre></div>
-<p>In this configuration:</p>
-<ul>
-<li>The <code>handler404</code> setting specifies the view that Django should use when it encounters a 404 error.</li>
-<li>Here, we set it to <code>Custom404View.as_view()</code>, which means Django will use your custom 404 view (<code>Custom404View</code>) to render the response for 404 errors.</li>
-</ul>
 </div>
+<div class="tabbed-block">
+<p>Celery provides several tools for monitoring and managing tasks:</p>
+<ol>
+<li>
+<p><strong>Flower</strong>: A real-time web-based monitoring tool for Celery.</p>
+<ul>
+<li>Install Flower: <code>pip install flower</code></li>
+<li>Run Flower: <code>celery -A myproject flower</code></li>
+<li>Access Flower: Navigate to <code>http://localhost:5555/</code> in your web browser.</li>
+</ul>
+</li>
+<li>
+<p><strong>Celery Events</strong>: Built-in command-line tool for monitoring.</p>
+<ul>
+<li>Run Celery Events: celery -A myproject events</li>
+</ul>
+</li>
+</ol>
 </div>
 </div>
 </div>
 <hr>
-<h2 id="reference">Reference</h2>
-<ul>
-<li><a href="https://www.w3schools.com/django/django_404.php">Django 404 (page not found) :w3schools</a></li>
-</ul></div>
+<blockquote>
+<p>Summary</p>
+</blockquote>
+<p>Celery is an essential tool for handling asynchronous tasks in Django applications. It is particularly useful for long-running tasks, I/O bound tasks, scheduled tasks, real-time updates, resource-intensive tasks, integration with external APIs, and tasks that require retry mechanisms. By offloading such tasks to Celery, you can improve the responsiveness, scalability, and maintainability of your Django applications.</p>
+</details></div>
 
 
 
@@ -2712,7 +2750,7 @@ Set Up URL Configuration: You'll need to wire up this custom view to the URL pat
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../migration/" class="md-footer__link md-footer__link--prev" aria-label="Previous: django migrations">
+          <a href="../django-signals/" class="md-footer__link md-footer__link--prev" aria-label="Previous: django signals">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -2722,20 +2760,20 @@ Set Up URL Configuration: You'll need to wire up this custom view to the URL pat
                 Previous
               </span>
               <div class="md-ellipsis">
-                django migrations
+                django signals
               </div>
             </div>
           </a>
         
         
           
-          <a href="../django-mail/" class="md-footer__link md-footer__link--next" aria-label="Next: django mail">
+          <a href="../django-channels/" class="md-footer__link md-footer__link--next" aria-label="Next: django channels">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                django mail
+                django channels
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2773,10 +2811,10 @@ Set Up URL Configuration: You'll need to wire up this custom view to the URL pat
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tabs.sticky", "header.autohide", "navigation.footer", "content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tabs.sticky", "header.autohide", "navigation.footer", "content.code.copy", "content.code.select"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
