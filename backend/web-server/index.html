@@ -10,28 +10,28 @@
         <meta name="author" content="it guy">
       
       
-        <link rel="canonical" href="https://bishowtheitguy.github.io/backend/django/builtin/django-contrib-auth/">
+        <link rel="canonical" href="https://bishowtheitguy.github.io/backend/web-server/">
       
       
-        <link rel="prev" href="../django-contrib-admin/">
+        <link rel="prev" href="../intro/">
       
       
-        <link rel="next" href="../django-contrib-contenttypes/">
+        <link rel="next" href="../../python/args/">
       
       
-      <link rel="icon" href="../../../../assets/logo/favicon.ico">
+      <link rel="icon" href="../../assets/logo/favicon.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
     
     
       
-        <title>django contrib auth - Bishow IT Guy</title>
+        <title>Web Server - Bishow IT Guy</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,14 +50,14 @@
       
     
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -68,7 +68,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#djangocontribauth" class="md-skip">
+        <a href="#gunicorn-green-unicorn" class="md-skip">
           Skip to content
         </a>
       
@@ -103,9 +103,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="Bishow IT Guy" class="md-header__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
+    <a href="../.." title="Bishow IT Guy" class="md-header__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
       
-  <img src="../../../../assets/logo/internet.png" alt="logo">
+  <img src="../../assets/logo/internet.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              django contrib auth
+              Web Server
             
           </span>
         </div>
@@ -223,28 +223,10 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../blog/" class="md-tabs__link">
+        <a href="../../blog/" class="md-tabs__link">
           
   
   Blog
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../intro/" class="md-tabs__link">
-          
-  
-  Backend
 
         </a>
       </li>
@@ -261,7 +243,25 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../intro/" class="md-tabs__link">
+        <a href="../intro/" class="md-tabs__link">
+          
+  
+  Backend
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../django/intro/" class="md-tabs__link">
           
   
   Django
@@ -279,7 +279,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../drf/intro/" class="md-tabs__link">
+        <a href="../drf/intro/" class="md-tabs__link">
           
   
   drf
@@ -297,7 +297,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../designpatterns/intro/" class="md-tabs__link">
+        <a href="../designpatterns/intro/" class="md-tabs__link">
           
   
   Design Pattern
@@ -315,7 +315,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../interview/intro/" class="md-tabs__link">
+        <a href="../../interview/intro/" class="md-tabs__link">
           
   
   Interview
@@ -354,9 +354,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="Bishow IT Guy" class="md-nav__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
+    <a href="../.." title="Bishow IT Guy" class="md-nav__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
       
-  <img src="../../../../assets/logo/internet.png" alt="logo">
+  <img src="../../assets/logo/internet.png" alt="logo">
 
     </a>
     Bishow IT Guy
@@ -413,7 +413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../blog/" class="md-nav__link">
+      <a href="../../blog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -473,7 +473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../blog/archive/2024/" class="md-nav__link">
+      <a href="../../blog/archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -506,8 +506,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -516,12 +518,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -535,7 +537,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Backend
@@ -549,7 +551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../intro/" class="md-nav__link">
+      <a href="../intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -567,10 +569,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../web-server/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Web Server
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -579,6 +599,60 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gunicorn-green-unicorn" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gunicorn (Green Unicorn)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uvicorn" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uvicorn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#daphne" class="md-nav__link">
+    <span class="md-ellipsis">
+      Daphne
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -628,7 +702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../python/args/" class="md-nav__link">
+      <a href="../../python/args/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -649,7 +723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../python/content-management-system/" class="md-nav__link">
+      <a href="../../python/content-management-system/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -715,7 +789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../fastAPI/fast-api/" class="md-nav__link">
+      <a href="../fastAPI/fast-api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -744,7 +818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../celery/" class="md-nav__link">
+      <a href="../celery/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -765,7 +839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../draft/" class="md-nav__link">
+      <a href="../draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -790,8 +864,6 @@
       
   
   
-    
-  
   
   
     
@@ -802,12 +874,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -821,7 +893,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Django
@@ -835,7 +907,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intro/" class="md-nav__link">
+      <a href="../django/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -856,7 +928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django-form/" class="md-nav__link">
+      <a href="../django/django-form/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -877,7 +949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django-view/" class="md-nav__link">
+      <a href="../django/django-view/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -898,7 +970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django-model/" class="md-nav__link">
+      <a href="../django/django-model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -919,7 +991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django-template/" class="md-nav__link">
+      <a href="../django/django-template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -940,7 +1012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django-urlconf/" class="md-nav__link">
+      <a href="../django/django-urlconf/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -961,7 +1033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django-middleware/" class="md-nav__link">
+      <a href="../django/django-middleware/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -982,7 +1054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../migration/" class="md-nav__link">
+      <a href="../django/migration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1003,7 +1075,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django-404/" class="md-nav__link">
+      <a href="../django/django-404/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1024,7 +1096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django-mail/" class="md-nav__link">
+      <a href="../django/django-mail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1045,7 +1117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django-reset-password/" class="md-nav__link">
+      <a href="../django/django-reset-password/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1066,7 +1138,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../decorator/" class="md-nav__link">
+      <a href="../django/decorator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1087,7 +1159,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../context-processors/" class="md-nav__link">
+      <a href="../django/context-processors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1108,7 +1180,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django-tools/" class="md-nav__link">
+      <a href="../django/django-tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1129,7 +1201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django-utility-functions/" class="md-nav__link">
+      <a href="../django/django-utility-functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1150,7 +1222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django-hardening/" class="md-nav__link">
+      <a href="../django/django-hardening/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1171,7 +1243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../django-secretkey/" class="md-nav__link">
+      <a href="../django/django-secretkey/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1192,7 +1264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chatgpt/" class="md-nav__link">
+      <a href="../django/chatgpt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1250,7 +1322,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mixins/intro/" class="md-nav__link">
+      <a href="../django/mixins/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1271,7 +1343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mixins/context-processors/" class="md-nav__link">
+      <a href="../django/mixins/context-processors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1292,7 +1364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mixins/custom-char-field-widget/" class="md-nav__link">
+      <a href="../django/mixins/custom-char-field-widget/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1313,7 +1385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mixins/custom-text-field-widget/" class="md-nav__link">
+      <a href="../django/mixins/custom-text-field-widget/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1334,7 +1406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mixins/image-display-mixins/" class="md-nav__link">
+      <a href="../django/mixins/image-display-mixins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1355,7 +1427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mixins/image-size-validators/" class="md-nav__link">
+      <a href="../django/mixins/image-size-validators/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1376,7 +1448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mixins/image-type-validators/" class="md-nav__link">
+      <a href="../django/mixins/image-type-validators/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1397,7 +1469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mixins/permission-mixins/" class="md-nav__link">
+      <a href="../django/mixins/permission-mixins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1423,21 +1495,19 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_20" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_20" >
         
           
           <label class="md-nav__link" for="__nav_3_20" id="__nav_3_20_label" tabindex="0">
@@ -1451,7 +1521,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_20_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_20_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_20">
             <span class="md-nav__icon md-icon"></span>
             Built-in
@@ -1465,7 +1535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../intro/" class="md-nav__link">
+      <a href="../django/builtin/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1486,7 +1556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-contrib-admin/" class="md-nav__link">
+      <a href="../django/builtin/django-contrib-admin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1504,30 +1574,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    django contrib auth
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../django/builtin/django-contrib-auth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1536,53 +1586,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#auth-urls-and-views" class="md-nav__link">
-    <span class="md-ellipsis">
-      Auth URLs and Views
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#authentication-views" class="md-nav__link">
-    <span class="md-ellipsis">
-      Authentication Views
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reference" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reference
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1595,7 +1598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-contrib-contenttypes/" class="md-nav__link">
+      <a href="../django/builtin/django-contrib-contenttypes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1616,7 +1619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../class-based-views/" class="md-nav__link">
+      <a href="../django/builtin/class-based-views/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1637,7 +1640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-paginator/" class="md-nav__link">
+      <a href="../django/builtin/django-paginator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1703,7 +1706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/intro/" class="md-nav__link">
+      <a href="../django/advanced/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1724,7 +1727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/django-signals/" class="md-nav__link">
+      <a href="../django/advanced/django-signals/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1745,7 +1748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/django-celery/" class="md-nav__link">
+      <a href="../django/advanced/django-celery/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1766,7 +1769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../advanced/django-channels/" class="md-nav__link">
+      <a href="../django/advanced/django-channels/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1832,7 +1835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../package/intro/" class="md-nav__link">
+      <a href="../package/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1853,7 +1856,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../package/python-dotenv/" class="md-nav__link">
+      <a href="../package/python-dotenv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1874,7 +1877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../package/python-mysqlclient/" class="md-nav__link">
+      <a href="../package/python-mysqlclient/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1895,7 +1898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../package/tinymce/" class="md-nav__link">
+      <a href="../package/tinymce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1916,7 +1919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../package/jwt-guide/" class="md-nav__link">
+      <a href="../package/jwt-guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1937,7 +1940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../package/jwt-installation/" class="md-nav__link">
+      <a href="../package/jwt-installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1958,7 +1961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../package/dj-rest-auth/" class="md-nav__link">
+      <a href="../package/dj-rest-auth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1979,7 +1982,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../package/django-allauth/" class="md-nav__link">
+      <a href="../package/django-allauth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2000,7 +2003,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../package/django-autoslug/" class="md-nav__link">
+      <a href="../package/django-autoslug/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2021,7 +2024,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../package/django-cors-headers/" class="md-nav__link">
+      <a href="../package/django-cors-headers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2042,7 +2045,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../package/django-debug-toolbar/" class="md-nav__link">
+      <a href="../package/django-debug-toolbar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2063,7 +2066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../package/django-environ/" class="md-nav__link">
+      <a href="../package/django-environ/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2084,7 +2087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../package/django-extensions/" class="md-nav__link">
+      <a href="../package/django-extensions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2105,7 +2108,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../package/django-simple-history/" class="md-nav__link">
+      <a href="../package/django-simple-history/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2126,7 +2129,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../package/django-taggit/" class="md-nav__link">
+      <a href="../package/django-taggit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2147,7 +2150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../package/0.draft/" class="md-nav__link">
+      <a href="../package/0.draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2213,7 +2216,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../projects/intro/" class="md-nav__link">
+      <a href="../django/projects/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2289,7 +2292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../drf/intro/" class="md-nav__link">
+      <a href="../drf/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2310,7 +2313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../drf/drf-functionbasedviews/" class="md-nav__link">
+      <a href="../drf/drf-functionbasedviews/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2331,7 +2334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../drf/drf-viewsets/" class="md-nav__link">
+      <a href="../drf/drf-viewsets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2352,7 +2355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../drf/python-microservices/" class="md-nav__link">
+      <a href="../drf/python-microservices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2420,7 +2423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../designpatterns/intro/" class="md-nav__link">
+      <a href="../designpatterns/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2441,7 +2444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../designpatterns/template-patterns/" class="md-nav__link">
+      <a href="../designpatterns/template-patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2462,7 +2465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../designpatterns/model-mixins-patterns/" class="md-nav__link">
+      <a href="../designpatterns/model-mixins-patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2483,7 +2486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../designpatterns/user-profile-patterns/" class="md-nav__link">
+      <a href="../designpatterns/user-profile-patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2551,7 +2554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../interview/intro/" class="md-nav__link">
+      <a href="../../interview/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2572,7 +2575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../interview/draft/" class="md-nav__link">
+      <a href="../../interview/draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2610,8 +2613,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2620,18 +2621,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#auth-urls-and-views" class="md-nav__link">
+  <a href="#gunicorn-green-unicorn" class="md-nav__link">
     <span class="md-ellipsis">
-      Auth URLs and Views
+      Gunicorn (Green Unicorn)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#authentication-views" class="md-nav__link">
+  <a href="#uvicorn" class="md-nav__link">
     <span class="md-ellipsis">
-      Authentication Views
+      Uvicorn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#daphne" class="md-nav__link">
+    <span class="md-ellipsis">
+      Daphne
     </span>
   </a>
   
@@ -2661,79 +2671,38 @@
                   
 
 
-<div><h1 id="djangocontribauth">django.contrib.auth</h1>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># django_project/settings.py</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="s2">"django.contrib.admin"</span><span class="p">,</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="s2">"django.contrib.auth"</span><span class="p">,</span> <span class="c1"># Yoohoo!!!!</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="s2">"django.contrib.contenttypes"</span><span class="p">,</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="s2">"django.contrib.sessions"</span><span class="p">,</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="s2">"django.contrib.messages"</span><span class="p">,</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="s2">"django.contrib.staticfiles"</span><span class="p">,</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="c1"># Local</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="s2">"accounts.apps.AccountsConfig"</span><span class="p">,</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="s2">"pages.apps.PagesConfig"</span><span class="p">,</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p">]</span>
+  <h1>Web Server</h1>
+
+<div><h2 id="gunicorn-green-unicorn">Gunicorn <code>(Green Unicorn)</code></h2>
+<p>Gunicorn is a <mark>WSGI server</mark> for Python applications, well known for its advanced process management features.</p>
+<p><a class="glightbox" href="https://geekflare.com/wp-content/uploads/2022/09/logo.jpg" data-type="image" data-width="100%" data-height="auto" data-title="Gunicorn" data-desc-position="bottom"><img alt="Gunicorn" src="https://geekflare.com/wp-content/uploads/2022/09/logo.jpg"></a></p>
+<p>If you have <strong>Python 3.5</strong> and later, you can install Gunicorn using pip:</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>gunicorn
 </span></code></pre></div>
-<p>There are, in fact, 6 apps already there that Django provides for us which power the site. The first is <code>admin</code> and the second is <code>auth</code>. This is how we know the auth app is already present in our Django project.</p>
-<p>When we earlier ran the migrate command for the first time all of these apps were linked together in the initial database. And remember that we used the <strong>AUTH_USER_MODEL</strong> setting to tell Django to use our <mark>custom user model</mark>, not the default User model here. This is why we had to wait until that configuration was complete before running migrate for the first time.</p>
-<h2 id="auth-urls-and-views">Auth URLs and Views</h2>
-<p>To use Django’s built-in auth app we must explicitly add it to our <code>config/urls.py</code> file. The easiest approach is to use <strong>accounts/</strong> as the prefix since that is commonly used in the Django community.</p>
-<p>Make the one line change below. Note that as our <code>urls.py</code> file grows in length, adding comments for each type of URL–admin, user management, local apps, etc.–helps with readability.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># django_project/urls.py</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span><span class="p">,</span> <span class="n">include</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="c1"># Django admin</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="n">path</span><span class="p">(</span><span class="s2">"admin/"</span><span class="p">,</span> <span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">urls</span><span class="p">),</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="c1"># User management</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="n">path</span><span class="p">(</span><span class="s2">"accounts/"</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s2">"django.contrib.auth.urls"</span><span class="p">)),</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="c1"># new</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="c1"># Local apps</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    <span class="n">path</span><span class="p">(</span><span class="s2">""</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s2">"pages.urls"</span><span class="p">)),</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="p">]</span>
-</span></code></pre></div>
-<p>What’s included in the auth app? A lot it turns out. First off, there are a number of associated urls.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">accounts</span><span class="o">/</span><span class="n">login</span><span class="o">/</span> <span class="p">[</span><span class="n">name</span><span class="o">=</span><span class="s2">"login"</span><span class="p">]</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">accounts</span><span class="o">/</span><span class="n">logout</span><span class="o">/</span> <span class="p">[</span><span class="n">name</span><span class="o">=</span><span class="s2">"logout"</span><span class="p">]</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">accounts</span><span class="o">/</span><span class="n">password_change</span><span class="o">/</span> <span class="p">[</span><span class="n">name</span><span class="o">=</span><span class="s2">"password_change"</span><span class="p">]</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">accounts</span><span class="o">/</span><span class="n">password_change</span><span class="o">/</span><span class="n">done</span><span class="o">/</span> <span class="p">[</span><span class="n">name</span><span class="o">=</span><span class="s2">"password_change_done"</span><span class="p">]</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">accounts</span><span class="o">/</span><span class="n">password_reset</span><span class="o">/</span> <span class="p">[</span><span class="n">name</span><span class="o">=</span><span class="s2">"password_reset"</span><span class="p">]</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">accounts</span><span class="o">/</span><span class="n">password_reset</span><span class="o">/</span><span class="n">done</span><span class="o">/</span> <span class="p">[</span><span class="n">name</span><span class="o">=</span><span class="s2">"password_reset_done"</span><span class="p">]</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">accounts</span><span class="o">/</span><span class="n">reset</span><span class="o">/&lt;</span><span class="n">uidb64</span><span class="o">&gt;/&lt;</span><span class="n">token</span><span class="o">&gt;/</span> <span class="p">[</span><span class="n">name</span><span class="o">=</span><span class="s2">"password_reset_confirm"</span><span class="p">]</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="n">accounts</span><span class="o">/</span><span class="n">reset</span><span class="o">/</span><span class="n">done</span><span class="o">/</span> <span class="p">[</span><span class="n">name</span><span class="o">=</span><span class="s2">"password_reset_complete"</span><span class="p">]</span>
-</span></code></pre></div>
+</div>
 <hr>
-<h2 id="authentication-views"><a href="https://docs.djangoproject.com/en/5.0/topics/auth/default/#module-django.contrib.auth.views">Authentication Views</a></h2>
-<p>Django provides several views that you can use for handling login, logout, and password management. </p>
-<p>Django provides no default template for the authentication views. You should create your own templates for the views you want to use. The template context is documented in each view, see All authentication views.</p>
-<blockquote>
-<p>Using the views</p>
-</blockquote>
-<p>There are different methods to implement these views in your project. The easiest way is to include the provided URLconf in <code>django.contrib.auth.urls</code> in your own **URLconf, for example:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="n">path</span><span class="p">(</span><span class="s2">"accounts/"</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s2">"django.contrib.auth.urls"</span><span class="p">)),</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">]</span>
+<h2 id="uvicorn">Uvicorn</h2>
+<p>Uvicorn is an <mark>ASGI server</mark> implementation for Python.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>uvicorn<span class="o">[</span>standard<span class="o">]</span><span class="w"> </span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># includes installation of optional and Cython-based dependencies</span>
 </span></code></pre></div>
-<p>This will include the following URL patterns:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>accounts/login/ [name='login']
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>accounts/logout/ [name='logout']
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>accounts/password_change/ [name='password_change']
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>accounts/password_change/done/ [name='password_change_done']
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>accounts/password_reset/ [name='password_reset']
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>accounts/password_reset/done/ [name='password_reset_done']
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>accounts/reset/&lt;uidb64&gt;/&lt;token&gt;/ [name='password_reset_confirm']
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>accounts/reset/done/ [name='password_reset_complete']
+</div>
+<hr>
+<h2 id="daphne">Daphne</h2>
+<p>Daphne is one of the first <mark>ASGI server</mark> implementations used as a reference for ASGI server implementations.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="language-bash highlight"><span class="filename">bash</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>daphne
 </span></code></pre></div>
+</div>
 <hr>
 <h2 id="reference">Reference</h2>
 <ul>
-<li><a href="#">Django for Professionals by William S. Vincent</a></li>
-<li><a href="https://docs.djangoproject.com/en/5.0/topics/auth/default/#module-django.contrib.auth.views">Authentication Views</a></li>
-<li><a href="https://learndjango.com/tutorials/django-login-and-logout-tutorial">learndjango auth</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Authentication">Django Authentication</a></li>
-<li><a href="https://docs.djangoproject.com/en/5.0/topics/auth/">Django auth: official</a></li>
+<li><a href="https://geekflare.com/python-web-servers/">9 Python Web Servers to Try for Your Next Project </a></li>
 </ul></div>
 
 
@@ -2770,7 +2739,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../django-contrib-admin/" class="md-footer__link md-footer__link--prev" aria-label="Previous: django contrib admin">
+          <a href="../intro/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Intro">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -2780,20 +2749,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                django contrib admin
+                Intro
               </div>
             </div>
           </a>
         
         
           
-          <a href="../django-contrib-contenttypes/" class="md-footer__link md-footer__link--next" aria-label="Next: django contrib contenttypes">
+          <a href="../../python/args/" class="md-footer__link md-footer__link--next" aria-label="Next: Args">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                django contrib contenttypes
+                Args
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2831,10 +2800,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tabs.sticky", "header.autohide", "navigation.footer", "content.code.copy", "content.code.select"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.tabs.sticky", "header.autohide", "navigation.footer", "content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
