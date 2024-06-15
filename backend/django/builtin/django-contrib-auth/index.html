@@ -2940,6 +2940,71 @@
 </div>
 </div>
 <hr>
+<details class="question">
+<summary>Question</summary>
+<p>In Django, <strong>django.contrib.auth.views</strong> and <strong>django.views</strong> are <mark>modules</mark> that provide various functionalities related to authentication and generic views, respectively.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">django.contrib.auth.views</label><label for="__tabbed_2_2">django.views</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The <code>django.contrib.auth.views</code> module specifically deals with authentication-related views and functionalities. Here are some key components it provides:</p>
+<ol>
+<li>
+<p>Login and Logout Views:</p>
+<ul>
+<li>LoginView: Allows users to log in to the site.</li>
+<li>LogoutView: Allows users to log out from the site.</li>
+</ul>
+</li>
+<li>
+<p>Password Management:</p>
+<ul>
+<li>PasswordChangeView: Allows users to change their password.</li>
+<li>PasswordChangeDoneView: Confirmation view after a password change.</li>
+<li>PasswordResetView: Allows users to request a password reset.</li>
+<li>PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView: Views for handling password reset flow.</li>
+</ul>
+</li>
+<li>
+<p>User Management:</p>
+<ul>
+<li>UserCreationForm, UserChangeForm: Forms for creating and changing user accounts.</li>
+<li>UserDetailView: View for displaying user details.</li>
+</ul>
+</li>
+<li>
+<p>Permissions and Authorization:</p>
+<ul>
+<li>Views and forms related to permissions and authorization checks.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p>These views and functionalities provided by django.contrib.auth.views help developers quickly implement common authentication-related features in their Django applications.</p>
+</div>
+<div class="tabbed-block">
+<p>On the other hand, <code>django.views</code> is a module that provides generic views for handling common web development patterns. Some of the generic views provided by django.views include:</p>
+<ul>
+<li><strong>View</strong>: The base class for all views. It handles HTTP request processing.</li>
+<li><strong>TemplateView</strong>: Renders a given template, with the context passed through.</li>
+<li><strong>RedirectView</strong>: Redirects to a specified URL.</li>
+<li><strong>ListView</strong>: Renders a list of objects from a queryset.</li>
+<li><strong>DetailView</strong>: Renders the details of a single object from a queryset.</li>
+</ul>
+<p>These generic views simplify the implementation of common tasks in Django web development, such as rendering data from models, handling redirects, or displaying static templates.</p>
+</div>
+</div>
+</div>
+<hr>
+<blockquote>
+<p>Summary</p>
+</blockquote>
+<ul>
+<li><code>django.contrib.auth.views</code>: Deals with authentication-related views and functionalities like login, logout, password management, and user management.</li>
+<li><code>django.views</code>: Provides generic views for handling common web development patterns such as rendering templates, handling redirects, and displaying lists or details of objects.</li>
+</ul>
+<p>Both modules are essential in Django development, offering convenient abstractions and utilities to streamline the creation of robust web applications.</p>
+</details>
+<hr>
 <h2 id="reference">Reference</h2>
 <ul>
 <li><a href="#">Django for Professionals by William S. Vincent</a></li>
