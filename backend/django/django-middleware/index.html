@@ -1039,6 +1039,39 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#redirect-authenticated-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redirect Authenticated Users
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Redirect Authenticated Users">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reasons-to-redirect-authenticated-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reasons to Redirect Authenticated Users:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-implement-redirects-in-django" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Implement Redirects in Django:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -2792,6 +2825,39 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#redirect-authenticated-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redirect Authenticated Users
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Redirect Authenticated Users">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reasons-to-redirect-authenticated-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reasons to Redirect Authenticated Users:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-implement-redirects-in-django" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Implement Redirects in Django:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -2830,6 +2896,133 @@
 <h2 id="commonmiddleware">CommonMiddleware:</h2>
 <p>Provides some basic functionalities that are chores to implement. Such as sending away banned user-agents and making sure that the URL ends with a slash.</p>
 <p>As you can see, middlewares have a wide variety of uses, be cautious with what you put in the codebase of a middleware, though. Since all requests in your service will enter that middleware, computation intensive and network operations might slow down your application significantly.</p>
+<hr>
+<h2 id="redirect-authenticated-users">Redirect Authenticated Users</h2>
+<p>Yes, it is generally a good practice to redirect users away from the login and signup pages if they are already authenticated (logged in). This practice ensures a better user experience and aligns with common usability patterns across web applications.</p>
+<h3 id="reasons-to-redirect-authenticated-users">Reasons to Redirect Authenticated Users:</h3>
+<ul>
+<li>
+<p><strong>Avoid Confusion</strong>: Users who are already logged in might be confused if they land on a login or signup page again. They might wonder if they've been logged out or if there's a problem with their session.</p>
+</li>
+<li>
+<p><strong>Security</strong>: Prevents authenticated users from performing unnecessary actions that don't apply to them, such as attempting to log in again or sign up for a new account.</p>
+</li>
+<li>
+<p><strong>Simplifies Navigation</strong>: Keeps navigation straightforward by presenting relevant options based on the user's current authentication status. For example, redirecting them to a dashboard, profile page, or the main application interface.</p>
+</li>
+</ul>
+<h3 id="how-to-implement-redirects-in-django">How to Implement Redirects in Django:</h3>
+<p>In Django, you can handle redirection in several ways:</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Middleware Approach (Recommended):</label><label for="__tabbed_1_2">Views Approach:</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Create a middleware to redirect authenticated users away from the login and signup pages.</p>
+<div class="language-python highlight"><span class="filename">middleware.py</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">redirect</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">reverse</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">class</span> <span class="nc">RedirectIfAuthenticatedMiddleware</span><span class="p">:</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">get_response</span><span class="p">):</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">get_response</span> <span class="o">=</span> <span class="n">get_response</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">is_authenticated</span><span class="p">:</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>            <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">path</span> <span class="ow">in</span> <span class="p">[</span><span class="n">reverse</span><span class="p">(</span><span class="s1">'login'</span><span class="p">),</span> <span class="n">reverse</span><span class="p">(</span><span class="s1">'signup'</span><span class="p">)]:</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>                <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">settings</span><span class="o">.</span><span class="n">LOGIN_REDIRECT_URL</span><span class="p">)</span>  <span class="c1"># Redirect to desired URL after login</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_response</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        <span class="k">return</span> <span class="n">response</span>
+</span></code></pre></div>
+<p>Ensure to include this middleware in your Django settings:</p>
+<div class="language-python highlight"><span class="filename">settings.py</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">MIDDLEWARE</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="c1"># Other middleware...</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="s1">'yourapp.middleware.RedirectIfAuthenticatedMiddleware'</span><span class="p">,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="c1"># Other middleware...</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">]</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-python highlight"><span class="filename">views.py</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">redirect</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">reverse</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">def</span> <span class="nf">login_view</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">is_authenticated</span><span class="p">:</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">reverse</span><span class="p">(</span><span class="s1">'home'</span><span class="p">))</span>  <span class="c1"># Replace 'home' with your desired redirect URL</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="c1"># Handle login logic...</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="k">def</span> <span class="nf">signup_view</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">is_authenticated</span><span class="p">:</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">reverse</span><span class="p">(</span><span class="s1">'home'</span><span class="p">))</span>  <span class="c1"># Replace 'home' with your desired redirect URL</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    <span class="c1"># Handle signup logic...</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<hr>
+<blockquote>
+<p>Summary:</p>
+</blockquote>
+<ul>
+<li>Middleware: Recommended for global rules and ensuring consistency across the application. Suitable for enforcing authentication-related policies universally.</li>
+<li>Views: Provide flexibility and granularity for specific redirection logic within individual views. Useful for scenarios where different views require unique handling based on context.</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Breakdown</p>
+<ol>
+<li>
+<p>Constructor (<code>__init__</code> method):</p>
+<ul>
+<li><strong>get_response</strong>: This parameter is a function that will be called with the request to get the response. It's used to handle the request further down the middleware chain or to the view.</li>
+</ul>
+</li>
+<li>
+<p><code>__call__</code> method:</p>
+<ul>
+<li>This method allows the class instance to be callable like a function, making it a middleware. It takes <code>request</code> as an argument.</li>
+</ul>
+</li>
+<li>
+<p>Logic Explanation:</p>
+<ul>
+<li>Authenticated Check: if request.user.is_authenticated: checks if the user is logged in.</li>
+<li>Path Check: if request.path in [reverse('login'), reverse('signup')] checks if the current request path is either the login or signup page.</li>
+<li>Redirect: If both conditions are met (user is authenticated and the path is <code>login/signup</code>), <code>redirect(settings.LOGIN_REDIRECT_URL)</code> redirects the user to the URL specified in <code>settings.LOGIN_REDIRECT_URL</code>.</li>
+<li>Pass-through: If the user is not authenticated or is visiting a different path, self.get_response(request) allows the request to continue through the middleware chain and eventually to the view.</li>
+</ul>
+</li>
+</ol>
+</div>
+<hr>
+<div class="admonition example">
+<p class="admonition-title">Package-Level Initialization</p>
+<p><code>__init__.py</code> indicates that the <mark>directory should be treated</mark> as a package. </p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Example</label><label for="__tabbed_2_2">Package Versioning and Metadata</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># mypackage/__init__.py</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">from</span> <span class="nn">.module1</span> <span class="kn">import</span> <span class="n">ClassA</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kn">from</span> <span class="nn">.module2</span> <span class="kn">import</span> <span class="n">function_b</span>
+</span></code></pre></div>
+<p>This allows users to do:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span> <span class="nn">mypackage</span> <span class="kn">import</span> <span class="n">ClassA</span><span class="p">,</span> <span class="n">function_b</span>
+</span></code></pre></div>
+<p>instead of:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">mypackage.module1</span> <span class="kn">import</span> <span class="n">ClassA</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kn">from</span> <span class="nn">mypackage.module2</span> <span class="kn">import</span> <span class="n">function_b</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><code>__init__.py</code> can be used to store package metadata, such as version information. For example:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># mypackage/__init__.py</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">__version__</span> <span class="o">=</span> <span class="s2">"1.0.0"</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="n">__author__</span> <span class="o">=</span> <span class="s2">"Your Name"</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+</div>
 <hr>
 <h2 id="reference">Reference</h2>
 <ul>
