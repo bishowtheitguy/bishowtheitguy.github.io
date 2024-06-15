@@ -1072,6 +1072,30 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#separate-logout-urls-for-admin-and-user-accounts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Separate Logout URLs for Admin and User Accounts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Separate Logout URLs for Admin and User Accounts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#benefits-of-separate-logout-urls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Benefits of Separate Logout URLs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -2858,6 +2882,30 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#separate-logout-urls-for-admin-and-user-accounts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Separate Logout URLs for Admin and User Accounts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Separate Logout URLs for Admin and User Accounts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#benefits-of-separate-logout-urls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Benefits of Separate Logout URLs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -2885,6 +2933,8 @@
 
 <div><p><strong>Middleware is a framework of hooks into Django’s request/response processing.</strong> It’s a light, low-level “plugin” system for globally altering Django’s input or output.</p>
 <hr>
+<details class="note">
+<summary>Note</summary>
 <h2 id="a-primer-on-middlewares">A Primer on Middlewares</h2>
 <p>Middlewares are one of the core concepts of Django. Just like ogres and onions, Django also has layers that your request and response goes through when they enter and exit your application. The centerpiece of this layered system is the view function and the class based view itself. Consider Figure 2-6.</p>
 <p><a class="glightbox" href="../../../assets/django/django-middleware.png" data-type="image" data-width="100%" data-height="auto" data-title="django middleware" data-desc-position="bottom"><img alt="django middleware" src="../../../assets/django/django-middleware.png"></a></p>
@@ -2896,6 +2946,7 @@
 <h2 id="commonmiddleware">CommonMiddleware:</h2>
 <p>Provides some basic functionalities that are chores to implement. Such as sending away banned user-agents and making sure that the URL ends with a slash.</p>
 <p>As you can see, middlewares have a wide variety of uses, be cautious with what you put in the codebase of a middleware, though. Since all requests in your service will enter that middleware, computation intensive and network operations might slow down your application significantly.</p>
+</details>
 <hr>
 <h2 id="redirect-authenticated-users">Redirect Authenticated Users</h2>
 <p>Yes, it is generally a good practice to redirect users away from the login and signup pages if they are already authenticated (logged in). This practice ensures a better user experience and aligns with common usability patterns across web applications.</p>
@@ -3022,6 +3073,91 @@
 </div>
 </div>
 </div>
+</div>
+<hr>
+<h2 id="separate-logout-urls-for-admin-and-user-accounts">Separate Logout URLs for Admin and User Accounts</h2>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<ol>
+<li>
+<p>Admin Logout</p>
+<p>For the Django admin interface, the logout behavior is handled internally by Django's admin site. By default, the admin logout URL is <code>/admin/logout/</code>. You typically don't need to customize this unless you have specific requirements.</p>
+</li>
+<li>
+<p>User Accounts Logout</p>
+<p>For user accounts, you can define a separate logout URL (<code>/accounts/logout/</code>) and implement custom logout views for additional functionalities or redirects.</p>
+</li>
+</ol>
+</div>
+<details class="example">
+<summary>Implementation Steps</summary>
+<ol>
+<li>
+<p>Define Admin Logout URL</p>
+<p>Django admin handles admin logout internally. Users are redirected to <code>/admin/logout/</code> by default. You generally do not need to modify this behavior unless you have specific requirements.</p>
+</li>
+<li>
+<p>Define User Accounts Logout URL</p>
+<p>Define a custom URL pattern for user logout (<code>/accounts/logout/</code>) in your Django project's urls.py:</p>
+<div class="language-python highlight"><span class="filename">myproject/urls.py</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kn">from</span> <span class="nn">django.contrib.auth</span> <span class="kn">import</span> <span class="n">views</span> <span class="k">as</span> <span class="n">auth_views</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    <span class="c1"># Admin URLs</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">'admin/'</span><span class="p">,</span> <span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">urls</span><span class="p">),</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    <span class="c1"># User Accounts URLs</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">'accounts/logout/'</span><span class="p">,</span> <span class="n">auth_views</span><span class="o">.</span><span class="n">LogoutView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">'logout'</span><span class="p">),</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">'accounts/profile/'</span><span class="p">,</span> <span class="n">ProfileView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">'profile'</span><span class="p">),</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">'accounts/signup/'</span><span class="p">,</span> <span class="n">SignupView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">'signup'</span><span class="p">),</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">'accounts/'</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s1">'django.contrib.auth.urls'</span><span class="p">)),</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>    <span class="c1"># other app URLs</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="p">]</span>
+</span></code></pre></div>
+<ul>
+<li>Use LogoutView.as_view() provided by Django's authentication views (<code>django.contrib.auth.views</code>) to handle user logout. This view takes care of logging the user out and can also handle custom redirects or actions if needed.</li>
+</ul>
+</li>
+<li>
+<p>Customize User Logout Behavior (Optional)</p>
+<p>If you need to customize the logout behavior for user accounts (e.g., redirecting to a specific page after logout), you can subclass LogoutView and override its behavior:</p>
+<div class="language-python highlight"><span class="filename">views.py</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">from</span> <span class="nn">django.contrib.auth.views</span> <span class="kn">import</span> <span class="n">LogoutView</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">reverse_lazy</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">redirect</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="k">class</span> <span class="nc">CustomLogoutView</span><span class="p">(</span><span class="n">LogoutView</span><span class="p">):</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    <span class="k">def</span> <span class="nf">get_next_page</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>        <span class="c1"># Customize the redirect URL after logout</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>        <span class="k">return</span> <span class="n">reverse_lazy</span><span class="p">(</span><span class="s1">'home'</span><span class="p">)</span>  <span class="c1"># Example: Redirect to home page after logout</span>
+</span></code></pre></div>
+<p>Then, use <code>CustomLogoutView.as_view()</code> in your URL configuration:</p>
+<div class="language-python highlight"><span class="filename">urls.py</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">path</span><span class="p">(</span><span class="s1">'accounts/logout/'</span><span class="p">,</span> <span class="n">CustomLogoutView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">'logout'</span><span class="p">),</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>Update LOGOUT_REDIRECT_URL Setting</p>
+<p>In your Django project's <code>settings.py</code>, specify where users should be redirected after logging out from user accounts:</p>
+<div class="language-python highlight"><span class="filename">settings.py</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">LOGOUT_REDIRECT_URL</span> <span class="o">=</span> <span class="s1">'/accounts/login/'</span>  <span class="c1"># Example: Redirect to login page after logout</span>
+</span></code></pre></div>
+</li>
+</ol>
+</details>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<h3 id="benefits-of-separate-logout-urls">Benefits of Separate Logout URLs</h3>
+<ul>
+<li>
+<p>Role-Based Navigation: Provides a clear distinction between logout actions for admin users and regular users, aligning with their respective roles and permissions.</p>
+</li>
+<li>
+<p>Customization Flexibility: Allows customization of logout behavior and redirects based on specific user roles or application requirements.</p>
+</li>
+<li>
+<p>Security and User Experience: Enhances security by ensuring users are redirected appropriately after logging out, improving overall user experience and system usability.</p>
+</li>
+</ul>
+<p>By following these practices, you can effectively manage and customize logout functionalities for admin users and regular users in your Django application, ensuring a clear and intuitive user experience tailored to different user roles.</p>
 </div>
 <hr>
 <h2 id="reference">Reference</h2>
