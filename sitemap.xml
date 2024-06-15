@@ -71,11 +71,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://bishowtheitguy.github.io/backend/django/django-hardening/</loc>
-         <lastmod>2024-06-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://bishowtheitguy.github.io/backend/django/django-mail/</loc>
          <lastmod>2024-06-15</lastmod>
          <changefreq>daily</changefreq>
@@ -102,11 +97,6 @@
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/django/django-template/</loc>
-         <lastmod>2024-06-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishowtheitguy.github.io/backend/django/django-tools/</loc>
          <lastmod>2024-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -146,7 +136,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishowtheitguy.github.io/backend/django/advanced/django-hardening/</loc>
+         <lastmod>2024-06-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishowtheitguy.github.io/backend/django/advanced/django-signals/</loc>
+         <lastmod>2024-06-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishowtheitguy.github.io/backend/django/advanced/django-tools/</loc>
          <lastmod>2024-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -286,6 +286,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishowtheitguy.github.io/backend/package/django-crispy-forms/</loc>
+         <lastmod>2024-06-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishowtheitguy.github.io/backend/package/django-debug-toolbar/</loc>
          <lastmod>2024-06-15</lastmod>
          <changefreq>daily</changefreq>
@@ -321,22 +326,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://bishowtheitguy.github.io/backend/package/jwt-guide/</loc>
-         <lastmod>2024-06-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bishowtheitguy.github.io/backend/package/jwt-installation/</loc>
-         <lastmod>2024-06-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://bishowtheitguy.github.io/backend/package/python-dotenv/</loc>
          <lastmod>2024-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/package/python-mysqlclient/</loc>
+         <lastmod>2024-06-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishowtheitguy.github.io/backend/package/simplejwt/</loc>
          <lastmod>2024-06-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
