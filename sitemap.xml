@@ -156,6 +156,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishowtheitguy.github.io/backend/django/advanced/shortcuts/</loc>
+         <lastmod>2024-06-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishowtheitguy.github.io/backend/django/builtin/class-based-views/</loc>
          <lastmod>2024-06-15</lastmod>
          <changefreq>daily</changefreq>

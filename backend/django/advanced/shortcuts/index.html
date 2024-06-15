@@ -10,28 +10,28 @@
         <meta name="author" content="it guy">
       
       
-        <link rel="canonical" href="https://bishowtheitguy.github.io/blog/2024/05/08/customizing-how-models-are-displayed/">
+        <link rel="canonical" href="https://bishowtheitguy.github.io/backend/django/advanced/shortcuts/">
       
       
-        <link rel="prev" href="../../07/creating-a-blog-model-in-django/">
+        <link rel="prev" href="../django-tools/">
       
       
-        <link rel="next" href="../../09/django-admin-forms-with-formfield_overrides/">
+        <link rel="next" href="../../../package/intro/">
       
       
-      <link rel="icon" href="../../../../../assets/logo/favicon.ico">
+      <link rel="icon" href="../../../../assets/logo/favicon.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
     
     
       
-        <title>Customizing how models are displayed - Bishow IT Guy</title>
+        <title>Shortcuts - Bishow IT Guy</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,14 +50,14 @@
       
     
     
-    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -68,7 +68,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#customizing-how-models-are-displayed" class="md-skip">
+        <a href="#django-shortcuts" class="md-skip">
           Skip to content
         </a>
       
@@ -103,9 +103,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../../.." title="Bishow IT Guy" class="md-header__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
+    <a href="../../../.." title="Bishow IT Guy" class="md-header__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
       
-  <img src="../../../../../assets/logo/internet.png" alt="logo">
+  <img src="../../../../assets/logo/internet.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Customizing how models are displayed
+              Shortcuts
             
           </span>
         </div>
@@ -219,13 +219,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../../blog/" class="md-tabs__link">
           
   
   Blog
@@ -243,7 +241,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../backend/intro/" class="md-tabs__link">
+        <a href="../../../intro/" class="md-tabs__link">
           
   
   Backend
@@ -257,11 +255,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../../../backend/django/intro/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../intro/" class="md-tabs__link">
           
   
   Django
@@ -279,7 +279,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../backend/drf/intro/" class="md-tabs__link">
+        <a href="../../../drf/intro/" class="md-tabs__link">
           
   
   drf
@@ -297,7 +297,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../backend/designpatterns/intro/" class="md-tabs__link">
+        <a href="../../../designpatterns/intro/" class="md-tabs__link">
           
   
   Design Pattern
@@ -315,7 +315,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../interview/intro/" class="md-tabs__link">
+        <a href="../../../../interview/intro/" class="md-tabs__link">
           
   
   Interview
@@ -343,9 +343,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -356,9 +354,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../.." title="Bishow IT Guy" class="md-nav__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
+    <a href="../../../.." title="Bishow IT Guy" class="md-nav__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
       
-  <img src="../../../../../assets/logo/internet.png" alt="logo">
+  <img src="../../../../assets/logo/internet.png" alt="logo">
 
     </a>
     Bishow IT Guy
@@ -370,8 +368,6 @@
       
   
   
-    
-  
   
   
     
@@ -382,12 +378,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
@@ -401,7 +397,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Blog
@@ -412,14 +408,12 @@
                 
   
   
-    
-  
   
     
   
   
-    <li class="md-nav__item md-nav__item--active">
-      <a href="../../../../" class="md-nav__link">
+    <li class="md-nav__item">
+      <a href="../../../../blog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -479,7 +473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archive/2024/" class="md-nav__link">
+      <a href="../../../../blog/archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -555,7 +549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/intro/" class="md-nav__link">
+      <a href="../../../intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -576,7 +570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/web-server/" class="md-nav__link">
+      <a href="../../../web-server/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -634,7 +628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/args/" class="md-nav__link">
+      <a href="../../../../python/args/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -655,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/content-management-system/" class="md-nav__link">
+      <a href="../../../../python/content-management-system/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -721,7 +715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/fastAPI/fast-api/" class="md-nav__link">
+      <a href="../../../fastAPI/fast-api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -750,7 +744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/celery/" class="md-nav__link">
+      <a href="../../../celery/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -771,7 +765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/draft/" class="md-nav__link">
+      <a href="../../../draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -796,8 +790,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -806,12 +802,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -825,7 +821,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Django
@@ -839,7 +835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/intro/" class="md-nav__link">
+      <a href="../../intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -860,7 +856,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-form/" class="md-nav__link">
+      <a href="../../django-form/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -881,7 +877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-view/" class="md-nav__link">
+      <a href="../../django-view/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -902,7 +898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-model/" class="md-nav__link">
+      <a href="../../django-model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -923,7 +919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-template/" class="md-nav__link">
+      <a href="../../django-template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -944,7 +940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-urlconf/" class="md-nav__link">
+      <a href="../../django-urlconf/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -965,7 +961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-middleware/" class="md-nav__link">
+      <a href="../../django-middleware/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -986,7 +982,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/migration/" class="md-nav__link">
+      <a href="../../migration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1007,7 +1003,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-404/" class="md-nav__link">
+      <a href="../../django-404/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1028,7 +1024,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-mail/" class="md-nav__link">
+      <a href="../../django-mail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1049,7 +1045,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-reset-password/" class="md-nav__link">
+      <a href="../../django-reset-password/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1070,7 +1066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/decorator/" class="md-nav__link">
+      <a href="../../decorator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1091,7 +1087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/context-processors/" class="md-nav__link">
+      <a href="../../context-processors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1112,7 +1108,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-utility-functions/" class="md-nav__link">
+      <a href="../../django-utility-functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1133,7 +1129,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-secretkey/" class="md-nav__link">
+      <a href="../../django-secretkey/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1191,7 +1187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/intro/" class="md-nav__link">
+      <a href="../../mixins/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1212,7 +1208,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/context-processors/" class="md-nav__link">
+      <a href="../../mixins/context-processors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1233,7 +1229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/custom-char-field-widget/" class="md-nav__link">
+      <a href="../../mixins/custom-char-field-widget/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1254,7 +1250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/custom-text-field-widget/" class="md-nav__link">
+      <a href="../../mixins/custom-text-field-widget/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1275,7 +1271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/image-display-mixins/" class="md-nav__link">
+      <a href="../../mixins/image-display-mixins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1296,7 +1292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/image-size-validators/" class="md-nav__link">
+      <a href="../../mixins/image-size-validators/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1317,7 +1313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/image-type-validators/" class="md-nav__link">
+      <a href="../../mixins/image-type-validators/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1338,7 +1334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/permission-mixins/" class="md-nav__link">
+      <a href="../../mixins/permission-mixins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1404,7 +1400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/builtin/intro/" class="md-nav__link">
+      <a href="../../builtin/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1425,7 +1421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/builtin/django-contrib-admin/" class="md-nav__link">
+      <a href="../../builtin/django-contrib-admin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1446,7 +1442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/builtin/django-contrib-auth/" class="md-nav__link">
+      <a href="../../builtin/django-contrib-auth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1467,7 +1463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/builtin/django-contrib-contenttypes/" class="md-nav__link">
+      <a href="../../builtin/django-contrib-contenttypes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1488,7 +1484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/builtin/django-contrib-messages/" class="md-nav__link">
+      <a href="../../builtin/django-contrib-messages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1509,7 +1505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/builtin/class-based-views/" class="md-nav__link">
+      <a href="../../builtin/class-based-views/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1530,7 +1526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/builtin/django-paginator/" class="md-nav__link">
+      <a href="../../builtin/django-paginator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1556,19 +1552,21 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_18" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_18" checked>
         
           
           <label class="md-nav__link" for="__nav_3_18" id="__nav_3_18_label" tabindex="0">
@@ -1582,7 +1580,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_18_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_18_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_18">
             <span class="md-nav__icon md-icon"></span>
             Django Advanced
@@ -1596,7 +1594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/advanced/intro/" class="md-nav__link">
+      <a href="../intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1617,7 +1615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/advanced/django-signals/" class="md-nav__link">
+      <a href="../django-signals/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1638,7 +1636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/advanced/django-celery/" class="md-nav__link">
+      <a href="../django-celery/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1659,7 +1657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/advanced/django-channels/" class="md-nav__link">
+      <a href="../django-channels/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1680,7 +1678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/advanced/django-hardening/" class="md-nav__link">
+      <a href="../django-hardening/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1701,7 +1699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/advanced/django-tools/" class="md-nav__link">
+      <a href="../django-tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1719,10 +1717,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../../backend/django/advanced/shortcuts/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Shortcuts
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1731,6 +1749,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1788,7 +1835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/intro/" class="md-nav__link">
+      <a href="../../../package/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1809,7 +1856,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/python-dotenv/" class="md-nav__link">
+      <a href="../../../package/python-dotenv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1830,7 +1877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/python-mysqlclient/" class="md-nav__link">
+      <a href="../../../package/python-mysqlclient/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1851,7 +1898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/tinymce/" class="md-nav__link">
+      <a href="../../../package/tinymce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1872,7 +1919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/simplejwt/" class="md-nav__link">
+      <a href="../../../package/simplejwt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1893,7 +1940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/dj-rest-auth/" class="md-nav__link">
+      <a href="../../../package/dj-rest-auth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1914,7 +1961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-allauth/" class="md-nav__link">
+      <a href="../../../package/django-allauth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1935,7 +1982,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-autoslug/" class="md-nav__link">
+      <a href="../../../package/django-autoslug/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1956,7 +2003,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-cors-headers/" class="md-nav__link">
+      <a href="../../../package/django-cors-headers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1977,7 +2024,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-debug-toolbar/" class="md-nav__link">
+      <a href="../../../package/django-debug-toolbar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1998,7 +2045,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-environ/" class="md-nav__link">
+      <a href="../../../package/django-environ/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2019,7 +2066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-extensions/" class="md-nav__link">
+      <a href="../../../package/django-extensions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2040,7 +2087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-simple-history/" class="md-nav__link">
+      <a href="../../../package/django-simple-history/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2061,7 +2108,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-taggit/" class="md-nav__link">
+      <a href="../../../package/django-taggit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2082,7 +2129,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-filter/" class="md-nav__link">
+      <a href="../../../package/django-filter/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2103,7 +2150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-crispy-forms/" class="md-nav__link">
+      <a href="../../../package/django-crispy-forms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2124,7 +2171,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/social-auth-app-django/" class="md-nav__link">
+      <a href="../../../package/social-auth-app-django/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2145,7 +2192,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/0.draft/" class="md-nav__link">
+      <a href="../../../package/0.draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2221,7 +2268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/drf/intro/" class="md-nav__link">
+      <a href="../../../drf/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2242,7 +2289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/drf/drf-functionbasedviews/" class="md-nav__link">
+      <a href="../../../drf/drf-functionbasedviews/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2263,7 +2310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/drf/drf-viewsets/" class="md-nav__link">
+      <a href="../../../drf/drf-viewsets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2284,7 +2331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/drf/python-microservices/" class="md-nav__link">
+      <a href="../../../drf/python-microservices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2342,7 +2389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/drf/package/pyjwt/" class="md-nav__link">
+      <a href="../../../drf/package/pyjwt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2418,7 +2465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/designpatterns/intro/" class="md-nav__link">
+      <a href="../../../designpatterns/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2439,7 +2486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/designpatterns/template-patterns/" class="md-nav__link">
+      <a href="../../../designpatterns/template-patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2460,7 +2507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/designpatterns/model-mixins-patterns/" class="md-nav__link">
+      <a href="../../../designpatterns/model-mixins-patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2481,7 +2528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/designpatterns/user-profile-patterns/" class="md-nav__link">
+      <a href="../../../designpatterns/user-profile-patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2549,7 +2596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../interview/intro/" class="md-nav__link">
+      <a href="../../../../interview/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2570,7 +2617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../interview/theory/" class="md-nav__link">
+      <a href="../../../../interview/theory/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2591,7 +2638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../interview/memonic/" class="md-nav__link">
+      <a href="../../../../interview/memonic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2612,7 +2659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../interview/draft/" class="md-nav__link">
+      <a href="../../../../interview/draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2633,7 +2680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../interview/serialization-versus-deserialization/" class="md-nav__link">
+      <a href="../../../../interview/serialization-versus-deserialization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2662,8 +2709,6 @@
             
             
               
-                
-              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -2683,15 +2728,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#understanding-modeladmin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Understanding ModelAdmin
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
       Reference
@@ -2709,176 +2745,97 @@
             
           
           
-  <div class="md-content md-content--post" data-md-component="content">
-    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
-      <div class="md-sidebar__scrollwrap">
-        <div class="md-sidebar__inner md-post">
-          <nav class="md-nav md-nav--primary">
-            <div class="md-post__back">
-              <div class="md-nav__title md-nav__container">
-                <a href="../../../../" class="md-nav__link">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-                  <span class="md-ellipsis">
-                    Back to index
-                  </span>
-                </a>
-              </div>
-            </div>
-            
-              <div class="md-post__authors md-typeset">
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
-                  <div class="md-profile md-post__profile">
-                    <span class="md-author md-author--long">
-                      <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-                    </span>
-                    <span class="md-profile__description">
-                      <strong>
-                        
-                          Bishow Thapa
-                        
-                      </strong>
-                      <br>
-                      Creator
-                    </span>
-                  </div>
-                
-              </div>
-            
-            <ul class="md-post__meta md-nav__list">
-              <li class="md-nav__item md-nav__item--section">
-                <div class="md-post__title">
-                  <span class="md-ellipsis">
-                    Metadata
-                  </span>
-                </div>
-                <nav class="md-nav">
-                  <ul class="md-nav__list">
-                    <li class="md-nav__item">
-                      <div class="md-nav__link">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2024-05-08 00:00:00" class="md-ellipsis">May 8, 2024</time>
-                      </div>
-                    </li>
-                    
-                    
-                    
-                      
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
-                          <span class="md-ellipsis">
-                            
-                              3 min read
-                            
-                          </span>
-                        </div>
-                      </li>
-                    
-                  </ul>
-                </nav>
-              </li>
-            </ul>
-          </nav>
-          
-        </div>
-      </div>
-    </div>
-    <article class="md-content__inner md-typeset">
-      
-        
-  
-  
-
-<nav class="md-tags" >
-  
-    
-    
-      
-      
-    
-    
-      <a href="../../../../../tags/#python" class="md-tag md-tag-icon">Python</a>
-    
-  
-    
-    
-      
-      
-    
-    
-      <a href="../../../../../tags/#django" class="md-tag md-tag-icon">Django</a>
-    
-  
-</nav>
+                  
 
 
-
-<div><h1 id="customizing-how-models-are-displayed">Customizing how models are displayed</h1>
-<p>In Django, ModelAdmin is a class used in the Django admin interface to customize how models are displayed and interacted with. It allows you to specify various attributes and methods to control the behavior and appearance of models in the admin interface. </p>
-<!-- more -->
-
-<p>Now, we will take a look at how to customize the administration site.</p>
-<div class="language-python highlight"><span class="filename">admin.py</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Post</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nd">@admin</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">Post</span><span class="p">)</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">class</span> <span class="nc">PostAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">list_display</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'title'</span><span class="p">,</span> <span class="s1">'slug'</span><span class="p">,</span> <span class="s1">'author'</span><span class="p">,</span> <span class="s1">'publish'</span><span class="p">,</span> <span class="s1">'status'</span><span class="p">]</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">list_filter</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'status'</span><span class="p">,</span> <span class="s1">'created'</span><span class="p">,</span> <span class="s1">'publish'</span><span class="p">,</span> <span class="s1">'author'</span><span class="p">]</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">search_fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'title'</span><span class="p">,</span> <span class="s1">'body'</span><span class="p">]</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">prepopulated_fields</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'slug'</span><span class="p">:</span> <span class="p">(</span><span class="s1">'title'</span><span class="p">,)}</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="n">raw_id_fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'author'</span><span class="p">]</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="n">date_hierarchy</span> <span class="o">=</span> <span class="s1">'publish'</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="n">ordering</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'status'</span><span class="p">,</span> <span class="s1">'publish'</span><span class="p">]</span>
-</span></code></pre></div>
-<h2 id="understanding-modeladmin">Understanding ModelAdmin</h2>
-<p>The ModelAdmin class <mark>serves as a bridge between</mark> Django models and the admin interface. By defining a ModelAdmin class for each model, developers gain fine-grained control over how data is presented and manipulated in the admin interface.</p>
-<p>Here are some common <strong>attributes</strong> used in ModelAdmin:</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">most used</label><label for="__tabbed_1_2">all attribute</label></div>
+<div><h1 id="django-shortcuts">Django Shortcuts</h1>
+<p>Django shortcuts module is a collection of helper functions that are generally used in <mark>view</mark> <strong>function/classes</strong>. There are many shortcuts available in module  <code>django.shortcuts</code>. <mark>In other words</mark>, these function/classes introduce controlled coupling for convenience's sake.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">render()</label><label for="__tabbed_1_2">redirect()</label><label for="__tabbed_1_3">get_object_or_404()</label><label for="__tabbed_1_4">get_list_or_404()</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<ol>
-<li><strong>list_display</strong>: Specifies which fields should be displayed as columns in the list view of the admin interface.</li>
-<li><strong>list_filter</strong>: Enables filtering of data based on specified fields, providing users with options to refine the displayed records.</li>
-<li><strong>search_fields</strong>: Allows users to search for specific records within the admin interface, typically by specifying relevant field names.</li>
-<li><strong>readonly_fields</strong>: Specifies fields that should be read-only in the admin interface, preventing users from modifying them.</li>
-<li><strong>actions</strong>: Defines custom actions that can be performed on selected items in the admin interface, such as deleting multiple records at once.</li>
-<li><strong>fieldsets</strong>: Organizes fields into sections in the detail view for improved readability and organization.</li>
-<li><strong>list_editable</strong>: Specifies which fields can be edited directly from the list view, providing a convenient way to update multiple records at once.</li>
-<li><strong>list_display_links</strong>: Specifies which fields should link to the change view from the list view, allowing users to quickly navigate to detailed. information.</li>
-<li><strong>list_per_page</strong>: Sets the number of items displayed per page in the list view, allowing developers to control pagination.</li>
-<li><strong>ordering</strong>: Defines the default ordering of records in the admin interface, typically based on one or more fields.</li>
-</ol>
+<p>It combines a given template with a dictionary and returns the <strong>HttpResponse</strong> object with that rendered text. Following is the syntax of the <strong>render()</strong> function.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span>  
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">def</span> <span class="nf">new_view</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>  
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="c1"># View code here...  </span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="k">return</span> <span class="n">render</span><span class="p">(</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        <span class="n">request</span><span class="p">,</span> <span class="s1">'newapp/index.html'</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        <span class="p">{</span>  
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="s1">'foo'</span><span class="p">:</span> <span class="s1">'bar'</span><span class="p">,</span>  
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="p">},</span> 
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        <span class="n">content_type</span><span class="o">=</span><span class="s1">'application/xhtml+xml'</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        <span class="p">)</span>
+</span></code></pre></div>
+<p>It is equivalent to the below code.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">def</span> <span class="nf">new_view</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>  
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="c1"># View code here...  </span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="n">t</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">get_template</span><span class="p">(</span><span class="s1">'newapp/index.html'</span><span class="p">)</span>  
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="n">c</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'foo'</span><span class="p">:</span> <span class="s1">'bar'</span><span class="p">}</span>  
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">request</span><span class="p">),</span> <span class="n">content_type</span><span class="o">=</span><span class="s1">'application/xhtml+xml'</span><span class="p">)</span> 
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<ol>
-<li><strong>list_display</strong>: A tuple or list of model field names that should be displayed as columns in the model's list view in the admin interface.</li>
-<li><strong>list_filter</strong>: A tuple or list of field names that should be used as filters in the list view.</li>
-<li><strong>search_fields</strong>: A tuple or list of field names that should be searchable in the admin interface.</li>
-<li><strong>list_editable</strong>: A tuple or list of field names that can be edited directly from the list view.</li>
-<li><strong>list_display_links</strong>: A tuple or list of field names that should link to the change view from the list view.</li>
-<li><strong>list_per_page</strong>: An integer specifying the number of items displayed per page in the list view.</li>
-<li><strong>list_select_related</strong>: A boolean specifying whether to use select_related() in the queryset for the list view.</li>
-<li><strong>ordering</strong>: A tuple or list of field names used to order the queryset in the admin interface.</li>
-<li><strong>fields</strong>: A tuple or list of field names to be displayed in the detail view of the model.</li>
-<li><strong>fieldsets</strong>: A list of two-tuples, where each two-tuple represents a section of fields in the detail view.</li>
-<li><strong>readonly_fields</strong>: A tuple or list of field names that should be read-only in the admin interface.</li>
-<li><strong>date_hierarchy</strong>: A string representing the name of a DateField or DateTimeField used to create a date-based drilldown navigation in the admin interface.</li>
-<li><strong>prepopulated_fields</strong>: A dictionary specifying fields whose values are automatically set based on other fields.</li>
-<li><strong>actions</strong>: A list of custom actions that can be performed on selected items in the admin interface.</li>
-<li><strong>filter_horizontal</strong> and <strong>filter_vertical</strong>: A tuple or list of field names used to specify ManyToManyField fields displayed as horizontal or vertical filter widgets, respectively.</li>
-</ol>
+<p>The redirect() function is used to redirect to the specific URL. It returns an <strong>HttpResponseRedirect</strong> to the appropriate URL for the argument passed. Let's see the following syntax.</p>
+<div class="admonition tip">
+<p class="admonition-title">Syntax</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>redirect(to, *args, permanent=False, **kwargs)  
+</span></code></pre></div>
+</div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">def</span> <span class="nf">blog_view</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">post_id</span><span class="p">):</span>  
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="n">blog</span> <span class="o">=</span> <span class="n">Post</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">pk</span><span class="o">=</span><span class="n">post_id</span><span class="p">)</span>  
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">blog</span><span class="p">)</span>  
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="c1"># equivalent to: return HttpResponseRedirect(blog.get_absolute_url())  </span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="k">def</span> <span class="nf">blog_view</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">post_id</span><span class="p">):</span>  
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">'blog_details'</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">post_id</span><span class="p">)</span>  
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="c1"># equivalent to: return HttpResponseRedirect(reverse('blog_details', args=(post_id, )))  </span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="k">def</span> <span class="nf">relative_url_view</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>  
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">'/blogs/archive/'</span><span class="p">)</span>  
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    <span class="c1"># equivalent to: return HttpResponseRedirect('/blogs/archive/')  </span>
+</span></code></pre></div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>It returns the <strong>DoesNotExist</strong> exception if the searched object is not found. On the other hand, <code>get()</code> method raise <strong>Http404</strong>.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">get_object_or_404</span>  
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">def</span> <span class="nf">my_view</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>  
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="n">obj</span> <span class="o">=</span> <span class="n">get_object_or_404</span><span class="p">(</span><span class="n">MyModel</span><span class="p">,</span> <span class="n">pk</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  
+</span></code></pre></div>
+<p>It is equivalent to:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">Http404</span>   
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">def</span> <span class="nf">my_view</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>  
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="k">try</span><span class="p">:</span>  
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>            <span class="n">obj</span> <span class="o">=</span> <span class="n">MyModel</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">pk</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    <span class="k">except</span> <span class="n">MyModel</span><span class="o">.</span><span class="n">DoesNotExist</span><span class="p">:</span>  
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>            <span class="k">raise</span> <span class="n">Http404</span><span class="p">(</span><span class="s2">"No MyModel matches the given query."</span><span class="p">)</span>  
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>It returns the results of <code>filter()</code> on a given model manager cast to a list, raising Http404 if the resulting list is empty. The syntax is same as get_object_or_404.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">get_list_or_404</span>  
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">def</span> <span class="nf">my_view</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>  
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="n">my_objects</span> <span class="o">=</span> <span class="n">get_list_or_404</span><span class="p">(</span><span class="n">MyModel</span><span class="p">,</span> <span class="n">published</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  
+</span></code></pre></div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">Http404</span>  
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">def</span> <span class="nf">my_view</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>  
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    <span class="n">my_objects</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">MyModel</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">published</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>  
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="n">my_objects</span><span class="p">:</span>  
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    <span class="k">raise</span> <span class="n">Http404</span><span class="p">(</span><span class="s2">"No MyModel matches the given query."</span><span class="p">)</span>  
+</span></code></pre></div>
 </div>
 </div>
 </div>
 </div>
-<p>These are just a few of the most commonly used attributes of the ModelAdmin class. Depending on your needs, you may also <mark>override methods</mark> such as <strong>get_queryset()</strong>, <strong>formfield_for_foreignkey()</strong>, <strong>get_form()</strong> etc., to further customize the behavior of your model in the admin interface.</p>
 <hr>
 <h2 id="reference">Reference</h2>
 <ul>
-<li><a href="https://www.amazon.com/Django-Example-powerful-reliable-applications/dp/1801813051">Django 4 By Example Fourth Edition by Antonio Melé:pg-28</a></li>
+<li><a href="https://www.javatpoint.com/django-shortcuts">django shortcuts</a></li>
 </ul></div>
 
 
@@ -2887,20 +2844,15 @@
 
 
 
-  
-  
 
 
 
 
-  
 
-
-
-      
-    </article>
-  </div>
-
+                
+              </article>
+            </div>
+          
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
@@ -2917,12 +2869,10 @@
   
     
       
-        
-      
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../07/creating-a-blog-model-in-django/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Creating a blog model in django">
+          <a href="../django-tools/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Django Tool">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -2932,20 +2882,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Creating a blog model in django
+                Django Tool
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../09/django-admin-forms-with-formfield_overrides/" class="md-footer__link md-footer__link--next" aria-label="Next: Django Admin Forms with formfield_overrides">
+          <a href="../../../package/intro/" class="md-footer__link md-footer__link--next" aria-label="Next: Intro">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Django Admin Forms with formfield_overrides
+                Intro
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2983,10 +2933,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tabs.sticky", "header.autohide", "navigation.footer", "content.code.copy", "content.code.select"], "search": "../../../../../assets/javascripts/workers/search.f886a092.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tabs.sticky", "header.autohide", "navigation.footer", "content.code.copy", "content.code.select"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
