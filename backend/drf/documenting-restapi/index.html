@@ -10,28 +10,28 @@
         <meta name="author" content="it guy">
       
       
-        <link rel="canonical" href="https://bishowtheitguy.github.io/blog/2024/05/03/a-guide-to-csrf-cookie-settings/">
+        <link rel="canonical" href="https://bishowtheitguy.github.io/backend/drf/documenting-restapi/">
       
       
-        <link rel="prev" href="../../02/ensuring-admin-access-control-in-django-models/">
+        <link rel="prev" href="../api-authorization-authentication/">
       
       
-        <link rel="next" href="../../06/django-with-ajax/">
+        <link rel="next" href="../package/pyjwt/">
       
       
-      <link rel="icon" href="../../../../../assets/logo/favicon.ico">
+      <link rel="icon" href="../../../assets/logo/favicon.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
     
     
       
-        <title>A Guide to CSRF Cookie Settings - Bishow IT Guy</title>
+        <title>Documenting REST APIs - Bishow IT Guy</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,14 +50,14 @@
       
     
     
-    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -68,7 +68,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#a-guide-to-csrf-cookie-settings" class="md-skip">
+        <a href="#documenting-rest-apis-with-openapi" class="md-skip">
           Skip to content
         </a>
       
@@ -103,9 +103,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../../.." title="Bishow IT Guy" class="md-header__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
+    <a href="../../.." title="Bishow IT Guy" class="md-header__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
       
-  <img src="../../../../../assets/logo/internet.png" alt="logo">
+  <img src="../../../assets/logo/internet.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              A Guide to CSRF Cookie Settings
+              Documenting REST APIs
             
           </span>
         </div>
@@ -219,13 +219,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../blog/" class="md-tabs__link">
           
   
   Blog
@@ -243,7 +241,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../backend/intro/" class="md-tabs__link">
+        <a href="../../intro/" class="md-tabs__link">
           
   
   Backend
@@ -261,7 +259,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../backend/django/intro/" class="md-tabs__link">
+        <a href="../../django/intro/" class="md-tabs__link">
           
   
   Django
@@ -275,11 +273,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../../../backend/drf/intro/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../intro/" class="md-tabs__link">
           
   
   drf
@@ -297,7 +297,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../backend/designpatterns/intro/" class="md-tabs__link">
+        <a href="../../designpatterns/intro/" class="md-tabs__link">
           
   
   Design Pattern
@@ -315,7 +315,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../interview/intro/" class="md-tabs__link">
+        <a href="../../../interview/intro/" class="md-tabs__link">
           
   
   Interview
@@ -343,9 +343,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -356,9 +354,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../.." title="Bishow IT Guy" class="md-nav__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
+    <a href="../../.." title="Bishow IT Guy" class="md-nav__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
       
-  <img src="../../../../../assets/logo/internet.png" alt="logo">
+  <img src="../../../assets/logo/internet.png" alt="logo">
 
     </a>
     Bishow IT Guy
@@ -370,8 +368,6 @@
       
   
   
-    
-  
   
   
     
@@ -382,12 +378,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
@@ -401,7 +397,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Blog
@@ -412,14 +408,12 @@
                 
   
   
-    
-  
   
     
   
   
-    <li class="md-nav__item md-nav__item--active">
-      <a href="../../../../" class="md-nav__link">
+    <li class="md-nav__item">
+      <a href="../../../blog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -479,7 +473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archive/2024/" class="md-nav__link">
+      <a href="../../../blog/archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -555,7 +549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/intro/" class="md-nav__link">
+      <a href="../../intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -576,7 +570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/web-server/" class="md-nav__link">
+      <a href="../../web-server/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -634,7 +628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/args/" class="md-nav__link">
+      <a href="../../../python/args/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -655,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/content-management-system/" class="md-nav__link">
+      <a href="../../../python/content-management-system/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -721,7 +715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/fastAPI/fast-api/" class="md-nav__link">
+      <a href="../../fastAPI/fast-api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -750,7 +744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/celery/" class="md-nav__link">
+      <a href="../../celery/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -771,7 +765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/draft/" class="md-nav__link">
+      <a href="../../draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -839,7 +833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/intro/" class="md-nav__link">
+      <a href="../../django/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -860,7 +854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-form/" class="md-nav__link">
+      <a href="../../django/django-form/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -881,7 +875,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-view/" class="md-nav__link">
+      <a href="../../django/django-view/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -902,7 +896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-model/" class="md-nav__link">
+      <a href="../../django/django-model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -923,7 +917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-template/" class="md-nav__link">
+      <a href="../../django/django-template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -944,7 +938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-urlconf/" class="md-nav__link">
+      <a href="../../django/django-urlconf/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -965,7 +959,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-middleware/" class="md-nav__link">
+      <a href="../../django/django-middleware/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -986,7 +980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/migration/" class="md-nav__link">
+      <a href="../../django/migration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1007,7 +1001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-404/" class="md-nav__link">
+      <a href="../../django/django-404/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1028,7 +1022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-mail/" class="md-nav__link">
+      <a href="../../django/django-mail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1049,7 +1043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-reset-password/" class="md-nav__link">
+      <a href="../../django/django-reset-password/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1070,7 +1064,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/decorator/" class="md-nav__link">
+      <a href="../../django/decorator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1091,7 +1085,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/context-processors/" class="md-nav__link">
+      <a href="../../django/context-processors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1112,7 +1106,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-utility-functions/" class="md-nav__link">
+      <a href="../../django/django-utility-functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1133,7 +1127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-secretkey/" class="md-nav__link">
+      <a href="../../django/django-secretkey/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1191,7 +1185,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/intro/" class="md-nav__link">
+      <a href="../../django/mixins/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1212,7 +1206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/context-processors/" class="md-nav__link">
+      <a href="../../django/mixins/context-processors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1233,7 +1227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/custom-char-field-widget/" class="md-nav__link">
+      <a href="../../django/mixins/custom-char-field-widget/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1254,7 +1248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/custom-text-field-widget/" class="md-nav__link">
+      <a href="../../django/mixins/custom-text-field-widget/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1275,7 +1269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/image-display-mixins/" class="md-nav__link">
+      <a href="../../django/mixins/image-display-mixins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1296,7 +1290,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/image-size-validators/" class="md-nav__link">
+      <a href="../../django/mixins/image-size-validators/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1317,7 +1311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/image-type-validators/" class="md-nav__link">
+      <a href="../../django/mixins/image-type-validators/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1338,7 +1332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/permission-mixins/" class="md-nav__link">
+      <a href="../../django/mixins/permission-mixins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1404,7 +1398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/builtin/intro/" class="md-nav__link">
+      <a href="../../django/builtin/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1425,7 +1419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/builtin/django-contrib-admin/" class="md-nav__link">
+      <a href="../../django/builtin/django-contrib-admin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1446,7 +1440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/builtin/django-contrib-auth/" class="md-nav__link">
+      <a href="../../django/builtin/django-contrib-auth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1467,7 +1461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/builtin/django-contrib-contenttypes/" class="md-nav__link">
+      <a href="../../django/builtin/django-contrib-contenttypes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1488,7 +1482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/builtin/django-contrib-messages/" class="md-nav__link">
+      <a href="../../django/builtin/django-contrib-messages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1509,7 +1503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/builtin/class-based-views/" class="md-nav__link">
+      <a href="../../django/builtin/class-based-views/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1530,7 +1524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/builtin/django-paginator/" class="md-nav__link">
+      <a href="../../django/builtin/django-paginator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1596,7 +1590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/advanced/intro/" class="md-nav__link">
+      <a href="../../django/advanced/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1617,7 +1611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/advanced/django-signals/" class="md-nav__link">
+      <a href="../../django/advanced/django-signals/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1638,7 +1632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/advanced/django-celery/" class="md-nav__link">
+      <a href="../../django/advanced/django-celery/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1659,7 +1653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/advanced/django-channels/" class="md-nav__link">
+      <a href="../../django/advanced/django-channels/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1680,7 +1674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/advanced/django-hardening/" class="md-nav__link">
+      <a href="../../django/advanced/django-hardening/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1701,7 +1695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/advanced/django-tools/" class="md-nav__link">
+      <a href="../../django/advanced/django-tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1722,7 +1716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/advanced/shortcuts/" class="md-nav__link">
+      <a href="../../django/advanced/shortcuts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1788,7 +1782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/intro/" class="md-nav__link">
+      <a href="../../package/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1809,7 +1803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/python-dotenv/" class="md-nav__link">
+      <a href="../../package/python-dotenv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1830,7 +1824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/python-mysqlclient/" class="md-nav__link">
+      <a href="../../package/python-mysqlclient/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1851,7 +1845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/tinymce/" class="md-nav__link">
+      <a href="../../package/tinymce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1872,7 +1866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/simplejwt/" class="md-nav__link">
+      <a href="../../package/simplejwt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1893,7 +1887,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/dj-rest-auth/" class="md-nav__link">
+      <a href="../../package/dj-rest-auth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1914,7 +1908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-recaptcha/" class="md-nav__link">
+      <a href="../../package/django-recaptcha/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1935,7 +1929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-allauth/" class="md-nav__link">
+      <a href="../../package/django-allauth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1956,7 +1950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-autoslug/" class="md-nav__link">
+      <a href="../../package/django-autoslug/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1977,7 +1971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-cors-headers/" class="md-nav__link">
+      <a href="../../package/django-cors-headers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1998,7 +1992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-debug-toolbar/" class="md-nav__link">
+      <a href="../../package/django-debug-toolbar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2019,7 +2013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-environ/" class="md-nav__link">
+      <a href="../../package/django-environ/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2040,7 +2034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-extensions/" class="md-nav__link">
+      <a href="../../package/django-extensions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2061,7 +2055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-simple-history/" class="md-nav__link">
+      <a href="../../package/django-simple-history/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2082,7 +2076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-taggit/" class="md-nav__link">
+      <a href="../../package/django-taggit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2103,7 +2097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-filter/" class="md-nav__link">
+      <a href="../../package/django-filter/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2124,7 +2118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-crispy-forms/" class="md-nav__link">
+      <a href="../../package/django-crispy-forms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2145,7 +2139,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/social-auth-app-django/" class="md-nav__link">
+      <a href="../../package/social-auth-app-django/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2166,7 +2160,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/0.draft/" class="md-nav__link">
+      <a href="../../package/0.draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2199,8 +2193,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -2209,12 +2205,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
@@ -2228,7 +2224,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             drf
@@ -2242,7 +2238,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/drf/intro/" class="md-nav__link">
+      <a href="../intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2263,7 +2259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/drf/drf-functionbasedviews/" class="md-nav__link">
+      <a href="../drf-functionbasedviews/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2284,7 +2280,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/drf/drf-viewsets/" class="md-nav__link">
+      <a href="../drf-viewsets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2305,7 +2301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/drf/python-microservices/" class="md-nav__link">
+      <a href="../python-microservices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2326,7 +2322,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/drf/api-authorization-authentication/" class="md-nav__link">
+      <a href="../api-authorization-authentication/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2344,10 +2340,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../../backend/drf/documenting-restapi/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Documenting REST APIs
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2356,6 +2372,71 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#openapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      OpenAPI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      JSON Schema
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#swagger" class="md-nav__link">
+    <span class="md-ellipsis">
+      Swagger
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relationship-between-openapi-json-schema-and-swagger" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relationship Between OpenAPI, JSON Schema, and Swagger
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2405,7 +2486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/drf/package/pyjwt/" class="md-nav__link">
+      <a href="../package/pyjwt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2481,7 +2562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/designpatterns/intro/" class="md-nav__link">
+      <a href="../../designpatterns/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2502,7 +2583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/designpatterns/template-patterns/" class="md-nav__link">
+      <a href="../../designpatterns/template-patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2523,7 +2604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/designpatterns/model-mixins-patterns/" class="md-nav__link">
+      <a href="../../designpatterns/model-mixins-patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2544,7 +2625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/designpatterns/user-profile-patterns/" class="md-nav__link">
+      <a href="../../designpatterns/user-profile-patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2612,7 +2693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../interview/intro/" class="md-nav__link">
+      <a href="../../../interview/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2633,7 +2714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../interview/theory/" class="md-nav__link">
+      <a href="../../../interview/theory/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2654,7 +2735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../interview/memonic/" class="md-nav__link">
+      <a href="../../../interview/memonic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2675,7 +2756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../interview/draft/" class="md-nav__link">
+      <a href="../../../interview/draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2696,7 +2777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../interview/serialization-versus-deserialization/" class="md-nav__link">
+      <a href="../../../interview/serialization-versus-deserialization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2725,8 +2806,6 @@
             
             
               
-                
-              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -2746,36 +2825,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#strengthening-django-security" class="md-nav__link">
+  <a href="#openapi" class="md-nav__link">
     <span class="md-ellipsis">
-      Strengthening Django Security:
+      OpenAPI
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#1-csrf_cookie_secure-guarding-transmission" class="md-nav__link">
+  <a href="#json-schema" class="md-nav__link">
     <span class="md-ellipsis">
-      1. CSRF_COOKIE_SECURE: Guarding Transmission
+      JSON Schema
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-csrf_cookie_httponly-limiting-script-access" class="md-nav__link">
+  <a href="#swagger" class="md-nav__link">
     <span class="md-ellipsis">
-      2. CSRF_COOKIE_HTTPONLY: Limiting Script Access
+      Swagger
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
+  <a href="#relationship-between-openapi-json-schema-and-swagger" class="md-nav__link">
     <span class="md-ellipsis">
-      Conclusion
+      Relationship Between OpenAPI, JSON Schema, and Swagger
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
     </span>
   </a>
   
@@ -2790,154 +2878,125 @@
             
           
           
-  <div class="md-content md-content--post" data-md-component="content">
-    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
-      <div class="md-sidebar__scrollwrap">
-        <div class="md-sidebar__inner md-post">
-          <nav class="md-nav md-nav--primary">
-            <div class="md-post__back">
-              <div class="md-nav__title md-nav__container">
-                <a href="../../../../" class="md-nav__link">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-                  <span class="md-ellipsis">
-                    Back to index
-                  </span>
-                </a>
-              </div>
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<div><h1 id="documenting-rest-apis-with-openapi">Documenting REST APIs with OpenAPI</h1>
+<h2 id="openapi">OpenAPI</h2>
+<p>The OpenAPI Specification (OAS) is a standard for describing RESTful APIs. It provides a structured way to define the endpoints, request/response formats, authentication methods, and other aspects of an API in a machine-readable format. The OpenAPI Specification is typically written in YAML or JSON.</p>
+<p>An OpenAPI document (often referred to as a "swagger file" in earlier versions) includes details such as:</p>
+<ul>
+<li>Paths: Endpoints of the API.</li>
+<li>Operations: Methods (e.g., GET, POST) supported by each endpoint.</li>
+<li>Parameters: Query parameters, path parameters, etc.</li>
+<li>Request Bodies: The structure and format of data sent in requests.</li>
+<li>Responses: Expected responses, including status codes and response bodies.</li>
+<li>Security: Authentication methods.</li>
+</ul>
+<details>
+<summary>Example of a simple OpenAPI document in YAML:</summary>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">openapi</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.0.0</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">info</span><span class="p">:</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Sample API</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0.0</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nt">paths</span><span class="p">:</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nt">/users</span><span class="p">:</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="nt">get</span><span class="p">:</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="nt">summary</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">List all users</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="nt">responses</span><span class="p">:</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">            </span><span class="s">'200'</span><span class="p p-Indicator">:</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">            </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A JSON array of user names</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">            </span><span class="nt">content</span><span class="p">:</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">                </span><span class="nt">application/json</span><span class="p">:</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">                </span><span class="nt">schema</span><span class="p">:</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">                    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">array</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">                    </span><span class="nt">items</span><span class="p">:</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">                    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+</span></code></pre></div>
+</details>
+<hr>
+<h2 id="json-schema">JSON Schema</h2>
+<p>JSON Schema is a vocabulary that allows you to annotate and validate JSON documents. It is used to define the structure and constraints of JSON data, ensuring that the data adheres to a specified format.</p>
+<p>JSON Schema supports the following basic data types:</p>
+<ul>
+<li><code>string</code> for character values</li>
+<li><code>number</code> for integer and decimal values</li>
+<li><code>object</code> for associative arrays (i.e., dictionaries in Python)</li>
+<li><code>array</code> for collections of other data types (i.e., lists in Python)</li>
+<li><code>boolean</code> for true or false values</li>
+<li><code>null</code> for uninitialized data</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>JSON Schema can be used to describe the properties of JSON objects, including:</p>
+<ul>
+<li><strong>Types</strong>: Define the data types (e.g., <code>string</code>, <code>number</code>, <code>object</code>).</li>
+<li><strong>Properties</strong>: Describe the attributes of an object.</li>
+<li><strong>Constraints</strong>: Specify rules for data (e.g., required fields, value ranges).</li>
+</ul>
+</div>
+<details class="success" open="open">
+<summary>Example of a JSON Schema:</summary>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nt">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://json-schema.org/draft-07/schema#"</span><span class="p">,</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User"</span><span class="p">,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nt">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="nt">"age"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"integer"</span><span class="p">,</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">        </span><span class="nt">"minimum"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"name"</span><span class="p">,</span><span class="w"> </span><span class="s2">"age"</span><span class="p">]</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="p">}</span>
+</span></code></pre></div>
+</details>
+<hr>
+<h2 id="swagger">Swagger</h2>
+<p>Swagger originally referred to a set of tools for implementing the OpenAPI Specification. It was created by SmartBear Software and has become one of the most widely used frameworks for API documentation and testing.</p>
+<p>Swagger includes:</p>
+<ul>
+<li><strong>Swagger UI</strong>: An interactive documentation tool that automatically generates a user interface based on an OpenAPI document. It allows users to test API endpoints directly from the documentation.</li>
+<li><strong>Swagger Editor</strong>: An online editor for creating and editing OpenAPI documents with real-time preview and validation.</li>
+<li><strong>Swagger Codegen</strong>: A tool for generating client libraries, server stubs, and API documentation from an OpenAPI document.</li>
+</ul>
+<p>Swagger tools work with OpenAPI documents to facilitate API design, documentation, and client generation.</p>
+<hr>
+<h2 id="relationship-between-openapi-json-schema-and-swagger">Relationship Between OpenAPI, JSON Schema, and Swagger</h2>
+<ul>
+<li><strong>OpenAPI</strong>: A specification for describing RESTful APIs. OpenAPI documents can be written in YAML or JSON.</li>
+<li><strong>JSON Schema</strong>: A vocabulary for validating and annotating JSON documents. OpenAPI uses JSON Schema to define the data models for API requests and responses.</li>
+<li><strong>Swagger</strong>: A set of tools for working with OpenAPI documents, including generating interactive documentation, client libraries, and server stubs.</li>
+</ul>
+<p>Together, these technologies provide a comprehensive ecosystem for designing, documenting, validating, and interacting with APIs.</p>
+<hr>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="#">Microservice APIs by JOSÉ HARO PERALTA</a></li>
+<li><a href="https://swagger.io/docs/specification/about/">swagger about</a></li>
+</ul></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
             </div>
-            
-              <div class="md-post__authors md-typeset">
-                
-                  <div class="md-profile md-post__profile">
-                    <span class="md-author md-author--long">
-                      <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-                    </span>
-                    <span class="md-profile__description">
-                      <strong>
-                        
-                          Bishow Thapa
-                        
-                      </strong>
-                      <br>
-                      Creator
-                    </span>
-                  </div>
-                
-              </div>
-            
-            <ul class="md-post__meta md-nav__list">
-              <li class="md-nav__item md-nav__item--section">
-                <div class="md-post__title">
-                  <span class="md-ellipsis">
-                    Metadata
-                  </span>
-                </div>
-                <nav class="md-nav">
-                  <ul class="md-nav__list">
-                    <li class="md-nav__item">
-                      <div class="md-nav__link">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2024-05-03 00:00:00" class="md-ellipsis">May 3, 2024</time>
-                      </div>
-                    </li>
-                    
-                    
-                    
-                      
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
-                          <span class="md-ellipsis">
-                            
-                              2 min read
-                            
-                          </span>
-                        </div>
-                      </li>
-                    
-                  </ul>
-                </nav>
-              </li>
-            </ul>
-          </nav>
           
-        </div>
-      </div>
-    </div>
-    <article class="md-content__inner md-typeset">
-      
-        
-  
-  
-
-<nav class="md-tags" >
-  
-    
-    
-      
-      
-    
-    
-      <a href="../../../../../tags/#django" class="md-tag md-tag-icon">Django</a>
-    
-  
-</nav>
-
-
-
-<div><h1 id="a-guide-to-csrf-cookie-settings">A Guide to CSRF Cookie Settings</h1>
-<p>Django, a popular web framework for Python, comes equipped with robust measures to mitigate CSRF risks.</p>
-<!-- more -->
-
-<h2 id="strengthening-django-security">Strengthening Django Security:</h2>
-<p>In the dynamic landscape of web development, security is paramount. Django, a powerful Python web framework, provides robust measures to fortify applications against threats like Cross-Site Request Forgery (CSRF). Let's explore how <mark>two critical</mark> CSRF cookie settings, <code>CSRF_COOKIE_SECURE</code> and <code>CSRF_COOKIE_HTTPONLY</code>, enhance security.</p>
-<h2 id="1-csrf_cookie_secure-guarding-transmission">1. <code>CSRF_COOKIE_SECURE</code>: Guarding Transmission</h2>
-<p>Consider a scenario where an attacker intercepts requests between a user and a Django application. Without encryption, sensitive data, including CSRF tokens, is vulnerable. Setting <code>CSRF_COOKIE_SECURE</code> to <code>True</code> ensures the CSRF cookie is transmitted solely over secure HTTPS connections.</p>
-<div class="admonition tip">
-<p class="admonition-title">SECURE</p>
-<div class="language-python highlight"><span class="filename">python</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># settings.py</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">CSRF_COOKIE_SECURE</span> <span class="o">=</span> <span class="kc">True</span>
-</span></code></pre></div>
-</div>
-<p>By enforcing HTTPS, Django shields the CSRF token from interception during transit. This simple setting bolsters the integrity of the CSRF protection mechanism, enhancing overall security.</p>
-<h2 id="2-csrf_cookie_httponly-limiting-script-access">2. <code>CSRF_COOKIE_HTTPONLY</code>: Limiting Script Access</h2>
-<p>Now, imagine a malicious script injected into a page, aiming to hijack user sessions. Without proper safeguards, the script could access and manipulate the CSRF token, enabling unauthorized actions. By setting <code>CSRF_COOKIE_HTTPONLY</code> to <code>True</code>, Django restricts access to the CSRF cookie from client-side scripts.</p>
-<div class="admonition tip">
-<p class="admonition-title">HTTPONLY</p>
-<div class="language-python highlight"><span class="filename">python</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># settings.py</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">CSRF_COOKIE_HTTPONLY</span> <span class="o">=</span> <span class="kc">True</span>
-</span></code></pre></div>
-</div>
-<p>This precaution mitigates Cross-Site Scripting (XSS) attacks, preserving user session integrity and thwarting unauthorized requests.</p>
-<h2 id="conclusion">Conclusion</h2>
-<p>In conclusion, configuring CSRF cookie settings in Django is essential for bolstering application security. By enabling CSRF_COOKIE_SECURE and CSRF_COOKIE_HTTPONLY, developers fortify their defenses against CSRF and XSS attacks, safeguarding user interactions and data confidentiality.</p>
-<p>```python title="python"</p>
-<h1 id="settingspy">settings.py</h1>
-<p>CSRF_COOKIE_SECURE = True
-CSRF_COOKIE_HTTPONLY = True
-``</p>
-<p>As stewards of digital trust, let's prioritize security, ensuring Django applications provide users with a safe and resilient online experience.</p></div>
-
-
-
-
-
-
-
-  
-  
-
-
-
-
-  
-
-
-
-      
-    </article>
-  </div>
-
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
@@ -2954,12 +3013,10 @@ CSRF_COOKIE_HTTPONLY = True
   
     
       
-        
-      
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../02/ensuring-admin-access-control-in-django-models/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Ensuring Admin Access Control in Django Models">
+          <a href="../api-authorization-authentication/" class="md-footer__link md-footer__link--prev" aria-label="Previous: API authorization &amp; authentication">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -2969,20 +3026,20 @@ CSRF_COOKIE_HTTPONLY = True
                 Previous
               </span>
               <div class="md-ellipsis">
-                Ensuring Admin Access Control in Django Models
+                API authorization & authentication
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../06/django-with-ajax/" class="md-footer__link md-footer__link--next" aria-label="Next: Django with ajax">
+          <a href="../package/pyjwt/" class="md-footer__link md-footer__link--next" aria-label="Next: pyjwt">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Django with ajax
+                pyjwt
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -3020,10 +3077,10 @@ CSRF_COOKIE_HTTPONLY = True
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tabs.sticky", "header.autohide", "navigation.footer", "content.code.copy", "content.code.select"], "search": "../../../../../assets/javascripts/workers/search.f886a092.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tabs.sticky", "header.autohide", "navigation.footer", "content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>

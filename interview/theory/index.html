@@ -86,6 +86,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#marshalling-vs-serilization" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -2314,6 +2319,48 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../backend/drf/api-authorization-authentication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API authorization & authentication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backend/drf/documenting-restapi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documenting REST APIs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -2324,10 +2371,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
         
           
-          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2338,8 +2385,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
             <span class="md-nav__icon md-icon"></span>
             Package
           </label>
@@ -2589,6 +2636,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Theory
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2598,6 +2656,65 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#marshalling-vs-serilization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Marshalling vs Serilization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Marshalling vs Serilization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#serialization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Serialization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#marshalling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Marshalling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#differences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Differences
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2692,6 +2809,56 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#marshalling-vs-serilization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Marshalling vs Serilization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Marshalling vs Serilization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#serialization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Serialization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#marshalling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Marshalling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#differences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Differences
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2712,7 +2879,50 @@
 <li>Software as a Service (SaaS)</li>
 <li>Platform as a Service (PaaS)</li>
 <li>Infrastructure as a Service (IaaS)</li>
-</ol></div>
+</ol>
+<hr>
+<details open="open">
+<summary>Microservices</summary>
+<blockquote>
+<p>DEFINITION</p>
+</blockquote>
+<p>A microservice is an architectural style in which components of a system are designed as independently deployable services. Microservices are designed around well-defined business subdomains, and they talk to each other using lightweight protocols, such as HTTP.</p>
+<blockquote>
+<p>DEFINITION</p>
+</blockquote>
+<p>A monolith is an architectural pattern in which the whole application is deployed as a single build.</p>
+<hr>
+<ul>
+<li><a href="#"></a></li>
+</ul>
+</details>
+<hr>
+<h2 id="marshalling-vs-serilization">Marshalling vs Serilization</h2>
+<p>Marshalling and serialization are related concepts in Django, but they are not exactly the same. Both involve converting data from one format to another, but they are used in slightly different contexts and with different purposes.</p>
+<h3 id="serialization">Serialization</h3>
+<p>Serialization in Django refers to the process of converting complex data types, such as Django model instances, into a format that can be easily rendered into JSON, XML, or other content types. This is particularly useful for API development, where data needs to be sent over the network in a standard format.</p>
+<p><mark>In Django</mark>, serialization is often achieved using the <strong>serializers module</strong> from the Django REST framework (DRF). Here's a basic example of how serialization works in Django:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">rest_framework</span> <span class="kn">import</span> <span class="n">serializers</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">myapp.models</span> <span class="kn">import</span> <span class="n">MyModel</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">class</span> <span class="nc">MyModelSerializer</span><span class="p">(</span><span class="n">serializers</span><span class="o">.</span><span class="n">ModelSerializer</span><span class="p">):</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        <span class="n">model</span> <span class="o">=</span> <span class="n">MyModel</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="n">fields</span> <span class="o">=</span> <span class="s1">'__all__'</span>
+</span></code></pre></div>
+<p>This serializer can then be used to convert MyModel` instances to and from JSON, XML, or other formats.</p>
+<h3 id="marshalling">Marshalling</h3>
+<p>Marshalling is a broader term that refers to the process of transforming data structures or objects into a format that can be stored or transmitted and later reconstructed. While marshalling is a general concept used in many programming languages and frameworks, in the context of Django, it can be seen as part of the serialization process, especially when dealing with data transmission over networks.</p>
+<p>In the Django REST framework, marshalling is effectively handled by the serializers, as they not only serialize data into specific formats but also ensure the data is in a suitable structure for transmission and storage.</p>
+<h3 id="differences">Differences</h3>
+<ul>
+<li><strong>Scope</strong>: Serialization is specifically about converting objects to a different format (like JSON or XML). Marshalling, on the other hand, is a broader concept that includes serialization but also involves preparing data for transmission and ensuring it can be correctly reconstructed.</li>
+<li><strong>Context</strong>: In Django, serialization is the more commonly used term and is often associated with the Django REST framework and APIs. Marshalling is more of a general concept in computer science that encompasses serialization.</li>
+</ul>
+<hr>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Marshalling_(computer_science)">Marshalling: wikipedia</a></li>
+</ul></div>
 
 
 

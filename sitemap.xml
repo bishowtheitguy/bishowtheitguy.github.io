@@ -236,6 +236,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishowtheitguy.github.io/backend/drf/api-authorization-authentication/</loc>
+         <lastmod>2024-06-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishowtheitguy.github.io/backend/drf/documenting-restapi/</loc>
+         <lastmod>2024-06-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishowtheitguy.github.io/backend/drf/drf-functionbasedviews/</loc>
          <lastmod>2024-06-16</lastmod>
          <changefreq>daily</changefreq>
