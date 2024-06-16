@@ -2835,25 +2835,38 @@
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">]</span>
 </span></code></pre></div>
 <h2 id="for-example">For example:</h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>RECAPTCHA_PUBLIC_KEY = 'MyRecaptchaKey123'
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>RECAPTCHA_PRIVATE_KEY = 'MyRecaptchaPrivateKey456'
+<div class="admonition tip">
+<p class="admonition-title">.env.example</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">RECAPTCHA_PUBLIC_KEY</span> <span class="o">=</span> <span class="s1">'MyRecaptchaKey123'</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">RECAPTCHA_PRIVATE_KEY</span> <span class="o">=</span> <span class="s1">'MyRecaptchaPrivateKey456'</span>
 </span></code></pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">settings.py</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">dotenv</span> <span class="kn">import</span> <span class="n">load_dotenv</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1">#RECAPTCHA</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">RECAPTCHA_PUBLIC_KEY</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'RECAPTCHA_PUBLIC_KEY'</span><span class="p">)</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">RECAPTCHA_PRIVATE_KEY</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'RECAPTCHA_PRIVATE_KEY'</span><span class="p">)</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">RECAPTCHA_DOMAIN</span> <span class="o">=</span> <span class="s1">'www.recaptcha.net'</span>
+</span></code></pre></div>
+</div>
 <h2 id="usage">Usage</h2>
 <div class="admonition example">
 <p class="admonition-title">Fields</p>
 <p>The quickest way to add reCAPTCHA to a form is to use the included <code>ReCaptchaField</code> field class. A <code>ReCaptchaV2Checkbox</code> will be rendered by default. For example:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">django</span> <span class="kn">import</span> <span class="n">forms</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">from</span> <span class="nn">django_recaptcha.fields</span> <span class="kn">import</span> <span class="n">ReCaptchaField</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">class</span> <span class="nc">FormWithCaptcha</span><span class="p">(</span><span class="n">forms</span><span class="o">.</span><span class="n">Form</span><span class="p">):</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">captcha</span> <span class="o">=</span> <span class="n">ReCaptchaField</span><span class="p">()</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span> <span class="nn">django</span> <span class="kn">import</span> <span class="n">forms</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">from</span> <span class="nn">django_recaptcha.fields</span> <span class="kn">import</span> <span class="n">ReCaptchaField</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">class</span> <span class="nc">FormWithCaptcha</span><span class="p">(</span><span class="n">forms</span><span class="o">.</span><span class="n">Form</span><span class="p">):</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="n">captcha</span> <span class="o">=</span> <span class="n">ReCaptchaField</span><span class="p">()</span>
 </span></code></pre></div>
 <p>Be sure to include the captcha field in your forms. There are many ways to add fields to forms in Django. We recommend you refer to the <a href="https://docs.djangoproject.com/en/dev/topics/forms/#form-rendering-options">form rendering options</a> and <a href="https://docs.djangoproject.com/en/dev/topics/forms/#rendering-fields-manually">rendering fields manually</a> sections of the <a href="https://docs.djangoproject.com/en/dev/topics/forms">official Django documentation for forms</a>.</p>
 <p>To allow for runtime specification of keys you can optionally pass the <code>private_key</code> or <code>public_key</code> parameters to the constructor. For example:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">captcha</span> <span class="o">=</span> <span class="n">ReCaptchaField</span><span class="p">(</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="n">public_key</span><span class="o">=</span><span class="s1">'76wtgdfsjhsydt7r5FFGFhgsdfytd656sad75fgh'</span><span class="p">,</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="n">private_key</span><span class="o">=</span><span class="s1">'98dfg6df7g56df6gdfgdfg65JHJH656565GFGFGs'</span><span class="p">,</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">captcha</span> <span class="o">=</span> <span class="n">ReCaptchaField</span><span class="p">(</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="n">public_key</span><span class="o">=</span><span class="s1">'76wtgdfsjhsydt7r5FFGFhgsdfytd656sad75fgh'</span><span class="p">,</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="n">private_key</span><span class="o">=</span><span class="s1">'98dfg6df7g56df6gdfgdfg65JHJH656565GFGFGs'</span><span class="p">,</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">)</span>
 </span></code></pre></div>
 <p>If specified, these parameters will be used instead of your reCAPTCHA project settings.</p>
 </div>
@@ -2866,18 +2879,19 @@
 <li><code>ReCaptchaV3</code> for <a href="https://developers.google.com/recaptcha/docs/v3">Google reCAPTCHA V3</a></li>
 </ul>
 <p>To make use of widgets other than the default Google reCAPTCHA V2 - Checkbox widget, simply replace the <code>ReCaptchaField</code> widget. For example:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span> <span class="nn">django</span> <span class="kn">import</span> <span class="n">forms</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kn">from</span> <span class="nn">django_recaptcha.fields</span> <span class="kn">import</span> <span class="n">ReCaptchaField</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kn">from</span> <span class="nn">django_recaptcha.widgets</span> <span class="kn">import</span> <span class="n">ReCaptchaV2Invisible</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="k">class</span> <span class="nc">FormWithCaptcha</span><span class="p">(</span><span class="n">forms</span><span class="o">.</span><span class="n">Form</span><span class="p">):</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="n">captcha</span> <span class="o">=</span> <span class="n">ReCaptchaField</span><span class="p">(</span><span class="n">widget</span><span class="o">=</span><span class="n">ReCaptchaV2Invisible</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">django</span> <span class="kn">import</span> <span class="n">forms</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kn">from</span> <span class="nn">django_recaptcha.fields</span> <span class="kn">import</span> <span class="n">ReCaptchaField</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="kn">from</span> <span class="nn">django_recaptcha.widgets</span> <span class="kn">import</span> <span class="n">ReCaptchaV2Invisible</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="k">class</span> <span class="nc">FormWithCaptcha</span><span class="p">(</span><span class="n">forms</span><span class="o">.</span><span class="n">Form</span><span class="p">):</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="n">captcha</span> <span class="o">=</span> <span class="n">ReCaptchaField</span><span class="p">(</span><span class="n">widget</span><span class="o">=</span><span class="n">ReCaptchaV2Invisible</span><span class="p">)</span>
 </span></code></pre></div>
 </div>
 <hr>
 <h2 id="reference">Reference</h2>
 <ul>
 <li><a href="https://pypi.org/project/django-recaptcha/">django-recaptcha: pypi</a></li>
+<li><a href="https://djangopackages.org/grids/g/captcha/">captcha: djangopackages.org</a></li>
 </ul></div>
 
 
