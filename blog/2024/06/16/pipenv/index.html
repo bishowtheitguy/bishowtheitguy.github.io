@@ -10,13 +10,13 @@
         <meta name="author" content="it guy">
       
       
-        <link rel="canonical" href="https://bishowtheitguy.github.io/blog/archive/2024/page/2/">
+        <link rel="canonical" href="https://bishowtheitguy.github.io/blog/2024/06/16/pipenv/">
       
       
-        <link rel="prev" href="../../../../">
+        <link rel="prev" href="../../15/handling-boolean-environment-variables-in-django-settings/">
       
       
-        <link rel="next" href="../../../../../backend/intro/">
+        <link rel="next" href="../../17/installation-django/">
       
       
       <link rel="icon" href="../../../../../assets/logo/favicon.ico">
@@ -24,7 +24,7 @@
     
     
       
-        <title>2024 - Bishow IT Guy</title>
+        <title>Pipenv - Bishow IT Guy</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#2024" class="md-skip">
+        <a href="#pipenv" class="md-skip">
           Skip to content
         </a>
       
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2024
+              Pipenv
             
           </span>
         </div>
@@ -343,7 +343,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -410,11 +412,13 @@
                 
   
   
+    
+  
   
     
   
   
-    <li class="md-nav__item">
+    <li class="md-nav__item md-nav__item--active">
       <a href="../../../../" class="md-nav__link">
         
   
@@ -433,21 +437,19 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
         
           
           <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
@@ -461,7 +463,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1_2">
             <span class="md-nav__icon md-icon"></span>
             Archive
@@ -474,19 +476,10 @@
   
   
     
-      
-    
   
   
     <li class="md-nav__item">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="../../" class="md-nav__link md-nav__link--active">
+      <a href="../../../../archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -495,7 +488,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -2775,6 +2767,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -2787,6 +2781,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2794,422 +2805,205 @@
             
           
           
-  <div class="md-content" data-md-component="content">
-    <div class="md-content__inner">
-      <header class="md-typeset">
-        <h1 id="2024">2024</h1>
-      </header>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-06-21 00:00:00">June 21, 2024</time></li>
-        
-        
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          Bishow Thapa
+                        
+                      </strong>
+                      <br>
+                      Creator
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
+                        <time datetime="2024-06-16 00:00:00" class="md-ellipsis">June 16, 2024</time>
+                      </div>
+                    </li>
+                    
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              2 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+          </nav>
           
-          <li class="md-meta__item">
-            
-              2 min read
-            
-          </li>
-        
-      </ul>
-      
+        </div>
+      </div>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="secret_key-in-django"><a class="toclink" href="../../../../2024/06/21/secret_key-in-django/">SECRET_KEY in Django</a></h2>
-<p>In Django, the <code>SECRET_KEY</code> setting is crucial for cryptographic signing and should be kept confidential. It is used for securing session data, CSRF tokens, and other cryptographic operations. If Django cannot find a <code>SECRET_KEY</code> defined in your project's settings, it raises an ImproperlyConfigured exception because it cannot operate securely without it.</p>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+  
 
-    <nav class="md-post__action">
-      <a href="../../../../2024/06/21/secret_key-in-django/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
+<nav class="md-tags" >
+  
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-06-20 00:00:00">June 20, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-      </ul>
       
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="using-sqlite-with-django"><a class="toclink" href="../../../../2024/06/20/using-sqlite-with-django/">Using sqlite with django</a></h2>
-<p>Using and managing SQLite databases in both Windows and Ubuntu can be done easily with a few tools and commands. Below are instructions for using SQLite on both operating systems:</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/06/20/using-sqlite-with-django/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
       
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-06-19 00:00:00">June 19, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="phantomjs-headless-browser-is-dead"><a class="toclink" href="../../../../2024/06/19/phantomjs-headless-browser-is-dead/">PhantomJS Headless Browser is DEAD</a></h2>
-<p>PhantomJS is said to be a headless browser because there is no involvement of browser while executing the JavaScript code. The execution will not be seen in the browser display, but on the command line prompt.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/06/19/phantomjs-headless-browser-is-dead/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
+      <a href="../../../../../tags/#package" class="md-tag md-tag-icon">package</a>
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
+  
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-06-18 00:00:00">June 18, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              4 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="the-restful-api-architecture"><a class="toclink" href="../../../../2024/06/18/the-restful-api-architecture/">The RESTful API architecture</a></h2>
-<p>DRF is an extension of Django for developing and deploying RESTful APIs.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/06/18/the-restful-api-architecture/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
+      
+      
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-06-17 00:00:00">June 17, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="installation-django"><a class="toclink" href="../../../../2024/06/17/installation-django/">Installation Django</a></h2>
-<p>To install Django, you must have Python installed, and a package manager like PIP. In other words, using ~=4.0 ensures that you get the latest minor release of Django within the 4.0 series. For example, it could install Django 4.0.1, 4.0.2, 4.1.0, etc., but it won't install Django 5.0 or higher.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/06/17/installation-django/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
+      <a href="../../../../../tags/#python" class="md-tag md-tag-icon">python</a>
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-06-16 00:00:00">June 16, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              2 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="pipenv"><a class="toclink" href="../../../../2024/06/16/pipenv/">Pipenv</a></h2>
-<p>pipenv is for Python what NPM is for Node.js. However, pipenv is used for much more than package management, and it also creates and manages a virtual environment for you. </p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/06/16/pipenv/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-06-15 00:00:00">June 15, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="handling-boolean-environment-variables-in-django-settings"><a class="toclink" href="../../../../2024/06/15/handling-boolean-environment-variables-in-django-settings/">Handling Boolean Environment Variables in Django Settings</a></h2>
-<p>In Django development, managing environment variables is crucial for configuring application settings across different environments. One common pitfall developers encounter involves boolean settings, such as <strong>DEBUG</strong>, <mark>which are often stored as strings in environment</mark> files (<code>.env</code>). Let’s delve into why this can be problematic and how to effectively solve it.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/06/15/handling-boolean-environment-variables-in-django-settings/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-06-14 00:00:00">June 14, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              2 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="dumping-data-from-django-database"><a class="toclink" href="../../../../2024/06/14/dumping-data-from-django-database/">Dumping Data from Django Database</a></h2>
-<p>Dumping data from a Django database and loading it into a local environment can be useful for various reasons, such as creating backups or setting up development environments. Here's how you can do it step-by-step:</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/06/14/dumping-data-from-django-database/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-06-13 00:00:00">June 13, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="django-with-tailwind"><a class="toclink" href="../../../../2024/06/13/django-with-tailwind/">Django with Tailwind</a></h2>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/06/13/django-with-tailwind/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-06-05 00:00:00">June 5, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="mysqlclient-related-errors-in-ubuntu"><a class="toclink" href="../../../../2024/06/05/mysqlclient-related-errors-in-ubuntu/">mysqlclient related errors in ubuntu</a></h2>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/06/05/mysqlclient-related-errors-in-ubuntu/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-      
-        
-          
-
-
-
-<nav class="md-pagination">
-  <a class="md-pagination__link" href="../../">1</a> <span class="md-pagination__current">2</span> <a class="md-pagination__link" href="../3/">3</a> <a class="md-pagination__link" href="../4/">4</a> <span class="md-pagination__dots">..</span> <a class="md-pagination__link" href="../6/">6</a>
+  
 </nav>
-        
+
+
+
+<div><h1 id="pipenv">Pipenv</h1>
+<p>pipenv is for Python what NPM is for Node.js. However, pipenv is used for much more than package management, and it also creates and manages a virtual environment for you. </p>
+<!-- more -->
+
+<div class="admonition abstract">
+<p class="admonition-title">Environment Management with Pipenv</p>
+<p>The <mark>three primary commands</mark> you’ll use in managing your pipenv environment are:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span>pipenv<span class="w"> </span>install,
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>$<span class="w"> </span>pipenv<span class="w"> </span>uninstall,<span class="w"> </span><span class="p">&amp;</span><span class="w"> </span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>$<span class="w"> </span>pipenv<span class="w"> </span>lock.
+</span></code></pre></div>
+</div>
+<p>In the previous chapters, we used <code>virtualenv</code> to create our virtual environment; however, Kenneth Reitz (the creator of the popular package requests) created <code>pipenv</code>. <mark>pipenv is for Python what NPM is for Node.js</mark>. However, pipenv is used for much more than package management, and it also creates and manages a virtual environment for you. In my opinion, there are a lot of advantages of the old development workflows, but for me, there are two things that stand out: the first is that you no longer need two different tools (pip, virtualenv), and the second is that it is much simpler to have all these great features in just one place.</p>
+<p>Another thing that I really like about pipenv is the use of Pipfile. Sometimes, it is really hard to work with requirement files. Our production environment and development environment have the same dependencies, and you end up having to maintain two different files; plus, every time you need to remove one dependency, you will need to edit the requirement file manually.</p>
+<p>With <code>pipenv</code>, you don't need to worry about having multiple requirement files. Development and production dependencies are placed in the same file, and pipenv also takes care of updating the <code>Pipfile</code>.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Installing pipenv is quite simple, just run:</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>pip<span class="w"> </span>install<span class="w"> </span>pipenv
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># After installing it you can run:</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>pipenv<span class="w"> </span>--help
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># use pipenv to create our virtual environment</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>pipenv<span class="w"> </span>--python<span class="w"> </span>python3.6
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>pipenv<span class="w"> </span>install<span class="w"> </span>requests
+</span></code></pre></div>
+<p>The <mark>author of</mark> <code>pipenv</code> <mark>is the same developer who created the popular</mark> <code>requests</code> library.</p>
+<hr>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$<span class="w"> </span>pipenv<span class="w"> </span>install<span class="w"> </span>&lt;package&gt;
+</span></code></pre></div>
+<p>This will create a <code>Pipfile</code> if one doesn’t exist. If one does exist, it will automatically be edited with the new package your provided.</p>
+<p>Next, activate the <code>Pipenv</code> shell:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$<span class="w"> </span>pipenv<span class="w"> </span>shell
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>$<span class="w"> </span>python<span class="w"> </span>--version
+</span></code></pre></div>
+<hr>
+<details class="example" open="open">
+<summary>Specifying Versions of Python</summary>
+<p>To create a new virtualenv, using a specific version of Python you have installed (and on your PATH), use the <code>--python VERSION</code> flag, like so:</p>
+<div class="admonition tip">
+<p class="admonition-title">Use Python 3:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$<span class="w"> </span>pipenv<span class="w"> </span>--python<span class="w"> </span><span class="m">3</span>
+</span></code></pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Use Python3.6:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$<span class="w"> </span>pipenv<span class="w"> </span>--python<span class="w"> </span><span class="m">3</span>.6
+</span></code></pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Use Python 2.7.14:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$ pipenv --python 2.7.14
+</span></code></pre></div>
+</div>
+<hr>
+<p>When given a Python version, like this, <code>Pipenv</code> will automatically scan your system for a Python that matches that given version.</p>
+<p>If a <code>Pipfile</code> hasn’t been created yet, one will be created for you, that looks like this:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>[[source]]
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>url = "https://pypi.python.org/simple"
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>verify_ssl = true
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>[dev-packages]
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>[packages]
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>[requires]
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>python_version = "3.6"
+</span></code></pre></div>
+</details>
+<hr>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="#">Python Programming Blueprints by Daniel Furtado : pg-158</a></li>
+<li><a href="https://pipenv-es.readthedocs.io/es/stable/basics.html">pipenv-es.readthedocs.io</a></li>
+</ul>
+<hr></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
       
-    </div>
+    </article>
   </div>
 
           
@@ -3228,10 +3022,12 @@
   
     
       
+        
+      
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../../../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Index">
+          <a href="../../15/handling-boolean-environment-variables-in-django-settings/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Handling Boolean Environment Variables in Django Settings">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -3241,20 +3037,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Index
+                Handling Boolean Environment Variables in Django Settings
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../../../../backend/intro/" class="md-footer__link md-footer__link--next" aria-label="Next: Intro">
+          <a href="../../17/installation-django/" class="md-footer__link md-footer__link--next" aria-label="Next: Installation Django">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Intro
+                Installation Django
               </div>
             </div>
             <div class="md-footer__button md-icon">

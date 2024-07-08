@@ -10,13 +10,11 @@
         <meta name="author" content="it guy">
       
       
-        <link rel="canonical" href="https://bishowtheitguy.github.io/blog/archive/2024/page/2/">
+        <link rel="canonical" href="https://bishowtheitguy.github.io/blog/2024/07/01/django-and-djangorestframework-views/">
       
       
-        <link rel="prev" href="../../../../">
+        <link rel="prev" href="../../../06/30/customizing-the-reqest-and-response-in-drf/">
       
-      
-        <link rel="next" href="../../../../../backend/intro/">
       
       
       <link rel="icon" href="../../../../../assets/logo/favicon.ico">
@@ -24,7 +22,7 @@
     
     
       
-        <title>2024 - Bishow IT Guy</title>
+        <title>Django and djangorestframework views - Bishow IT Guy</title>
       
     
     
@@ -87,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#2024" class="md-skip">
+        <a href="#django-and-djangorestframework-views" class="md-skip">
           Skip to content
         </a>
       
@@ -122,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2024
+              Django and djangorestframework views
             
           </span>
         </div>
@@ -343,7 +341,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -410,11 +410,13 @@
                 
   
   
+    
+  
   
     
   
   
-    <li class="md-nav__item">
+    <li class="md-nav__item md-nav__item--active">
       <a href="../../../../" class="md-nav__link">
         
   
@@ -433,21 +435,19 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
         
           
           <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
@@ -461,7 +461,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1_2">
             <span class="md-nav__icon md-icon"></span>
             Archive
@@ -474,19 +474,10 @@
   
   
     
-      
-    
   
   
     <li class="md-nav__item">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="../../" class="md-nav__link md-nav__link--active">
+      <a href="../../../../archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -495,7 +486,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -2775,6 +2765,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -2787,6 +2779,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#using-viewsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using ViewSets
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2794,422 +2803,462 @@
             
           
           
-  <div class="md-content" data-md-component="content">
-    <div class="md-content__inner">
-      <header class="md-typeset">
-        <h1 id="2024">2024</h1>
-      </header>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-06-21 00:00:00">June 21, 2024</time></li>
-        
-        
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          Bishow Thapa
+                        
+                      </strong>
+                      <br>
+                      Creator
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
+                        <time datetime="2024-07-01 00:00:00" class="md-ellipsis">July 1, 2024</time>
+                      </div>
+                    </li>
+                    
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              4 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+          </nav>
           
-          <li class="md-meta__item">
-            
-              2 min read
-            
-          </li>
-        
-      </ul>
-      
+        </div>
+      </div>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="secret_key-in-django"><a class="toclink" href="../../../../2024/06/21/secret_key-in-django/">SECRET_KEY in Django</a></h2>
-<p>In Django, the <code>SECRET_KEY</code> setting is crucial for cryptographic signing and should be kept confidential. It is used for securing session data, CSRF tokens, and other cryptographic operations. If Django cannot find a <code>SECRET_KEY</code> defined in your project's settings, it raises an ImproperlyConfigured exception because it cannot operate securely without it.</p>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+  
 
-    <nav class="md-post__action">
-      <a href="../../../../2024/06/21/secret_key-in-django/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
+<nav class="md-tags" >
+  
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-06-20 00:00:00">June 20, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-      </ul>
       
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="using-sqlite-with-django"><a class="toclink" href="../../../../2024/06/20/using-sqlite-with-django/">Using sqlite with django</a></h2>
-<p>Using and managing SQLite databases in both Windows and Ubuntu can be done easily with a few tools and commands. Below are instructions for using SQLite on both operating systems:</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/06/20/using-sqlite-with-django/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
       
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-06-19 00:00:00">June 19, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="phantomjs-headless-browser-is-dead"><a class="toclink" href="../../../../2024/06/19/phantomjs-headless-browser-is-dead/">PhantomJS Headless Browser is DEAD</a></h2>
-<p>PhantomJS is said to be a headless browser because there is no involvement of browser while executing the JavaScript code. The execution will not be seen in the browser display, but on the command line prompt.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/06/19/phantomjs-headless-browser-is-dead/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
+      <a href="../../../../../tags/#django" class="md-tag md-tag-icon">django</a>
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
+  
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-06-18 00:00:00">June 18, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              4 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="the-restful-api-architecture"><a class="toclink" href="../../../../2024/06/18/the-restful-api-architecture/">The RESTful API architecture</a></h2>
-<p>DRF is an extension of Django for developing and deploying RESTful APIs.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/06/18/the-restful-api-architecture/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
+      
+      
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-06-17 00:00:00">June 17, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="installation-django"><a class="toclink" href="../../../../2024/06/17/installation-django/">Installation Django</a></h2>
-<p>To install Django, you must have Python installed, and a package manager like PIP. In other words, using ~=4.0 ensures that you get the latest minor release of Django within the 4.0 series. For example, it could install Django 4.0.1, 4.0.2, 4.1.0, etc., but it won't install Django 5.0 or higher.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/06/17/installation-django/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
+      <a href="../../../../../tags/#drf" class="md-tag md-tag-icon">drf</a>
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-06-16 00:00:00">June 16, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              2 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="pipenv"><a class="toclink" href="../../../../2024/06/16/pipenv/">Pipenv</a></h2>
-<p>pipenv is for Python what NPM is for Node.js. However, pipenv is used for much more than package management, and it also creates and manages a virtual environment for you. </p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/06/16/pipenv/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-06-15 00:00:00">June 15, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="handling-boolean-environment-variables-in-django-settings"><a class="toclink" href="../../../../2024/06/15/handling-boolean-environment-variables-in-django-settings/">Handling Boolean Environment Variables in Django Settings</a></h2>
-<p>In Django development, managing environment variables is crucial for configuring application settings across different environments. One common pitfall developers encounter involves boolean settings, such as <strong>DEBUG</strong>, <mark>which are often stored as strings in environment</mark> files (<code>.env</code>). Let’s delve into why this can be problematic and how to effectively solve it.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/06/15/handling-boolean-environment-variables-in-django-settings/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-06-14 00:00:00">June 14, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              2 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="dumping-data-from-django-database"><a class="toclink" href="../../../../2024/06/14/dumping-data-from-django-database/">Dumping Data from Django Database</a></h2>
-<p>Dumping data from a Django database and loading it into a local environment can be useful for various reasons, such as creating backups or setting up development environments. Here's how you can do it step-by-step:</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/06/14/dumping-data-from-django-database/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-06-13 00:00:00">June 13, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="django-with-tailwind"><a class="toclink" href="../../../../2024/06/13/django-with-tailwind/">Django with Tailwind</a></h2>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/06/13/django-with-tailwind/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-06-05 00:00:00">June 5, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="mysqlclient-related-errors-in-ubuntu"><a class="toclink" href="../../../../2024/06/05/mysqlclient-related-errors-in-ubuntu/">mysqlclient related errors in ubuntu</a></h2>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/06/05/mysqlclient-related-errors-in-ubuntu/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-      
-        
-          
-
-
-
-<nav class="md-pagination">
-  <a class="md-pagination__link" href="../../">1</a> <span class="md-pagination__current">2</span> <a class="md-pagination__link" href="../3/">3</a> <a class="md-pagination__link" href="../4/">4</a> <span class="md-pagination__dots">..</span> <a class="md-pagination__link" href="../6/">6</a>
+  
 </nav>
-        
+
+
+
+<div><h1 id="django-and-djangorestframework-views">Django and djangorestframework <code>views</code></h1>
+<p>Django views are versatile for rendering web pages, while DRF generic views streamline API development with standardized CRUD operations and serialization support.</p>
+<!-- more -->
+
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Class-Based API Views</label><label for="__tabbed_1_2">Generic API Views</label><label for="__tabbed_1_3">Combining</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>These are Python classes that provide more structure and reusability.</p>
+<p>from <strong>rest_framework.views</strong> import APIView</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">rest_framework.views</span> <span class="kn">import</span> <span class="n">APIView</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">rest_framework.response</span> <span class="kn">import</span> <span class="n">Response</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">from</span> <span class="nn">rest_framework</span> <span class="kn">import</span> <span class="n">status</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Book</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kn">from</span> <span class="nn">.serializers</span> <span class="kn">import</span> <span class="n">BookSerializer</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">class</span> <span class="nc">BookList</span><span class="p">(</span><span class="n">APIView</span><span class="p">):</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        <span class="n">books</span> <span class="o">=</span> <span class="n">Book</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        <span class="n">serializer</span> <span class="o">=</span> <span class="n">BookSerializer</span><span class="p">(</span><span class="n">books</span><span class="p">,</span> <span class="n">many</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="n">serializer</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="k">def</span> <span class="nf">post</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        <span class="n">serializer</span> <span class="o">=</span> <span class="n">BookSerializer</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        <span class="k">if</span> <span class="n">serializer</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>            <span class="n">serializer</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>            <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="n">serializer</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_201_CREATED</span><span class="p">)</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>        <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="n">serializer</span><span class="o">.</span><span class="n">errors</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="n">status</span><span class="o">.</span><span class="n">HTTP_400_BAD_REQUEST</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>Generic API views abstract common patterns to make view development easier and faster. DRF provides a set of built-in generic views for common tasks, such as listing, creating, retrieving, updating, and deleting objects.</p>
+<p>from <strong>rest_framework.generics</strong> import ListAPIView</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:5"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><input id="__tabbed_2_4" name="__tabbed_2" type="radio"><input id="__tabbed_2_5" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">ListAPIView</label><label for="__tabbed_2_2">CreateAPIView</label><label for="__tabbed_2_3">RetrieveAPIView</label><label for="__tabbed_2_4">UpdateAPIView</label><label for="__tabbed_2_5">DestroyAPIView</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>
+<p>Used to retrieve a list of objects.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">rest_framework.generics</span> <span class="kn">import</span> <span class="n">ListAPIView</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Book</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">from</span> <span class="nn">.serializers</span> <span class="kn">import</span> <span class="n">BookSerializer</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">class</span> <span class="nc">BookListView</span><span class="p">(</span><span class="n">ListAPIView</span><span class="p">):</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="n">queryset</span> <span class="o">=</span> <span class="n">Book</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="n">serializer_class</span> <span class="o">=</span> <span class="n">BookSerializer</span>
+</span></code></pre></div>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>
+<p>Used to create a new object.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">rest_framework.generics</span> <span class="kn">import</span> <span class="n">CreateAPIView</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Book</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kn">from</span> <span class="nn">.serializers</span> <span class="kn">import</span> <span class="n">BookSerializer</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">class</span> <span class="nc">BookCreateView</span><span class="p">(</span><span class="n">CreateAPIView</span><span class="p">):</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="n">queryset</span> <span class="o">=</span> <span class="n">Book</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="n">serializer_class</span> <span class="o">=</span> <span class="n">BookSerializer</span>
+</span></code></pre></div>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>
+<p>Used to retrieve a single object.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span> <span class="nn">rest_framework.generics</span> <span class="kn">import</span> <span class="n">RetrieveAPIView</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Book</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kn">from</span> <span class="nn">.serializers</span> <span class="kn">import</span> <span class="n">BookSerializer</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">class</span> <span class="nc">BookDetailView</span><span class="p">(</span><span class="n">RetrieveAPIView</span><span class="p">):</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="n">queryset</span> <span class="o">=</span> <span class="n">Book</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="n">serializer_class</span> <span class="o">=</span> <span class="n">BookSerializer</span>
+</span></code></pre></div>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>
+<p>Used to update an existing object.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span> <span class="nn">rest_framework.generics</span> <span class="kn">import</span> <span class="n">UpdateAPIView</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Book</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kn">from</span> <span class="nn">.serializers</span> <span class="kn">import</span> <span class="n">BookSerializer</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="k">class</span> <span class="nc">BookUpdateView</span><span class="p">(</span><span class="n">UpdateAPIView</span><span class="p">):</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="n">queryset</span> <span class="o">=</span> <span class="n">Book</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="n">serializer_class</span> <span class="o">=</span> <span class="n">BookSerializer</span>
+</span></code></pre></div>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>
+<p>Used to delete an existing object.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">rest_framework.generics</span> <span class="kn">import</span> <span class="n">DestroyAPIView</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Book</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="kn">from</span> <span class="nn">.serializers</span> <span class="kn">import</span> <span class="n">BookSerializer</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="k">class</span> <span class="nc">BookDeleteView</span><span class="p">(</span><span class="n">DestroyAPIView</span><span class="p">):</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="n">queryset</span> <span class="o">=</span> <span class="n">Book</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="n">serializer_class</span> <span class="o">=</span> <span class="n">BookSerializer</span>
+</span></code></pre></div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="tabbed-block">
+<blockquote>
+<p>Combining Multiple Generic API Views</p>
+</blockquote>
+<p>For more complex workflows, you can combine multiple generic views to handle different actions.</p>
+<div class="language-python highlight"><span class="filename">Combining List and Create Views</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kn">from</span> <span class="nn">.views</span> <span class="kn">import</span> <span class="n">BookListView</span><span class="p">,</span> <span class="n">BookCreateView</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">'books/'</span><span class="p">,</span> <span class="n">BookListView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">'book-list'</span><span class="p">),</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">'books/new/'</span><span class="p">,</span> <span class="n">BookCreateView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">'book-create'</span><span class="p">),</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="p">]</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<h2 id="using-viewsets">Using ViewSets</h2>
+<p>Viewsets combine the logic for multiple views into a single class. They are a more concise way to handle standard create, retrieve, update, and delete actions.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">from</span> <span class="nn">rest_framework</span> <span class="kn">import</span> <span class="n">viewsets</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Book</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="kn">from</span> <span class="nn">.serializers</span> <span class="kn">import</span> <span class="n">BookSerializer</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="k">class</span> <span class="nc">BookViewSet</span><span class="p">(</span><span class="n">viewsets</span><span class="o">.</span><span class="n">ModelViewSet</span><span class="p">):</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    <span class="n">queryset</span> <span class="o">=</span> <span class="n">Book</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    <span class="n">serializer_class</span> <span class="o">=</span> <span class="n">BookSerializer</span>
+</span></code></pre></div>
+<div class="language-python highlight"><span class="filename">Router Configuration</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span><span class="p">,</span> <span class="n">include</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kn">from</span> <span class="nn">rest_framework.routers</span> <span class="kn">import</span> <span class="n">DefaultRouter</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="kn">from</span> <span class="nn">.views</span> <span class="kn">import</span> <span class="n">BookViewSet</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="n">router</span> <span class="o">=</span> <span class="n">DefaultRouter</span><span class="p">()</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="n">router</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="sa">r</span><span class="s1">'books'</span><span class="p">,</span> <span class="n">BookViewSet</span><span class="p">)</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>    <span class="n">path</span><span class="p">(</span><span class="s1">''</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="n">router</span><span class="o">.</span><span class="n">urls</span><span class="p">)),</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="p">]</span>
+</span></code></pre></div>
+<hr>
+<h1 id="django-generic-views-and-generic-api-views">Django Generic Views and Generic API Views</h1>
+<div class="admonition note">
+<p class="admonition-title">Django Generic Views</p>
+<table>
+<thead>
+<tr>
+<th><strong>View Name</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Example Usage</strong></th>
+<th><strong>Import</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ListView</td>
+<td>Displays a list of objects.</td>
+<td><code>class BookListView(ListView)</code></td>
+<td><code>from django.views.generic import ListView</code></td>
+</tr>
+<tr>
+<td>DetailView</td>
+<td>Displays a single object.</td>
+<td><code>class BookDetailView(DetailView)</code></td>
+<td><code>from django.views.generic import DetailView</code></td>
+</tr>
+<tr>
+<td>CreateView</td>
+<td>Displays a form for creating a new object and handles form submission.</td>
+<td><code>class BookCreateView(CreateView)</code></td>
+<td><code>from django.views.generic import CreateView</code></td>
+</tr>
+<tr>
+<td>UpdateView</td>
+<td>Displays a form for updating an existing object and handles form submission.</td>
+<td><code>class BookUpdateView(UpdateView)</code></td>
+<td><code>from django.views.generic import UpdateView</code></td>
+</tr>
+<tr>
+<td>DeleteView</td>
+<td>Displays a confirmation page and deletes an existing object.</td>
+<td><code>class BookDeleteView(DeleteView)</code></td>
+<td><code>from django.views.generic import DeleteView</code></td>
+</tr>
+<tr>
+<td>TemplateView</td>
+<td>Renders a template.</td>
+<td><code>class MyTemplateView(TemplateView)</code></td>
+<td><code>from django.views.generic import TemplateView</code></td>
+</tr>
+<tr>
+<td>RedirectView</td>
+<td>Redirects to a given URL.</td>
+<td><code>class MyRedirectView(RedirectView)</code></td>
+<td><code>from django.views.generic import RedirectView</code></td>
+</tr>
+<tr>
+<td>FormView</td>
+<td>Displays a form and handles form submission.</td>
+<td><code>class MyFormView(FormView)</code></td>
+<td><code>from django.views.generic import FormView</code></td>
+</tr>
+<tr>
+<td>ArchiveIndexView</td>
+<td>Displays an archive index of date-based items.</td>
+<td><code>class MyArchiveIndexView(ArchiveIndexView)</code></td>
+<td><code>from django.views.generic.dates import ArchiveIndexView</code></td>
+</tr>
+<tr>
+<td>YearArchiveView</td>
+<td>Displays an archive of items for a specific year.</td>
+<td><code>class MyYearArchiveView(YearArchiveView)</code></td>
+<td><code>from django.views.generic.dates import YearArchiveView</code></td>
+</tr>
+<tr>
+<td>MonthArchiveView</td>
+<td>Displays an archive of items for a specific month.</td>
+<td><code>class MyMonthArchiveView(MonthArchiveView)</code></td>
+<td><code>from django.views.generic.dates import MonthArchiveView</code></td>
+</tr>
+<tr>
+<td>WeekArchiveView</td>
+<td>Displays an archive of items for a specific week.</td>
+<td><code>class MyWeekArchiveView(WeekArchiveView)</code></td>
+<td><code>from django.views.generic.dates import WeekArchiveView</code></td>
+</tr>
+<tr>
+<td>DayArchiveView</td>
+<td>Displays an archive of items for a specific day.</td>
+<td><code>class MyDayArchiveView(DayArchiveView)</code></td>
+<td><code>from django.views.generic.dates import DayArchiveView</code></td>
+</tr>
+<tr>
+<td>TodayArchiveView</td>
+<td>Displays an archive of items for today.</td>
+<td><code>class MyTodayArchiveView(TodayArchiveView)</code></td>
+<td><code>from django.views.generic.dates import TodayArchiveView</code></td>
+</tr>
+<tr>
+<td>DateDetailView</td>
+<td>Displays a single object for a specific date.</td>
+<td><code>class MyDateDetailView(DateDetailView)</code></td>
+<td><code>from django.views.generic.dates import DateDetailView</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition note">
+<p class="admonition-title">DRF Generic API Views</p>
+<table>
+<thead>
+<tr>
+<th><strong>View Name</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Example Usage</strong></th>
+<th><strong>Import</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ListAPIView</td>
+<td>Used for read-only endpoints to represent a collection of model instances.</td>
+<td><code>class BookListView(ListAPIView)</code></td>
+<td><code>from rest_framework.generics import ListAPIView</code></td>
+</tr>
+<tr>
+<td>CreateAPIView</td>
+<td>Used for create-only endpoints.</td>
+<td><code>class BookCreateView(CreateAPIView)</code></td>
+<td><code>from rest_framework.generics import CreateAPIView</code></td>
+</tr>
+<tr>
+<td>RetrieveAPIView</td>
+<td>Used for read-only endpoints to represent a single model instance.</td>
+<td><code>class BookDetailView(RetrieveAPIView)</code></td>
+<td><code>from rest_framework.generics import RetrieveAPIView</code></td>
+</tr>
+<tr>
+<td>UpdateAPIView</td>
+<td>Used for update-only endpoints for a single model instance.</td>
+<td><code>class BookUpdateView(UpdateAPIView)</code></td>
+<td><code>from rest_framework.generics import UpdateAPIView</code></td>
+</tr>
+<tr>
+<td>DestroyAPIView</td>
+<td>Used for delete-only endpoints for a single model instance.</td>
+<td><code>class BookDeleteView(DestroyAPIView)</code></td>
+<td><code>from rest_framework.generics import DestroyAPIView</code></td>
+</tr>
+<tr>
+<td>ListCreateAPIView</td>
+<td>Used for read-write endpoints to represent a collection of model instances.</td>
+<td><code>class BookListCreateView(ListCreateAPIView)</code></td>
+<td><code>from rest_framework.generics import ListCreateAPIView</code></td>
+</tr>
+<tr>
+<td>RetrieveUpdateAPIView</td>
+<td>Used for read or update endpoints to represent a single model instance.</td>
+<td><code>class BookRetrieveUpdateView(RetrieveUpdateAPIView)</code></td>
+<td><code>from rest_framework.generics import RetrieveUpdateAPIView</code></td>
+</tr>
+<tr>
+<td>RetrieveDestroyAPIView</td>
+<td>Used for read or delete endpoints to represent a single model instance.</td>
+<td><code>class BookRetrieveDestroyView(RetrieveDestroyAPIView)</code></td>
+<td><code>from rest_framework.generics import RetrieveDestroyAPIView</code></td>
+</tr>
+<tr>
+<td>RetrieveUpdateDestroyAPIView</td>
+<td>Used for read, update or delete endpoints to represent a single model instance.</td>
+<td><code>class BookRetrieveUpdateDestroyView(RetrieveUpdateDestroyAPIView)</code></td>
+<td><code>from rest_framework.generics import RetrieveUpdateDestroyAPIView</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href=""></a></li>
+</ul></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
       
-    </div>
+    </article>
   </div>
 
           
@@ -3228,10 +3277,12 @@
   
     
       
+        
+      
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../../../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Index">
+          <a href="../../../06/30/customizing-the-reqest-and-response-in-drf/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Customizing the Reqest and Response in DRF">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -3241,27 +3292,11 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Index
+                Customizing the Reqest and Response in DRF
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../../../../../backend/intro/" class="md-footer__link md-footer__link--next" aria-label="Next: Intro">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Intro
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
         
       </nav>
     
