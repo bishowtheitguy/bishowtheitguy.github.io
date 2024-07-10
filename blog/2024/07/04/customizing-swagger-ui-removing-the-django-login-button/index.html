@@ -10,13 +10,11 @@
         <meta name="author" content="it guy">
       
       
-        <link rel="canonical" href="https://bishowtheitguy.github.io/blog/archive/2024/page/4/">
+        <link rel="canonical" href="https://bishowtheitguy.github.io/blog/2024/07/04/customizing-swagger-ui-removing-the-django-login-button/">
       
       
-        <link rel="prev" href="../../../../">
+        <link rel="prev" href="../../02/django-allauth-for-web-apps---dj-rest-auth-for-api/">
       
-      
-        <link rel="next" href="../../../../../backend/intro/">
       
       
       <link rel="icon" href="../../../../../assets/logo/favicon.ico">
@@ -24,7 +22,7 @@
     
     
       
-        <title>2024 - Bishow IT Guy</title>
+        <title>Customizing Swagger UI: Removing the Django Login Button - Bishow IT Guy</title>
       
     
     
@@ -87,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#2024" class="md-skip">
+        <a href="#customizing-swagger-ui-removing-the-django-login-button" class="md-skip">
           Skip to content
         </a>
       
@@ -122,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2024
+              Customizing Swagger UI: Removing the Django Login Button
             
           </span>
         </div>
@@ -343,7 +341,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -410,11 +410,13 @@
                 
   
   
+    
+  
   
     
   
   
-    <li class="md-nav__item">
+    <li class="md-nav__item md-nav__item--active">
       <a href="../../../../" class="md-nav__link">
         
   
@@ -433,21 +435,19 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
         
           
           <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
@@ -461,7 +461,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1_2">
             <span class="md-nav__icon md-icon"></span>
             Archive
@@ -474,19 +474,10 @@
   
   
     
-      
-    
   
   
     <li class="md-nav__item">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="../../" class="md-nav__link md-nav__link--active">
+      <a href="../../../../archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -495,7 +486,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -2838,6 +2828,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -2850,6 +2842,50 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#to-customize-the-swagger-ui-to-use-jwt-tokens-instead-of-basic-auth" class="md-nav__link">
+    <span class="md-ellipsis">
+      To customize the Swagger UI to use JWT tokens instead of Basic Auth,
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#most-used-swagger-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Most used swagger settings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rest-framework-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      REST Framework Settings
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2857,399 +2893,240 @@
             
           
           
-  <div class="md-content" data-md-component="content">
-    <div class="md-content__inner">
-      <header class="md-typeset">
-        <h1 id="2024">2024</h1>
-      </header>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-12 00:00:00">May 12, 2024</time></li>
-        
-        
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          Bishow Thapa
+                        
+                      </strong>
+                      <br>
+                      Creator
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
+                        <time datetime="2024-07-04 00:00:00" class="md-ellipsis">July 4, 2024</time>
+                      </div>
+                    </li>
+                    
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              2 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+          </nav>
           
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-      </ul>
-      
+        </div>
+      </div>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="simplifying-django-views-with-get_object_or_404"><a class="toclink" href="../../../../2024/05/12/simplifying-django-views-with-get_object_or_404/">Simplifying Django Views with get_object_or_404</a></h2>
-<p>In the realm of Django development, building views that retrieve and display specific objects from the database is a common task. However, ensuring that these views gracefully handle scenarios where the requested object does not exist can be a bit cumbersome. This is where Django's <code>get_object_or_404</code> comes to the rescue, offering a simple yet powerful solution.</p>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+  
 
-    <nav class="md-post__action">
-      <a href="../../../../2024/05/12/simplifying-django-views-with-get_object_or_404/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
+<nav class="md-tags" >
+  
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-12 00:00:00">May 12, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="understanding-slugify-and-slugfield-in-django"><a class="toclink" href="../../../../2024/05/12/understanding-slugify-and-slugfield-in-django/">Understanding Slugify and SlugField in Django</a></h2>
-<p>In the world of web development with Django, creating clean and SEO-friendly URLs is crucial for enhancing user experience and search engine visibility. Two essential tools in achieving this are slugify and SlugField. Let's delve into what they are and how they play their roles in Django applications.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/05/12/understanding-slugify-and-slugfield-in-django/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
+      
+      
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-10 00:00:00">May 10, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="django-easy-thumbnails-package"><a class="toclink" href="../../../../2024/05/10/django-easy-thumbnails-package/">Django <code>easy-thumbnails</code> package</a></h2>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/05/10/django-easy-thumbnails-package/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
+      <a href="../../../../../tags/#django" class="md-tag md-tag-icon">django</a>
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-09 00:00:00">May 9, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="django-model-fields-with-textchoices"><a class="toclink" href="../../../../2024/05/09/django-model-fields-with-textchoices/">Django Model Fields with TextChoices</a></h2>
-<p>Before Django <code>3.0</code>, defining choices for model fields typically involved using tuples of tuples, which could be cumbersome and error-prone. With the introduction of TextChoices, Django provides a more elegant and Pythonic way to define choices using class-based syntax.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/05/09/django-model-fields-with-textchoices/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
+  
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-09 00:00:00">May 9, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-      </ul>
       
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="django-admin-forms-with-formfield_overrides"><a class="toclink" href="../../../../2024/05/09/django-admin-forms-with-formfield_overrides/">Django Admin Forms with formfield_overrides</a></h2>
-<p><code>formfield_overrides</code> is a nifty attribute available in Django's <code>admin.ModelAdmin</code> class that allows developers to customize the form fields used in the admin interface for specific model fields. This feature enables you to enhance the user experience, integrate third-party widgets, and streamline data entry without the need for extensive customizations.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/05/09/django-admin-forms-with-formfield_overrides/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
       
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-08 00:00:00">May 8, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="customizing-how-models-are-displayed"><a class="toclink" href="../../../../2024/05/08/customizing-how-models-are-displayed/">Customizing how models are displayed</a></h2>
-<p>In Django, ModelAdmin is a class used in the Django admin interface to customize how models are displayed and interacted with. It allows you to specify various attributes and methods to control the behavior and appearance of models in the admin interface. </p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/05/08/customizing-how-models-are-displayed/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
+      <a href="../../../../../tags/#management" class="md-tag md-tag-icon">management</a>
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-07 00:00:00">May 7, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              4 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="creating-a-blog-model-in-django"><a class="toclink" href="../../../../2024/05/07/creating-a-blog-model-in-django/">Creating a blog model in django</a></h2>
-<p>A Django model is a source of information and behaviors of your data. It consists of a Python class that subclasses django.db.models.Model. Each model maps to a single database table, where each attribute of the class represents a database field.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/05/07/creating-a-blog-model-in-django/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-06 00:00:00">May 6, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              4 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="active-link-in-django"><a class="toclink" href="../../../../2024/05/06/active-link-in-django/">Active link in django</a></h2>
-<p>we'll explore different techniques to add an 'active' class to navigation elements based on the user's location, providing visual cues that enhance navigation clarity.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/05/06/active-link-in-django/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-06 00:00:00">May 6, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="django-with-ajax"><a class="toclink" href="../../../../2024/05/06/django-with-ajax/">Django with ajax</a></h2>
-<p>In the ever-evolving landscape of web development, enhancing user experience is paramount. One powerful tool for achieving this is AJAX (<code>Asynchronous JavaScript and XML</code>), which allows for seamless, asynchronous communication between the client and server. When integrated with Django, a high-level Python web framework, AJAX can elevate your web applications to new heights of interactivity and responsiveness.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/05/06/django-with-ajax/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-03 00:00:00">May 3, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              2 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="a-guide-to-csrf-cookie-settings"><a class="toclink" href="../../../../2024/05/03/a-guide-to-csrf-cookie-settings/">A Guide to CSRF Cookie Settings</a></h2>
-<p>Django, a popular web framework for Python, comes equipped with robust measures to mitigate CSRF risks.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/05/03/a-guide-to-csrf-cookie-settings/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-      
-        
-          
-
-
-
-<nav class="md-pagination">
-  <a class="md-pagination__link" href="../../">1</a> <a class="md-pagination__link" href="../2/">2</a> <a class="md-pagination__link" href="../3/">3</a> <span class="md-pagination__current">4</span> <a class="md-pagination__link" href="../5/">5</a> <a class="md-pagination__link" href="../6/">6</a> <a class="md-pagination__link" href="../7/">7</a>
+  
 </nav>
-        
+
+
+
+<div><h1 id="customizing-swagger-ui-removing-the-django-login-button">Customizing Swagger UI: Removing the Django Login Button</h1>
+<!-- more -->
+
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>drf-yasg
+</span></code></pre></div>
+<div class="language-python highlight"><span class="filename">settings.py</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">SWAGGER_SETTINGS</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="s1">'DEFAULT_GENERATOR_CLASS'</span><span class="p">:</span> <span class="s1">'drf_yasg.generators.OpenAPISchemaGenerator'</span><span class="p">,</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="s1">'USE_SESSION_AUTH'</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>  <span class="c1"># Disable session authentication if desired</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="to-customize-the-swagger-ui-to-use-jwt-tokens-instead-of-basic-auth">To customize the Swagger UI to use JWT tokens instead of Basic Auth,</h2>
+<p>you need to modify the Swagger configuration to include JWT authentication</p>
+<div class="language-python highlight"><span class="filename">settings.py</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">SWAGGER_SETTINGS</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="s1">'DEFAULT_INFO'</span><span class="p">:</span> <span class="s1">'path.to.your_project.urls.api_info'</span><span class="p">,</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="s1">'SECURITY_DEFINITIONS'</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        <span class="s1">'Bearer'</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>            <span class="s1">'type'</span><span class="p">:</span> <span class="s1">'apiKey'</span><span class="p">,</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>            <span class="s1">'name'</span><span class="p">:</span> <span class="s1">'Authorization'</span><span class="p">,</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>            <span class="s1">'in'</span><span class="p">:</span> <span class="s1">'header'</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        <span class="p">}</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    <span class="p">},</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="s1">'USE_SESSION_AUTH'</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="example-configuration">Example Configuration</h2>
+<details class="example" open="open">
+<summary>Example</summary>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">SWAGGER_SETTINGS</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="s1">'DEFAULT_GENERATOR_CLASS'</span><span class="p">:</span> <span class="s1">'drf_yasg.generators.OpenAPISchemaGenerator'</span><span class="p">,</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="s1">'DEFAULT_AUTO_SCHEMA_CLASS'</span><span class="p">:</span> <span class="s1">'drf_yasg.inspectors.SwaggerAutoSchema'</span><span class="p">,</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="s1">'USE_SESSION_AUTH'</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="s1">'SECURITY_DEFINITIONS'</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>        <span class="s1">'Bearer'</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>            <span class="s1">'type'</span><span class="p">:</span> <span class="s1">'apiKey'</span><span class="p">,</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>            <span class="s1">'name'</span><span class="p">:</span> <span class="s1">'Authorization'</span><span class="p">,</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>            <span class="s1">'in'</span><span class="p">:</span> <span class="s1">'header'</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>        <span class="p">}</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    <span class="p">},</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    <span class="s1">'DOC_EXPANSION'</span><span class="p">:</span> <span class="s1">'none'</span><span class="p">,</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    <span class="s1">'OPERATIONS_SORTER'</span><span class="p">:</span> <span class="s1">'alpha'</span><span class="p">,</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    <span class="s1">'SHOW_REQUEST_HEADERS'</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>    <span class="s1">'SHOW_EXTENSIONS'</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    <span class="s1">'VALIDATOR_URL'</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    <span class="s1">'PERSIST_AUTH'</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>    <span class="s1">'APIS_SORTER'</span><span class="p">:</span> <span class="s1">'alpha'</span><span class="p">,</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>    <span class="s1">'TAGS_SORTER'</span><span class="p">:</span> <span class="s1">'alpha'</span><span class="p">,</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>    <span class="s1">'JSON_EDITOR'</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>    <span class="s1">'SUPPORTED_SUBMIT_METHODS'</span><span class="p">:</span> <span class="p">[</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>        <span class="s1">'get'</span><span class="p">,</span> <span class="s1">'post'</span><span class="p">,</span> <span class="s1">'put'</span><span class="p">,</span> <span class="s1">'delete'</span><span class="p">,</span> <span class="s1">'patch'</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>    <span class="p">],</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>    <span class="s1">'DEFAULT_FIELD_INSPECTORS'</span><span class="p">:</span> <span class="p">[</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>        <span class="s1">'drf_yasg.inspectors.CamelCaseJSONFilter'</span><span class="p">,</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>        <span class="s1">'drf_yasg.inspectors.DjangoRestResponsePagination'</span><span class="p">,</span>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>        <span class="s1">'drf_yasg.inspectors.DjangoRestResponseFilter'</span><span class="p">,</span>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>        <span class="s1">'drf_yasg.inspectors.RestFrameworkDefaultSchema'</span>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>    <span class="p">],</span>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>    <span class="s1">'DEFAULT_PAGINATOR_INSPECTORS'</span><span class="p">:</span> <span class="p">[</span>
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>        <span class="s1">'drf_yasg.inspectors.DjangoRestResponsePagination'</span><span class="p">,</span>
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>        <span class="s1">'drf_yasg.inspectors.RestFrameworkDefaultPaginator'</span>
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>    <span class="p">],</span>
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>    <span class="s1">'DEFAULT_FILTER_INSPECTORS'</span><span class="p">:</span> <span class="p">[</span>
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>        <span class="s1">'drf_yasg.inspectors.DjangoRestResponseFilter'</span><span class="p">,</span>
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>        <span class="s1">'drf_yasg.inspectors.RestFrameworkDefaultFilter'</span>
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>    <span class="p">]</span>
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a><span class="p">}</span>
+</span></code></pre></div>
+</details>
+<h2 id="most-used-swagger-settings">Most used swagger settings</h2>
+<div class="language-python highlight"><span class="filename">settings.py</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">SWAGGER_SETTINGS</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="s1">'DEFAULT_INFO'</span><span class="p">:</span> <span class="s1">'path.to.your_project.urls.api_info'</span><span class="p">,</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="s1">'SECURITY_DEFINITIONS'</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>        <span class="s1">'Bearer'</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>            <span class="s1">'type'</span><span class="p">:</span> <span class="s1">'apiKey'</span><span class="p">,</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>            <span class="s1">'name'</span><span class="p">:</span> <span class="s1">'Authorization'</span><span class="p">,</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>            <span class="s1">'in'</span><span class="p">:</span> <span class="s1">'header'</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>        <span class="p">}</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    <span class="p">},</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    <span class="s1">'USE_SESSION_AUTH'</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="s1">'DOC_EXPANSION'</span><span class="p">:</span> <span class="s1">'none'</span><span class="p">,</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    <span class="s1">'OPERATIONS_SORTER'</span><span class="p">:</span> <span class="s1">'alpha'</span><span class="p">,</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    <span class="s1">'SHOW_REQUEST_HEADERS'</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>    <span class="s1">'PERSIST_AUTH'</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>    <span class="s1">'APIS_SORTER'</span><span class="p">:</span> <span class="s1">'alpha'</span><span class="p">,</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>    <span class="s1">'VALIDATOR_URL'</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>    <span class="s1">'JSON_EDITOR'</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>    <span class="s1">'SUPPORTED_SUBMIT_METHODS'</span><span class="p">:</span> <span class="p">[</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>        <span class="s1">'get'</span><span class="p">,</span> <span class="s1">'post'</span><span class="p">,</span> <span class="s1">'put'</span><span class="p">,</span> <span class="s1">'delete'</span><span class="p">,</span> <span class="s1">'patch'</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>    <span class="p">],</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="rest-framework-settings">REST Framework Settings</h2>
+<p>Additionally, it's important to configure the Django REST framework settings to ensure proper authentication and permissions for your API:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">REST_FRAMEWORK</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="s1">'DEFAULT_AUTHENTICATION_CLASSES'</span><span class="p">:</span> <span class="p">(</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>        <span class="s1">'rest_framework_simplejwt.authentication.JWTAuthentication'</span><span class="p">,</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="p">),</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="s1">'DEFAULT_PERMISSION_CLASSES'</span><span class="p">:</span> <span class="p">(</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>        <span class="s1">'rest_framework.permissions.IsAuthenticated'</span><span class="p">,</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="p">),</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>The <code>DEFAULT_PERMISSION_CLASSES</code> setting with <code>IsAuthenticated</code> <mark>ensures that all API endpoints require user authentication by default</mark>, enhancing the security of your application by restricting access to authorized users only. This setting is essential for protecting sensitive data and functionality in your API.</p>
+<details class="abstract" open="open">
+<summary>Other Common Permission Classes</summary>
+<ul>
+<li><strong>AllowAny</strong>: No restrictions, accessible to all users.</li>
+<li><strong>IsAdminUser</strong>: Only accessible to users with admin status.</li>
+<li><strong>IsAuthenticatedOrReadOnly</strong>: Allows authenticated users to perform any request, but anonymous users can only perform read-only requests (e.g., GET).</li>
+</ul>
+</details>
+<p>By configuring these settings, you can ensure that your Swagger UI is both user-friendly and secure, providing a clear and interactive documentation experience for developers.</p></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
       
-    </div>
+    </article>
   </div>
 
           
@@ -3268,10 +3145,12 @@
   
     
       
+        
+      
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../../../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Index">
+          <a href="../../02/django-allauth-for-web-apps---dj-rest-auth-for-api/" class="md-footer__link md-footer__link--prev" aria-label="Previous: django-allauth for web apps &amp;  dj-rest-auth for API">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -3281,27 +3160,11 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Index
+                django-allauth for web apps &  dj-rest-auth for API
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../../../../../backend/intro/" class="md-footer__link md-footer__link--next" aria-label="Next: Intro">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Intro
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
         
       </nav>
     

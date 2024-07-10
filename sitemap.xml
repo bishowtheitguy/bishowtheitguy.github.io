@@ -426,6 +426,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishowtheitguy.github.io/blog/2024/07/04/customizing-swagger-ui-removing-the-django-login-button/</loc>
+         <lastmod>2024-07-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/06/23/decorators-in-python/</loc>
          <lastmod>2024-07-10</lastmod>
          <changefreq>daily</changefreq>
@@ -766,6 +771,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishowtheitguy.github.io/blog/page/7/</loc>
+         <lastmod>2024-07-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishowtheitguy.github.io/blog/archive/2024/page/2/</loc>
          <lastmod>2024-07-10</lastmod>
          <changefreq>daily</changefreq>
@@ -787,6 +797,11 @@
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/archive/2024/page/6/</loc>
+         <lastmod>2024-07-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishowtheitguy.github.io/blog/archive/2024/page/7/</loc>
          <lastmod>2024-07-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
