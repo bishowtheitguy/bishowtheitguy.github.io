@@ -51,6 +51,21 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishowtheitguy.github.io/APIs/drf/Router/listing-exposed-api/</loc>
+         <lastmod>2024-08-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishowtheitguy.github.io/APIs/drf/Router/understanding-basename/</loc>
+         <lastmod>2024-08-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishowtheitguy.github.io/APIs/drf/Serializers/custom-field-validation/</loc>
+         <lastmod>2024-08-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishowtheitguy.github.io/APIs/drf/Serializers/drf-serializers/</loc>
          <lastmod>2024-08-10</lastmod>
          <changefreq>daily</changefreq>
