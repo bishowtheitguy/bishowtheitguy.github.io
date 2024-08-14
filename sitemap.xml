@@ -126,6 +126,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishowtheitguy.github.io/APIs/drf/package/django-ratelimit/</loc>
+         <lastmod>2024-08-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishowtheitguy.github.io/APIs/drf/package/djangorestframework-api-key/</loc>
          <lastmod>2024-08-14</lastmod>
          <changefreq>daily</changefreq>
@@ -392,6 +397,16 @@
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/backend/django/mixins/permission-mixins/</loc>
+         <lastmod>2024-08-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishowtheitguy.github.io/backend/middleware/intro/</loc>
+         <lastmod>2024-08-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishowtheitguy.github.io/backend/middleware/topic/</loc>
          <lastmod>2024-08-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
