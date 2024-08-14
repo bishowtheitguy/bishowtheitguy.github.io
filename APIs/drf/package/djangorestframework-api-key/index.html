@@ -10,28 +10,28 @@
         <meta name="author" content="it guy">
       
       
-        <link rel="canonical" href="https://bishowtheitguy.github.io/blog/2024/04/26/understanding-django-query-methods-objectsall-vs-get_object_or_404/">
+        <link rel="canonical" href="https://bishowtheitguy.github.io/APIs/drf/package/djangorestframework-api-key/">
       
       
-        <link rel="prev" href="../../25/a-peek-into-str-method-in-django/">
+        <link rel="prev" href="../djoser/">
       
       
-        <link rel="next" href="../../27/difference-between-templateview-listview-and-view/">
+        <link rel="next" href="../../intro/">
       
       
-      <link rel="icon" href="../../../../../assets/logo/favicon.ico">
+      <link rel="icon" href="../../../../assets/logo/favicon.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
     
     
       
-        <title>Understanding Django Query Methods: objects.all() vs get_object_or_404() - Bishow IT Guy</title>
+        <title>djangorestframework-api-key - Bishow IT Guy</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,14 +50,14 @@
       
     
     
-    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -68,7 +68,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#understanding-django-query-methods-objectsall-vs-get_object_or_404" class="md-skip">
+        <a href="#introduction" class="md-skip">
           Skip to content
         </a>
       
@@ -103,9 +103,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../../.." title="Bishow IT Guy" class="md-header__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
+    <a href="../../../.." title="Bishow IT Guy" class="md-header__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
       
-  <img src="../../../../../assets/logo/internet.png" alt="logo">
+  <img src="../../../../assets/logo/internet.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Understanding Django Query Methods: objects.all() vs get_object_or_404()
+              djangorestframework-api-key
             
           </span>
         </div>
@@ -219,13 +219,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../../blog/" class="md-tabs__link">
           
   
   Blog
@@ -243,7 +241,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../backend/intro/" class="md-tabs__link">
+        <a href="../../../../backend/intro/" class="md-tabs__link">
           
   
   Backend
@@ -261,7 +259,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../backend/django/intro/" class="md-tabs__link">
+        <a href="../../../../backend/django/intro/" class="md-tabs__link">
           
   
   Django
@@ -275,11 +273,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../../../APIs/intro/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../intro/" class="md-tabs__link">
           
   
   APIs
@@ -297,7 +297,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../interview/intro/" class="md-tabs__link">
+        <a href="../../../../interview/intro/" class="md-tabs__link">
           
   
   Interview
@@ -325,9 +325,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -338,9 +336,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../.." title="Bishow IT Guy" class="md-nav__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
+    <a href="../../../.." title="Bishow IT Guy" class="md-nav__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
       
-  <img src="../../../../../assets/logo/internet.png" alt="logo">
+  <img src="../../../../assets/logo/internet.png" alt="logo">
 
     </a>
     Bishow IT Guy
@@ -352,8 +350,6 @@
       
   
   
-    
-  
   
   
     
@@ -364,12 +360,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
@@ -383,7 +379,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Blog
@@ -394,14 +390,12 @@
                 
   
   
-    
-  
   
     
   
   
-    <li class="md-nav__item md-nav__item--active">
-      <a href="../../../../" class="md-nav__link">
+    <li class="md-nav__item">
+      <a href="../../../../blog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -461,7 +455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../archive/2024/" class="md-nav__link">
+      <a href="../../../../blog/archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -537,7 +531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/intro/" class="md-nav__link">
+      <a href="../../../../backend/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -595,7 +589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/args/" class="md-nav__link">
+      <a href="../../../../python/args/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -616,7 +610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python/content-management-system/" class="md-nav__link">
+      <a href="../../../../python/content-management-system/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -645,7 +639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/web-server/" class="md-nav__link">
+      <a href="../../../../backend/web-server/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -666,7 +660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/design-principle/" class="md-nav__link">
+      <a href="../../../../backend/design-principle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -724,7 +718,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/intro/" class="md-nav__link">
+      <a href="../../../../backend/package/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -745,7 +739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/python-dotenv/" class="md-nav__link">
+      <a href="../../../../backend/package/python-dotenv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -766,7 +760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/python-mysqlclient/" class="md-nav__link">
+      <a href="../../../../backend/package/python-mysqlclient/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -787,7 +781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/tinymce/" class="md-nav__link">
+      <a href="../../../../backend/package/tinymce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -808,7 +802,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/simplejwt/" class="md-nav__link">
+      <a href="../../../../backend/package/simplejwt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -829,7 +823,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/dj-rest-auth/" class="md-nav__link">
+      <a href="../../../../backend/package/dj-rest-auth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -850,7 +844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-recaptcha/" class="md-nav__link">
+      <a href="../../../../backend/package/django-recaptcha/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -871,7 +865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-allauth/" class="md-nav__link">
+      <a href="../../../../backend/package/django-allauth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -892,7 +886,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-autoslug/" class="md-nav__link">
+      <a href="../../../../backend/package/django-autoslug/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -913,7 +907,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-cors-headers/" class="md-nav__link">
+      <a href="../../../../backend/package/django-cors-headers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -934,7 +928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-debug-toolbar/" class="md-nav__link">
+      <a href="../../../../backend/package/django-debug-toolbar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -955,7 +949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-environ/" class="md-nav__link">
+      <a href="../../../../backend/package/django-environ/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -976,7 +970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-extensions/" class="md-nav__link">
+      <a href="../../../../backend/package/django-extensions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -997,7 +991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-simple-history/" class="md-nav__link">
+      <a href="../../../../backend/package/django-simple-history/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1018,7 +1012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-taggit/" class="md-nav__link">
+      <a href="../../../../backend/package/django-taggit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1039,7 +1033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-filter/" class="md-nav__link">
+      <a href="../../../../backend/package/django-filter/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1060,7 +1054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/django-crispy-forms/" class="md-nav__link">
+      <a href="../../../../backend/package/django-crispy-forms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1081,7 +1075,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/social-auth-app-django/" class="md-nav__link">
+      <a href="../../../../backend/package/social-auth-app-django/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1102,7 +1096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/package/0.draft/" class="md-nav__link">
+      <a href="../../../../backend/package/0.draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1168,7 +1162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/designpatterns/intro/" class="md-nav__link">
+      <a href="../../../../backend/designpatterns/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1189,7 +1183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/designpatterns/template-patterns/" class="md-nav__link">
+      <a href="../../../../backend/designpatterns/template-patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1210,7 +1204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/designpatterns/model-mixins-patterns/" class="md-nav__link">
+      <a href="../../../../backend/designpatterns/model-mixins-patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1231,7 +1225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/designpatterns/user-profile-patterns/" class="md-nav__link">
+      <a href="../../../../backend/designpatterns/user-profile-patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1297,7 +1291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/tools/intro/" class="md-nav__link">
+      <a href="../../../../backend/tools/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1318,7 +1312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/tools/pipenv/" class="md-nav__link">
+      <a href="../../../../backend/tools/pipenv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1339,7 +1333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/tools/pyenv/" class="md-nav__link">
+      <a href="../../../../backend/tools/pyenv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1368,7 +1362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/draft/" class="md-nav__link">
+      <a href="../../../../backend/draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1436,7 +1430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/intro/" class="md-nav__link">
+      <a href="../../../../backend/django/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1457,7 +1451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-form/" class="md-nav__link">
+      <a href="../../../../backend/django/django-form/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1478,7 +1472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-view/" class="md-nav__link">
+      <a href="../../../../backend/django/django-view/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1499,7 +1493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-model/" class="md-nav__link">
+      <a href="../../../../backend/django/django-model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1520,7 +1514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-template/" class="md-nav__link">
+      <a href="../../../../backend/django/django-template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1541,7 +1535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-urlconf/" class="md-nav__link">
+      <a href="../../../../backend/django/django-urlconf/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1562,7 +1556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-middleware/" class="md-nav__link">
+      <a href="../../../../backend/django/django-middleware/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1583,7 +1577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/migration/" class="md-nav__link">
+      <a href="../../../../backend/django/migration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1604,7 +1598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-404/" class="md-nav__link">
+      <a href="../../../../backend/django/django-404/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1625,7 +1619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-mail/" class="md-nav__link">
+      <a href="../../../../backend/django/django-mail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1646,7 +1640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-reset-password/" class="md-nav__link">
+      <a href="../../../../backend/django/django-reset-password/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1667,7 +1661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/decorator/" class="md-nav__link">
+      <a href="../../../../backend/django/decorator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1688,7 +1682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/context-processors/" class="md-nav__link">
+      <a href="../../../../backend/django/context-processors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1709,7 +1703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-utility-functions/" class="md-nav__link">
+      <a href="../../../../backend/django/django-utility-functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1730,7 +1724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/django-secretkey/" class="md-nav__link">
+      <a href="../../../../backend/django/django-secretkey/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1788,7 +1782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/intro/" class="md-nav__link">
+      <a href="../../../../backend/django/mixins/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1809,7 +1803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/context-processors/" class="md-nav__link">
+      <a href="../../../../backend/django/mixins/context-processors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1830,7 +1824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/custom-char-field-widget/" class="md-nav__link">
+      <a href="../../../../backend/django/mixins/custom-char-field-widget/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1851,7 +1845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/custom-text-field-widget/" class="md-nav__link">
+      <a href="../../../../backend/django/mixins/custom-text-field-widget/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1872,7 +1866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/image-display-mixins/" class="md-nav__link">
+      <a href="../../../../backend/django/mixins/image-display-mixins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1893,7 +1887,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/image-size-validators/" class="md-nav__link">
+      <a href="../../../../backend/django/mixins/image-size-validators/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1914,7 +1908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/image-type-validators/" class="md-nav__link">
+      <a href="../../../../backend/django/mixins/image-type-validators/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1935,7 +1929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/mixins/permission-mixins/" class="md-nav__link">
+      <a href="../../../../backend/django/mixins/permission-mixins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2001,7 +1995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/builtin/intro/" class="md-nav__link">
+      <a href="../../../../backend/django/builtin/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2022,7 +2016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/builtin/django-contrib-admin/" class="md-nav__link">
+      <a href="../../../../backend/django/builtin/django-contrib-admin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2043,7 +2037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/builtin/django-contrib-auth/" class="md-nav__link">
+      <a href="../../../../backend/django/builtin/django-contrib-auth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2064,7 +2058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/builtin/django-contrib-contenttypes/" class="md-nav__link">
+      <a href="../../../../backend/django/builtin/django-contrib-contenttypes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2085,7 +2079,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/builtin/django-contrib-messages/" class="md-nav__link">
+      <a href="../../../../backend/django/builtin/django-contrib-messages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2106,7 +2100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/builtin/class-based-views/" class="md-nav__link">
+      <a href="../../../../backend/django/builtin/class-based-views/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2127,7 +2121,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/builtin/django-paginator/" class="md-nav__link">
+      <a href="../../../../backend/django/builtin/django-paginator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2193,7 +2187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/advanced/intro/" class="md-nav__link">
+      <a href="../../../../backend/django/advanced/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2214,7 +2208,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/advanced/django-signals/" class="md-nav__link">
+      <a href="../../../../backend/django/advanced/django-signals/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2235,7 +2229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/advanced/django-celery/" class="md-nav__link">
+      <a href="../../../../backend/django/advanced/django-celery/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2256,7 +2250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/advanced/django-channels/" class="md-nav__link">
+      <a href="../../../../backend/django/advanced/django-channels/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2277,7 +2271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/advanced/django-hardening/" class="md-nav__link">
+      <a href="../../../../backend/django/advanced/django-hardening/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2298,7 +2292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/advanced/django-tools/" class="md-nav__link">
+      <a href="../../../../backend/django/advanced/django-tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2319,7 +2313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/advanced/shortcuts/" class="md-nav__link">
+      <a href="../../../../backend/django/advanced/shortcuts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2385,7 +2379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/celery/celery/" class="md-nav__link">
+      <a href="../../../../backend/django/celery/celery/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2406,7 +2400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backend/django/celery/celery-theory/" class="md-nav__link">
+      <a href="../../../../backend/django/celery/celery-theory/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2439,8 +2433,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -2449,12 +2445,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
@@ -2468,7 +2464,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             APIs
@@ -2482,7 +2478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../APIs/intro/" class="md-nav__link">
+      <a href="../../../intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2503,7 +2499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../APIs/query-parameters/" class="md-nav__link">
+      <a href="../../../query-parameters/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2521,19 +2517,21 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
         
           
           <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
@@ -2547,7 +2545,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
             Package
@@ -2561,7 +2559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../APIs/drf/package/pyjwt/" class="md-nav__link">
+      <a href="../pyjwt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2582,7 +2580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../APIs/drf/package/django-allauth/" class="md-nav__link">
+      <a href="../django-allauth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2603,7 +2601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../APIs/drf/package/drf-rest-auth/" class="md-nav__link">
+      <a href="../drf-rest-auth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2624,7 +2622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../APIs/drf/package/djoser/" class="md-nav__link">
+      <a href="../djoser/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2642,10 +2640,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../../APIs/drf/package/djangorestframework-api-key/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    djangorestframework-api-key
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2654,6 +2670,150 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quickstart" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quickstart
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting permissions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#making-authorized-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Making authorized requests
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Making authorized requests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authorization-header" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authorization header
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-header" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom header
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-and-managing-api-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating and managing API keys
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating and managing API keys">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#admin-site" class="md-nav__link">
+    <span class="md-ellipsis">
+      Admin site
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programmatic-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programmatic usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-guide-bishow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Guide Bishow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Important Guide Bishow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#normal-authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Normal Authorization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-api_key_custom_header" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using API_KEY_CUSTOM_HEADER
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2711,7 +2871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../APIs/drf/intro/" class="md-nav__link">
+      <a href="../../intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2732,7 +2892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../APIs/drf/drf-roadmap/" class="md-nav__link">
+      <a href="../../drf-roadmap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2790,7 +2950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../APIs/drf/core/drf-functionbasedviews/" class="md-nav__link">
+      <a href="../../core/drf-functionbasedviews/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2811,7 +2971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../APIs/drf/core/documenting-restapi/" class="md-nav__link">
+      <a href="../../core/documenting-restapi/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2832,7 +2992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../APIs/drf/core/public-api-security/" class="md-nav__link">
+      <a href="../../core/public-api-security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2853,7 +3013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../APIs/drf/core/api-key-in-public-api/" class="md-nav__link">
+      <a href="../../core/api-key-in-public-api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2874,7 +3034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../APIs/drf/core/rate-limiting-throttling/" class="md-nav__link">
+      <a href="../../core/rate-limiting-throttling/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2895,7 +3055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../APIs/drf/core/bulk-insert-api/" class="md-nav__link">
+      <a href="../../core/bulk-insert-api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2961,7 +3121,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../APIs/drf/Viewsets/intro/" class="md-nav__link">
+      <a href="../../Viewsets/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2982,7 +3142,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../APIs/drf/Viewsets/drf-viewsets/" class="md-nav__link">
+      <a href="../../Viewsets/drf-viewsets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3048,7 +3208,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../APIs/drf/Serializers/drf-serializers/" class="md-nav__link">
+      <a href="../../Serializers/drf-serializers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3069,7 +3229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../APIs/drf/Serializers/basic-serializers/" class="md-nav__link">
+      <a href="../../Serializers/basic-serializers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3090,7 +3250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../APIs/drf/Serializers/model-serializers/" class="md-nav__link">
+      <a href="../../Serializers/model-serializers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3111,7 +3271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../APIs/drf/Serializers/nested-serializers/" class="md-nav__link">
+      <a href="../../Serializers/nested-serializers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3132,7 +3292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../APIs/drf/Serializers/custom-field-validation/" class="md-nav__link">
+      <a href="../../Serializers/custom-field-validation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3198,7 +3358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../APIs/drf/Router/intro/" class="md-nav__link">
+      <a href="../../Router/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3219,7 +3379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../APIs/drf/Router/DefaultRouter/" class="md-nav__link">
+      <a href="../../Router/DefaultRouter/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3240,7 +3400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../APIs/drf/Router/understanding-basename/" class="md-nav__link">
+      <a href="../../Router/understanding-basename/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3261,7 +3421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../APIs/drf/Router/listing-exposed-api/" class="md-nav__link">
+      <a href="../../Router/listing-exposed-api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3327,7 +3487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../APIs/drf/AuthenticationandPermissions/intro/" class="md-nav__link">
+      <a href="../../AuthenticationandPermissions/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3401,7 +3561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../APIs/fastAPI/fast-api/" class="md-nav__link">
+      <a href="../../../fastAPI/fast-api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3467,7 +3627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../APIs/microservices/intro/" class="md-nav__link">
+      <a href="../../../microservices/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3488,7 +3648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../APIs/microservices/python-microservices/" class="md-nav__link">
+      <a href="../../../microservices/python-microservices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3564,7 +3724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../interview/intro/" class="md-nav__link">
+      <a href="../../../../interview/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3585,7 +3745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../interview/theory/" class="md-nav__link">
+      <a href="../../../../interview/theory/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3606,7 +3766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../interview/memonic/" class="md-nav__link">
+      <a href="../../../../interview/memonic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3627,7 +3787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../interview/draft/" class="md-nav__link">
+      <a href="../../../../interview/draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3648,7 +3808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../interview/serialization-versus-deserialization/" class="md-nav__link">
+      <a href="../../../../interview/serialization-versus-deserialization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3677,8 +3837,6 @@
             
             
               
-                
-              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -3688,8 +3846,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -3698,29 +3854,128 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#when-to-use-each-method" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      When to Use Each Method
+      Introduction
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
+  <a href="#quickstart" class="md-nav__link">
     <span class="md-ellipsis">
-      Conclusion
+      Quickstart
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#objectsall-vs-get_object_or_404" class="md-nav__link">
+  <a href="#setting-permissions" class="md-nav__link">
     <span class="md-ellipsis">
-      .objects.all() vs get_object_or_404()
+      Setting permissions
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#making-authorized-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Making authorized requests
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Making authorized requests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authorization-header" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authorization header
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-header" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom header
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-and-managing-api-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating and managing API keys
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating and managing API keys">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#admin-site" class="md-nav__link">
+    <span class="md-ellipsis">
+      Admin site
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programmatic-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programmatic usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-guide-bishow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Guide Bishow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Important Guide Bishow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#normal-authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Normal Authorization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-api_key_custom_header" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using API_KEY_CUSTOM_HEADER
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3733,163 +3988,148 @@
             
           
           
-  <div class="md-content md-content--post" data-md-component="content">
-    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
-      <div class="md-sidebar__scrollwrap">
-        <div class="md-sidebar__inner md-post">
-          <nav class="md-nav md-nav--primary">
-            <div class="md-post__back">
-              <div class="md-nav__title md-nav__container">
-                <a href="../../../../" class="md-nav__link">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-                  <span class="md-ellipsis">
-                    Back to index
-                  </span>
-                </a>
-              </div>
-            </div>
-            
-              <div class="md-post__authors md-typeset">
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
-                  <div class="md-profile md-post__profile">
-                    <span class="md-author md-author--long">
-                      <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-                    </span>
-                    <span class="md-profile__description">
-                      <strong>
-                        
-                          Bishow Thapa
-                        
-                      </strong>
-                      <br>
-                      Creator
-                    </span>
-                  </div>
-                
-              </div>
-            
-            <ul class="md-post__meta md-nav__list">
-              <li class="md-nav__item md-nav__item--section">
-                <div class="md-post__title">
-                  <span class="md-ellipsis">
-                    Metadata
-                  </span>
-                </div>
-                <nav class="md-nav">
-                  <ul class="md-nav__list">
-                    <li class="md-nav__item">
-                      <div class="md-nav__link">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2024-04-26 00:00:00" class="md-ellipsis">April 26, 2024</time>
-                      </div>
-                    </li>
-                    
-                    
-                    
-                      
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
-                          <span class="md-ellipsis">
-                            
-                              2 min read
-                            
-                          </span>
-                        </div>
-                      </li>
-                    
-                  </ul>
-                </nav>
-              </li>
-            </ul>
-          </nav>
-          
-        </div>
-      </div>
-    </div>
-    <article class="md-content__inner md-typeset">
-      
-        
-  
-  
-
-<nav class="md-tags" >
-  
-    
-    
-      
-      
-    
-    
-      <a href="../../../../../tags/#django" class="md-tag md-tag-icon">Django</a>
-    
-  
-</nav>
+                  
 
 
+  <h1>djangorestframework-api-key</h1>
 
-<div><h1 id="understanding-django-query-methods-objectsall-vs-get_object_or_404">Understanding Django Query Methods: objects.all() vs get_object_or_404()</h1>
-<p>In Django development, two commonly used methods for retrieving objects from the database are <code>objects.all()</code> and <code>get_object_or_404()</code>. Although they both deal with database queries, they serve different purposes and are used in different contexts.</p>
-<!-- more -->
-
-<ol>
-<li>
-<p><strong>objects.all()</strong>: <mark>Retrieving Multiple Objects</mark></p>
-<p>When you need to retrieve multiple objects from a database table, <code>objects.all()</code> comes to the rescue. This method returns a <mark>queryset</mark> containing all objects that match the query criteria. It's particularly useful when you want to fetch a collection of objects to display in a list or iterate over.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">myapp.models</span> <span class="kn">import</span> <span class="n">MyModel</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">queryset</span> <span class="o">=</span> <span class="n">MyModel</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<div><h2 id="introduction"><a href="https://florimondmanca.github.io/djangorestframework-api-key/">Introduction</a></h2>
+<p><strong>Django REST Framework API Key is a powerful library for allowing server-side clients to safely use your API</strong>. These clients are typically third-party backends and services (<em>i.e. machines</em>) which do not have a user account but still need to interact with your API in a secure way.</p>
+<h2 id="quickstart"><a href="https://florimondmanca.github.io/djangorestframework-api-key/#quickstart">Quickstart</a></h2>
+<p>Install with <code>pip</code>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">"djangorestframework-api-key==2.*"</span>
 </span></code></pre></div>
-</div>
-</li>
-<li>
-<p><strong>get_object_or_404()</strong>: <mark>Retrieving a Single Object</mark></p>
-<p>On the other hand, when you're dealing with situations where you expect to retrieve a <mark>single object</mark> based on specific conditions, <code>get_object_or_404()</code> is your go-to method. This function retrieves an object based on the provided criteria (such as primary key or unique field value). If the object is not found, it raises a HTTP 404 Not Found error, which is particularly handy for handling cases where a requested object does not exist.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-</div>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">get_object_or_404</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span> <span class="nn">myapp.models</span> <span class="kn">import</span> <span class="n">MyModel</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">obj</span> <span class="o">=</span> <span class="n">get_object_or_404</span><span class="p">(</span><span class="n">MyModel</span><span class="p">,</span> <span class="n">pk</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<details class="note" open="open">
+<summary>Important</summary>
+<p>It is highly recommended to <strong>pin your dependency</strong> to the latest major version (as depicted above), as breaking changes may and will happen between major releases.</p>
+</details>
+<p>Add the app to your <code>INSTALLED_APPS</code>:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># settings.py</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  <span class="c1"># ...</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>  <span class="s2">"rest_framework"</span><span class="p">,</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  <span class="s2">"rest_framework_api_key"</span><span class="p">,</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">]</span>
 </span></code></pre></div>
-</li>
-</ol>
-<h2 id="when-to-use-each-method">When to Use Each Method</h2>
-<ul>
-<li><strong>objects.all()</strong>: Use this method when you need to fetch multiple objects from the database, such as when displaying a list of items.</li>
-<li><strong>get_object_or_404()</strong>: Use this method when you expect to retrieve a single object based on specific criteria and want to handle the case where the object does not exist gracefully by raising a 404 error.</li>
-</ul>
-<h2 id="conclusion">Conclusion</h2>
-<p>Understanding the differences between <code>objects.all()</code> and <code>get_object_or_404()</code> allows you to leverage Django's powerful querying capabilities more effectively, ensuring your application retrieves the data it needs efficiently while handling errors gracefully.</p>
+<p>Run the included migrations:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>manage.py<span class="w"> </span>migrate
+</span></code></pre></div>
+<p>To learn how to configure permissions and manage API keys, head to the <a href="https://florimondmanca.github.io/djangorestframework-api-key/guide/">User Guide</a>.</p>
+<h2 id="setting-permissions"><a href="https://florimondmanca.github.io/djangorestframework-api-key/guide/#setting-permissions">Setting permissions</a></h2>
+<p>The <code>HasAPIKey</code> permission class protects a view behind API key authorization.</p>
+<p>You can set the permission globally:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># settings.py</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">REST_FRAMEWORK</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="s2">"DEFAULT_PERMISSION_CLASSES"</span><span class="p">:</span> <span class="p">[</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>        <span class="s2">"rest_framework_api_key.permissions.HasAPIKey"</span><span class="p">,</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="p">]</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>or on a per-view basis:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># views.py</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kn">from</span> <span class="nn">rest_framework.views</span> <span class="kn">import</span> <span class="n">APIView</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kn">from</span> <span class="nn">rest_framework_api_key.permissions</span> <span class="kn">import</span> <span class="n">HasAPIKey</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="k">class</span> <span class="nc">UserListView</span><span class="p">(</span><span class="n">APIView</span><span class="p">):</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="n">permission_classes</span> <span class="o">=</span> <span class="p">[</span><span class="n">HasAPIKey</span><span class="p">]</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="c1"># ...</span>
+</span></code></pre></div>
+<p>See also <a href="http://www.django-rest-framework.org/api-guide/permissions/#setting-the-permission-policy">Setting the permission policy</a> for more information on using permission classes in the Django REST Framework.</p>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>You can use the bitwise operators <code>|</code> and <code>&amp;</code> to compose <code>HasAPIKey</code> with other permission classes and achieve more complex authorization behaviour.</p>
+<p>For example, to require a valid API key or authentication credentials, use:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">rest_framework.permissions</span> <span class="kn">import</span> <span class="n">IsAuthenticated</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kn">from</span> <span class="nn">rest_framework_api_key.permissions</span> <span class="kn">import</span> <span class="n">HasAPIKey</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1"># ...</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">permission_classes</span> <span class="o">=</span> <span class="p">[</span><span class="n">HasAPIKey</span> <span class="o">|</span> <span class="n">IsAuthenticated</span><span class="p">]</span>
+</span></code></pre></div>
+</details>
 <hr>
-<h2 id="objectsall-vs-get_object_or_404"><code>.objects.all()</code> vs <code>get_object_or_404()</code></h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>In Django, <code>IndustriesItem.objects.all()</code> and <code>get_object_or_404(IndustriesItem)</code> are used to retrieve objects from the database, but they serve different purposes.</p>
-<ol>
-<li>
-<p><strong>IndustriesItem.objects.all()</strong>:</p>
+<h2 id="making-authorized-requests"><a href="https://florimondmanca.github.io/djangorestframework-api-key/guide/#making-authorized-requests">Making authorized requests</a></h2>
+<h3 id="authorization-header">Authorization header</h3>
+<p>By default, clients must pass their API key via the <code>Authorization</code> header. It must be formatted as follows:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Authorization: Api-Key &lt;API_KEY&gt;
+</span></code></pre></div>
+<p>where <code>&lt;API_KEY&gt;</code> refers to the full generated API key (see <a href="https://florimondmanca.github.io/djangorestframework-api-key/guide/#creating-and-managing-api-keys">Creating and managing API keys</a> below).</p>
+<p>To know under which conditions access is granted, please see <a href="https://florimondmanca.github.io/djangorestframework-api-key/security/#grant-scheme">Grant scheme</a>.</p>
+<p>If wanting to also customize the keyword used for parsing the Api-Key, please see <a href="https://florimondmanca.github.io/djangorestframework-api-key/guide/#api-key-custom-keyword">API key Custom Keyword</a></p>
+<h3 id="custom-header">Custom header</h3>
+<p>You can set the <code>API_KEY_CUSTOM_HEADER</code> setting to a non-<code>None</code> value to require clients to pass their API key in a custom header instead of the <code>Authorization</code> header.</p>
+<p>This is useful if you plan to use API keys AND an authentication scheme which already uses the <code>Authorization</code> header (e.g. token-based authentication).</p>
+<p>For example, if you set:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a># settings.py
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>API_KEY_CUSTOM_HEADER = "HTTP_X_API_KEY"
+</span></code></pre></div>
+<p>then clients must make authorized requests using:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>X-Api-Key: &lt;API_KEY&gt;
+</span></code></pre></div>
+<p>where <code>&lt;API_KEY&gt;</code> refers to the full generated API key.</p>
+<p>Please refer to <a href="https://docs.djangoproject.com/en/2.2/ref/request-response/#django.http.HttpRequest.META">HttpRequest.META</a> for more information on headers in Django.</p>
+<hr>
+<h2 id="creating-and-managing-api-keys"><a href="https://florimondmanca.github.io/djangorestframework-api-key/guide/#creating-and-managing-api-keys">Creating and managing API keys</a></h2>
+<h3 id="admin-site">Admin site</h3>
+<p>When it is installed, <code>djangorestframework-api-key</code> adds an "API Key Permissions" section to the Django admin site where you can create, view and revoke API keys.</p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>Upon creating an API key from the admin, the full API key is shown only once in a success message banner. <strong>This is what should be passed in authorization headers</strong>. After creation, only the prefix of the API key is shown in the admin site, mostly for identification purposes. If you lose the full API key, you'll need to regenerate a new one.</p>
+</details>
+<h3 id="programmatic-usage">Programmatic usage</h3>
+<p>API keys can be created, viewed and revoked programmatically by manipulating the <code>APIKey</code> model.</p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>The examples below use the <a href="https://docs.djangoproject.com/en/2.2/ref/django-admin/#django-admin-shell">Django shell</a>.</p>
+</details>
 <ul>
-<li>This retrieves all instances of the <code>IndustriesItem</code> model from the database.</li>
-<li>It returns a queryset, which is essentially a list of objects that match the query parameters (in this case, all objects).</li>
-<li>This is useful when you want to retrieve multiple objects and perform operations on them collectively.</li>
+<li>You can view and query <code>APIKey</code> like any other model. For example, to know the total number of API keys:</li>
 </ul>
-</li>
-<li>
-<p><strong>get_object_or_404(IndustriesItem)</strong>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>&gt;&gt;&gt;<span class="w"> </span>from<span class="w"> </span>rest_framework_api_key.models<span class="w"> </span>import<span class="w"> </span>APIKey
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>&gt;&gt;&gt;<span class="w"> </span>APIKey.objects.count<span class="o">()</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="m">42</span>
+</span></code></pre></div>
 <ul>
-<li>This is used to retrieve a single object of the <code>IndustriesItem</code> model from the database.</li>
-<li>If the object does not exist, it raises a 404 HTTP error, which is commonly used for handling "not found" errors in web applications.</li>
-<li>This is useful when you expect to retrieve a single object based on certain criteria, such as a unique identifier.</li>
+<li>If you wish to create an API key programmatically, you'll most likely want a one-time access to its generated key too. To do so, use the <code>.create_key()</code> method on the <code>APIKey</code> objects manager instead of <code>.create()</code>:</li>
 </ul>
-</li>
-</ol>
-<p>So, the main difference lies in the number of objects returned and the behavior when no matching objects are found. <code>IndustriesItem.objects.all()</code> returns multiple objects (all instances), while <code>get_object_or_404(IndustriesItem)</code> returns a single object or raises a 404 error if none is found.</p>
-</div>
-<hr></div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>&gt;&gt;&gt;<span class="w"> </span>from<span class="w"> </span>rest_framework_api_key.models<span class="w"> </span>import<span class="w"> </span>APIKey
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>&gt;&gt;&gt;<span class="w"> </span>api_key,<span class="w"> </span><span class="nv">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>APIKey.objects.create_key<span class="o">(</span><span class="nv">name</span><span class="o">=</span><span class="s2">"my-remote-service"</span><span class="o">)</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>&gt;&gt;&gt;<span class="w"> </span><span class="c1"># Proceed with `api_key` and `key`...</span>
+</span></code></pre></div>
+<details class="danger" open="open">
+<summary>Danger</summary>
+<p>To prevent leaking API keys, you must only give the <code>key</code> <strong>to the client that triggered its generation</strong>. In particular, <strong>do not keep any trace of it on the server</strong>.</p>
+</details>
+<ul>
+<li>To retrieve an <code>APIKey</code> instance based on its generated key (which is not stored in the database) use the <code>.get_from_key()</code> method on the <code>APIKey</code> objects manager instead of <code>.get()</code>. This is useful if you'd like to access an <code>APIKey</code> object from a view protected by a <code>HasAPIKey</code> permission.</li>
+</ul>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">from</span> <span class="nn">rest_framework.views</span> <span class="kn">import</span> <span class="n">APIView</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="kn">from</span> <span class="nn">rest_framework_api_key.models</span> <span class="kn">import</span> <span class="n">APIKey</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="kn">from</span> <span class="nn">rest_framework_api_key.permissions</span> <span class="kn">import</span> <span class="n">HasAPIKey</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Project</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="k">class</span> <span class="nc">ProjectListView</span><span class="p">(</span><span class="n">APIView</span><span class="p">):</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>    <span class="n">permission_classes</span> <span class="o">=</span> <span class="p">[</span><span class="n">HasAPIKey</span><span class="p">]</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="w">        </span><span class="sd">"""Retrieve a project based on the request API key."""</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>        <span class="n">key</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">META</span><span class="p">[</span><span class="s2">"HTTP_AUTHORIZATION"</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>        <span class="n">api_key</span> <span class="o">=</span> <span class="n">APIKey</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get_from_key</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>        <span class="n">project</span> <span class="o">=</span> <span class="n">Project</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">)</span>
+</span></code></pre></div>
+<hr>
+<h2 id="important-guide-bishow">Important Guide Bishow</h2>
+<h3 id="normal-authorization">Normal <code>Authorization</code></h3>
+<p>use <code>Api-Key</code> and space before pasting the key</p>
+<p><a class="glightbox" href="../../../../assets/APIs/restfox-1.png" data-type="image" data-width="100%" data-height="auto" data-title="APIs" data-desc-position="bottom"><img alt="APIs" src="../../../../assets/APIs/restfox-1.png"></a></p>
+<h3 id="using-api_key_custom_header">Using <code>API_KEY_CUSTOM_HEADER</code></h3>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># settings.py</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">API_KEY_CUSTOM_HEADER</span> <span class="o">=</span> <span class="s2">"HTTP_X_API_KEY"</span>
+</span></code></pre></div>
+<p><a class="glightbox" href="../../../../assets/APIs/restfox.png" data-type="image" data-width="100%" data-height="auto" data-title="APIs restfox" data-desc-position="bottom"><img alt="APIs restfox" src="../../../../assets/APIs/restfox.png"></a></p></div>
 
 
 
@@ -3897,20 +4137,15 @@
 
 
 
-  
-  
 
 
 
 
-  
 
-
-
-      
-    </article>
-  </div>
-
+                
+              </article>
+            </div>
+          
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
@@ -3927,12 +4162,10 @@
   
     
       
-        
-      
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../25/a-peek-into-str-method-in-django/" class="md-footer__link md-footer__link--prev" aria-label="Previous: A peek into str method in django">
+          <a href="../djoser/" class="md-footer__link md-footer__link--prev" aria-label="Previous: djoser">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -3942,20 +4175,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                A peek into str method in django
+                djoser
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../27/difference-between-templateview-listview-and-view/" class="md-footer__link md-footer__link--next" aria-label="Next: Difference between TemplateView, ListView, and View">
+          <a href="../../intro/" class="md-footer__link md-footer__link--next" aria-label="Next: Intro">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Difference between TemplateView, ListView, and View
+                Intro
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -3993,10 +4226,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tabs.sticky", "header.autohide", "navigation.footer", "content.code.copy", "content.code.select"], "search": "../../../../../assets/javascripts/workers/search.f886a092.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tabs.sticky", "header.autohide", "navigation.footer", "content.code.copy", "content.code.select"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
