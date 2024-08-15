@@ -10,28 +10,28 @@
         <meta name="author" content="it guy">
       
       
-        <link rel="canonical" href="https://bishowtheitguy.github.io/interview/memonic/">
+        <link rel="canonical" href="https://bishowtheitguy.github.io/interview/core/function-signature/">
       
       
-        <link rel="prev" href="../theory/">
+        <link rel="prev" href="../serialization-versus-deserialization/">
       
       
-        <link rel="next" href="../serialization-versus-deserialization/">
+        <link rel="next" href="../../leetcode/intro/">
       
       
-      <link rel="icon" href="../../assets/logo/favicon.ico">
+      <link rel="icon" href="../../../assets/logo/favicon.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
     
     
       
-        <title>Memonic - Bishow IT Guy</title>
+        <title>function signature - Bishow IT Guy</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,14 +50,14 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -68,7 +68,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -86,6 +86,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#components-of-a-function-signature" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -98,9 +103,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Bishow IT Guy" class="md-header__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
+    <a href="../../.." title="Bishow IT Guy" class="md-header__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
       
-  <img src="../../assets/logo/internet.png" alt="logo">
+  <img src="../../../assets/logo/internet.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -117,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Memonic
+              function signature
             
           </span>
         </div>
@@ -218,7 +223,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../blog/" class="md-tabs__link">
+        <a href="../../../blog/" class="md-tabs__link">
           
   
   Blog
@@ -236,7 +241,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../backend/intro/" class="md-tabs__link">
+        <a href="../../../backend/intro/" class="md-tabs__link">
           
   
   Backend
@@ -254,7 +259,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../backend/django/intro/" class="md-tabs__link">
+        <a href="../../../backend/django/intro/" class="md-tabs__link">
           
   
   Django
@@ -272,7 +277,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../APIs/intro/" class="md-tabs__link">
+        <a href="../../../APIs/intro/" class="md-tabs__link">
           
   
   APIs
@@ -291,14 +296,25 @@
   
     
     
+      
+  
+  
+    
+  
+  
+    
+    
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../intro/" class="md-tabs__link">
+        <a href="../intro.md" class="md-tabs__link">
           
   
   Interview
 
         </a>
       </li>
+    
+  
+
     
   
 
@@ -331,9 +347,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Bishow IT Guy" class="md-nav__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
+    <a href="../../.." title="Bishow IT Guy" class="md-nav__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
       
-  <img src="../../assets/logo/internet.png" alt="logo">
+  <img src="../../../assets/logo/internet.png" alt="logo">
 
     </a>
     Bishow IT Guy
@@ -390,7 +406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/" class="md-nav__link">
+      <a href="../../../blog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -450,7 +466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/archive/2024/" class="md-nav__link">
+      <a href="../../../blog/archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -526,7 +542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/intro/" class="md-nav__link">
+      <a href="../../../backend/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -547,7 +563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/topic/" class="md-nav__link">
+      <a href="../../../backend/topic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -605,7 +621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/args/" class="md-nav__link">
+      <a href="../../../python/args/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -626,7 +642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../python/content-management-system/" class="md-nav__link">
+      <a href="../../../python/content-management-system/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -729,7 +745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/core/server/web-server/" class="md-nav__link">
+      <a href="../../../backend/core/server/web-server/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -758,7 +774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/core/designprinciple/design-principle/" class="md-nav__link">
+      <a href="../../../backend/core/designprinciple/design-principle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -816,7 +832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/core/designpatterns/intro/" class="md-nav__link">
+      <a href="../../../backend/core/designpatterns/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -837,7 +853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/core/designpatterns/template-patterns/" class="md-nav__link">
+      <a href="../../../backend/core/designpatterns/template-patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -858,7 +874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/core/designpatterns/model-mixins-patterns/" class="md-nav__link">
+      <a href="../../../backend/core/designpatterns/model-mixins-patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -879,7 +895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/core/designpatterns/user-profile-patterns/" class="md-nav__link">
+      <a href="../../../backend/core/designpatterns/user-profile-patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -953,7 +969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/middleware/intro/" class="md-nav__link">
+      <a href="../../../backend/middleware/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -974,7 +990,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/middleware/topic/" class="md-nav__link">
+      <a href="../../../backend/middleware/topic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1040,7 +1056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/tools/intro/" class="md-nav__link">
+      <a href="../../../backend/tools/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1061,7 +1077,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/tools/pipenv/" class="md-nav__link">
+      <a href="../../../backend/tools/pipenv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1082,7 +1098,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/tools/pyenv/" class="md-nav__link">
+      <a href="../../../backend/tools/pyenv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1148,7 +1164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/package/intro/" class="md-nav__link">
+      <a href="../../../backend/package/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1169,7 +1185,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/package/python-dotenv/" class="md-nav__link">
+      <a href="../../../backend/package/python-dotenv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1190,7 +1206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/package/python-mysqlclient/" class="md-nav__link">
+      <a href="../../../backend/package/python-mysqlclient/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1211,7 +1227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/package/tinymce/" class="md-nav__link">
+      <a href="../../../backend/package/tinymce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1232,7 +1248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/package/simplejwt/" class="md-nav__link">
+      <a href="../../../backend/package/simplejwt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1253,7 +1269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/package/dj-rest-auth/" class="md-nav__link">
+      <a href="../../../backend/package/dj-rest-auth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1274,7 +1290,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/package/django-recaptcha/" class="md-nav__link">
+      <a href="../../../backend/package/django-recaptcha/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1295,7 +1311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/package/django-allauth/" class="md-nav__link">
+      <a href="../../../backend/package/django-allauth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1316,7 +1332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/package/django-autoslug/" class="md-nav__link">
+      <a href="../../../backend/package/django-autoslug/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1337,7 +1353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/package/django-cors-headers/" class="md-nav__link">
+      <a href="../../../backend/package/django-cors-headers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1358,7 +1374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/package/django-debug-toolbar/" class="md-nav__link">
+      <a href="../../../backend/package/django-debug-toolbar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1379,7 +1395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/package/django-environ/" class="md-nav__link">
+      <a href="../../../backend/package/django-environ/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1400,7 +1416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/package/django-extensions/" class="md-nav__link">
+      <a href="../../../backend/package/django-extensions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1421,7 +1437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/package/django-simple-history/" class="md-nav__link">
+      <a href="../../../backend/package/django-simple-history/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1442,7 +1458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/package/django-taggit/" class="md-nav__link">
+      <a href="../../../backend/package/django-taggit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1463,7 +1479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/package/django-filter/" class="md-nav__link">
+      <a href="../../../backend/package/django-filter/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1484,7 +1500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/package/django-crispy-forms/" class="md-nav__link">
+      <a href="../../../backend/package/django-crispy-forms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1505,7 +1521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/package/social-auth-app-django/" class="md-nav__link">
+      <a href="../../../backend/package/social-auth-app-django/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1526,7 +1542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/package/0.draft/" class="md-nav__link">
+      <a href="../../../backend/package/0.draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1592,7 +1608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/course/intro/" class="md-nav__link">
+      <a href="../../../backend/course/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1613,7 +1629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/course/course/" class="md-nav__link">
+      <a href="../../../backend/course/course/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1634,7 +1650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/course/planning/" class="md-nav__link">
+      <a href="../../../backend/course/planning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1663,7 +1679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/draft/" class="md-nav__link">
+      <a href="../../../backend/draft/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1731,7 +1747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/intro/" class="md-nav__link">
+      <a href="../../../backend/django/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1752,7 +1768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/django-form/" class="md-nav__link">
+      <a href="../../../backend/django/django-form/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1773,7 +1789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/django-view/" class="md-nav__link">
+      <a href="../../../backend/django/django-view/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1794,7 +1810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/django-model/" class="md-nav__link">
+      <a href="../../../backend/django/django-model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1815,7 +1831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/django-template/" class="md-nav__link">
+      <a href="../../../backend/django/django-template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1836,7 +1852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/django-urlconf/" class="md-nav__link">
+      <a href="../../../backend/django/django-urlconf/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1857,7 +1873,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/django-middleware/" class="md-nav__link">
+      <a href="../../../backend/django/django-middleware/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1878,7 +1894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/migration/" class="md-nav__link">
+      <a href="../../../backend/django/migration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1899,7 +1915,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/django-404/" class="md-nav__link">
+      <a href="../../../backend/django/django-404/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1920,7 +1936,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/django-mail/" class="md-nav__link">
+      <a href="../../../backend/django/django-mail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1941,7 +1957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/django-reset-password/" class="md-nav__link">
+      <a href="../../../backend/django/django-reset-password/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1962,7 +1978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/decorator/" class="md-nav__link">
+      <a href="../../../backend/django/decorator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1983,7 +1999,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/context-processors/" class="md-nav__link">
+      <a href="../../../backend/django/context-processors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2004,7 +2020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/django-utility-functions/" class="md-nav__link">
+      <a href="../../../backend/django/django-utility-functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2025,7 +2041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/django-secretkey/" class="md-nav__link">
+      <a href="../../../backend/django/django-secretkey/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2083,7 +2099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/mixins/intro/" class="md-nav__link">
+      <a href="../../../backend/django/mixins/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2104,7 +2120,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/mixins/context-processors/" class="md-nav__link">
+      <a href="../../../backend/django/mixins/context-processors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2125,7 +2141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/mixins/custom-char-field-widget/" class="md-nav__link">
+      <a href="../../../backend/django/mixins/custom-char-field-widget/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2146,7 +2162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/mixins/custom-text-field-widget/" class="md-nav__link">
+      <a href="../../../backend/django/mixins/custom-text-field-widget/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2167,7 +2183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/mixins/image-display-mixins/" class="md-nav__link">
+      <a href="../../../backend/django/mixins/image-display-mixins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2188,7 +2204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/mixins/image-size-validators/" class="md-nav__link">
+      <a href="../../../backend/django/mixins/image-size-validators/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2209,7 +2225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/mixins/image-type-validators/" class="md-nav__link">
+      <a href="../../../backend/django/mixins/image-type-validators/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2230,7 +2246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/mixins/permission-mixins/" class="md-nav__link">
+      <a href="../../../backend/django/mixins/permission-mixins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2296,7 +2312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/builtin/intro/" class="md-nav__link">
+      <a href="../../../backend/django/builtin/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2317,7 +2333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/builtin/django-contrib-admin/" class="md-nav__link">
+      <a href="../../../backend/django/builtin/django-contrib-admin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2338,7 +2354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/builtin/django-contrib-auth/" class="md-nav__link">
+      <a href="../../../backend/django/builtin/django-contrib-auth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2359,7 +2375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/builtin/django-contrib-contenttypes/" class="md-nav__link">
+      <a href="../../../backend/django/builtin/django-contrib-contenttypes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2380,7 +2396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/builtin/django-contrib-messages/" class="md-nav__link">
+      <a href="../../../backend/django/builtin/django-contrib-messages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2401,7 +2417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/builtin/class-based-views/" class="md-nav__link">
+      <a href="../../../backend/django/builtin/class-based-views/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2422,7 +2438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/builtin/django-paginator/" class="md-nav__link">
+      <a href="../../../backend/django/builtin/django-paginator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2488,7 +2504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/advanced/intro/" class="md-nav__link">
+      <a href="../../../backend/django/advanced/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2509,7 +2525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/advanced/django-signals/" class="md-nav__link">
+      <a href="../../../backend/django/advanced/django-signals/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2530,7 +2546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/advanced/django-celery/" class="md-nav__link">
+      <a href="../../../backend/django/advanced/django-celery/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2551,7 +2567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/advanced/django-channels/" class="md-nav__link">
+      <a href="../../../backend/django/advanced/django-channels/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2572,7 +2588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/advanced/django-hardening/" class="md-nav__link">
+      <a href="../../../backend/django/advanced/django-hardening/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2593,7 +2609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/advanced/django-tools/" class="md-nav__link">
+      <a href="../../../backend/django/advanced/django-tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2614,7 +2630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/advanced/shortcuts/" class="md-nav__link">
+      <a href="../../../backend/django/advanced/shortcuts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2680,7 +2696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/celery/celery/" class="md-nav__link">
+      <a href="../../../backend/django/celery/celery/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2701,7 +2717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backend/django/celery/celery-theory/" class="md-nav__link">
+      <a href="../../../backend/django/celery/celery-theory/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2777,7 +2793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../APIs/intro/" class="md-nav__link">
+      <a href="../../../APIs/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2798,7 +2814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../APIs/query-parameters/" class="md-nav__link">
+      <a href="../../../APIs/query-parameters/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2856,7 +2872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../APIs/drf/package/pyjwt/" class="md-nav__link">
+      <a href="../../../APIs/drf/package/pyjwt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2877,7 +2893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../APIs/drf/package/django-allauth/" class="md-nav__link">
+      <a href="../../../APIs/drf/package/django-allauth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2898,7 +2914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../APIs/drf/package/drf-rest-auth/" class="md-nav__link">
+      <a href="../../../APIs/drf/package/drf-rest-auth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2919,7 +2935,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../APIs/drf/package/djoser/" class="md-nav__link">
+      <a href="../../../APIs/drf/package/djoser/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2940,7 +2956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../APIs/drf/package/djangorestframework-api-key/" class="md-nav__link">
+      <a href="../../../APIs/drf/package/djangorestframework-api-key/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2961,7 +2977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../APIs/drf/package/django-ratelimit/" class="md-nav__link">
+      <a href="../../../APIs/drf/package/django-ratelimit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3027,7 +3043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../APIs/drf/intro/" class="md-nav__link">
+      <a href="../../../APIs/drf/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3048,7 +3064,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../APIs/drf/drf-roadmap/" class="md-nav__link">
+      <a href="../../../APIs/drf/drf-roadmap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3106,7 +3122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../APIs/drf/core/drf-functionbasedviews/" class="md-nav__link">
+      <a href="../../../APIs/drf/core/drf-functionbasedviews/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3127,7 +3143,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../APIs/drf/core/documenting-restapi/" class="md-nav__link">
+      <a href="../../../APIs/drf/core/documenting-restapi/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3148,7 +3164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../APIs/drf/core/public-api-security/" class="md-nav__link">
+      <a href="../../../APIs/drf/core/public-api-security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3169,7 +3185,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../APIs/drf/core/api-key-in-public-api/" class="md-nav__link">
+      <a href="../../../APIs/drf/core/api-key-in-public-api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3190,7 +3206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../APIs/drf/core/rate-limiting-throttling/" class="md-nav__link">
+      <a href="../../../APIs/drf/core/rate-limiting-throttling/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3211,7 +3227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../APIs/drf/core/bulk-insert-api/" class="md-nav__link">
+      <a href="../../../APIs/drf/core/bulk-insert-api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3277,7 +3293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../APIs/drf/Viewsets/intro/" class="md-nav__link">
+      <a href="../../../APIs/drf/Viewsets/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3298,7 +3314,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../APIs/drf/Viewsets/drf-viewsets/" class="md-nav__link">
+      <a href="../../../APIs/drf/Viewsets/drf-viewsets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3364,7 +3380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../APIs/drf/Serializers/drf-serializers/" class="md-nav__link">
+      <a href="../../../APIs/drf/Serializers/drf-serializers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3385,7 +3401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../APIs/drf/Serializers/basic-serializers/" class="md-nav__link">
+      <a href="../../../APIs/drf/Serializers/basic-serializers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3406,7 +3422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../APIs/drf/Serializers/model-serializers/" class="md-nav__link">
+      <a href="../../../APIs/drf/Serializers/model-serializers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3427,7 +3443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../APIs/drf/Serializers/nested-serializers/" class="md-nav__link">
+      <a href="../../../APIs/drf/Serializers/nested-serializers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3448,7 +3464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../APIs/drf/Serializers/custom-field-validation/" class="md-nav__link">
+      <a href="../../../APIs/drf/Serializers/custom-field-validation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3514,7 +3530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../APIs/drf/Router/intro/" class="md-nav__link">
+      <a href="../../../APIs/drf/Router/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3535,7 +3551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../APIs/drf/Router/DefaultRouter/" class="md-nav__link">
+      <a href="../../../APIs/drf/Router/DefaultRouter/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3556,7 +3572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../APIs/drf/Router/understanding-basename/" class="md-nav__link">
+      <a href="../../../APIs/drf/Router/understanding-basename/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3577,7 +3593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../APIs/drf/Router/listing-exposed-api/" class="md-nav__link">
+      <a href="../../../APIs/drf/Router/listing-exposed-api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3643,7 +3659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../APIs/drf/AuthenticationandPermissions/intro/" class="md-nav__link">
+      <a href="../../../APIs/drf/AuthenticationandPermissions/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3717,7 +3733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../APIs/fastAPI/fast-api/" class="md-nav__link">
+      <a href="../../../APIs/fastAPI/fast-api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3783,7 +3799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../APIs/microservices/intro/" class="md-nav__link">
+      <a href="../../../APIs/microservices/intro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3804,7 +3820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../APIs/microservices/python-microservices/" class="md-nav__link">
+      <a href="../../../APIs/microservices/python-microservices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3879,10 +3895,49 @@
                 
   
   
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Core
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Core
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
-      <a href="../intro/" class="md-nav__link">
+      <a href="../intro.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3921,17 +3976,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../memonic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3940,7 +3988,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -3971,14 +4018,181 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../draft/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    function signature
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Draft
+    function signature
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#components-of-a-function-signature" class="md-nav__link">
+    <span class="md-ellipsis">
+      Components of a Function Signature
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#significance-of-function-signatures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Significance of Function Signatures
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returning-a-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      returning a value
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#languages-that-return-default-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Languages That Return Default Values
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Leetcode
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Leetcode
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../leetcode/intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../draft/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    draft
   </span>
   
 
@@ -4013,6 +4227,50 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#components-of-a-function-signature" class="md-nav__link">
+    <span class="md-ellipsis">
+      Components of a Function Signature
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#significance-of-function-signatures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Significance of Function Signatures
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returning-a-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      returning a value
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#languages-that-return-default-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Languages That Return Default Values
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4026,9 +4284,262 @@
                   
 
 
-  <h1>Memonic</h1>
+  <h1>function signature</h1>
 
-<p>memonic</p>
+<div><p>In programming languages, a <strong>function signature</strong> refers to the part of the function definition that specifies the function's <mark>name</mark>, its <mark>parameters</mark>, and, in some languages, its <mark>return type</mark>. The function signature provides essential information about how the function can be called and what arguments are required. It serves as a contract or blueprint for what the function will accept and return.</p>
+<h2 id="components-of-a-function-signature">Components of a Function Signature</h2>
+<ul>
+<li><strong>Function Name</strong>: The identifier by which the function is called.</li>
+<li><strong>Parameters</strong>: The list of input variables (or arguments) that the function accepts. This includes the number and types of parameters.</li>
+<li><strong>Return Type <code>(in some languages)</code></strong>: Specifies the type of value the function returns.</li>
+</ul>
+<hr>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><input id="__tabbed_1_5" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Python</label><label for="__tabbed_1_2">JavaScript</label><label for="__tabbed_1_3">Java</label><label for="__tabbed_1_4">C++</label><label for="__tabbed_1_5">TypeScript</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-py highlight"><span class="filename">python</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</span></code></pre></div>
+<ul>
+<li><strong>Function Name</strong>: <code>add</code></li>
+<li><strong>Parameters</strong>: <code>a</code> and <code>b</code> of type <code>int</code></li>
+<li><strong>Return Type</strong>: <code>int</code></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<div class="language-js highlight"><span class="filename">javascript</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">multiply</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">y</span><span class="p">;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">}</span>
+</span></code></pre></div>
+<ul>
+<li><strong>Function Name</strong>: <code>multiply</code></li>
+<li><strong>Parameters</strong>: <code>x</code> and <code>y</code> (types are not explicitly declared in JavaScript, though you can use TypeScript for type annotations)</li>
+<li><strong>Return Type</strong>: Not explicitly declared (implicitly returns a number)</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<div class="language-js highlight"><span class="filename">java</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kr">public</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="nx">subtract</span><span class="p">(</span><span class="kr">int</span><span class="w"> </span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="nx">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">y</span><span class="p">;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">}</span>
+</span></code></pre></div>
+<ul>
+<li><strong>Function Name</strong>: <code>subtract</code></li>
+<li><strong>Parameters</strong>: <code>x</code> and <code>y</code> of type <code>int</code></li>
+<li><strong>Return Type</strong>: <code>int</code></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<div class="language-js highlight"><span class="filename">cpp</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kr">int</span><span class="w"> </span><span class="nx">divide</span><span class="p">(</span><span class="kr">int</span><span class="w"> </span><span class="nx">numerator</span><span class="p">,</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="nx">denominator</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">numerator</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">denominator</span><span class="p">;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">}</span>
+</span></code></pre></div>
+<ul>
+<li><strong>Function Name</strong>: <code>divide</code></li>
+<li><strong>Parameters</strong>: <code>numerator</code> and <code>denominator</code> of type <code>int</code></li>
+<li><strong>Return Type</strong>: <code>int</code></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<div class="language-js highlight"><span class="filename">typescript</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">concatenate</span><span class="p">(</span><span class="nx">a</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">}</span>
+</span></code></pre></div>
+<ul>
+<li><strong>Function Name</strong>: <code>concatenate</code></li>
+<li><strong>Parameters</strong>: <code>a</code> and <code>b</code> of type <code>string</code></li>
+<li><strong>Return Type</strong>: <code>string</code></li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+<h2 id="significance-of-function-signatures">Significance of Function Signatures</h2>
+<ol>
+<li>
+<p><strong>Code Clarity</strong>: Function signatures help make code clearer by specifying what types of inputs are expected and what the function will return.</p>
+</li>
+<li>
+<p><strong>Type Checking</strong>: In statically typed languages, the function signature helps with type checking, ensuring that functions are called with the correct types of arguments.</p>
+</li>
+<li>
+<p><strong>Documentation</strong>: Function signatures serve as a form of documentation for other developers to understand how to use the function properly.</p>
+</li>
+<li>
+<p><strong>Overloading</strong>: In languages that support function overloading (e.g., Java, C++), the function signature allows multiple functions with the same name but different parameters.</p>
+</li>
+</ol>
+<p>In summary, the function signature is a fundamental aspect of function definitions that conveys the interface of the function, allowing for correct usage and integration within a program.</p>
+<hr>
+<h2 id="returning-a-value">returning a value</h2>
+<p>In programming, returning a value from a function <mark>is often necessary</mark> to produce a result that other parts of your code can use. However, not every function needs to return a value. The decision to return a value or not depends on the function's purpose and the specific requirements of your program.</p>
+<ol>
+<li>
+<p><strong>Functions That Return a Value</strong></p>
+<p>Functions that are designed to produce a result or compute a value usually include a return statement. The return value can be used by the caller of the function for further processing.</p>
+<div class="language-py highlight"><span class="filename">Example in Python:</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">result</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>  <span class="c1"># result is now 8</span>
+</span></code></pre></div>
+<div class="language-js highlight"><span class="filename">Example in JavaScript:</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">multiply</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">y</span><span class="p">;</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p">}</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="kd">let</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">multiply</span><span class="p">(</span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span><span class="w">  </span><span class="c1">// result is now 20</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>Functions That <mark>Do Not</mark> Return a Value</strong></p>
+<p>Functions that perform actions rather than calculations or data transformations might not need to return a value. These functions often perform operations like printing to the console, modifying global state, or interacting with external systems.</p>
+<div class="language-py highlight"><span class="filename">Example in Python (No Return Value):</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">def</span> <span class="nf">print_message</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">print_message</span><span class="p">(</span><span class="s2">"Hello, World!"</span><span class="p">)</span>  <span class="c1"># Prints "Hello, World!" to the console</span>
+</span></code></pre></div>
+<div class="language-js highlight"><span class="filename">Example in JavaScript (No Return Value):</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">logMessage</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="p">}</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="nx">logMessage</span><span class="p">(</span><span class="s2">"Hello, World!"</span><span class="p">);</span><span class="w">  </span><span class="c1">// Logs "Hello, World!" to the console</span>
+</span></code></pre></div>
+</li>
+</ol>
+<details class="note" open="open">
+<summary>What Happens If a Function Does Not Return a Value?</summary>
+<ul>
+<li>
+<p><strong>Default Return Value</strong>: In languages like <code>Python</code> and <code>JavaScript</code>, if a function does not explicitly return a value, <mark>it returns a default value</mark>:</p>
+<ul>
+<li><strong>Python</strong>: The default return value is <code>None</code>.</li>
+<li><strong>JavaScript</strong>: The default return value is <code>undefined</code>.</li>
+</ul>
+<div class="language-py highlight"><span class="filename">Python Example:</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">def</span> <span class="nf">no_return</span><span class="p">():</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="k">pass</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="n">result</span> <span class="o">=</span> <span class="n">no_return</span><span class="p">()</span>  <span class="c1"># result is None</span>
+</span></code></pre></div>
+<div class="language-js highlight"><span class="filename">JavaScript Example:</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">noReturn</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="c1">// no return statement</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="p">}</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="kd">let</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">noReturn</span><span class="p">();</span><span class="w">  </span><span class="c1">// result is undefined</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>Utility</strong>: Functions that do not return a value are useful for performing side effects:</p>
+<ul>
+<li>Logging: Writing information to the console or a log file.</li>
+<li>Modifying State: Changing global variables or updating class properties.</li>
+<li>Interacting with External Systems: Sending data to a server or writing to a file.</li>
+</ul>
+</li>
+<li>
+<p><strong>Control Flow</strong>: Some functions control the flow of execution without returning a value, such as functions that raise exceptions or terminate a program.</p>
+<div class="language-py highlight"><span class="filename">Python Example:</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">def</span> <span class="nf">terminate_program</span><span class="p">():</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    <span class="k">raise</span> <span class="ne">SystemExit</span><span class="p">(</span><span class="s2">"Terminating program."</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-js highlight"><span class="filename">JavaScript Example:</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">terminateProgram</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="s2">"Terminating program."</span><span class="p">);</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="p">}</span>
+</span></code></pre></div>
+</li>
+</ul>
+</details>
+<p><strong>Summary</strong></p>
+<ul>
+<li>
+<p><strong>Functions That Return Values</strong>: Used when the result of a computation or data transformation needs to be used later in the code.</p>
+</li>
+<li>
+<p><strong>Functions That Do Not Return Values</strong>: Used when the function performs an action or produces a side effect, such as logging or modifying state.</p>
+</li>
+</ul>
+<p>Whether or not to use a <code>return</code> statement depends on the function's purpose and how it fits into the overall design of your program. Functions without return values can still be valuable for their side effects and control flow capabilities.</p>
+<hr>
+<h2 id="languages-that-return-default-values">Languages That Return Default Values</h2>
+<p>In programming, whether a function returns a default value when no explicit return statement is provided depends on the language. Here's a breakdown of some popular programming languages and their behavior regarding default return values:</p>
+<details class="note" open="open">
+<summary>Languages That Return Default Values</summary>
+<ol>
+<li>
+<p><strong>Python</strong></p>
+<ul>
+<li><strong>Default Return Value</strong>: <code>None</code></li>
+<li><strong>Reason</strong>: In Python, if a function does not have an explicit <code>return</code> statement, it implicitly returns <code>None</code>. This design simplifies function definitions by ensuring that all functions return a value, making it easier to handle cases where a function might not need to return a value but still maintains a consistent interface.</li>
+</ul>
+<div class="language-py highlight"><span class="filename">python</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">def</span> <span class="nf">do_nothing</span><span class="p">():</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    <span class="k">pass</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="n">result</span> <span class="o">=</span> <span class="n">do_nothing</span><span class="p">()</span>  <span class="c1"># result is None</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>JavaScript</strong></p>
+<ul>
+<li><strong>Default Return Value</strong>: <code>undefined</code></li>
+<li><strong>Reason</strong>: In JavaScript, if a function does not have an explicit <code>return</code> statement, it implicitly returns <code>undefined</code>. This behavior aligns with JavaScript's loose typing and dynamic nature, where <code>undefined</code> is used to represent an uninitialized or non-existent value.</li>
+</ul>
+<div class="language-js highlight"><span class="filename">javascrip</span><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">doNothing</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="c1">// no return statement</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="p">}</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="kd">let</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">doNothing</span><span class="p">();</span><span class="w">  </span><span class="c1">// result is undefined</span>
+</span></code></pre></div>
+</li>
+</ol>
+</details>
+<details class="note" open="open">
+<summary>Languages Where Default Return Values Are Not Applicable</summary>
+<ol>
+<li>
+<p><strong>C++</strong></p>
+<ul>
+<li><strong>Default Return Value</strong>: Undefined behavior if the return type is not <code>void</code></li>
+<li><strong>Reason</strong>: In C++, if a function that is supposed to return a value (i.e., not of type <code>void</code>) does not have a return statement, it leads to undefined behavior. This is because C++ expects an explicit return value for non-<code>void</code> functions to maintain well-defined program behavior.</li>
+</ul>
+<div class="language-cpp highlight"><span class="filename">cpp</span><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="c1">// no return statement</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="p">}</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w">  </span><span class="c1">// Undefined behavior</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>Java</strong></p>
+<ul>
+<li><strong>Default Return Value</strong>: None (Functions must explicitly return a value)</li>
+<li><strong>Reason</strong>: In Java, methods with non-<code>void</code> return types must include an explicit <code>return</code> statement. The language enforces this rule to ensure that methods conform to their declared return types and avoid potential runtime errors.</li>
+</ul>
+<div class="language-java highlight"><span class="filename">java</span><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="p">}</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w">  </span><span class="c1">// result is 3</span>
+</span></code></pre></div>
+</li>
+</ol>
+</details>
+<p><strong>Why Default Return Values Are Used</strong></p>
+<ol>
+<li>
+<p><strong>Language Design Philosophy</strong>: Default return values often reflect the language's design philosophy and goals. For example, Python and JavaScript favor flexibility and simplicity, while languages like Swift and Java emphasize explicitness and type safety.</p>
+</li>
+<li>
+<p><strong>Error Handling</strong>: Providing default return values can help prevent errors related to uninitialized values. In dynamically typed languages like Python and JavaScript, <code>None</code> and <code>undefined</code> serve as indicators of missing or uninitialized values.</p>
+</li>
+<li>
+<p><strong>Conciseness</strong>: Languages like Ruby use implicit returns to enable more concise and readable code, reducing boilerplate and making it easier to write expressive functions.</p>
+</li>
+<li>
+<p><strong>Safety and Clarity</strong>: Languages like Swift and Java require explicit return values to ensure that function contracts are clear and enforced, reducing the risk of unexpected behavior and improving code safety.</p>
+</li>
+</ol>
+<p><strong>Summary</strong></p>
+<ul>
+<li><strong>Languages with Default Values</strong>: Python (<code>None</code>), JavaScript (<code>undefined</code>), Ruby (last evaluated expression)</li>
+<li><strong>Languages without Default Values</strong>: Swift, C++, Java (require explicit return values for non-void functions)</li>
+</ul>
+<p>The behavior of default return values reflects the language's design goals, such as simplicity, safety, and expressiveness.</p></div>
 
 
 
@@ -4064,7 +4575,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../theory/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Theory">
+          <a href="../serialization-versus-deserialization/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Serialization">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -4074,20 +4585,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Theory
+                Serialization
               </div>
             </div>
           </a>
         
         
           
-          <a href="../serialization-versus-deserialization/" class="md-footer__link md-footer__link--next" aria-label="Next: Serialization">
+          <a href="../../leetcode/intro/" class="md-footer__link md-footer__link--next" aria-label="Next: Intro">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Serialization
+                Intro
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -4125,10 +4636,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.tabs.sticky", "header.autohide", "navigation.footer", "content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tabs.sticky", "header.autohide", "navigation.footer", "content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>

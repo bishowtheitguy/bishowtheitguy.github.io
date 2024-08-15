@@ -866,17 +866,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://bishowtheitguy.github.io/interview/memonic/</loc>
+         <loc>https://bishowtheitguy.github.io/interview/core/function-signature/</loc>
          <lastmod>2024-08-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://bishowtheitguy.github.io/interview/serialization-versus-deserialization/</loc>
+         <loc>https://bishowtheitguy.github.io/interview/core/memonic/</loc>
          <lastmod>2024-08-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://bishowtheitguy.github.io/interview/theory/</loc>
+         <loc>https://bishowtheitguy.github.io/interview/core/serialization-versus-deserialization/</loc>
+         <lastmod>2024-08-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishowtheitguy.github.io/interview/core/theory/</loc>
+         <lastmod>2024-08-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishowtheitguy.github.io/interview/leetcode/intro/</loc>
          <lastmod>2024-08-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
