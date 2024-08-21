@@ -86,6 +86,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#the-contrib-packages" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -535,6 +540,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Intro
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -544,6 +560,41 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-contrib-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      The contrib packages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4232,6 +4283,32 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-contrib-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      The contrib packages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4303,7 +4380,32 @@
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>#     'SECURITY_DEFINITIONS': None,
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>#     'USE_SESSION_AUTH': False,
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a># }
-</span></code></pre></div></div>
+</span></code></pre></div>
+<hr>
+<h2 id="the-contrib-packages">The contrib packages</h2>
+<p>The contrib packages are a part of Django that contain some very useful applications that the Django developers decided should be shipped with Django.</p>
+<p>The included applications provide an impressive set of features, including some that we'll be using in this application:</p>
+<ul>
+<li>
+<p><strong>Admin</strong> is a full featured CMS that can be used to manage the content of a Django site. The Admin application is an important reason for the popularity of Django. We'll use this to provide an interface for site administrators to moderate and manage the data in our application.</p>
+</li>
+<li>
+<p><strong>Auth</strong> provides user registration and authentication without requiring us to do any work. We'll be using this module to allow users to sign up, sign in, and manage their profiles in our application.</p>
+</li>
+</ul>
+<blockquote>
+<p>Django comes with a couple of <code>contrib</code> packages that speed up our work considerably.</p>
+</blockquote>
+<details class="note">
+<summary>Note</summary>
+<p>There are a lot more goodies in the contrib module. I suggest you take a look at the complete list at <a href="https://docs.djangoproject.com/en/stable/ref/contrib/#contrib-packages">docs.djangoproject.com</a>. </p>
+<p>I usually end up using at least three of the contrib packages in all my Django projects. They provide often-required features like <code>user registration</code> and <code>management</code>, and free you to work on the core parts of your project, providing a solid foundation to build upon.</p>
+</details>
+<hr>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="#">Django Project Blueprints by Asad Jibran Ahmed, 2016 Packt Publishing</a></li>
+</ul></div>
 
 
 
