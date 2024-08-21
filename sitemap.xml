@@ -156,6 +156,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishowtheitguy.github.io/APIs/ideas/api-example/</loc>
+         <lastmod>2024-08-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishowtheitguy.github.io/APIs/ideas/backend/</loc>
          <lastmod>2024-08-21</lastmod>
          <changefreq>daily</changefreq>
