@@ -10,13 +10,13 @@
         <meta name="author" content="it guy">
       
       
-        <link rel="canonical" href="https://bishowtheitguy.github.io/APIs/ideas/ideas/">
+        <link rel="canonical" href="https://bishowtheitguy.github.io/APIs/core/exact-or-range-in-pipfile/">
       
       
-        <link rel="prev" href="../../query-parameters/">
+        <link rel="prev" href="../query-parameters/">
       
       
-        <link rel="next" href="../backend/">
+        <link rel="next" href="../ideas/ideas/">
       
       
       <link rel="icon" href="../../../assets/logo/favicon.ico">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Intro - Bishow IT Guy</title>
+        <title>Guidelines - Bishow IT Guy</title>
       
     
     
@@ -86,6 +86,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#guidelines-for-using-exact-vs-range-of-versions-in-pipfiles" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -117,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Intro
+              Guidelines
             
           </span>
         </div>
@@ -2797,10 +2802,49 @@
                 
   
   
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Core
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Core
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
-      <a href="../../query-parameters/" class="md-nav__link">
+      <a href="../query-parameters/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2822,60 +2866,118 @@
   
   
   
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Ideas
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4_3">
-            <span class="md-nav__icon md-icon"></span>
-            Ideas
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-    
-  
-  
-  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Guidelines
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Intro
+    Guidelines
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#guidelines-for-using-exact-vs-range-of-versions-in-pipfiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guidelines for Using Exact vs Range of Versions in Pipfiles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Guidelines for Using Exact vs Range of Versions in Pipfiles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-core-frameworks-and-libraries-eg-django-flask-react" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.  Core Frameworks and Libraries (e.g., Django, Flask, React)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-utility-libraries-eg-requests-numpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Utility Libraries (e.g., Requests, NumPy)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-security-or-essential-dependency-packages-eg-jwt-auth-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.  Security or Essential Dependency Packages (e.g., JWT, Auth Libraries)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-development-or-build-tools-eg-linters-testing-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Development or Build Tools (e.g., Linters, Testing Libraries)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-packages-in-active-development-or-with-known-instability" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Packages in Active Development or With Known Instability
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-rule-of-thumb" class="md-nav__link">
+    <span class="md-ellipsis">
+      General Rule of Thumb:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2888,8 +2990,66 @@
   
   
   
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_3" id="__nav_4_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ideas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Ideas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../backend/" class="md-nav__link">
+      <a href="../ideas/ideas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ideas/backend/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2910,7 +3070,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api-example/" class="md-nav__link">
+      <a href="../ideas/api-example/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2919,6 +3079,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -2948,10 +3116,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
         
           
-          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2962,8 +3130,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
             Package
           </label>
@@ -3119,10 +3287,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
         
           
-          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3133,8 +3301,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
             <span class="md-nav__icon md-icon"></span>
             d-restframework
           </label>
@@ -3198,10 +3366,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_3" >
         
           
-          <label class="md-nav__link" for="__nav_4_5_3" id="__nav_4_5_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_4_3" id="__nav_4_4_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3212,8 +3380,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_5_3">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4_3">
             <span class="md-nav__icon md-icon"></span>
             Core
           </label>
@@ -3369,10 +3537,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_4" >
         
           
-          <label class="md-nav__link" for="__nav_4_5_4" id="__nav_4_5_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_4_4" id="__nav_4_4_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3383,8 +3551,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_5_4">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4_4">
             <span class="md-nav__icon md-icon"></span>
             Viewsets API
           </label>
@@ -3456,10 +3624,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_5" >
         
           
-          <label class="md-nav__link" for="__nav_4_5_5" id="__nav_4_5_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_4_5" id="__nav_4_4_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3470,8 +3638,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_5_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4_5">
             <span class="md-nav__icon md-icon"></span>
             Serializers API
           </label>
@@ -3606,10 +3774,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_6" >
         
           
-          <label class="md-nav__link" for="__nav_4_5_6" id="__nav_4_5_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_4_6" id="__nav_4_4_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3620,8 +3788,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_5_6">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4_6">
             <span class="md-nav__icon md-icon"></span>
             Router RestAPI
           </label>
@@ -3735,10 +3903,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_7" >
         
           
-          <label class="md-nav__link" for="__nav_4_5_7" id="__nav_4_5_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_4_7" id="__nav_4_4_7_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3749,8 +3917,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_5_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_5_7">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4_7">
             <span class="md-nav__icon md-icon"></span>
             Authentication and Permissions
           </label>
@@ -3809,10 +3977,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
         
           
-          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3823,8 +3991,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_6">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
             <span class="md-nav__icon md-icon"></span>
             fastAPI
           </label>
@@ -3875,10 +4043,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
         
           
-          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -3889,8 +4057,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_7">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
             <span class="md-nav__icon md-icon"></span>
             Microservices
           </label>
@@ -4255,6 +4423,83 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#guidelines-for-using-exact-vs-range-of-versions-in-pipfiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guidelines for Using Exact vs Range of Versions in Pipfiles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Guidelines for Using Exact vs Range of Versions in Pipfiles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-core-frameworks-and-libraries-eg-django-flask-react" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.  Core Frameworks and Libraries (e.g., Django, Flask, React)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-utility-libraries-eg-requests-numpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Utility Libraries (e.g., Requests, NumPy)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-security-or-essential-dependency-packages-eg-jwt-auth-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.  Security or Essential Dependency Packages (e.g., JWT, Auth Libraries)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-development-or-build-tools-eg-linters-testing-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Development or Build Tools (e.g., Linters, Testing Libraries)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-packages-in-active-development-or-with-known-instability" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Packages in Active Development or With Known Instability
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-rule-of-thumb" class="md-nav__link">
+    <span class="md-ellipsis">
+      General Rule of Thumb:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4268,271 +4513,116 @@
                   
 
 
-  <h1>Intro</h1>
+  <h1>Guidelines</h1>
 
-<div><details class="tips" open="open">
-<summary>dating app</summary>
-</details>
-<p>Creating a dating app is an exciting challenge, especially given the complexities involved in handling user interactions, data privacy, and real-time communications. As a software engineer, here’s a comprehensive guide to help you through the entire process:</p>
-<ol>
-<li>
-<p><strong>Concept and Planning</strong></p>
+<div><h2 id="guidelines-for-using-exact-vs-range-of-versions-in-pipfiles">Guidelines for Using Exact vs Range of Versions in Pipfiles</h2>
+<p>Whether to use an exact version or a range of versions depends on the type of package and the stability you want in your project. Here’s a guideline to help you decide:</p>
+<h3 id="1-core-frameworks-and-libraries-eg-django-flask-react">1.  Core Frameworks and Libraries (e.g., Django, Flask, React)</h3>
 <ul>
 <li>
-<p>Define Unique Value Proposition:</p>
-<ul>
-<li>What makes your dating app stand out? Consider features like unique matching algorithms, niche targeting, or enhanced security.</li>
-</ul>
+<p><strong>Use a Range of Versions</strong>: For widely-used frameworks like Django, it's best to use a range of versions, as these libraries are well-maintained, and backward compatibility is usually handled well. The range allows you to benefit from minor bug fixes and security patches.</p>
 </li>
 <li>
-<p>Identify Target Audience:</p>
-<ul>
-<li>Define demographics, interests, and location to tailor the app's features and marketing strategy.</li>
-</ul>
+<p>Example:</p>
+<div class="language-toml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">django</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"&gt;=3.2, &lt;4.0"</span><span class="w">  </span><span class="c1"># Pin to Django 3.x versions</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">djangorestframework</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"&gt;=3.12, &lt;4.0"</span><span class="w">    </span><span class="c1"># Pin to DRF 3.x versions</span>
+</span></code></pre></div>
 </li>
 <li>
-<p>Market Research:</p>
-<ul>
-<li>Analyze competitors to understand what works and identify gaps in the market.</li>
-</ul>
-</li>
-<li>
-<p>Feature List:</p>
-<ul>
-<li>Core Features: User profiles, matchmaking, messaging, notifications, search filters.</li>
-<li>Advanced Features: Video calls, AI-based matchmaking, location-based services, event features.</li>
-<li>Privacy and Security: Enhanced encryption, secure authentication, user data protection.</li>
-</ul>
+<p><strong>Why Range?</strong>: These core libraries release frequent updates with important fixes or new features, and you generally want to keep your project up-to-date within a stable version range (e.g., all <code>3.x</code> versions).</p>
 </li>
 </ul>
-</li>
-<li>
-<p><strong>Technology Stack</strong></p>
+<h3 id="2-utility-libraries-eg-requests-numpy">2. Utility Libraries (e.g., Requests, NumPy)</h3>
 <ul>
 <li>
-<p>Frontend Development:</p>
-<ul>
-<li>Mobile Platforms:<ul>
-<li>iOS: Swift or Objective-C.</li>
-<li>Android: Kotlin or Java.</li>
-<li>Cross-Platform: React Native, Flutter, or Xamarin.</li>
-</ul>
-</li>
-</ul>
+<p><strong>Use a Range of Versions</strong>: For well-maintained utility libraries, it’s also a good idea to use a range. These packages typically have a high level of stability, and minor updates rarely break functionality.</p>
 </li>
 <li>
-<p>Backend Development:</p>
-<ul>
-<li>Frameworks: Node.js with Express, Django (Python), Ruby on Rails, Spring Boot (Java).</li>
-<li>Database: PostgreSQL, MySQL, or NoSQL options like MongoDB.</li>
-</ul>
+<p>Example:</p>
+<div class="language-toml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">requests</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"&gt;=2.25, &lt;3.0"</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">numpy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"&gt;=1.19, &lt;1.24"</span>
+</span></code></pre></div>
 </li>
 <li>
-<p>Real-Time Features:</p>
-<ul>
-<li>Messaging: Use WebSockets, Firebase Realtime Database, or PubNub.</li>
-<li>Notifications: Firebase Cloud Messaging (FCM), Apple Push Notification Service (APNs).</li>
-</ul>
-</li>
-<li>
-<p>Infrastructure:</p>
-<ul>
-<li>Cloud Providers: AWS, Google Cloud Platform, or Azure for scalable infrastructure.</li>
-<li>Containerization: Docker for deploying services.</li>
-<li>Orchestration: Kubernetes for managing containerized applications.</li>
-</ul>
+<p><strong>Why Range?</strong>: These libraries usually evolve incrementally, and staying within a range helps avoid potential breaking changes in major releases.</p>
 </li>
 </ul>
-</li>
-<li>
-<p>Design and User Experience</p>
+<h3 id="3-security-or-essential-dependency-packages-eg-jwt-auth-libraries">3.  Security or Essential Dependency Packages (e.g., JWT, Auth Libraries)</h3>
 <ul>
 <li>
-<p>Wireframing:</p>
-<ul>
-<li>Create wireframes to map out the user flow and app layout.</li>
-</ul>
+<p><strong>Use Exact Versions</strong>: For packages related to security or critical components (e.g., authentication libraries), it is often safer to lock them to an <mark>exact version</mark> to avoid unexpected changes in security behavior.</p>
 </li>
 <li>
-<p>UI/UX Design:</p>
-<ul>
-<li>Tools: Figma, Sketch, Adobe XD.</li>
-<li>Design Principles: Focus on a clean, intuitive design that facilitates user engagement and ease of use.</li>
-</ul>
+<p>Example</p>
+<div class="language-toml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">pyjwt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"2.1.0"</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">cryptography</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"3.4.7"</span>
+</span></code></pre></div>
 </li>
 <li>
-<p>Prototyping:</p>
-<ul>
-<li>Develop interactive prototypes to test user flows and gather feedback.</li>
-</ul>
+<p><strong>Why Exact Version?</strong>: Security packages can sometimes introduce significant changes even in minor releases, so locking them to a tested version helps ensure stability.</p>
 </li>
 </ul>
-</li>
-<li>
-<p>Development Process</p>
+<h3 id="4-development-or-build-tools-eg-linters-testing-libraries">4. Development or Build Tools (e.g., Linters, Testing Libraries)</h3>
 <ul>
 <li>
-<p>Frontend Development:</p>
-<ul>
-<li>UI Components: Implement user interfaces based on the designs.</li>
-<li>Integration: Connect with backend services and APIs.</li>
-</ul>
+<p><strong>Use Exact Versions or Very Narrow Ranges</strong>: For development tools (e.g., <code>flake8</code>, <code>pytest</code>), you may want to use exact versions or narrow ranges to ensure consistent behavior across all environments, especially in CI/CD pipelines.</p>
 </li>
 <li>
-<p>Backend Development:</p>
-<ul>
-<li>API Development: Create RESTful APIs or GraphQL endpoints.</li>
-<li>Authentication: Implement user login/signup, OAuth, JWT for secure sessions.</li>
-<li>Database Management: Design schema and implement CRUD operations.</li>
-<li>Matching Algorithms: Develop algorithms for matching users based on preferences and behavior.</li>
-</ul>
+<p>Example:</p>
+<div class="language-toml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">flake8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"3.9.2"</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">black</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"21.5b0"</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">pytest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"&gt;=6.2.4, &lt;6.3"</span>
+</span></code></pre></div>
 </li>
 <li>
-<p>Real-Time Communication:</p>
-<ul>
-<li>Messaging System: Set up real-time chat functionality.</li>
-<li>Video Calls: Integrate services like Agora or Twilio for video communication if required.</li>
-</ul>
+<p><strong>Why Exact or Narrow?</strong>: These tools directly impact your development workflow, and it’s essential to avoid unexpected changes in formatting, testing, or code linting due to updates.</p>
 </li>
 </ul>
-</li>
-<li>
-<p>Security and Privacy</p>
+<h3 id="5-packages-in-active-development-or-with-known-instability">5. Packages in Active Development or With Known Instability</h3>
 <ul>
 <li>
-<p>Data Encryption:</p>
-<ul>
-<li>Encrypt data in transit (using HTTPS) and at rest.</li>
-</ul>
+<p><strong>Use Exact Versions</strong>: If a package is relatively new, not well-documented, or has a history of breaking changes, it’s best to use an exact version that you’ve tested.</p>
 </li>
 <li>
-<p>Authentication and Authorization:</p>
-<ul>
-<li>Use secure methods for user authentication.</li>
-<li>Implement role-based access control if needed.</li>
-</ul>
+<p>Example:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>some-unstable-library = "0.5.2"
+</span></code></pre></div>
 </li>
 <li>
-<p>Data Privacy:</p>
-<ul>
-<li>Ensure compliance with data protection regulations (GDPR, CCPA).</li>
-<li>Develop clear privacy policies and data handling practices.</li>
-</ul>
-</li>
-<li>
-<p>User Reporting and Moderation:</p>
-<ul>
-<li>Implement features for reporting inappropriate content and users.</li>
-<li>Consider moderation tools and processes.</li>
-</ul>
+<p><strong>Why Exact Version?</strong>: For packages that might introduce breaking changes frequently or are still in early development (pre-1.0 versions), you should lock the version to avoid unexpected behavior.</p>
 </li>
 </ul>
-</li>
-<li>
-<p>Testing</p>
-<ul>
-<li>
-<p>Unit Testing:</p>
-<ul>
-<li>Test individual components and functions.</li>
-</ul>
-</li>
-<li>
-<p>Integration Testing:</p>
-<ul>
-<li>Test interactions between components and services.</li>
-</ul>
-</li>
-<li>
-<p>UI/UX Testing:</p>
-<ul>
-<li>Ensure the app is intuitive and responsive across different devices.</li>
-</ul>
-</li>
-<li>
-<p>Performance Testing:</p>
-<ul>
-<li>Test app performance under various conditions, including high load.</li>
-</ul>
-</li>
-<li>
-<p>Security Testing:</p>
-<ul>
-<li>Conduct vulnerability assessments and penetration testing.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>Deployment and Monitoring</p>
-<ul>
-<li>
-<p>App Store Preparation:</p>
-<ul>
-<li>Prepare app store listings with descriptions, screenshots, and marketing materials.</li>
-<li>Comply with app store guidelines for submission.</li>
-</ul>
-</li>
-<li>
-<p>Deployment:</p>
-<ul>
-<li>iOS: Use Xcode for building and submitting to the App Store.</li>
-<li>Android: Use Android Studio for building and submitting to Google Play.</li>
-</ul>
-</li>
-<li>
-<p>Monitoring:</p>
-<ul>
-<li>Analytics: Integrate tools like Google Analytics, Firebase Analytics to track user behavior.</li>
-<li>Error Tracking: Use services like Sentry or Rollbar to monitor and manage app errors.</li>
-</ul>
-</li>
-<li>
-<p>User Feedback:
-    Implement mechanisms for collecting user feedback and reviews.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>Post-Launch</p>
-<ul>
-<li>
-<p>Marketing and Promotion:</p>
-<ul>
-<li>Develop a marketing strategy including social media, partnerships, and ads.</li>
-<li>Engage with influencers or use PR to increase visibility.</li>
-</ul>
-</li>
-<li>
-<p>User Support:</p>
-<ul>
-<li>Provide customer support through in-app chat, email, or a help center.</li>
-</ul>
-</li>
-<li>
-<p>Iterative Updates:</p>
-<ul>
-<li>Continuously update the app based on user feedback and performance metrics.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<blockquote>
-<p>Summary</p>
-</blockquote>
-<ul>
-<li>Concept and Planning: Define the app’s purpose, target audience, and features.</li>
-<li>Technology Stack: Choose the right tools and frameworks for development.</li>
-<li>Design and UX: Focus on intuitive and engaging user interface design.</li>
-<li>Development Process: Implement frontend and backend, real-time features, and secure data handling.</li>
-<li>Testing: Ensure thorough testing for functionality, performance, and security.</li>
-<li>Deployment and Monitoring: Prepare for launch, deploy the app, and set up monitoring tools.</li>
-<li>Post-Launch: Market the app, provide support, and update based on feedback.</li>
-</ul>
-<p>By following this detailed guide, you can systematically approach the development of your dating app and address the various technical and strategic aspects involved.</p>
 <hr>
-<p><a href="https://www.milyoapp.com/">milyo</a></p></div>
+<h2 id="general-rule-of-thumb">General Rule of Thumb:</h2>
+<ul>
+<li><strong>Range for stability, minor updates, and flexibility</strong>: For mature and well-maintained packages.</li>
+<li><strong>Exact version for security, critical dependencies, or packages with frequent breaking changes</strong>: For security or more unstable libraries.</li>
+</ul>
+<p>This balanced approach ensures you get the best of both worlds: flexibility in your main dependencies while avoiding unexpected changes in critical areas.</p>
+<hr>
+<p>Here’s an example of an updated Pipfile with these recommendations:</p>
+<div class="language-toml highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">[[source]]</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"https://pypi.org/simple"</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">verify_ssl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"pypi"</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="k">[packages]</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="n">django</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"&gt;=3.2, &lt;4.0"</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="n">djangorestframework</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"&gt;=3.12, &lt;4.0"</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="k">[dev-packages]</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="n">flake8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"*"</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="n">black</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"*"</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="n">pytest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"*"</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="n">pytest-django</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"*"</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="n">safety</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"*"</span>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="n">bandit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"*"</span>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="k">[requires]</span>
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="n">python_version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"3.8"</span>
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="n">python_full_version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"3.8.1"</span>
+</span></code></pre></div>
+<p>This should make your project more stable and maintainable while following good development practices.</p></div>
 
 
 
@@ -4568,7 +4658,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../query-parameters/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Query Paramter">
+          <a href="../query-parameters/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Query Paramter">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -4585,13 +4675,13 @@
         
         
           
-          <a href="../backend/" class="md-footer__link md-footer__link--next" aria-label="Next: Backend">
+          <a href="../ideas/ideas/" class="md-footer__link md-footer__link--next" aria-label="Next: Intro">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Backend
+                Intro
               </div>
             </div>
             <div class="md-footer__button md-icon">
