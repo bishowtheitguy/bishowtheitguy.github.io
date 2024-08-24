@@ -3061,7 +3061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../APIs/core/exact-or-range-in-pipfile/" class="md-nav__link">
+      <a href="../../../APIs/core/guidelines-range-version-pipfile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4736,6 +4736,14 @@
 <p>For each version of Python, only the latest micro release (A.B.C) is officially supported. You can find the latest micro version for each series on the Python download page.</p>
 <p>Typically, we will support a Python version up to and including the first Django LTS release whose security support ends after security support for that version of Python ends. For example, Python <code>3.9</code> security support ends in October 2025 and Django <code>4.2</code> LTS security support ends in April 2026. Therefore Django <code>4.2</code> is the last version to support Python 3.9.</p>
 <p><a class="glightbox" href="https://static.djangoproject.com/img/release-roadmap.4cf783b31fbe.png" data-type="image" data-width="100%" data-height="auto" data-title="https://endoflife.date/django" data-desc-position="bottom"><img alt="https://endoflife.date/django" src="https://static.djangoproject.com/img/release-roadmap.4cf783b31fbe.png"></a></p>
+<hr>
+<details class="question" open="open">
+<summary><a href="https://docs.djangoproject.com/en/5.0/faq/install/#what-are-django-s-prerequisites">What are Django’s prerequisites?</a></summary>
+<p>Django requires Python. See the table in the next question for the versions of Python that work with each version of Django. Other Python libraries may be required for some use cases, but you’ll receive an error about them as they’re needed.</p>
+<p>For a development environment – if you just want to experiment with Django – you don’t need to have a separate web server installed or database server.</p>
+<p>Django comes with its own <a href="https://docs.djangoproject.com/en/5.0/ref/django-admin/#django-admin-runserver">lightweight development server</a>. For a production environment, Django follows the WSGI spec, <a href="https://peps.python.org/pep-3333/">PEP 3333</a>, which means it can run on a variety of web servers. See <a href="https://docs.djangoproject.com/en/5.0/howto/deployment/">Deploying Django</a> for more information.</p>
+<p>Django runs <a href="https://www.sqlite.org/">SQLite</a> by default, which is included in Python installations. For a production environment, we recommend <a href="https://www.postgresql.org/">PostgreSQL</a>; but we also officially support <a href="https://mariadb.org/">MariaDB</a>, <a href="https://www.mysql.com/">MySQL</a>, <a href="https://www.sqlite.org/">SQLite</a>, and <a href="https://www.oracle.com/">Oracle</a>. See <a href="https://docs.djangoproject.com/en/5.0/ref/databases/">Supported Databases</a> for more information.</p>
+</details>
 <hr>
 <h2 id="basic">Basic</h2>
 <h3 id="django-3-core-parts">Django <code>3</code> core parts</h3>
