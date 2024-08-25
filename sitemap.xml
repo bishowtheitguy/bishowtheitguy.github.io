@@ -606,6 +606,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishowtheitguy.github.io/blog/2024/07/10/integrating-code-formatting-and-linting-checks-in-github-actions/</loc>
+         <lastmod>2024-08-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/07/06/comparing-django-environ-python-decouple-and-python-dotenv/</loc>
          <lastmod>2024-08-25</lastmod>
          <changefreq>daily</changefreq>
@@ -837,6 +842,11 @@
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/06/16/pipenv/</loc>
+         <lastmod>2024-08-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishowtheitguy.github.io/blog/2024/07/10/pre-commit/</loc>
          <lastmod>2024-08-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
