@@ -10,13 +10,13 @@
         <meta name="author" content="it guy">
       
       
-        <link rel="canonical" href="https://bishowtheitguy.github.io/blog/archive/2024/page/2/">
+        <link rel="canonical" href="https://bishowtheitguy.github.io/blog/2024/07/12/content-type-or-mime-type-in-post/">
       
       
-        <link rel="prev" href="../../../../">
+        <link rel="prev" href="../../11/project-specific-configuration-vscode/">
       
       
-        <link rel="next" href="../../../../../backend/intro/">
+        <link rel="next" href="../../13/how-to-send-multipartform-data-request-file-in-postman/">
       
       
       <link rel="icon" href="../../../../../assets/logo/favicon.ico">
@@ -24,7 +24,7 @@
     
     
       
-        <title>2024 - Bishow IT Guy</title>
+        <title>Content-Type or MIME type in Post - Bishow IT Guy</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#2024" class="md-skip">
+        <a href="#content-type-or-mime-type-in-post" class="md-skip">
           Skip to content
         </a>
       
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2024
+              Content-Type or MIME type in Post
             
           </span>
         </div>
@@ -325,7 +325,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -392,11 +394,13 @@
                 
   
   
+    
+  
   
     
   
   
-    <li class="md-nav__item">
+    <li class="md-nav__item md-nav__item--active">
       <a href="../../../../" class="md-nav__link">
         
   
@@ -415,21 +419,19 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
         
           
           <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
@@ -443,7 +445,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1_2">
             <span class="md-nav__icon md-icon"></span>
             Archive
@@ -456,19 +458,10 @@
   
   
     
-      
-    
   
   
     <li class="md-nav__item">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="../../" class="md-nav__link md-nav__link--active">
+      <a href="../../../../archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -477,7 +470,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -4666,6 +4658,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -4678,6 +4672,143 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      Syntax
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#most-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      Most used
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mime-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      MIME types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MIME types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multipart-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multipart types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#important-mime-types-for-web-developers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important MIME types for Web developers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mime-type-content-type-realtionship" class="md-nav__link">
+    <span class="md-ellipsis">
+      MIME-Type &amp; Content-Type Realtionship
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MIME-Type & Content-Type Realtionship">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mime-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      MIME Type
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#content-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content-Type
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relationship" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relationship
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-in-a-post-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example in a POST Request
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4685,422 +4816,329 @@
             
           
           
-  <div class="md-content" data-md-component="content">
-    <div class="md-content__inner">
-      <header class="md-typeset">
-        <h1 id="2024">2024</h1>
-      </header>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-07-06 00:00:00">July 6, 2024</time></li>
-        
-        
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          Bishow Thapa
+                        
+                      </strong>
+                      <br>
+                      Creator
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
+                        <time datetime="2024-07-12 00:00:00" class="md-ellipsis">July 12, 2024</time>
+                      </div>
+                    </li>
+                    
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              4 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+          </nav>
           
-          <li class="md-meta__item">
-            
-              2 min read
-            
-          </li>
-        
-      </ul>
-      
+        </div>
+      </div>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="comparing-django-environ-python-decouple-and-python-dotenv"><a class="toclink" href="../../../../2024/07/06/comparing-django-environ-python-decouple-and-python-dotenv/">Comparing django-environ, python-decouple, and python-dotenv</a></h2>
-<p>All three libraries — <code>django-environ</code>, <code>python-decouple</code>, and <code>python-dotenv</code> — serve similar purposes: managing configuration and environment variables in Python projects. </p>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+  
 
-    <nav class="md-post__action">
-      <a href="../../../../2024/07/06/comparing-django-environ-python-decouple-and-python-dotenv/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
+<nav class="md-tags" >
+  
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-07-05 00:00:00">July 5, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              5 min read
-            
-          </li>
-        
-      </ul>
       
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="using-ajax-in-the-django-forms"><a class="toclink" href="../../../../2024/07/05/using-ajax-in-the-django-forms/">Using Ajax in the django forms</a></h2>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/07/05/using-ajax-in-the-django-forms/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
       
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-07-04 00:00:00">July 4, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              2 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="customizing-swagger-ui-removing-the-django-login-button"><a class="toclink" href="../../../../2024/07/04/customizing-swagger-ui-removing-the-django-login-button/">Customizing Swagger UI: Removing the Django Login Button</a></h2>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/07/04/customizing-swagger-ui-removing-the-django-login-button/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
+      <a href="../../../../../tags/#postman" class="md-tag md-tag-icon">postman</a>
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
+  
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-07-02 00:00:00">July 2, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              5 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="django-allauth-for-web-apps-dj-rest-auth-for-api"><a class="toclink" href="../../../../2024/07/02/django-allauth-for-web-apps---dj-rest-auth-for-api/"><code>django-allauth</code> for web apps &amp;  <code>dj-rest-auth</code> for API</a></h2>
-<p><code>dj-rest-auth</code> and <code>django-allauth</code> are related but serve different purposes in a Django project, particularly when it comes to user authentication and account management:</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/07/02/django-allauth-for-web-apps---dj-rest-auth-for-api/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
+      
+      
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-07-01 00:00:00">July 1, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              4 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="django-and-djangorestframework-views"><a class="toclink" href="../../../../2024/07/01/django-and-djangorestframework-views/">Django and djangorestframework <code>views</code></a></h2>
-<p>Django views are versatile for rendering web pages, while DRF generic views streamline API development with standardized CRUD operations and serialization support.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/07/01/django-and-djangorestframework-views/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
+      <a href="../../../../../tags/#http" class="md-tag md-tag-icon">http</a>
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-06-30 00:00:00">June 30, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              4 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="customizing-the-reqest-and-response-in-drf"><a class="toclink" href="../../../../2024/06/30/customizing-the-reqest-and-response-in-drf/">Customizing the Reqest and Response in DRF</a></h2>
-<p>Customizing the request and response JSON payload in Django Rest Framework (DRF) involves utilizing serializers, views, and potentially middleware to tailor how data is structured and presented in your API. Here's a comprehensive guide on how to achieve this customization:</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/06/30/customizing-the-reqest-and-response-in-drf/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-06-29 00:00:00">June 29, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="python-magic-or-dunder-methods"><a class="toclink" href="../../../../2024/06/29/python---magic-or-dunder-methods/">Python - Magic or Dunder Methods</a></h2>
-<p>In Python, <code>special methods</code> are also called <code>magic methods</code>, or <code>dunder methods</code>. This latter terminology, dunder, refers to a particular naming convention that Python uses to name its special <mark>methods</mark> and <mark>attributes</mark>. </p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/06/29/python---magic-or-dunder-methods/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-06-28 00:00:00">June 28, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              2 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="django-environ-package"><a class="toclink" href="../../../../2024/06/28/django-environ-package/"><code>django-environ</code> package</a></h2>
-<p><code>django-environ</code> is a library that helps manage environment variables in Django projects. It allows you to configure your Django settings via environment variables, which is useful for separating configuration from code, enhancing security, and making your application more flexible for different environments (<code>development</code>, <code>testing</code>, <code>production</code>).</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/06/28/django-environ-package/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-06-27 00:00:00">June 27, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              4 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="reverse-in-django"><a class="toclink" href="../../../../2024/06/27/reverse-in-django/">reverse() in django</a></h2>
-<p>In Django, the <code>reverse()</code> function is a powerful utility provided by the <code>django.urls</code> module that helps generate URLs for Django views based on their names and optional parameters. It is primarily used to avoid hardcoding URLs in your Django applications, promoting better code organization, maintainability, and flexibility.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/06/27/reverse-in-django/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-06-26 00:00:00">June 26, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="class-based-views-are-not-always-class-based-generic-views"><a class="toclink" href="../../../../2024/06/26/class-based-views-are-not-always-class-based-generic-views/">Class-Based Views are not always Class-Based Generic Views</a></h2>
-<p><mark>Most people confuse</mark> Class-Based Views and Class-Based Generic Views. Their names are similar, but they are not the same things. This has led to some interesting misconceptions as follows:</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/06/26/class-based-views-are-not-always-class-based-generic-views/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-      
-        
-          
-
-
-
-<nav class="md-pagination">
-  <a class="md-pagination__link" href="../../">1</a> <span class="md-pagination__current">2</span> <a class="md-pagination__link" href="../3/">3</a> <a class="md-pagination__link" href="../4/">4</a> <span class="md-pagination__dots">..</span> <a class="md-pagination__link" href="../8/">8</a>
+  
 </nav>
-        
+
+
+
+<div><h1 id="content-type-or-mime-type-in-post">Content-Type or MIME type in Post</h1>
+<p>The Content-Type representation header is used to indicate the original <a href="https://developer.mozilla.org/en-US/docs/Glossary/MIME_type">media type</a> of the resource (prior to any content encoding applied for sending).</p>
+<!-- more -->
+
+<h2 id="syntax">Syntax</h2>
+<div class="language-http highlight"><span class="filename">HTTP</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="err">Content-Type: text/html; charset=utf-8</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="err">Content-Type: multipart/form-data; boundary=something</span>
+</span></code></pre></div>
+<hr>
+<h2 id="most-used">Most used</h2>
+<p>The most commonly used <code>Content-Type</code> (or MIME type) for POST HTTP requests depends on the type of data being sent. Here are a few of the most frequently used Content-Type headers:</p>
+<ol>
+<li>application/json: Used for sending JSON data.</li>
+</ol>
+<hr>
+<h2 id="examples">Examples</h2>
+<details class="example" open="open">
+<summary>Content-Type in HTML forms</summary>
+<p>In a POST request, resulting from an HTML form submission, the Content-Type of the request is specified by the enctype attribute on the <code>&lt;form&gt;</code> element.</p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">"/foo"</span> <span class="na">method</span><span class="o">=</span><span class="s">"post"</span> <span class="na">enctype</span><span class="o">=</span><span class="s">"multipart/form-data"</span><span class="p">&gt;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="na">name</span><span class="o">=</span><span class="s">"description"</span> <span class="na">value</span><span class="o">=</span><span class="s">"some text"</span> <span class="p">/&gt;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"file"</span> <span class="na">name</span><span class="o">=</span><span class="s">"myFile"</span> <span class="p">/&gt;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"submit"</span><span class="p">&gt;</span>Submit<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<p>The request looks something like this (less interesting headers are omitted here):</p>
+<div class="language-http highlight"><span class="filename">HTTP</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nf">POST</span> <span class="nn">/foo</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="na">Content-Length</span><span class="o">:</span> <span class="l">68137</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="na">Content-Type</span><span class="o">:</span> <span class="l">multipart/form-data; boundary=---------------------------974767299852498929531610575</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>-----------------------------974767299852498929531610575
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>Content-Disposition: form-data; name="description"
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>some text
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>-----------------------------974767299852498929531610575
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>Content-Disposition: form-data; name="myFile"; filename="foo.txt"
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>Content-Type: text/plain
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>(content of the uploaded file foo.txt)
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>-----------------------------974767299852498929531610575--
+</span></code></pre></div>
+</details>
+<hr>
+<h2 id="mime-types">MIME types</h2>
+<p>A MIME type (now properly called "media type", <mark>but also sometimes</mark> "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled <code>audio/ogg</code>, or an image file <code>image/png</code>).</p>
+<h3 id="multipart-types">Multipart types</h3>
+<p>There are two multipart types:</p>
+<ol>
+<li>message</li>
+<li>multipart</li>
+</ol>
+<h3 id="important-mime-types-for-web-developers"><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#important_mime_types_for_web_developers">Important MIME types for Web developers</a></h3>
+<ol>
+<li>
+<p>application/octet-stream</p>
+<p>This is the <mark>default for <code>binary files</code></mark>. As it means <strong><em>unknown binary file</em></strong>, browsers usually don't execute it, or even ask if it should be executed. They treat it as if the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition">Content-Disposition</a> header was set to <code>attachment</code>, and propose a "Save As" dialog.</p>
+</li>
+<li>
+<p>text/plain</p>
+<p>This is the default for textual files. Even if it really means "unknown textual file," browsers assume they can display it.</p>
+</li>
+</ol>
+<details class="example" open="open">
+<summary>Example</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><input id="__tabbed_1_5" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Text</label><label for="__tabbed_1_2">Application</label><label for="__tabbed_1_3">Images</label><label for="__tabbed_1_4">Audio/Video</label><label for="__tabbed_1_5">Fonts</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Text
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>text/html: HTML documents.
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Content-Type: text/html
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>text/css: Cascading Style Sheets.
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>Content-Type: text/css
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>text/javascript or application/javascript: JavaScript files.
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>Content-Type: text/javascript
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Application
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>application/json: JSON data.
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>Content-Type: application/json
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>application/xml: XML data.
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>Content-Type: application/xml
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>application/octet-stream: Arbitrary binary data. Often used for file downloads.
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>Content-Type: application/octet-stream
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>application/pdf: PDF documents.
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>Content-Type: application/pdf
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>application/x-www-form-urlencoded: Form data in URL-encoded format.
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>Content-Type: application/x-www-form-urlencoded
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>multipart/form-data: Form data that includes files or binary data.
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>Content-Type: multipart/form-data; boundary=---boundary
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Images
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>image/jpeg: JPEG images.
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>Content-Type: image/jpeg
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>image/png: PNG images.
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>Content-Type: image/png
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>image/gif: GIF images.
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>Content-Type: image/gif
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>image/svg+xml: SVG vector images.
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>Content-Type: image/svg+xml
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Audio/Video
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>audio/mpeg: MP3 audio files.
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>Content-Type: audio/mpeg
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>audio/ogg: OGG audio files.
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>Content-Type: audio/ogg
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>audio/wav: WAV audio files.
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>Content-Type: audio/wav
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>video/mp4: MP4 video files.
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>Content-Type: video/mp4
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>video/ogg: OGG video files.
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>Content-Type: video/ogg
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Fonts
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>font/woff: Web Open Font Format (WOFF).
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>Content-Type: font/woff
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>font/woff2: Web Open Font Format (WOFF2).
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>Content-Type: font/woff2
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<hr>
+<p>Understanding these MIME types is crucial for web development as they help ensure that the server and browser correctly interpret and handle various types of content. Using the correct MIME type ensures proper rendering and functionality of web pages and applications.</p>
+</details>
+<hr>
+<h2 id="mime-type-content-type-realtionship">MIME-Type &amp; Content-Type Realtionship</h2>
+<h3 id="mime-type">MIME Type</h3>
+<ul>
+<li>What it is: A way to describe the type of content.</li>
+<li>Format: <code>type/subtype</code> (e.g., <code>application/json</code>, <code>text/html</code>).</li>
+<li>Example: <code>application/json</code> means the content is JSON.</li>
+</ul>
+<h3 id="content-type">Content-Type</h3>
+<ul>
+<li>What it is: An HTTP header that tells the server what type of content is being sent.</li>
+<li>What it contains: A MIME type.</li>
+<li>Example: <code>Content-Type: application/json</code> means the content being sent is JSON.</li>
+</ul>
+<h3 id="relationship">Relationship</h3>
+<ul>
+<li>The <code>Content-Type</code> header uses MIME types to specify the format of the data.</li>
+<li>In other words: MIME type is the value, and <code>Content-Type</code> is the header that holds that value.</li>
+</ul>
+<h3 id="example-in-a-post-request">Example in a POST Request</h3>
+<p>When sending JSON data in a POST request:</p>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nf">POST</span> <span class="nn">/api/resource</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="na">Host</span><span class="o">:</span> <span class="l">example.com</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="na">Content-Type</span><span class="o">:</span> <span class="l">application/json</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="na">Content-Length</span><span class="o">:</span> <span class="l">27</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="p">{</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John"</span><span class="p">,</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">  </span><span class="nt">"age"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="p">}</span>
+</span></code></pre></div>
+<ul>
+<li>Content-Type header: <code>Content-Type: application/json</code></li>
+<li>MIME type used: <code>application/json</code></li>
+</ul>
+<h3 id="summary">Summary</h3>
+<ul>
+<li>MIME Type: Describes the type of content (e.g., <code>application/json</code>).</li>
+<li>Content-Type: The HTTP header that includes the MIME type to tell the server what kind of data you're sending.</li>
+</ul>
+<p>So, MIME type and Content-Type are closely related, with MIME type being the description of the content and Content-Type being the header that communicates this description in HTTP requests.</p>
+<hr>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type">Content-Type: Http Headers</a></li>
+<li><a href="https://varaprasadh.medium.com/what-the-heck-is-multipart-form-data-8df091d598b5">what the heck is multipart/form-data???: medium</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME_types</a></li>
+</ul>
+<hr></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
       
-    </div>
+    </article>
   </div>
 
           
@@ -5119,10 +5157,12 @@
   
     
       
+        
+      
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../../../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Index">
+          <a href="../../11/project-specific-configuration-vscode/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Project-Specific Configuration vscode">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -5132,20 +5172,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Index
+                Project-Specific Configuration vscode
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../../../../backend/intro/" class="md-footer__link md-footer__link--next" aria-label="Next: Intro">
+          <a href="../../13/how-to-send-multipartform-data-request-file-in-postman/" class="md-footer__link md-footer__link--next" aria-label="Next: How to send multipart/form-data request file in postman">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Intro
+                How to send multipart/form-data request file in postman
               </div>
             </div>
             <div class="md-footer__button md-icon">

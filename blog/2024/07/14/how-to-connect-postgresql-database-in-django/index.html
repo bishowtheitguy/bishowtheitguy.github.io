@@ -10,13 +10,13 @@
         <meta name="author" content="it guy">
       
       
-        <link rel="canonical" href="https://bishowtheitguy.github.io/blog/archive/2024/page/2/">
+        <link rel="canonical" href="https://bishowtheitguy.github.io/blog/2024/07/14/how-to-connect-postgresql-database-in-django/">
       
       
-        <link rel="prev" href="../../../../">
+        <link rel="prev" href="../../13/how-to-send-multipartform-data-request-file-in-postman/">
       
       
-        <link rel="next" href="../../../../../backend/intro/">
+        <link rel="next" href="../../15/using-pipenv-to-manage-development-dependencies/">
       
       
       <link rel="icon" href="../../../../../assets/logo/favicon.ico">
@@ -24,7 +24,7 @@
     
     
       
-        <title>2024 - Bishow IT Guy</title>
+        <title>How to Connect PostgreSQL Database in Django" - Bishow IT Guy</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#2024" class="md-skip">
+        <a href="#how-to-connect-postgresql-database-in-django" class="md-skip">
           Skip to content
         </a>
       
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2024
+              How to Connect PostgreSQL Database in Django"
             
           </span>
         </div>
@@ -325,7 +325,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -392,11 +394,13 @@
                 
   
   
+    
+  
   
     
   
   
-    <li class="md-nav__item">
+    <li class="md-nav__item md-nav__item--active">
       <a href="../../../../" class="md-nav__link">
         
   
@@ -415,21 +419,19 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
         
           
           <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
@@ -443,7 +445,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1_2">
             <span class="md-nav__icon md-icon"></span>
             Archive
@@ -456,19 +458,10 @@
   
   
     
-      
-    
   
   
     <li class="md-nav__item">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="../../" class="md-nav__link md-nav__link--active">
+      <a href="../../../../archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -477,7 +470,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -4666,6 +4658,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -4678,6 +4672,101 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#to-connect-a-postgresql-database-to-your-django-project-follow-these-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      To connect a PostgreSQL database to your Django project, follow these steps:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="To connect a PostgreSQL database to your Django project, follow these steps:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-install-postgresql-and-psycopg2" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.  Install PostgreSQL and psycopg2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-configure-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.  Configure PostgreSQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-update-settingspy-in-django" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.  Update settings.py in Django
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-apply-migrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.  Apply Migrations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-run-the-django-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.  Run the Django Application
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differences-between-postgresql-and-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Differences Between PostgreSQL and MySQL:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-and-running-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation and Running PostgreSQL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#do-you-need-to-start-a-server-manually" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do You Need to Start a Server Manually?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4685,422 +4774,295 @@
             
           
           
-  <div class="md-content" data-md-component="content">
-    <div class="md-content__inner">
-      <header class="md-typeset">
-        <h1 id="2024">2024</h1>
-      </header>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-07-06 00:00:00">July 6, 2024</time></li>
-        
-        
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          Bishow Thapa
+                        
+                      </strong>
+                      <br>
+                      Creator
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
+                        <time datetime="2024-07-14 00:00:00" class="md-ellipsis">July 14, 2024</time>
+                      </div>
+                    </li>
+                    
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              3 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+          </nav>
           
-          <li class="md-meta__item">
-            
-              2 min read
-            
-          </li>
-        
-      </ul>
-      
+        </div>
+      </div>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="comparing-django-environ-python-decouple-and-python-dotenv"><a class="toclink" href="../../../../2024/07/06/comparing-django-environ-python-decouple-and-python-dotenv/">Comparing django-environ, python-decouple, and python-dotenv</a></h2>
-<p>All three libraries — <code>django-environ</code>, <code>python-decouple</code>, and <code>python-dotenv</code> — serve similar purposes: managing configuration and environment variables in Python projects. </p>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+  
 
-    <nav class="md-post__action">
-      <a href="../../../../2024/07/06/comparing-django-environ-python-decouple-and-python-dotenv/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
+<nav class="md-tags" >
+  
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-07-05 00:00:00">July 5, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              5 min read
-            
-          </li>
-        
-      </ul>
       
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="using-ajax-in-the-django-forms"><a class="toclink" href="../../../../2024/07/05/using-ajax-in-the-django-forms/">Using Ajax in the django forms</a></h2>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/07/05/using-ajax-in-the-django-forms/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
       
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-07-04 00:00:00">July 4, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              2 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="customizing-swagger-ui-removing-the-django-login-button"><a class="toclink" href="../../../../2024/07/04/customizing-swagger-ui-removing-the-django-login-button/">Customizing Swagger UI: Removing the Django Login Button</a></h2>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/07/04/customizing-swagger-ui-removing-the-django-login-button/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
+      <a href="../../../../../tags/#databse" class="md-tag md-tag-icon">databse</a>
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
+  
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-07-02 00:00:00">July 2, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              5 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="django-allauth-for-web-apps-dj-rest-auth-for-api"><a class="toclink" href="../../../../2024/07/02/django-allauth-for-web-apps---dj-rest-auth-for-api/"><code>django-allauth</code> for web apps &amp;  <code>dj-rest-auth</code> for API</a></h2>
-<p><code>dj-rest-auth</code> and <code>django-allauth</code> are related but serve different purposes in a Django project, particularly when it comes to user authentication and account management:</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/07/02/django-allauth-for-web-apps---dj-rest-auth-for-api/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
+      
+      
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-07-01 00:00:00">July 1, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              4 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="django-and-djangorestframework-views"><a class="toclink" href="../../../../2024/07/01/django-and-djangorestframework-views/">Django and djangorestframework <code>views</code></a></h2>
-<p>Django views are versatile for rendering web pages, while DRF generic views streamline API development with standardized CRUD operations and serialization support.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/07/01/django-and-djangorestframework-views/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
+      <a href="../../../../../tags/#django" class="md-tag md-tag-icon">django</a>
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-06-30 00:00:00">June 30, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              4 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="customizing-the-reqest-and-response-in-drf"><a class="toclink" href="../../../../2024/06/30/customizing-the-reqest-and-response-in-drf/">Customizing the Reqest and Response in DRF</a></h2>
-<p>Customizing the request and response JSON payload in Django Rest Framework (DRF) involves utilizing serializers, views, and potentially middleware to tailor how data is structured and presented in your API. Here's a comprehensive guide on how to achieve this customization:</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/06/30/customizing-the-reqest-and-response-in-drf/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
+  
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-06-29 00:00:00">June 29, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-      </ul>
       
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="python-magic-or-dunder-methods"><a class="toclink" href="../../../../2024/06/29/python---magic-or-dunder-methods/">Python - Magic or Dunder Methods</a></h2>
-<p>In Python, <code>special methods</code> are also called <code>magic methods</code>, or <code>dunder methods</code>. This latter terminology, dunder, refers to a particular naming convention that Python uses to name its special <mark>methods</mark> and <mark>attributes</mark>. </p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/06/29/python---magic-or-dunder-methods/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
       
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-06-28 00:00:00">June 28, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              2 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="django-environ-package"><a class="toclink" href="../../../../2024/06/28/django-environ-package/"><code>django-environ</code> package</a></h2>
-<p><code>django-environ</code> is a library that helps manage environment variables in Django projects. It allows you to configure your Django settings via environment variables, which is useful for separating configuration from code, enhancing security, and making your application more flexible for different environments (<code>development</code>, <code>testing</code>, <code>production</code>).</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/06/28/django-environ-package/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
+      <a href="../../../../../tags/#postgresql" class="md-tag md-tag-icon">postgresql</a>
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-06-27 00:00:00">June 27, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              4 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="reverse-in-django"><a class="toclink" href="../../../../2024/06/27/reverse-in-django/">reverse() in django</a></h2>
-<p>In Django, the <code>reverse()</code> function is a powerful utility provided by the <code>django.urls</code> module that helps generate URLs for Django views based on their names and optional parameters. It is primarily used to avoid hardcoding URLs in your Django applications, promoting better code organization, maintainability, and flexibility.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/06/27/reverse-in-django/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-06-26 00:00:00">June 26, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="class-based-views-are-not-always-class-based-generic-views"><a class="toclink" href="../../../../2024/06/26/class-based-views-are-not-always-class-based-generic-views/">Class-Based Views are not always Class-Based Generic Views</a></h2>
-<p><mark>Most people confuse</mark> Class-Based Views and Class-Based Generic Views. Their names are similar, but they are not the same things. This has led to some interesting misconceptions as follows:</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/06/26/class-based-views-are-not-always-class-based-generic-views/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-      
-        
-          
-
-
-
-<nav class="md-pagination">
-  <a class="md-pagination__link" href="../../">1</a> <span class="md-pagination__current">2</span> <a class="md-pagination__link" href="../3/">3</a> <a class="md-pagination__link" href="../4/">4</a> <span class="md-pagination__dots">..</span> <a class="md-pagination__link" href="../8/">8</a>
+  
 </nav>
-        
+
+
+
+<div><h1 id="how-to-connect-postgresql-database-in-django">How to Connect PostgreSQL Database in Django"</h1>
+<p>PostgreSQL is an open-source, powerful, and widely used relational database management system (RDBMS), similar to MySQL. It allows you to store and manage data and supports advanced features like JSON support, full-text search, and more complex querying options.</p>
+<!-- more -->
+
+<hr>
+<details class="questions" open="open">
+<summary>How to Connect PostgreSQL Database in Django: A Step-by-Step Guide</summary>
+</details>
+<h2 id="to-connect-a-postgresql-database-to-your-django-project-follow-these-steps">To connect a PostgreSQL database to your Django project, follow these steps:</h2>
+<h3 id="1-install-postgresql-and-psycopg2">1.  Install PostgreSQL and psycopg2</h3>
+<p>First, make sure PostgreSQL is installed on your system. If it isn't, you can install it using the appropriate method for your system:</p>
+<ul>
+<li>
+<p>On Ubuntu:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>postgresql<span class="w"> </span>postgresql-contrib
+</span></code></pre></div>
+</li>
+<li>
+<p>On Mac: You can use Homebrew:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>brew install postgresql
+</span></code></pre></div>
+</li>
+</ul>
+<p>Next, install <code>psycopg2</code>, the PostgreSQL <mark>adapter</mark> for Python, which is required for Django to interact with PostgreSQL.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pip<span class="w"> </span>install<span class="w"> </span>psycopg2
+</span></code></pre></div>
+<p>Alternatively, you can install <code>psycopg2-binary</code> for simplicity:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pip<span class="w"> </span>install<span class="w"> </span>psycopg2-binary
+</span></code></pre></div>
+<h3 id="2-configure-postgresql">2.  Configure PostgreSQL</h3>
+<p>Once PostgreSQL is installed, create a database and a user for your Django application.</p>
+<ol>
+<li>
+<p>Access the PostgreSQL prompt:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo -u postgres psql
+</span></code></pre></div>
+</li>
+<li>
+<p>Create a database:</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">mydatabase</span><span class="p">;</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>Create a user with a password:</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">myuser</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="n">PASSWORD</span><span class="w"> </span><span class="s1">'mypassword'</span><span class="p">;</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>Grant all privileges on the database to the user:</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">GRANT</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">mydatabase</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">myuser</span><span class="p">;</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>Exit the PostgreSQL prompt:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>\q
+</span></code></pre></div>
+</li>
+</ol>
+<h3 id="3-update-settingspy-in-django">3.  Update <code>settings.py</code> in Django</h3>
+<p>Now, update your Django project's <code>settings.py</code> to configure PostgreSQL as the database:</p>
+<ol>
+<li>Open your <code>settings.py</code> file.</li>
+<li>Modify the <code>DATABASES</code> setting to look like this:</li>
+</ol>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="s1">'default'</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>        <span class="s1">'ENGINE'</span><span class="p">:</span> <span class="s1">'django.db.backends.postgresql'</span><span class="p">,</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>        <span class="s1">'NAME'</span><span class="p">:</span> <span class="s1">'mydatabase'</span><span class="p">,</span>  <span class="c1"># Replace with your database name</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>        <span class="s1">'USER'</span><span class="p">:</span> <span class="s1">'myuser'</span><span class="p">,</span>      <span class="c1"># Replace with your database user</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>        <span class="s1">'PASSWORD'</span><span class="p">:</span> <span class="s1">'mypassword'</span><span class="p">,</span>  <span class="c1"># Replace with your user password</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>        <span class="s1">'HOST'</span><span class="p">:</span> <span class="s1">'localhost'</span><span class="p">,</span>   <span class="c1"># Or the IP address if using a remote database</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>        <span class="s1">'PORT'</span><span class="p">:</span> <span class="s1">'5432'</span><span class="p">,</span>        <span class="c1"># Default PostgreSQL port</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>    <span class="p">}</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="4-apply-migrations">4.  Apply Migrations</h3>
+<p>Once PostgreSQL is configured, run the following commands to apply migrations and create the necessary database tables:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">migrate</span>
+</span></code></pre></div>
+<h3 id="5-run-the-django-application">5.  Run the Django Application</h3>
+<p>Now, you can run your Django application with PostgreSQL as the database:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">runserver</span>
+</span></code></pre></div>
+<p>Your Django project is now connected to PostgreSQL!</p>
+<hr>
+<h2 id="differences-between-postgresql-and-mysql">Differences Between PostgreSQL and MySQL:</h2>
+<ul>
+<li>SQL Standard Compliance: PostgreSQL is considered more SQL-compliant and provides advanced features like foreign key constraints, window functions, and Common Table Expressions (CTEs).</li>
+<li>Extensibility: PostgreSQL is known for its extensibility, allowing users to add custom functions, data types, and operators.</li>
+<li>Data Integrity: PostgreSQL emphasizes data integrity and transactional reliability.</li>
+<li>License: PostgreSQL uses a more permissive license, while MySQL is under Oracle's ownership with a different licensing model.</li>
+</ul>
+<hr>
+<h2 id="installation-and-running-postgresql">Installation and Running PostgreSQL</h2>
+<p>Unlike XAMPP (which bundles MySQL, Apache, etc.), PostgreSQL is usually installed separately. <strong>After installation</strong>, <mark>PostgreSQL runs as a service</mark>, similar to how MySQL runs in the background on XAMPP.</p>
+<details class="example" open="open">
+<summary>Steps to Install PostgreSQL:</summary>
+<ol>
+<li>
+<p>Install PostgreSQL:</p>
+<ul>
+<li>
+<p>On Linux (Ubuntu):</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>sudo<span class="w"> </span>service<span class="w"> </span>postgresql<span class="w"> </span>start
+</span></code></pre></div>
+</li>
+<li>
+<p>On macOS (using Homebrew):</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>brew<span class="w"> </span>services<span class="w"> </span>start<span class="w"> </span>postgresql
+</span></code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>Start the PostgreSQL Service:</p>
+<ul>
+<li>
+<p>On Linux:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>sudo<span class="w"> </span>service<span class="w"> </span>postgresql<span class="w"> </span>start
+</span></code></pre></div>
+</li>
+<li>
+<p>On macOS:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>brew<span class="w"> </span>services<span class="w"> </span>start<span class="w"> </span>postgresql
+</span></code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>Verify if PostgreSQL is running:</p>
+<ul>
+<li>
+<p>You can check if PostgreSQL is running using the command:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>sudo<span class="w"> </span>service<span class="w"> </span>postgresql<span class="w"> </span>status
+</span></code></pre></div>
+</li>
+<li>
+<p>Or use <code>psql</code>, the PostgreSQL command-line tool:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>psql<span class="w"> </span>-U<span class="w"> </span>postgres
+</span></code></pre></div>
+</li>
+</ul>
+</li>
+</ol>
+</details>
+<hr>
+<h2 id="do-you-need-to-start-a-server-manually">Do You Need to Start a Server Manually?</h2>
+<p>Yes, just like MySQL in XAMPP, PostgreSQL <mark>runs as a</mark> server (or service) in the background. Once installed, it will automatically start when your machine boots up. You can start, stop, or restart PostgreSQL as needed.</p>
+<details class="tip" open="open">
+<summary>In summary:</summary>
+<ul>
+<li><strong>PostgreSQL</strong> is a standalone database server, like MySQL.</li>
+<li>After installation, PostgreSQL runs as a service (you don't need a XAMPP-like tool).</li>
+<li>You interact with PostgreSQL using its own command-line tool (<code>psql</code>) or through applications like Django, which connects to it once the service is running.</li>
+</ul>
+</details></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
       
-    </div>
+    </article>
   </div>
 
           
@@ -5119,10 +5081,12 @@
   
     
       
+        
+      
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../../../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Index">
+          <a href="../../13/how-to-send-multipartform-data-request-file-in-postman/" class="md-footer__link md-footer__link--prev" aria-label="Previous: How to send multipart/form-data request file in postman">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -5132,20 +5096,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Index
+                How to send multipart/form-data request file in postman
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../../../../backend/intro/" class="md-footer__link md-footer__link--next" aria-label="Next: Intro">
+          <a href="../../15/using-pipenv-to-manage-development-dependencies/" class="md-footer__link md-footer__link--next" aria-label="Next: Using Pipenv to Manage Development Dependencies">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Intro
+                Using Pipenv to Manage Development Dependencies
               </div>
             </div>
             <div class="md-footer__button md-icon">

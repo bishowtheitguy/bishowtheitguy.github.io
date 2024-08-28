@@ -641,6 +641,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishowtheitguy.github.io/blog/2024/07/12/content-type-or-mime-type-in-post/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/06/30/customizing-the-reqest-and-response-in-drf/</loc>
          <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
@@ -866,6 +871,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishowtheitguy.github.io/blog/2024/07/14/how-to-connect-postgresql-database-in-django/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/07/10/pre-commit/</loc>
          <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
@@ -911,6 +921,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishowtheitguy.github.io/blog/2024/07/13/how-to-send-multipartform-data-request-file-in-postman/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/05/15/separating-business-logic-and-presentation-in-django/</loc>
          <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
@@ -947,6 +962,11 @@
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/2024/06/19/phantomjs-headless-browser-is-dead/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishowtheitguy.github.io/blog/2024/07/15/using-pipenv-to-manage-development-dependencies/</loc>
          <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1031,6 +1051,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishowtheitguy.github.io/blog/page/8/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishowtheitguy.github.io/blog/archive/2024/page/2/</loc>
          <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
@@ -1057,6 +1082,11 @@
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/archive/2024/page/7/</loc>
+         <lastmod>2024-08-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishowtheitguy.github.io/blog/archive/2024/page/8/</loc>
          <lastmod>2024-08-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
