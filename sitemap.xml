@@ -16,6 +16,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bishowtheitguy.github.io/APIs/core/api-development/</loc>
+         <lastmod>2024-08-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bishowtheitguy.github.io/APIs/core/query-parameters/</loc>
          <lastmod>2024-08-31</lastmod>
          <changefreq>daily</changefreq>
@@ -212,6 +217,11 @@
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/APIs/testing/code-quality/intro/</loc>
+         <lastmod>2024-08-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bishowtheitguy.github.io/APIs/testing/framework/django-testing-framework/</loc>
          <lastmod>2024-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
