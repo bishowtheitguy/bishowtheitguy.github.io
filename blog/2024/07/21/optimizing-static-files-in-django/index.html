@@ -10,13 +10,11 @@
         <meta name="author" content="it guy">
       
       
-        <link rel="canonical" href="https://bishowtheitguy.github.io/blog/archive/2024/page/6/">
+        <link rel="canonical" href="https://bishowtheitguy.github.io/blog/2024/07/21/optimizing-static-files-in-django/">
       
       
-        <link rel="prev" href="../../../../">
+        <link rel="prev" href="../../20/understanding-djangos-serve-view-and-static-function/">
       
-      
-        <link rel="next" href="../../../../../backend/intro/">
       
       
       <link rel="icon" href="../../../../../assets/logo/favicon.ico">
@@ -24,7 +22,7 @@
     
     
       
-        <title>2024 - Bishow IT Guy</title>
+        <title>Optimizing Static Files in Django - Bishow IT Guy</title>
       
     
     
@@ -87,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#2024" class="md-skip">
+        <a href="#optimizing-static-files-in-django" class="md-skip">
           Skip to content
         </a>
       
@@ -122,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2024
+              Optimizing Static Files in Django
             
           </span>
         </div>
@@ -325,7 +323,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -392,11 +392,13 @@
                 
   
   
+    
+  
   
     
   
   
-    <li class="md-nav__item">
+    <li class="md-nav__item md-nav__item--active">
       <a href="../../../../" class="md-nav__link">
         
   
@@ -415,21 +417,19 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
         
           
           <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
@@ -443,7 +443,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1_2">
             <span class="md-nav__icon md-icon"></span>
             Archive
@@ -456,19 +456,10 @@
   
   
     
-      
-    
   
   
     <li class="md-nav__item">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="../../" class="md-nav__link md-nav__link--active">
+      <a href="../../../../archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -477,7 +468,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -4666,6 +4656,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -4678,6 +4670,92 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#simple-method-using-django-compressor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simple Method: Using django-compressor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-method-using-whitenoise-and-cache-busting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Method: Using whitenoise and Cache Busting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question" class="md-nav__link">
+    <span class="md-ellipsis">
+      Question
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Question">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#django-compressor" class="md-nav__link">
+    <span class="md-ellipsis">
+      django-compressor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whitenoise" class="md-nav__link">
+    <span class="md-ellipsis">
+      whitenoise
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#difference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Difference
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4685,407 +4763,317 @@
             
           
           
-  <div class="md-content" data-md-component="content">
-    <div class="md-content__inner">
-      <header class="md-typeset">
-        <h1 id="2024">2024</h1>
-      </header>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-12 00:00:00">May 12, 2024</time></li>
-        
-        
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          Bishow Thapa
+                        
+                      </strong>
+                      <br>
+                      Creator
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
+                        <time datetime="2024-07-21 00:00:00" class="md-ellipsis">July 21, 2024</time>
+                      </div>
+                    </li>
+                    
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              5 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+          </nav>
           
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-      </ul>
-      
+        </div>
+      </div>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="understanding-slugify-and-slugfield-in-django"><a class="toclink" href="../../../../2024/05/12/understanding-slugify-and-slugfield-in-django/">Understanding Slugify and SlugField in Django</a></h2>
-<p>In the world of web development with Django, creating clean and SEO-friendly URLs is crucial for enhancing user experience and search engine visibility. Two essential tools in achieving this are slugify and SlugField. Let's delve into what they are and how they play their roles in Django applications.</p>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+  
 
-    <nav class="md-post__action">
-      <a href="../../../../2024/05/12/understanding-slugify-and-slugfield-in-django/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
+<nav class="md-tags" >
+  
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-10 00:00:00">May 10, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-      </ul>
       
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="django-easy-thumbnails-package"><a class="toclink" href="../../../../2024/05/10/django-easy-thumbnails-package/">Django <code>easy-thumbnails</code> package</a></h2>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/05/10/django-easy-thumbnails-package/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
       
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-09 00:00:00">May 9, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="django-model-fields-with-textchoices"><a class="toclink" href="../../../../2024/05/09/django-model-fields-with-textchoices/">Django Model Fields with TextChoices</a></h2>
-<p>Before Django <code>3.0</code>, defining choices for model fields typically involved using tuples of tuples, which could be cumbersome and error-prone. With the introduction of TextChoices, Django provides a more elegant and Pythonic way to define choices using class-based syntax.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/05/09/django-model-fields-with-textchoices/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
+      <a href="../../../../../tags/#django" class="md-tag md-tag-icon">Django</a>
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
+  
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-09 00:00:00">May 9, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="django-admin-forms-with-formfield_overrides"><a class="toclink" href="../../../../2024/05/09/django-admin-forms-with-formfield_overrides/">Django Admin Forms with formfield_overrides</a></h2>
-<p><code>formfield_overrides</code> is a nifty attribute available in Django's <code>admin.ModelAdmin</code> class that allows developers to customize the form fields used in the admin interface for specific model fields. This feature enables you to enhance the user experience, integrate third-party widgets, and streamline data entry without the need for extensive customizations.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/05/09/django-admin-forms-with-formfield_overrides/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
+      
+      
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-08 00:00:00">May 8, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="customizing-how-models-are-displayed"><a class="toclink" href="../../../../2024/05/08/customizing-how-models-are-displayed/">Customizing how models are displayed</a></h2>
-<p>In Django, ModelAdmin is a class used in the Django admin interface to customize how models are displayed and interacted with. It allows you to specify various attributes and methods to control the behavior and appearance of models in the admin interface. </p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/05/08/customizing-how-models-are-displayed/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-07 00:00:00">May 7, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              4 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="creating-a-blog-model-in-django"><a class="toclink" href="../../../../2024/05/07/creating-a-blog-model-in-django/">Creating a blog model in django</a></h2>
-<p>A Django model is a source of information and behaviors of your data. It consists of a Python class that subclasses django.db.models.Model. Each model maps to a single database table, where each attribute of the class represents a database field.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/05/07/creating-a-blog-model-in-django/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
+      <a href="../../../../../tags/#production" class="md-tag md-tag-icon">production</a>
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-06 00:00:00">May 6, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              4 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="active-link-in-django"><a class="toclink" href="../../../../2024/05/06/active-link-in-django/">Active link in django</a></h2>
-<p>we'll explore different techniques to add an 'active' class to navigation elements based on the user's location, providing visual cues that enhance navigation clarity.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/05/06/active-link-in-django/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-06 00:00:00">May 6, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="django-with-ajax"><a class="toclink" href="../../../../2024/05/06/django-with-ajax/">Django with ajax</a></h2>
-<p>In the ever-evolving landscape of web development, enhancing user experience is paramount. One powerful tool for achieving this is AJAX (<code>Asynchronous JavaScript and XML</code>), which allows for seamless, asynchronous communication between the client and server. When integrated with Django, a high-level Python web framework, AJAX can elevate your web applications to new heights of interactivity and responsiveness.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/05/06/django-with-ajax/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-03 00:00:00">May 3, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              2 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="a-guide-to-csrf-cookie-settings"><a class="toclink" href="../../../../2024/05/03/a-guide-to-csrf-cookie-settings/">A Guide to CSRF Cookie Settings</a></h2>
-<p>Django, a popular web framework for Python, comes equipped with robust measures to mitigate CSRF risks.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/05/03/a-guide-to-csrf-cookie-settings/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-02 00:00:00">May 2, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              2 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="ensuring-admin-access-control-in-django-models"><a class="toclink" href="../../../../2024/05/02/ensuring-admin-access-control-in-django-models/">Ensuring Admin Access Control in Django Models</a></h2>
-<p>In a Django project, managing access control to models within the admin interface is crucial for maintaining data integrity and security. While Django provides powerful tools for defining permissions, it's essential to customize these permissions to meet specific requirements.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/05/02/ensuring-admin-access-control-in-django-models/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-      
-        
-          
-
-
-
-<nav class="md-pagination">
-  <a class="md-pagination__link" href="../../">1</a> <span class="md-pagination__dots">..</span> <a class="md-pagination__link" href="../4/">4</a> <a class="md-pagination__link" href="../5/">5</a> <span class="md-pagination__current">6</span> <a class="md-pagination__link" href="../7/">7</a> <a class="md-pagination__link" href="../8/">8</a>
+  
 </nav>
-        
+
+
+
+<div><h1 id="optimizing-static-files-in-django">Optimizing Static Files in Django</h1>
+<p>When building a Django project, optimizing static files like CSS and JavaScript is crucial for improving performance and delivering a better user experience</p>
+<!-- more -->
+
+<hr>
+<p>This blog post will guide you through two effective techniques: compressing static files and implementing cache busting. We’ll cover both simple and advanced methods to help you get the most out of your static assets.</p>
+<div class="admonition question">
+<p class="admonition-title">Optimizing Static Files in Django: Simple and Advanced Techniques</p>
+</div>
+<h2 id="simple-method-using-django-compressor">Simple Method: Using <code>django-compressor</code></h2>
+<ol>
+<li>
+<p><strong>Install <code>django-compressor</code></strong></p>
+<p>First, you need to install <code>django-compressor</code>, which simplifies the minification and compression of CSS and JavaScript files.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>django-compressor
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>Configure <code>django-compressor</code> in Your Django Project</strong></p>
+<p>Add <code>compressor</code> to your <code>INSTALLED_APPS</code> in <code>settings.py</code>:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="c1"># other apps</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="s1">'compressor'</span><span class="p">,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">]</span>
+</span></code></pre></div>
+<p>Add the following settings to your <code>settings.py</code> to configure <code>django-compressor</code>:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">COMPRESS_ENABLED</span> <span class="o">=</span> <span class="kc">True</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">COMPRESS_OFFLINE</span> <span class="o">=</span> <span class="kc">True</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">COMPRESS_ROOT</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s1">'static'</span><span class="p">)</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">COMPRESS_URL</span> <span class="o">=</span> <span class="s1">'/static/'</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">COMPRESS_PRECOMPILERS</span> <span class="o">=</span> <span class="p">(</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="p">(</span><span class="s1">'text/x-scss'</span><span class="p">,</span> <span class="s1">'sass --stdin --no-cache --style compressed'</span><span class="p">),</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">)</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>Update Your Templates</strong></p>
+<p>Use the <code>{% compress %}</code> tag in your templates to specify which files should be compressed:</p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>{% load compress %}
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>{% compress css %}
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"{% static 'css/style.css' %}"</span><span class="p">&gt;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>{% endcompress %}
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>{% compress js %}
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"{% static 'js/main.js' %}"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>{% endcompress %}
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>Collect Static Files</strong></p>
+<p>Run the following command to collect static files and generate compressed files:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>python<span class="w"> </span>manage.py<span class="w"> </span>collectstatic
+</span></code></pre></div>
+</li>
+</ol>
+<h2 id="advanced-method-using-whitenoise-and-cache-busting">Advanced Method: Using <code>whitenoise</code> and Cache Busting</h2>
+<ol>
+<li>
+<p><strong>Install <code>whitenoise</code></strong></p>
+<p><code>whitenoise</code> helps to serve compressed static files and manage cache-busting easily. Install it with:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">pip</span> <span class="n">install</span> <span class="n">whitenoise</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>Configure <code>whitenoise</code> in Your Django Project</strong></p>
+<p>In <code>settings.py</code>, add <code>whitenoise.middleware.WhiteNoiseMiddleware</code> to your <code>MIDDLEWARE</code> list:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">MIDDLEWARE</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="c1"># other middleware</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="s1">'whitenoise.middleware.WhiteNoiseMiddleware'</span><span class="p">,</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p">]</span>
+</span></code></pre></div>
+<p>Add the following settings to enable compression and cache-busting:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">STATICFILES_STORAGE</span> <span class="o">=</span> <span class="s1">'whitenoise.storage.CompressedManifestStaticFilesStorage'</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>Configure Cache Busting</strong></p>
+<p><code>whitenoise</code> uses the <code>CompressedManifestStaticFilesStorage</code> to automatically handle cache busting by appending hashed filenames to static files. You don’t need to do anything extra; it works out of the box.</p>
+<ol>
+<li>Update Your Templates</li>
+</ol>
+<p>Continue using the <code>{% static %}</code> template tag as usual. <code>whitenoise</code> will handle the cache-busting automatically:</p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"{% static 'css/style.css' %}"</span><span class="p">&gt;</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"{% static 'js/main.js' %}"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>Collect Static Files</strong></p>
+<p>Run the command to collect static files and apply optimizations:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">python</span> <span class="n">manage</span><span class="o">.</span><span class="n">py</span> <span class="n">collectstatic</span>
+</span></code></pre></div>
+</li>
+</ol>
+<h2 id="conclusion">Conclusion</h2>
+<p>Optimizing static files is a key part of improving your Django application’s performance. <mark>By using</mark> <a href="https://django-compressor.readthedocs.io/en/stable/">django-compressor</a>, you can easily minify and compress your CSS and JavaScript files. <mark>For advanced optimization</mark>, <code>whitenoise</code> provides built-in support for serving compressed files and managing cache busting with minimal configuration. Implement these techniques to ensure your application is fast, efficient, and delivers the latest content to your users.</p>
+<hr>
+<h2 id="question">Question</h2>
+<div class="admonition question">
+<p class="admonition-title">Understanding django-compressor and whitenoise</p>
+</div>
+<p><strong>Understanding django-compressor and whitenoise</strong></p>
+<p><code>django-compressor</code> and <code>whitenoise</code> are two different tools used for optimizing static files in Django projects. Each serves a unique purpose and can be used in different scenarios based on your project needs. Here’s a detailed comparison to help you understand when to use each one and their capabilities.</p>
+<h3 id="django-compressor"><code>django-compressor</code></h3>
+<p><strong>What is django-compressor?</strong></p>
+<p>django-compressor is a Django library that helps to compress and minify CSS and JavaScript files. It works by combining multiple CSS or JS files into a single file and minifying them to reduce their size, which improves load times and reduces HTTP requests.</p>
+<details class="info" open="open">
+<summary>Key Features</summary>
+<ul>
+<li>Minification: Compresses CSS and JavaScript files by removing whitespace and comments.</li>
+<li>Concatenation: Combines multiple CSS or JS files into a single file to reduce the number of HTTP requests.</li>
+<li>Preprocessing: Supports preprocessing languages like SCSS, LESS, and CoffeeScript.</li>
+<li>Offline Compression: Can pre-compress files and serve them efficiently.</li>
+</ul>
+</details>
+<details class="tip" open="open">
+<summary>When to Use django-compressor</summary>
+<ul>
+<li><strong>If You Need File Minification and Concatenation</strong>: Ideal for projects where CSS and JavaScript files need to be minified and combined to optimize loading times.</li>
+<li><strong>When Using Preprocessors</strong>: If you use CSS preprocessors (like SCSS) or JavaScript preprocessors, <code>django-compressor</code> can handle these transformations.</li>
+</ul>
+</details>
+<details class="tip" open="open">
+<summary>When Not to Use django-compressor</summary>
+<ul>
+<li><strong>If You Prefer Built-in Solutions for Static Files</strong>: For simple static file handling, <code>whitenoise</code> might be a better choice as it provides built-in compression and caching features without additional setup.</li>
+<li><strong>If You Need Advanced Caching</strong>: <code>django-compressor</code> does not handle cache-busting out of the box, which can be a limitation in certain scenarios.</li>
+</ul>
+</details>
+<details class="info" open="open">
+<summary>Limitations</summary>
+<ul>
+<li><strong>Does Not Handle Image Files</strong>: <code>django-compressor</code> is specifically designed for CSS and JavaScript files. It does not handle image optimization.</li>
+</ul>
+</details>
+<hr>
+<h3 id="whitenoise">whitenoise</h3>
+<p><strong>What is whitenoise?</strong></p>
+<p><code>whitenoise</code> is a Django middleware that provides a simple way to serve static files directly from your Django application. It supports compressed static files, cache-busting, and can be a more straightforward solution for handling static files in production.</p>
+<details class="info" open="open">
+<summary>Key Features</summary>
+<ul>
+<li>Static File Serving: Serves static files efficiently without needing a separate web server configuration.</li>
+<li>Compression: Automatically compresses CSS and JavaScript files using gzip and Brotli.</li>
+<li>Cache-Busting: Handles cache-busting by appending hashed file names.</li>
+<li>Easy Setup: Requires minimal configuration compared to <code>django-compressor</code>.</li>
+</ul>
+</details>
+<details class="tip" open="open">
+<summary>When to Use whitenoise</summary>
+<ul>
+<li>If You Need Simple Static File Serving: Great for projects that need an easy way to serve static files with built-in optimization features.</li>
+<li>For Cache-Busting Needs: Automatically handles cache-busting for static files, making it easier to ensure users receive the latest versions of files.</li>
+<li>If You Want Minimal Configuration: Easier to set up compared to <code>django-compressor</code>, with fewer configuration steps required.</li>
+</ul>
+</details>
+<details class="tip" open="open">
+<summary>When Not to Use whitenoise</summary>
+<ul>
+<li>If You Need Advanced Preprocessing: If you require preprocessing of CSS or JavaScript files (e.g., SCSS to CSS), <code>whitenoise</code> does not provide this functionality.</li>
+<li>For Projects with High Customization Needs: If you need a highly customized setup for static file management, <code>django-compressor</code> might offer more flexibility.</li>
+</ul>
+</details>
+<details class="info" open="open">
+<summary>Limitations</summary>
+<ul>
+<li>Does Not Handle Image File Optimization: Like <code>django-compressor</code>, <code>whitenoise</code> does not handle image file compression or optimization.</li>
+</ul>
+</details>
+<h3 id="summary">Summary</h3>
+<ul>
+<li><strong>Use</strong> <code>django-compressor</code> if you need to minify, concatenate, and preprocess CSS and JavaScript files. It's particularly useful for more complex setups where file transformation is required.</li>
+<li><strong>Use</strong> whitenoise if you want a simple and efficient way to serve static files with built-in support for compression and cache-busting. It’s great for straightforward use cases and offers minimal configuration.</li>
+</ul>
+<p>Both tools are powerful but serve different needs. Choose based on your project's requirements for static file handling, preprocessing, and optimization. Neither <code>django-compressor</code> nor <code>whitenoise</code> directly handles image file optimization, so consider additional tools or libraries if image optimization is also a requirement.</p>
+<hr>
+<h2 id="difference">Difference</h2>
+<p>The key difference between <code>django-compressor</code> and <code>whitenoise</code> is their primary function:</p>
+<ul>
+<li>
+<p><code>django-compressor</code> focuses on <strong>minifying and concatenating</strong> CSS and JavaScript files, and it supports preprocessing languages like SCSS and LESS. It is primarily a tool for optimizing and managing the delivery of these static assets.</p>
+</li>
+<li>
+<p><code>whitenoise</code> is primarily a tool for <strong>serving static files</strong> <mark>directly from your</mark> <code>Django application</code> with built-in compression and cache-busting. It simplifies static file handling and improves performance with minimal configuration.</p>
+</li>
+</ul>
+<p>In summary, <code>django-compressor</code> is about optimizing and transforming static files, while whitenoise is about efficiently serving static files with built-in optimizations.</p>
+<hr>
+<p><code>django-compressor</code> focuses on <strong>optimizing and minifying</strong> CSS and JavaScript files, <mark>while</mark> <code>whitenoise</code> is designed for <strong>efficiently serving</strong> static files with built-in compression and cache-busting.</p></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
       
-    </div>
+    </article>
   </div>
 
           
@@ -5104,10 +5092,12 @@
   
     
       
+        
+      
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../../../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Index">
+          <a href="../../20/understanding-djangos-serve-view-and-static-function/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Understanding Django’s serve View and static() Function">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -5117,27 +5107,11 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Index
+                Understanding Django’s serve View and static() Function
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../../../../../backend/intro/" class="md-footer__link md-footer__link--next" aria-label="Next: Intro">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Intro
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
         
       </nav>
     

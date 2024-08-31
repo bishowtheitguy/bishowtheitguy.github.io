@@ -10,13 +10,13 @@
         <meta name="author" content="it guy">
       
       
-        <link rel="canonical" href="https://bishowtheitguy.github.io/blog/archive/2024/page/6/">
+        <link rel="canonical" href="https://bishowtheitguy.github.io/blog/2024/07/17/mastering-django-static-file-settings-static_url-static_root--staticfiles_dirs/">
       
       
-        <link rel="prev" href="../../../../">
+        <link rel="prev" href="../understanding-media_root-and-media_url-in-django/">
       
       
-        <link rel="next" href="../../../../../backend/intro/">
+        <link rel="next" href="../../18/why-django-serves-static-files-differently-in-development-and-production/">
       
       
       <link rel="icon" href="../../../../../assets/logo/favicon.ico">
@@ -24,7 +24,7 @@
     
     
       
-        <title>2024 - Bishow IT Guy</title>
+        <title>Mastering Django Static File Settings: STATIC_URL, STATIC_ROOT & STATICFILES_DIRS - Bishow IT Guy</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#2024" class="md-skip">
+        <a href="#mastering-django-static-file-settings-static_url-static_root-staticfiles_dirs" class="md-skip">
           Skip to content
         </a>
       
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2024
+              Mastering Django Static File Settings: STATIC_URL, STATIC_ROOT & STATICFILES_DIRS
             
           </span>
         </div>
@@ -325,7 +325,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -392,11 +394,13 @@
                 
   
   
+    
+  
   
     
   
   
-    <li class="md-nav__item">
+    <li class="md-nav__item md-nav__item--active">
       <a href="../../../../" class="md-nav__link">
         
   
@@ -415,21 +419,19 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
         
           
           <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
@@ -443,7 +445,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1_2">
             <span class="md-nav__icon md-icon"></span>
             Archive
@@ -456,19 +458,10 @@
   
   
     
-      
-    
   
   
     <li class="md-nav__item">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="../../" class="md-nav__link md-nav__link--active">
+      <a href="../../../../archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -477,7 +470,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -4666,6 +4658,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -4678,6 +4672,206 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-static-files-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Static Files Work
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How Static Files Work">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Development:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Production:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explanation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Explanation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-static_url" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.  STATIC_URL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-static_root" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. STATIC_ROOT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-staticfiles_dirs" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. STATICFILES_DIRS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose-of-a-top-level-global-static-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose of a Top-Level Global Static Directory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-static-files-in-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Static Files in Templates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hidden-magic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hidden Magic
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hidden Magic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-all-the-seetings" class="md-nav__link">
+    <span class="md-ellipsis">
+      List all the seetings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diffsettings" class="md-nav__link">
+    <span class="md-ellipsis">
+      diffsettings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4685,407 +4879,310 @@
             
           
           
-  <div class="md-content" data-md-component="content">
-    <div class="md-content__inner">
-      <header class="md-typeset">
-        <h1 id="2024">2024</h1>
-      </header>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-12 00:00:00">May 12, 2024</time></li>
-        
-        
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          Bishow Thapa
+                        
+                      </strong>
+                      <br>
+                      Creator
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
+                        <time datetime="2024-07-17 00:00:00" class="md-ellipsis">July 17, 2024</time>
+                      </div>
+                    </li>
+                    
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              5 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+          </nav>
           
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-      </ul>
-      
+        </div>
+      </div>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="understanding-slugify-and-slugfield-in-django"><a class="toclink" href="../../../../2024/05/12/understanding-slugify-and-slugfield-in-django/">Understanding Slugify and SlugField in Django</a></h2>
-<p>In the world of web development with Django, creating clean and SEO-friendly URLs is crucial for enhancing user experience and search engine visibility. Two essential tools in achieving this are slugify and SlugField. Let's delve into what they are and how they play their roles in Django applications.</p>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+  
 
-    <nav class="md-post__action">
-      <a href="../../../../2024/05/12/understanding-slugify-and-slugfield-in-django/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
+<nav class="md-tags" >
+  
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-10 00:00:00">May 10, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 min read
-            
-          </li>
-        
-      </ul>
       
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="django-easy-thumbnails-package"><a class="toclink" href="../../../../2024/05/10/django-easy-thumbnails-package/">Django <code>easy-thumbnails</code> package</a></h2>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/05/10/django-easy-thumbnails-package/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
       
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-09 00:00:00">May 9, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="django-model-fields-with-textchoices"><a class="toclink" href="../../../../2024/05/09/django-model-fields-with-textchoices/">Django Model Fields with TextChoices</a></h2>
-<p>Before Django <code>3.0</code>, defining choices for model fields typically involved using tuples of tuples, which could be cumbersome and error-prone. With the introduction of TextChoices, Django provides a more elegant and Pythonic way to define choices using class-based syntax.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/05/09/django-model-fields-with-textchoices/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
+      <a href="../../../../../tags/#django" class="md-tag md-tag-icon">Django</a>
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-09 00:00:00">May 9, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="django-admin-forms-with-formfield_overrides"><a class="toclink" href="../../../../2024/05/09/django-admin-forms-with-formfield_overrides/">Django Admin Forms with formfield_overrides</a></h2>
-<p><code>formfield_overrides</code> is a nifty attribute available in Django's <code>admin.ModelAdmin</code> class that allows developers to customize the form fields used in the admin interface for specific model fields. This feature enables you to enhance the user experience, integrate third-party widgets, and streamline data entry without the need for extensive customizations.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/05/09/django-admin-forms-with-formfield_overrides/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-08 00:00:00">May 8, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="customizing-how-models-are-displayed"><a class="toclink" href="../../../../2024/05/08/customizing-how-models-are-displayed/">Customizing how models are displayed</a></h2>
-<p>In Django, ModelAdmin is a class used in the Django admin interface to customize how models are displayed and interacted with. It allows you to specify various attributes and methods to control the behavior and appearance of models in the admin interface. </p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/05/08/customizing-how-models-are-displayed/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-07 00:00:00">May 7, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              4 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="creating-a-blog-model-in-django"><a class="toclink" href="../../../../2024/05/07/creating-a-blog-model-in-django/">Creating a blog model in django</a></h2>
-<p>A Django model is a source of information and behaviors of your data. It consists of a Python class that subclasses django.db.models.Model. Each model maps to a single database table, where each attribute of the class represents a database field.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/05/07/creating-a-blog-model-in-django/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-06 00:00:00">May 6, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              4 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="active-link-in-django"><a class="toclink" href="../../../../2024/05/06/active-link-in-django/">Active link in django</a></h2>
-<p>we'll explore different techniques to add an 'active' class to navigation elements based on the user's location, providing visual cues that enhance navigation clarity.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/05/06/active-link-in-django/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-06 00:00:00">May 6, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="django-with-ajax"><a class="toclink" href="../../../../2024/05/06/django-with-ajax/">Django with ajax</a></h2>
-<p>In the ever-evolving landscape of web development, enhancing user experience is paramount. One powerful tool for achieving this is AJAX (<code>Asynchronous JavaScript and XML</code>), which allows for seamless, asynchronous communication between the client and server. When integrated with Django, a high-level Python web framework, AJAX can elevate your web applications to new heights of interactivity and responsiveness.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/05/06/django-with-ajax/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-03 00:00:00">May 3, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              2 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="a-guide-to-csrf-cookie-settings"><a class="toclink" href="../../../../2024/05/03/a-guide-to-csrf-cookie-settings/">A Guide to CSRF Cookie Settings</a></h2>
-<p>Django, a popular web framework for Python, comes equipped with robust measures to mitigate CSRF risks.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/05/03/a-guide-to-csrf-cookie-settings/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/25550945" alt="Bishow Thapa">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-05-02 00:00:00">May 2, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              2 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="ensuring-admin-access-control-in-django-models"><a class="toclink" href="../../../../2024/05/02/ensuring-admin-access-control-in-django-models/">Ensuring Admin Access Control in Django Models</a></h2>
-<p>In a Django project, managing access control to models within the admin interface is crucial for maintaining data integrity and security. While Django provides powerful tools for defining permissions, it's essential to customize these permissions to meet specific requirements.</p>
-
-    <nav class="md-post__action">
-      <a href="../../../../2024/05/02/ensuring-admin-access-control-in-django-models/">
-        Continue reading
-      </a>
-    </nav>
-  </div>
-</article>
-      
-      
-        
-          
-
-
-
-<nav class="md-pagination">
-  <a class="md-pagination__link" href="../../">1</a> <span class="md-pagination__dots">..</span> <a class="md-pagination__link" href="../4/">4</a> <a class="md-pagination__link" href="../5/">5</a> <span class="md-pagination__current">6</span> <a class="md-pagination__link" href="../7/">7</a> <a class="md-pagination__link" href="../8/">8</a>
+  
 </nav>
-        
+
+
+
+<div><h1 id="mastering-django-static-file-settings-static_url-static_root-staticfiles_dirs">Mastering Django Static File Settings: <code>STATIC_URL</code>, <code>STATIC_ROOT</code> &amp; <code>STATICFILES_DIRS</code></h1>
+<p>Django's static file settings are configuration options in the <code>settings.py</code> file that control how static files (such as CSS, JavaScript, and images) are managed and served in a Django project.</p>
+<!-- more -->
+
+<h2 id="overview">Overview</h2>
+<p>Static files are essential for adding styles, scripts, and images to your web application, and Django provides a structured way to handle these files both during development and in production.</p>
+<div class="admonition question">
+<p class="admonition-title">Mastering Django Static File Settings: From <code>STATIC_URL</code> to <code>STATICFILES_DIRS</code></p>
+</div>
+<h3 id="how-static-files-work">How Static Files Work</h3>
+<h4 id="1-development">1. Development:</h4>
+<ul>
+<li>During development, Django uses the <code>STATIC_URL</code> setting to serve static files directly.</li>
+<li>The <code>STATICFILES_DIRS</code> setting allows you to include additional directories for static files.</li>
+</ul>
+<h4 id="2-production">2. Production:</h4>
+<ul>
+<li>When deploying, you run <code>python manage.py collectstatic</code> to gather all static files into the directory specified by <code>STATIC_ROOT</code>.</li>
+<li>Static files are then served by the web server (e.g., Nginx, Apache) rather than by Django itself.</li>
+</ul>
+<hr>
+<h3 id="example-configuration">Example Configuration</h3>
+<p>Here's a sample configuration that might be used in a Django project:</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># settings.py</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># URL prefix for serving static files</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">STATIC_URL</span> <span class="o">=</span> <span class="s1">'/static/'</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># Additional directories to search for static files</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">STATICFILES_DIRS</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s1">'assets'</span><span class="p">),</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">]</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1"># Directory where static files will be collected for production</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="n">STATIC_ROOT</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s1">'staticfiles'</span><span class="p">)</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="c1"># Storage backend for static files (optional)</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="n">STATICFILES_STORAGE</span> <span class="o">=</span> <span class="s1">'django.contrib.staticfiles.storage.StaticFilesStorage'</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="c1"># Finders for locating static files (optional)</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="n">STATICFILES_FINDERS</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    <span class="s1">'django.contrib.staticfiles.finders.FileSystemFinder'</span><span class="p">,</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    <span class="s1">'django.contrib.staticfiles.finders.AppDirectoriesFinder'</span><span class="p">,</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="p">]</span>
+</span></code></pre></div>
+<h3 id="summary">Summary</h3>
+<p>Django's static file settings provide a framework for managing static assets in your project. They help you configure how static files are served and collected, ensuring that your CSS, JavaScript, and images are available to users both during development and in production.</p>
+<hr>
+<h2 id="explanation">Explanation</h2>
+<h3 id="1-static_url">1.  STATIC_URL</h3>
+<p>Purpose:</p>
+<ul>
+<li><code>STATIC_URL</code> defines the URL prefix for serving static files. It tells Django where static files can be accessed from the web.</li>
+</ul>
+<p>Manual Folder Creation:</p>
+<ul>
+<li>You <mark>do not</mark> need to create a folder manually for <code>STATIC_URL</code>. This setting is for defining the URL path, not a file system path.</li>
+</ul>
+<p>Configuration:</p>
+<ul>
+<li>Type: String</li>
+<li>Required: Yes</li>
+<li>Typical Value: <code>/static/</code></li>
+</ul>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">STATIC_URL</span> <span class="o">=</span> <span class="s1">'/static/'</span>
+</span></code></pre></div>
+<p>This means that static files will be served at URLs starting with <code>/static/</code>, such as <code>http://example.com/static/css/style.css</code>.</p>
+<h3 id="2-static_root">2. STATIC_ROOT</h3>
+<p>Purpose:</p>
+<p><code>STATIC_ROOT</code> specifies the directory where all static files will be collected when you run the <code>collectstatic</code> command. This is used in production to gather all static files into one place so that they can be served efficiently by a web server.</p>
+<p>Manual Folder Creation:</p>
+<ul>
+<li>You <mark>do not</mark> need to manually create the <code>STATIC_ROOT</code> folder before running <code>collectstatic</code>. Django will create this folder for you if it does not already exist. However, ensure that the directory is writable by the user running the Django application.</li>
+</ul>
+<p>Configuration:</p>
+<ul>
+<li>Type: String (directory path)</li>
+<li>Required: No, but it is necessary for production environments.</li>
+<li>Typical Value: <code>os.path.join(BASE_DIR, 'staticfiles')</code></li>
+</ul>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">STATIC_ROOT</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s1">'staticfiles'</span><span class="p">)</span>
+</span></code></pre></div>
+<p>This means that when you run <code>python manage.py collectstatic</code>, all your static files will be gathered into the <code>staticfiles</code> directory inside your project’s base directory.</p>
+<h3 id="3-staticfiles_dirs">3. STATICFILES_DIRS</h3>
+<p>Purpose:</p>
+<p><code>STATICFILES_DIRS</code> is a list of additional directories where Django should look for static files, in addition to each app’s <code>static</code> directory. It’s useful for specifying global static file locations outside of individual apps.</p>
+<p>Manual Folder Creation:</p>
+<ul>
+<li><mark>Yes</mark>, you need to manually create the folders listed in <code>STATICFILES_DIRS</code> if they do not already exist. For example, if you specify <code>assets</code> in <code>STATICFILES_DIRS</code>, you should create the <code>assets</code> folder in your project directory and place your static files there.</li>
+</ul>
+<p>Configuration:</p>
+<ul>
+<li>Type: List of strings (directory paths)</li>
+<li>Required: No, but useful if you need to add global directories for static files.</li>
+<li>Typical Value: <code>[os.path.join(BASE_DIR, 'assets')]</code></li>
+</ul>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">STATICFILES_DIRS</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s1">'assets'</span><span class="p">),</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">]</span>
+</span></code></pre></div>
+<p>This tells Django to also look in the <code>assets</code> directory at the <mark>base level of your project</mark> for static files.</p>
+<h3 id="summary_1">Summary</h3>
+<ul>
+<li><strong>STATIC_URL</strong>: Defines the URL path to access static files. No manual folder creation is needed.</li>
+<li><strong>STATIC_ROOT</strong>: Directory where static files are collected for production. Django creates this folder during the collectstatic process if it does not exist.</li>
+<li><strong>STATICFILES_DIRS</strong>: List of additional directories to search for static files. You need to manually create these directories and place static files in them.</li>
+</ul>
+<p>By configuring these settings properly and creating necessary directories, you ensure that Django can correctly manage and serve static files both during development and in production.</p>
+<hr>
+<h2 id="advanced">Advanced</h2>
+<p>In Django, a <mark>top-level directory</mark> for global static files is a directory located at the root of your project directory that is used to store static files that are not tied to any specific Django app but are shared across the entire project. This directory is an optional but useful organization technique for managing static assets that you want to be accessible throughout your project but are not directly associated with any particular application.</p>
+<h3 id="purpose-of-a-top-level-global-static-directory">Purpose of a Top-Level Global Static Directory</h3>
+<ul>
+<li><strong>Centralization</strong>: Keeps global static files in one place rather than scattering them across different apps.</li>
+<li><strong>Organization</strong>: Helps in maintaining a clear structure by separating static files used across the project from those specific to individual apps.</li>
+<li><strong>Convenience</strong>: Provides an easy way to manage and reference global assets, such as site-wide CSS or JavaScript files, that are used throughout the project.</li>
+</ul>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">myproject</span><span class="o">/</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="nx">myapp1</span><span class="o">/</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">        </span><span class="k">static</span><span class="err">/</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">            </span><span class="nx">myapp1</span><span class="o">/</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">                </span><span class="nx">css</span><span class="o">/</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">                </span><span class="nx">js</span><span class="o">/</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">                </span><span class="nx">images</span><span class="o">/</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="nx">myapp2</span><span class="o">/</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">        </span><span class="k">static</span><span class="err">/</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">            </span><span class="nx">myapp2</span><span class="o">/</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">                </span><span class="nx">css</span><span class="o">/</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">                </span><span class="nx">js</span><span class="o">/</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">                </span><span class="nx">images</span><span class="o">/</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="nx">assets</span><span class="o">/</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="nx">This</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nb">global</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="nx">directory</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">        </span><span class="nx">css</span><span class="o">/</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">        </span><span class="nx">js</span><span class="o">/</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">        </span><span class="nx">images</span><span class="o">/</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">    </span><span class="nx">myproject</span><span class="o">/</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">        </span><span class="nx">__init__</span><span class="p">.</span><span class="nx">py</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">        </span><span class="nx">settings</span><span class="p">.</span><span class="nx">py</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">        </span><span class="nx">urls</span><span class="p">.</span><span class="nx">py</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">        </span><span class="nx">wsgi</span><span class="p">.</span><span class="nx">py</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">    </span><span class="nx">manage</span><span class="p">.</span><span class="nx">py</span>
+</span></code></pre></div>
+<div class="language-py highlight"><span class="filename">settings.py</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">import</span> <span class="nn">os</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">BASE_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="c1"># URL prefix for serving static files</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="n">STATIC_URL</span> <span class="o">=</span> <span class="s1">'/static/'</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="c1"># Directory where static files will be collected for production</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="n">STATIC_ROOT</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s1">'staticfiles'</span><span class="p">)</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="c1"># Additional directories where Django will look for static files</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="n">STATICFILES_DIRS</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s1">'assets'</span><span class="p">),</span>  <span class="c1"># Global static directory</span>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="p">]</span>
+</span></code></pre></div>
+<details class="abstract" open="open">
+<summary>Explanation</summary>
+<ul>
+<li><strong>STATIC_URL</strong>: Defines the base URL for serving static files. In this case, <code>/static/</code> means that static files will be served at URLs starting with <code>/static/</code>.</li>
+<li><strong>STATICFILES_DIRS</strong>: Lists additional directories for Django to search for static files. The assets directory is specified here, so Django will also look in <code>myproject/assets/</code> for static files.</li>
+</ul>
+</details>
+<h3 id="using-static-files-in-templates">Using Static Files in Templates</h3>
+<p>When you use static files in your Django templates, you will reference them with the URL defined by <code>STATIC_URL</code>. For example:</p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="cm">&lt;!-- Linking a CSS file from the global assets directory --&gt;</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">type</span><span class="o">=</span><span class="s">"text/css"</span> <span class="na">href</span><span class="o">=</span><span class="s">"{% static 'css/style.css' %}"</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<p>In this case, Django will look for <code>style.css</code> in the <code>assets/css/</code> directory and serve it at <code>http://example.com/static/css/style.css</code>.</p>
+<h3 id="summary_2">Summary</h3>
+<ul>
+<li><strong>Top-Level Global Static Directory</strong>: A directory like <code>assets/</code> at the root level of your project that stores static files shared across the entire project.</li>
+<li><strong>Purpose</strong>: Centralizes and organizes global static files that are not specific to any particular app.</li>
+<li><strong>Configuration</strong>: Use the <code>STATICFILES_DIRS</code> setting in <code>settings.py</code> to include this directory in Django's static file search paths.</li>
+</ul>
+<p>By organizing your static files this way, you can maintain a clear and manageable structure, especially in larger projects where multiple apps and global assets are involved.</p>
+<hr>
+<h2 id="hidden-magic">Hidden Magic</h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>python3<span class="w"> </span>manage.py<span class="w"> </span>shell
+</span></code></pre></div>
+<h3 id="list-all-the-seetings">List all the seetings</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>from<span class="w"> </span>django.conf<span class="w"> </span>import<span class="w"> </span>settings
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>dir<span class="o">(</span>settings<span class="o">)</span>
+</span></code></pre></div>
+<h3 id="diffsettings"><code>diffsettings</code></h3>
+<p>Running <code>python manage.py diffsettings</code> will show you the settings that differ from the default values. This can be useful to see which static file settings have been explicitly defined in your project.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>python<span class="w"> </span>manage.py<span class="w"> </span>diffsettings
+</span></code></pre></div></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
       
-    </div>
+    </article>
   </div>
 
           
@@ -5104,10 +5201,12 @@
   
     
       
+        
+      
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../../../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Index">
+          <a href="../understanding-media_root-and-media_url-in-django/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Understanding MEDIA_ROOT and MEDIA_URL in Django">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -5117,20 +5216,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Index
+                Understanding MEDIA_ROOT and MEDIA_URL in Django
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../../../../backend/intro/" class="md-footer__link md-footer__link--next" aria-label="Next: Intro">
+          <a href="../../18/why-django-serves-static-files-differently-in-development-and-production/" class="md-footer__link md-footer__link--next" aria-label="Next: Why Django Serves Static Files Differently in Development and Production">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Intro
+                Why Django Serves Static Files Differently in Development and Production
               </div>
             </div>
             <div class="md-footer__button md-icon">
