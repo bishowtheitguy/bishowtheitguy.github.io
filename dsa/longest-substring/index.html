@@ -10,9 +10,13 @@
         <meta name="author" content="it guy">
       
       
-        <link rel="canonical" href="https://bishowtheitguy.github.io/python/args/">
+        <link rel="canonical" href="https://bishowtheitguy.github.io/dsa/longest-substring/">
       
       
+        <link rel="prev" href="../fibonacci/">
+      
+      
+        <link rel="next" href="../pattern/">
       
       
       <link rel="icon" href="../../assets/logo/favicon.ico">
@@ -20,7 +24,7 @@
     
     
       
-        <title>Understanding Args and Kwargs in Python - Bishow IT Guy</title>
+        <title>Longest Substring - Bishow IT Guy</title>
       
     
     
@@ -83,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#understanding-args-and-kwargs-in-python" class="md-skip">
+        <a href="#longest-substring-without-repeating-characters" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Understanding Args and Kwargs in Python
+              Longest Substring
             
           </span>
         </div>
@@ -251,11 +255,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../dsa/overview/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
           
   
   DSA
@@ -522,23 +528,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -550,7 +561,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             DSA
@@ -564,7 +575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dsa/overview/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -586,7 +597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dsa/understanding/" class="md-nav__link">
+      <a href="../understanding/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -608,7 +619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dsa/fibonacci/" class="md-nav__link">
+      <a href="../fibonacci/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -627,10 +638,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../dsa/longest-substring/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Longest Substring
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -640,6 +672,89 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-understand-the-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Understand the Problem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-naive-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Naive Solution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-optimized-approach-sliding-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Optimized Approach (Sliding Window)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-test-the-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Test the Solution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-analyze-the-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Analyze the Approach
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-the-problem-solving-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary of the Problem-Solving Approach:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -652,7 +767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dsa/pattern/" class="md-nav__link">
+      <a href="../pattern/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1470,45 +1585,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-are-args" class="md-nav__link">
+  <a href="#step-1-understand-the-problem" class="md-nav__link">
     <span class="md-ellipsis">
-      What are Args?"
+      Step 1: Understand the Problem
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-are-kwargs" class="md-nav__link">
+  <a href="#step-2-naive-solution" class="md-nav__link">
     <span class="md-ellipsis">
-      What are Kwargs?
+      Step 2: Naive Solution
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#use-of-args-and-kwargs" class="md-nav__link">
+  <a href="#step-3-optimized-approach-sliding-window" class="md-nav__link">
     <span class="md-ellipsis">
-      Use of Args and Kwargs
+      Step 3: Optimized Approach (Sliding Window)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-both-args-and-kwargs-in-a-function" class="md-nav__link">
+  <a href="#step-4-test-the-solution" class="md-nav__link">
     <span class="md-ellipsis">
-      Using Both Args and Kwargs in a Function
+      Step 4: Test the Solution
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#reference" class="md-nav__link">
+  <a href="#step-5-analyze-the-approach" class="md-nav__link">
     <span class="md-ellipsis">
-      Reference
+      Step 5: Analyze the Approach
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-the-problem-solving-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary of the Problem-Solving Approach:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps:
     </span>
   </a>
   
@@ -1530,59 +1663,177 @@
 
 
 
-<div><h1 id="understanding-args-and-kwargs-in-python">Understanding Args and Kwargs in Python</h1>
-<h2 id="what-are-args">What are Args?"</h2>
-<ol>
-<li>*args are used to pass non-keyword arguments. Examples of non-keyword arguments are fun(12,14), fun(“value1”,“value2”).</li>
-<li>*args are usually used to prevent the program from crashing. If we do not know, numerous parameters will be passed to the function. This is used in other programming languages.</li>
-</ol>
-<p>It makes it easy to use any number of arguments without having to change your code. It provides more flexibility to your code since you can have as many arguments as you wish in the future.</p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">func</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">33</span><span class="p">,</span><span class="s2">"Django"</span><span class="p">,</span><span class="s2">"Python"</span><span class="p">)</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">11</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">33</span><span class="p">,</span><span class="s2">"Django"</span><span class="p">,</span><span class="s2">"Python"</span><span class="p">]</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">func</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
-</span></code></pre></div>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">#OUTPUT</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="m">11</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="m">22</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="m">33</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Django
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>Python
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="c1">#List</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="o">[</span><span class="m">11</span>,<span class="w"> </span><span class="m">22</span>,<span class="w"> </span><span class="m">33</span>,<span class="w"> </span><span class="s1">'Django'</span>,<span class="w"> </span><span class="s1">'Python'</span><span class="o">]</span>
-</span></code></pre></div>
+<div><h1 id="longest-substring-without-repeating-characters">Longest Substring Without Repeating Characters</h1>
+<p>Great! Let's go through another problem-solving approach in JavaScript, but this time we'll tackle something a little more complex: Finding the longest substring without repeating characters.</p>
+<div class="admonition question">
+<p class="admonition-title"><strong>Problem: Longest Substring Without Repeating Characters</strong></p>
 </div>
-<h2 id="what-are-kwargs">What are Kwargs?</h2>
-<p><mark>**kwargs</mark> is a dictionary of keyword arguments. The double asterisk (<code>**</code>) symbol allows us to pass any number of arguments. A keyword argument is usually a dictionary.</p>
-<p>Here an example of a keyword argument is fun(a=1,b=17).</p>
-<div class="admonition tips">
-<p class="admonition-title">Tips</p>
-<p><mark>**kwargs</mark> are similar to *args, except you declare the variables and the
-amount within the same function arguments.</p>
-</div>
-<h2 id="use-of-args-and-kwargs">Use of Args and Kwargs</h2>
-<p>Args and kwargs are handy when you need to:</p>
+<p>Given a string, find the length of the longest substring without repeating characters.</p>
+<p><strong>Example 1</strong>:</p>
 <ul>
-<li>Pass multiple arguments in functions</li>
-<li>Reduce code writing</li>
-<li>Make your code more readable</li>
-<li>Reuse the piece of code</li>
+<li>Input: <code>"abcabcbb"</code></li>
+<li>Output: <code>3</code></li>
+<li>Explanation: The answer is <code>"abc"</code>, with the length of 3.</li>
 </ul>
-<h2 id="using-both-args-and-kwargs-in-a-function">Using Both Args and Kwargs in a Function</h2>
-<p>When using both args and kwargs in the same function definition, *args
-must occur before <mark>**kwargs</mark>.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<p><strong>Example 2</strong>:</p>
+<ul>
+<li>Input: <code>"bbbbb"</code></li>
+<li>Output: <code>1</code></li>
+<li>Explanation: The answer is <code>"b"</code>, with the length of 1.</li>
+</ul>
+<p><strong>Example 3</strong>:</p>
+<ul>
+<li>Input: <code>"pwwkew"</code></li>
+<li>Output: <code>3</code></li>
+<li>Explanation: The answer is <code>"wke"</code>, with the length of 3.</li>
+</ul>
+<hr>
+<h2 id="step-1-understand-the-problem">Step 1: Understand the Problem</h2>
+<p>We need to find the length of the <mark>longest substring</mark> in a given string that doesn’t have repeating characters.</p>
+<p>This means that:</p>
+<ul>
+<li>We will <strong>move through the string</strong> character by character.</li>
+<li>We need to <strong>keep track</strong> of the characters we’ve seen so far.</li>
+<li>As soon as we encounter a character that’s been seen before, we’ll stop extending the current substring and try to find a longer one starting from the next position.</li>
+</ul>
+<hr>
+<h2 id="step-2-naive-solution">Step 2: Naive Solution</h2>
+<p>A naive approach would involve checking all possible substrings, but this could lead to an inefficient solution with <strong>O(n²)</strong> time complexity because we would generate and check every possible substring.</p>
+<p>Here’s how a naive approach might look:</p>
+<div class="language-js highlight"><span class="filename">javascript</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">lengthOfLongestSubstringNaive</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">maxLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="c1">// Generate all substrings</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">s</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nx">s</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">substring</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">s</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="nx">j</span><span class="p">);</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">uniqueChars</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Set</span><span class="p">(</span><span class="nx">substring</span><span class="p">);</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">      </span><span class="c1">// If all characters in the substring are unique, update maxLength</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">substring</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">uniqueChars</span><span class="p">.</span><span class="nx">size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">        </span><span class="nx">maxLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">maxLength</span><span class="p">,</span><span class="w"> </span><span class="nx">substring</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">      </span><span class="p">}</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">maxLength</span><span class="p">;</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="p">}</span>
+</span></code></pre></div>
+<details class="note" open="open">
+<summary>Explanation:</summary>
+<ul>
+<li>We use two loops to generate every possible substring.</li>
+<li>For each substring, we check if all characters are unique by using a <code>Set</code>.</li>
+<li>If the length of the substring matches the size of the set (indicating no duplicates), we update the <code>maxLength</code>.</li>
+</ul>
+</details>
+<p><strong>Time Complexity</strong>: <code>O(n²)</code></p>
+<p>While this works, it’s not efficient for large strings because we’re generating all substrings and checking uniqueness repeatedly.</p>
+<hr>
+<h2 id="step-3-optimized-approach-sliding-window">Step 3: Optimized Approach (Sliding Window)</h2>
+<p>A much better approach is to use the <strong>sliding window technique</strong>, which allows us to scan the string in a linear pass and keep track of the substring as we go.</p>
+<details class="tip" open="open">
+<summary>Sliding Window Technique:</summary>
+<ul>
+<li>We maintain two pointers (or indices) to represent the current window of the substring.</li>
+<li>As we move the right pointer to explore new characters, we adjust the left pointer to shrink the window when we encounter a duplicate character.</li>
+<li>We keep track of the characters using a <code>Set</code> (or <code>Map</code>) and adjust the window size accordingly.</li>
+</ul>
+</details>
+<p>Here’s how the optimized solution looks:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">lengthOfLongestSubstring</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">charSet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Set</span><span class="p">();</span><span class="w"> </span><span class="c1">// To store unique characters in the current window</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// Left pointer</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">maxLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// To track the maximum length of the substring</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">right</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">s</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">right</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="c1">// If the character at the right pointer already exists in the set, shrink the window</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">charSet</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="nx">s</span><span class="p">[</span><span class="nx">right</span><span class="p">]))</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">      </span><span class="nx">charSet</span><span class="p">.</span><span class="ow">delete</span><span class="p">(</span><span class="nx">s</span><span class="p">[</span><span class="nx">left</span><span class="p">]);</span><span class="w"> </span><span class="c1">// Remove the character at the left pointer</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">      </span><span class="nx">left</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="c1">// Move the left pointer to the right</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="c1">// Add the current character to the set</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="nx">charSet</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">s</span><span class="p">[</span><span class="nx">right</span><span class="p">]);</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="c1">// Update the maxLength if necessary</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="nx">maxLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">maxLength</span><span class="p">,</span><span class="w"> </span><span class="nx">right</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">left</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">maxLength</span><span class="p">;</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="p">}</span>
+</span></code></pre></div>
+<details class="note" open="open">
+<summary>Explanation:</summary>
+<ul>
+<li>
+<p>We use a sliding window technique with two pointers (<code>left</code> and <code>right</code>).</p>
+</li>
+<li>
+<p>As we iterate through the string with the <code>right</code> pointer, we check if the current character exists in the <code>Set</code>. If it does, we shrink the window from the <code>left</code> by moving the left pointer until the character at the <code>right</code> pointer can be added to the <code>Set</code> without duplication.</p>
+</li>
+<li>
+<p>After adding the current character, we update the <code>maxLength</code> as we expand the window.</p>
+</li>
+</ul>
+</details>
+<p><strong>Time Complexity</strong>: <code>O(n)</code></p>
+<ul>
+<li>
+<p>We only go through the string once, and each character is added and removed from the set at most once.</p>
+</li>
+<li>
+<p>This is much more efficient than the naive solution, especially for large strings.</p>
+</li>
+</ul>
+<hr>
+<h2 id="step-4-test-the-solution">Step 4: Test the Solution</h2>
+<p>Let’s test the solution with the examples:</p>
+<div class="language-js highlight"><span class="filename">javascript</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">lengthOfLongestSubstring</span><span class="p">(</span><span class="s2">"abcabcbb"</span><span class="p">));</span><span class="w"> </span><span class="c1">// Output: 3</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">lengthOfLongestSubstring</span><span class="p">(</span><span class="s2">"bbbbb"</span><span class="p">));</span><span class="w"> </span><span class="c1">// Output: 1</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">lengthOfLongestSubstring</span><span class="p">(</span><span class="s2">"pwwkew"</span><span class="p">));</span><span class="w"> </span><span class="c1">// Output: 3</span>
+</span></code></pre></div>
+<div class="language-bash highlight"><span class="filename">Expected Output:</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="m">3</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="m">1</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="m">3</span>
 </span></code></pre></div>
 <hr>
-<h2 id="reference">Reference</h2>
+<h2 id="step-5-analyze-the-approach">Step 5: Analyze the Approach</h2>
+<p><strong>Time Complexity</strong>: <code>O(n)</code></p>
 <ul>
-<li><a href="https://www.amazon.com/Mastering-Django-Beginners-Computer-Science/dp/1032315989">Mastering Django A Beginner’s Guide Edited by Sufyan bin Uzayr - <code>pg: 178</code></a></li>
+<li>We only iterate over the string once with the <code>right</code> pointer.</li>
+<li>The <code>left</code> pointer may move from the beginning to the end, but each character is added to and removed from the <code>Set</code> at most once, so the total number of operations is proportional to the length of the string.</li>
+</ul>
+<p><strong>Space Complexity</strong>: <code>O(k)</code></p>
+<ul>
+<li>The space complexity is dependent on the number of unique characters in the string. In the worst case, if all characters are unique, we store all <code>n</code> characters in the <code>Set</code>, so the space complexity is <code>O(n)</code>. But in practice, it could be smaller, depending on the alphabet size.</li>
+</ul>
+<hr>
+<h2 id="summary-of-the-problem-solving-approach">Summary of the Problem-Solving Approach:</h2>
+<ol>
+<li>
+<p><strong>Understand the problem</strong>: You need to find the longest substring without repeating characters.</p>
+</li>
+<li>
+<p><strong>Start with a naive approach</strong>: The brute-force method of generating all substrings works but is inefficient.</p>
+</li>
+<li>
+<p><strong>Optimize the solution</strong>: Use the <mark>sliding window technique</mark> to maintain a dynamic window of unique characters while iterating through the string.</p>
+</li>
+<li>
+<p><strong>Test the solution</strong>: Validate it against different test cases.</p>
+</li>
+<li>
+<p><strong>Analyze the complexity</strong>: Ensure the solution is efficient in terms of both time and space.</p>
+</li>
+</ol>
+<hr>
+<h2 id="next-steps">Next Steps:</h2>
+<p>Now that you’ve seen the sliding window approach, I recommend practicing problems that require the sliding window technique. Here are some ideas:</p>
+<ul>
+<li><strong>Substring with at most two distinct characters.</strong></li>
+<li><strong>Longest subarray with sum at most k.</strong></li>
+<li><strong>Find all anagrams in a string.</strong></li>
 </ul></div>
 
 
@@ -1614,6 +1865,44 @@ must occur before <mark>**kwargs</mark>.</p>
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../fibonacci/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Fibonacci Example">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Fibonacci Example
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../pattern/" class="md-footer__link md-footer__link--next" aria-label="Next: Pattern">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Pattern
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
