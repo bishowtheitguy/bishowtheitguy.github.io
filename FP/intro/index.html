@@ -10,28 +10,28 @@
         <meta name="author" content="it guy">
       
       
-        <link rel="canonical" href="https://bishowtheitguy.github.io/interview/core/serialization-versus-deserialization/">
+        <link rel="canonical" href="https://bishowtheitguy.github.io/FP/intro/">
       
       
-        <link rel="prev" href="../memonic/">
+        <link rel="prev" href="../../paradigm/intro/">
       
       
-        <link rel="next" href="../function-signature/">
+        <link rel="next" href="../../OOP/intro/">
       
       
-      <link rel="icon" href="../../../assets/logo/favicon.ico">
+      <link rel="icon" href="../../assets/logo/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
     
     
       
-        <title>Serialization - Bishow IT Guy</title>
+        <title>Intro - Bishow IT Guy</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,14 +50,14 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -68,7 +68,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reference" class="md-skip">
+        <a href="#fp" class="md-skip">
           Skip to content
         </a>
       
@@ -103,9 +103,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Bishow IT Guy" class="md-header__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
+    <a href="../.." title="Bishow IT Guy" class="md-header__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
       
-  <img src="../../../assets/logo/internet.png" alt="logo">
+  <img src="../../assets/logo/internet.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Serialization
+              Intro
             
           </span>
         </div>
@@ -227,7 +227,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../blog/" class="md-tabs__link">
+        <a href="../../blog/" class="md-tabs__link">
           
   
   
@@ -247,7 +247,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../math/intro/" class="md-tabs__link">
+        <a href="../../math/intro/" class="md-tabs__link">
           
   
   
@@ -263,13 +263,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../intro/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../interview/intro/" class="md-tabs__link">
           
   
   
@@ -289,7 +287,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../dsa/overview/" class="md-tabs__link">
+        <a href="../../dsa/overview/" class="md-tabs__link">
           
   
   
@@ -309,7 +307,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../paradigm/intro/" class="md-tabs__link">
+        <a href="../../paradigm/intro/" class="md-tabs__link">
           
   
   
@@ -325,11 +323,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../FP/intro/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -349,7 +349,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../OOP/intro/" class="md-tabs__link">
+        <a href="../../OOP/intro/" class="md-tabs__link">
           
   
   
@@ -369,7 +369,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../http/intro/" class="md-tabs__link">
+        <a href="../../http/intro/" class="md-tabs__link">
           
   
   
@@ -409,9 +409,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Bishow IT Guy" class="md-nav__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
+    <a href="../.." title="Bishow IT Guy" class="md-nav__button md-logo" aria-label="Bishow IT Guy" data-md-component="logo">
       
-  <img src="../../../assets/logo/internet.png" alt="logo">
+  <img src="../../assets/logo/internet.png" alt="logo">
 
     </a>
     Bishow IT Guy
@@ -469,7 +469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/" class="md-nav__link">
+      <a href="../../blog/" class="md-nav__link">
         
   
   
@@ -492,7 +492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -563,7 +563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../math/intro/" class="md-nav__link">
+      <a href="../../math/intro/" class="md-nav__link">
         
   
   
@@ -590,29 +590,24 @@
       
   
   
-    
   
   
-  
     
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -625,7 +620,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Interview
@@ -639,7 +634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intro/" class="md-nav__link">
+      <a href="../../interview/intro/" class="md-nav__link">
         
   
   
@@ -659,8 +654,6 @@
                 
   
   
-    
-  
   
   
     
@@ -671,11 +664,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -691,7 +684,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             Core
@@ -705,7 +698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../theory/" class="md-nav__link">
+      <a href="../../interview/core/theory/" class="md-nav__link">
         
   
   
@@ -728,7 +721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../memonic/" class="md-nav__link">
+      <a href="../../interview/core/memonic/" class="md-nav__link">
         
   
   
@@ -748,30 +741,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Serialization
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../interview/core/serialization-versus-deserialization/" class="md-nav__link">
         
   
   
@@ -782,33 +755,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#reference" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reference
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -821,7 +767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../function-signature/" class="md-nav__link">
+      <a href="../../interview/core/function-signature/" class="md-nav__link">
         
   
   
@@ -893,7 +839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../leetcode/intro/" class="md-nav__link">
+      <a href="../../interview/leetcode/intro/" class="md-nav__link">
         
   
   
@@ -965,7 +911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../why-question/intro/" class="md-nav__link">
+      <a href="../../interview/why-question/intro/" class="md-nav__link">
         
   
   
@@ -988,7 +934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../why-question/control-statement/" class="md-nav__link">
+      <a href="../../interview/why-question/control-statement/" class="md-nav__link">
         
   
   
@@ -1011,7 +957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../why-question/control-statement-detail/" class="md-nav__link">
+      <a href="../../interview/why-question/control-statement-detail/" class="md-nav__link">
         
   
   
@@ -1034,7 +980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../why-question/try-catch/" class="md-nav__link">
+      <a href="../../interview/why-question/try-catch/" class="md-nav__link">
         
   
   
@@ -1065,7 +1011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../draft/" class="md-nav__link">
+      <a href="../../interview/draft/" class="md-nav__link">
         
   
   
@@ -1136,7 +1082,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dsa/overview/" class="md-nav__link">
+      <a href="../../dsa/overview/" class="md-nav__link">
         
   
   
@@ -1159,7 +1105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dsa/understanding/" class="md-nav__link">
+      <a href="../../dsa/understanding/" class="md-nav__link">
         
   
   
@@ -1182,7 +1128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dsa/fibonacci/" class="md-nav__link">
+      <a href="../../dsa/fibonacci/" class="md-nav__link">
         
   
   
@@ -1205,7 +1151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dsa/longest-substring/" class="md-nav__link">
+      <a href="../../dsa/longest-substring/" class="md-nav__link">
         
   
   
@@ -1228,7 +1174,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../dsa/pattern/" class="md-nav__link">
+      <a href="../../dsa/pattern/" class="md-nav__link">
         
   
   
@@ -1299,7 +1245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../paradigm/intro/" class="md-nav__link">
+      <a href="../../paradigm/intro/" class="md-nav__link">
         
   
   
@@ -1326,24 +1272,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
   
@@ -1356,7 +1307,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             FP
@@ -1367,10 +1318,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../FP/intro/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1381,6 +1341,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1441,7 +1402,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../OOP/intro/" class="md-nav__link">
+      <a href="../../OOP/intro/" class="md-nav__link">
         
   
   
@@ -1512,7 +1473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../http/intro/" class="md-nav__link">
+      <a href="../../http/intro/" class="md-nav__link">
         
   
   
@@ -1576,7 +1537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../http/jwt/intro/" class="md-nav__link">
+      <a href="../../http/jwt/intro/" class="md-nav__link">
         
   
   
@@ -1599,7 +1560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../http/jwt/theory/" class="md-nav__link">
+      <a href="../../http/jwt/theory/" class="md-nav__link">
         
   
   
@@ -1622,7 +1583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../http/jwt/refreshToken/intro/" class="md-nav__link">
+      <a href="../../http/jwt/refreshToken/intro/" class="md-nav__link">
         
   
   
@@ -1694,7 +1655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../http/OpenID/intro/" class="md-nav__link">
+      <a href="../../http/OpenID/intro/" class="md-nav__link">
         
   
   
@@ -1717,7 +1678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../http/OpenID/oidc-client/" class="md-nav__link">
+      <a href="../../http/OpenID/oidc-client/" class="md-nav__link">
         
   
   
@@ -1765,23 +1726,8 @@
   
   
   
+    
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#reference" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reference
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1797,17 +1743,7 @@
 
 
 
-  <h1>Serialization</h1>
-
-<div><p><a class="glightbox" href="../../../assets/interview/serialization-vs-deserialization.png" data-type="image" data-width="100%" data-height="auto" data-title="Serialization" data-desc-position="bottom"><img alt="Serialization" src="../../../assets/interview/serialization-vs-deserialization.png"></a></p>
-<p>An object is something that lives in the application memory. We can invoke its method or access its attributes in our application. </p>
-<p>However, when we want to transfer or store an object, we will have to convert it into a storable or transferrable format, and that format will be a stream of bytes. It can then be stored in a text file, in a database, or be transmitted over the internet. </p>
-<p>The process of converting an object to a stream of bytes is called serialization. This stream of bytes persists the state of the object so that it can be recreated later. The recreation of the object from a stream of bytes is called deserialization.</p>
-<hr>
-<h2 id="reference">Reference</h2>
-<ul>
-<li><a href="#">Python API Development Fundamentals - pg 126</a></li>
-</ul></div>
+<h1 id="fp">FP</h1>
 
 
 
@@ -1843,7 +1779,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../memonic/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Memonic">
+          <a href="../../paradigm/intro/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Intro">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1853,20 +1789,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Memonic
+                Intro
               </div>
             </div>
           </a>
         
         
           
-          <a href="../function-signature/" class="md-footer__link md-footer__link--next" aria-label="Next: function signature">
+          <a href="../../OOP/intro/" class="md-footer__link md-footer__link--next" aria-label="Next: Intro">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                function signature
+                Intro
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1906,10 +1842,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.tabs.sticky", "header.autohide", "navigation.footer", "content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.tabs.sticky", "header.autohide", "navigation.footer", "content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": {"Compatibility": "compat"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
