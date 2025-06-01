@@ -10,13 +10,13 @@
         <meta name="author" content="it guy">
       
       
-        <link rel="canonical" href="https://bishowtheitguy.github.io/http/graphql/graphql-client/">
+        <link rel="canonical" href="https://bishowtheitguy.github.io/http/graphql/rest-drawbacks/">
       
       
-        <link rel="prev" href="../rest-drawbacks/">
+        <link rel="prev" href="../overview/">
       
       
-        <link rel="next" href="../tools/">
+        <link rel="next" href="../graphql-client/">
       
       
       <link rel="icon" href="../../../assets/logo/favicon.ico">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Client - Bishow IT Guy</title>
+        <title>Rest Drawback - Bishow IT Guy</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#graphql-clients" class="md-skip">
+        <a href="#rest-drawbacks" class="md-skip">
           Skip to content
         </a>
       
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Client
+              Rest Drawback
             
           </span>
         </div>
@@ -1595,29 +1595,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../rest-drawbacks/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Rest Drawback
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -1635,7 +1612,7 @@
   
   
   <span class="md-ellipsis">
-    Client
+    Rest Drawback
     
   </span>
   
@@ -1648,7 +1625,7 @@
   
   
   <span class="md-ellipsis">
-    Client
+    Rest Drawback
     
   </span>
   
@@ -1671,18 +1648,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#setup-apollo-client" class="md-nav__link">
+  <a href="#overfetching" class="md-nav__link">
     <span class="md-ellipsis">
-      Setup Apollo Client
+      Overfetching
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#most-frequent-error-in-react-18" class="md-nav__link">
+  <a href="#underfetching" class="md-nav__link">
     <span class="md-ellipsis">
-      Most frequent Error in React 18
+      Underfetching
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-rest-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing REST Endpoints
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graphql-vs-rest" class="md-nav__link">
+    <span class="md-ellipsis">
+      🆚 GraphQL vs. REST
     </span>
   </a>
   
@@ -1701,6 +1696,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graphql-client/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Client
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2007,18 +2025,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#setup-apollo-client" class="md-nav__link">
+  <a href="#overfetching" class="md-nav__link">
     <span class="md-ellipsis">
-      Setup Apollo Client
+      Overfetching
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#most-frequent-error-in-react-18" class="md-nav__link">
+  <a href="#underfetching" class="md-nav__link">
     <span class="md-ellipsis">
-      Most frequent Error in React 18
+      Underfetching
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-rest-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing REST Endpoints
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graphql-vs-rest" class="md-nav__link">
+    <span class="md-ellipsis">
+      🆚 GraphQL vs. REST
     </span>
   </a>
   
@@ -2049,119 +2085,156 @@
 
 
 
-<div><h1 id="graphql-clients">GraphQL Clients</h1>
-<p>As we’ve said numerous times, GraphQL is just a spec. It doesn’t care whether you’re using it with React or Vue or JavaScript or even a browser. GraphQL has opinions about a few specific topics, but beyond that, <mark>your architectural decisions are up to you</mark>. This has led to the emergence of tools to enforce some choices beyond the spec. <strong>Enter GraphQL clients</strong>.</p>
-<p>GraphQL clients have emerged to speed the workflow for developer teams and improve the efficiency and performance of applications. They handle tasks like network requests, data caching, and injecting data into the user interface. There are many GraphQL clients, but the leaders in the space are <a href="https://facebook.github.io/relay/">Relay</a> and <a href="https://www.apollographql.com/">Apollo</a>.</p>
-<p>Relay is Facebook’s client that works with React and React Native. Relay aims to be the connective tissue between React components and the data that is fetched from the GraphQL server. Relay is used by Facebook, GitHub, Twitch, and more.</p>
-<p>Apollo Client was developed at Meteor Development Group and is a community-driven effort to build more comprehensive tooling around GraphQL. Apollo Client supports all major frontend development platforms and <mark>is framework agnostic</mark>. Companies, including Airbnb, CNBC, The New York Times, and Ticketmaster use Apollo Client in production.</p>
+<div><h1 id="rest-drawbacks">REST Drawbacks</h1>
+<h2 id="overfetching">Overfetching</h2>
+<details class="note" open="open">
+<summary>Note</summary>
+<p><strong>Overfetching</strong> happens when the API returns more data than the client actually needs. For example, if you only need a user's name but the API sends the entire user profile including unnecessary fields, this wastes bandwidth, slows down the app, and consumes extra resources.</p>
+</details>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Luke Skywalker"</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">"height"</span><span class="p">:</span><span class="w"> </span><span class="s2">"172"</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">"mass"</span><span class="p">:</span><span class="w"> </span><span class="s2">"77"</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nt">"hair_color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"blond"</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nt">"skin_color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fair"</span><span class="p">,</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="nt">"eye_color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"blue"</span><span class="p">,</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="nt">"birth_year"</span><span class="p">:</span><span class="w"> </span><span class="s2">"19BBY"</span><span class="p">,</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="nt">"gender"</span><span class="p">:</span><span class="w"> </span><span class="s2">"male"</span><span class="p">,</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="nt">"homeworld"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://swapi.co/api/planets/1/"</span><span class="p">,</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="nt">"films"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="s2">"https://swapi.co/api/films/2/"</span><span class="p">,</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="s2">"https://swapi.co/api/films/6/"</span><span class="p">,</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="s2">"https://swapi.co/api/films/3/"</span><span class="p">,</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="s2">"https://swapi.co/api/films/1/"</span><span class="p">,</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="s2">"https://swapi.co/api/films/7/"</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="p">],</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">  </span><span class="nt">"species"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"https://swapi.co/api/species/1/"</span><span class="p">],</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span><span class="nt">"vehicles"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="s2">"https://swapi.co/api/vehicles/14/"</span><span class="p">,</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="s2">"https://swapi.co/api/vehicles/30/"</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">  </span><span class="p">],</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">  </span><span class="nt">"starships"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">    </span><span class="s2">"https://swapi.co/api/starships/12/"</span><span class="p">,</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">    </span><span class="s2">"https://swapi.co/api/starships/22/"</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">  </span><span class="p">],</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">  </span><span class="nt">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014-12-09T13:50:51.644000Z"</span><span class="p">,</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">  </span><span class="nt">"edited"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2014-12-20T21:17:56.891000Z"</span><span class="p">,</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">  </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://swapi.co/api/people/1/"</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>This is a huge response. The response exceeds our app’s data needs. We just need the information for name, mass, and height:</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Luke Skywalker"</span><span class="p">,</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">"height"</span><span class="p">:</span><span class="w"> </span><span class="s2">"172"</span><span class="p">,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">"mass"</span><span class="p">:</span><span class="w"> </span><span class="s2">"77"</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>This is a clear case of <strong><em>overfetching</em></strong></p>
+<p>we’re getting a lot of data back that we don’t need. The client requires three data points, but we’re getting back an object with 16 keys and sending information over the network that is useless.</p>
 <hr>
-<div class="admonition question">
-<p class="admonition-title">Which client is easier for a beginner to set up and learn quickly</p>
-</div>
-<p>Between Relay and Apollo for GraphQL clients, <strong>Apollo Client is easier for a beginner to set up and learn quickly</strong>. Apollo has a simpler installation process, straightforward integration with React, and more beginner-friendly documentation and community support. Relay is more complex, with a steeper learning curve and more opinionated architecture, making it better suited for advanced or large-scale React projects rather than beginners. Therefore, <mark>Apollo is the recommended choice if you want to get started fast and learn GraphQL client development smoothly</mark>.</p>
+<h2 id="underfetching">Underfetching</h2>
+<p>Our project manager just showed up at our desk and wants to add another feature to the Star Wars app. In addition to name, height, and mass, we now need to display a list of movie titles for all films that Luke Skywalker is in. After we request the data from <a href="https://swapi.co/api/people/1/">swapi.co/api/people/1/</a>, we still need to make additional requests for more data.</p>
+<p>This means we <strong><em>underfetched</em></strong>.</p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p><strong>Underfetching</strong> occurs when the API returns too little data, so the client has to make additional requests to get all the information it needs. For example, if you get only user IDs but need usernames too, you must call the API again to fetch the missing data. This increases the number of requests, slows performance, and complicates client-side code.</p>
+</details>
+<p>In simple terms:</p>
+<ul>
+<li>
+<p>Overfetching = getting <strong><em>too much</em></strong> unnecessary data in one go.</p>
+</li>
+<li>
+<p>Underfetching = getting <strong><em>too little</em></strong> data and needing multiple calls to complete the info.</p>
+</li>
+</ul>
+<p>Both issues hurt performance and user experience, especially on slow connections or large datasets. Solutions often involve designing APIs that return just the right amount of data per request or using technologies like GraphQL that let clients specify exactly what data they want.</p>
+<h2 id="managing-rest-endpoints">Managing REST Endpoints</h2>
+<p>Another common complaint about REST APIs is the lack of flexibility. As the needs on the client change, you usually have to create new endpoints, and those endpoints can begin to multiply quickly.</p>
+<p>Development speed can be slow because setting up new endpoints often means that frontend and backend teams have more planning and communication to do with each other.</p>
+<p><strong>With GraphQL, the typical architecture involves a single endpoint</strong>. The single endpoint can act as a gateway and orchestrate several
+data sources, but the one endpoint still makes organization of data easier.</p>
+<p>In this discussion of REST drawbacks, it’s important to note that many organizations use GraphQL and REST together. Setting up a GraphQL endpoint that fetches data from REST endpoints is a perfectly valid way to use GraphQL. It can be a great way to incrementally adopt GraphQL at your organization.</p>
 <hr>
-<h2 id="setup-apollo-client">Setup Apollo Client</h2>
-<ol>
-<li>
-<p><strong>Install dependencies</strong></p>
-<p>Run this command in your project directory to install Apollo Client and GraphQL:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>npm<span class="w"> </span>install<span class="w"> </span>@apollo/client<span class="w"> </span>graphql
-</span></code></pre></div>
-</li>
-<li>
-<p><strong>Configure Apollo Client</strong></p>
-<p>Create a new Apollo Client instance by specifying your GraphQL server endpoint (<code>uri</code>) and setting up the cache:</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">ApolloClient</span><span class="p">,</span><span class="w"> </span><span class="nx">InMemoryCache</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@apollo/client"</span><span class="p">;</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ApolloClient</span><span class="p">({</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">"https://your-graphql-endpoint.com/graphql"</span><span class="p">,</span><span class="w"> </span><span class="c1">// Replace with your GraphQL API URL</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="nx">cache</span><span class="o">:</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">InMemoryCache</span><span class="p">(),</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">});</span>
-</span></code></pre></div>
-</li>
-<li>
-<p><strong>Connect Apollo Client to React</strong></p>
-<p>Wrap your root React component with <code>ApolloProvider</code> and pass the client instance. This makes Apollo Client available throughout your app:</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"react"</span><span class="p">;</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">import</span><span class="w"> </span><span class="nx">ReactDOM</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"react-dom"</span><span class="p">;</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">ApolloProvider</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@apollo/client"</span><span class="p">;</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">import</span><span class="w"> </span><span class="nx">App</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"./App"</span><span class="p">;</span><span class="w"> </span><span class="c1">// Your main app component</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="o">&lt;</span><span class="nx">ApolloProvider</span><span class="w"> </span><span class="nx">client</span><span class="o">=</span><span class="p">{</span><span class="nx">client</span><span class="p">}</span><span class="o">&gt;</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">App</span><span class="w"> </span><span class="o">/&gt;</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">  </span><span class="o">&lt;</span><span class="err">/ApolloProvider&gt;,</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"root"</span><span class="p">)</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="p">);</span>
-</span></code></pre></div>
-</li>
-<li>
-<p><strong>Fetch data with a query</strong></p>
-<p>Inside your components, use Apollo's <code>useQuery</code> hook to fetch data from your GraphQL API:</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useQuery</span><span class="p">,</span><span class="w"> </span><span class="nx">gql</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@apollo/client"</span><span class="p">;</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">GET_ITEMS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">gql</span><span class="sb">`</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="sb">  query GetItems {</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="sb">    items {</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="sb">      id</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="sb">      name</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="sb">    }</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="sb">  }</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="sb">`</span><span class="p">;</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="kd">function</span><span class="w"> </span><span class="nx">ItemList</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">loading</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useQuery</span><span class="p">(</span><span class="nx">GET_ITEMS</span><span class="p">);</span>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">loading</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">Loading</span><span class="p">...</span><span class="o">&lt;</span><span class="err">/p&gt;;</span>
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="ne">Error</span><span class="w"> </span><span class="o">&lt;</span><span class="err">/p&gt;;</span>
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
-</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">      </span><span class="p">{</span><span class="nx">data</span><span class="p">.</span><span class="nx">items</span><span class="p">.</span><span class="nx">map</span><span class="p">(({</span><span class="w"> </span><span class="nx">id</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">li</span><span class="w"> </span><span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">id</span><span class="p">}</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">name</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/li&gt;</span>
-</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">      </span><span class="p">))}</span>
-</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/ul&gt;</span>
-</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">  </span><span class="p">);</span>
-</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="p">}</span>
-</span></code></pre></div>
-</li>
-</ol>
-<p>This setup covers the basics: installing Apollo Client, configuring it, connecting it to React, and running your first query. You can then expand with mutations, subscriptions, and advanced caching as needed.</p>
+<h2 id="graphql-vs-rest">🆚 GraphQL vs. REST</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>GraphQL</th>
+<th>REST</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Fetching</td>
+<td>Clients specify exact fields</td>
+<td>Fixed endpoints with predefined data</td>
+</tr>
+<tr>
+<td>Operations</td>
+<td>Queries (read), Mutations (write)</td>
+<td>GET, POST, PUT, DELETE</td>
+</tr>
+<tr>
+<td>Over-fetching</td>
+<td>Avoided by selecting specific fields</td>
+<td>Possible due to fixed responses</td>
+</tr>
+<tr>
+<td>Under-fetching</td>
+<td>Avoided by requesting all needed data</td>
+<td>Possible, requiring multiple requests</td>
+</tr>
+</tbody>
+</table>
 <hr>
-<h2 id="most-frequent-error-in-react-18">Most frequent Error in React 18</h2>
-<div class="admonition bug">
-<p class="admonition-title">Error: createRoot(...): Target container is not a DOM element.</p>
-</div>
-<div class="admonition success">
-<p class="admonition-title">Fix: Ensure the root container element exists (usually <code>id="root"</code>), and initialize React 18 root properly:</p>
-</div>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">createRoot</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"react-dom/client"</span><span class="p">;</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">ApolloProvider</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@apollo/client"</span><span class="p">;</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">import</span><span class="w"> </span><span class="nx">client</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"./apolloClient"</span><span class="p">;</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">import</span><span class="w"> </span><span class="nx">App</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"./App"</span><span class="p">;</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="kd">const</span><span class="w"> </span><span class="nx">container</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"root"</span><span class="p">);</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="kd">const</span><span class="w"> </span><span class="nx">root</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createRoot</span><span class="p">(</span><span class="nx">container</span><span class="p">);</span>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="nx">root</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">  </span><span class="o">&lt;</span><span class="nx">ApolloProvider</span><span class="w"> </span><span class="nx">client</span><span class="o">=</span><span class="p">{</span><span class="nx">client</span><span class="p">}</span><span class="o">&gt;</span>
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">App</span><span class="w"> </span><span class="o">/&gt;</span>
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">  </span><span class="o">&lt;</span><span class="err">/ApolloProvider&gt;</span>
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="p">);</span>
+<details class="bug" open="open">
+<summary>HANDLING ERRORS</summary>
+<p>Successful queries return a JSON document that contains a “data” key. Unsuccessful queries return a JSON document that contains an “errors” key. The details of what went wrong is passed as JSON data under this key. A JSON response can contain both “data” and “errors.”</p>
+</details>
+<hr>
+<p>🔍 GraphQL Queries</p>
+<p>GraphQL queries allow clients to request specific data from the server. Unlike REST, where clients might over-fetch or under-fetch data due to fixed endpoints, GraphQL enables clients to specify exactly what data they need.</p>
+<p>Example:</p>
+<div class="language-graphql highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">query</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="n">user</span><span class="p">(</span><span class="n">id</span><span class="p">:</span><span class="w"> </span><span class="s">"1"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">id</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">name</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="n">email</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">}</span>
 </span></code></pre></div>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">// apolloClient.js</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">ApolloClient</span><span class="p">,</span><span class="w"> </span><span class="nx">InMemoryCache</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@apollo/client"</span><span class="p">;</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ApolloClient</span><span class="p">({</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span><span class="nx">uri</span><span class="o">:</span><span class="w"> </span><span class="s2">"https://your-graphql-endpoint.com/graphql"</span><span class="p">,</span><span class="w"> </span><span class="c1">// Replace with your GraphQL API URL</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">  </span><span class="nx">cache</span><span class="o">:</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">InMemoryCache</span><span class="p">(),</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">});</span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">client</span><span class="p">;</span>
+<p>In this query, the client requests the <code>id</code>, <code>name</code>, and <code>email</code> of the user with ID <code>1</code>. The server responds with only the requested fields, reducing unnecessary data transfer.</p>
+<hr>
+<p>✏️ GraphQL Mutations</p>
+<p>Mutations in GraphQL are used to modify server-side data, such as creating, updating, or deleting records. They are similar to queries but are defined under a separate root <code>mutation</code> type.</p>
+<p>Example:</p>
+<div class="language-graphql highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">mutation</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="n">createUser</span><span class="p">(</span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="s">"John Doe"</span><span class="p">,</span><span class="w"> </span><span class="n">email</span><span class="p">:</span><span class="w"> </span><span class="s">"john.doe@example.com"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">id</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="n">name</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="n">email</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">}</span>
 </span></code></pre></div>
+<p>This mutation creates a new user with the provided name and email, and returns the <code>id</code>, <code>name</code>, and <code>email</code> of the newly created user.</p>
+<ul>
+<li>
+<p><a href="https://yaasir007.medium.com/graphql-a-modern-approach-to-api-design-7a7b8af3bf7d">GraphQL: A Modern Approach to API Design</a></p>
+</li>
+<li>
+<p><a href="https://artsy.github.io/blog/2018/05/08/is-graphql-the-future/?utm_source=chatgpt.com">Is GraphQL The Future?</a></p>
+</li>
+<li>
+<p><a href="https://medium.com/%40matiesogeoffrey/graphql-vs-rest-a-detailed-comparison-of-queries-mutations-and-http-methods-b3dc1ae2097a">GraphQL Vs REST: A detailed Comparison of Queries, Mutations and HTTP Methods</a></p>
+</li>
+</ul>
 <hr>
 <h2 id="reference">Reference</h2>
 <ul>
 <li><a href="#">Learning GraphQL by Eve Porcello and Alex Banks</a></li>
+<li><a href="#">Modern API Design, REST, GraphQL and Beyong by Peter Johnson</a></li>
 </ul></div>
 
 
@@ -2198,7 +2271,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../rest-drawbacks/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Rest Drawback">
+          <a href="../overview/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Overview">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2208,20 +2281,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Rest Drawback
+                Overview
               </div>
             </div>
           </a>
         
         
           
-          <a href="../tools/" class="md-footer__link md-footer__link--next" aria-label="Next: Tools">
+          <a href="../graphql-client/" class="md-footer__link md-footer__link--next" aria-label="Next: Client">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Tools
+                Client
               </div>
             </div>
             <div class="md-footer__button md-icon">

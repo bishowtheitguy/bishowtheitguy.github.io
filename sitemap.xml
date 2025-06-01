@@ -2,134 +2,146 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://bishowtheitguy.github.io/</loc>
-         <lastmod>2025-05-30</lastmod>
+         <lastmod>2025-06-01</lastmod>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/tags/</loc>
-         <lastmod>2025-05-30</lastmod>
+         <lastmod>2025-06-01</lastmod>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/FP/intro/</loc>
-         <lastmod>2025-05-30</lastmod>
+         <lastmod>2025-06-01</lastmod>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/OOP/intro/</loc>
-         <lastmod>2025-05-30</lastmod>
+         <lastmod>2025-06-01</lastmod>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/blog/</loc>
-         <lastmod>2025-05-30</lastmod>
+         <lastmod>2025-06-01</lastmod>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/dsa/fibonacci/</loc>
-         <lastmod>2025-05-30</lastmod>
+         <lastmod>2025-06-01</lastmod>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/dsa/longest-substring/</loc>
-         <lastmod>2025-05-30</lastmod>
+         <lastmod>2025-06-01</lastmod>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/dsa/overview/</loc>
-         <lastmod>2025-05-30</lastmod>
+         <lastmod>2025-06-01</lastmod>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/dsa/pattern/</loc>
-         <lastmod>2025-05-30</lastmod>
+         <lastmod>2025-06-01</lastmod>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/dsa/understanding/</loc>
-         <lastmod>2025-05-30</lastmod>
+         <lastmod>2025-06-01</lastmod>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/http/intro/</loc>
-         <lastmod>2025-05-30</lastmod>
+         <lastmod>2025-06-01</lastmod>
+    </url>
+    <url>
+         <loc>https://bishowtheitguy.github.io/http/types-of-api-testing/</loc>
+         <lastmod>2025-06-01</lastmod>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/http/OpenID/intro/</loc>
-         <lastmod>2025-05-30</lastmod>
+         <lastmod>2025-06-01</lastmod>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/http/OpenID/oidc-client/</loc>
-         <lastmod>2025-05-30</lastmod>
+         <lastmod>2025-06-01</lastmod>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/http/graphql/graphql-client/</loc>
-         <lastmod>2025-05-30</lastmod>
+         <lastmod>2025-06-01</lastmod>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/http/graphql/overview/</loc>
-         <lastmod>2025-05-30</lastmod>
+         <lastmod>2025-06-01</lastmod>
+    </url>
+    <url>
+         <loc>https://bishowtheitguy.github.io/http/graphql/rest-drawbacks/</loc>
+         <lastmod>2025-06-01</lastmod>
+    </url>
+    <url>
+         <loc>https://bishowtheitguy.github.io/http/graphql/tools/</loc>
+         <lastmod>2025-06-01</lastmod>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/http/jwt/intro/</loc>
-         <lastmod>2025-05-30</lastmod>
+         <lastmod>2025-06-01</lastmod>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/http/jwt/theory/</loc>
-         <lastmod>2025-05-30</lastmod>
+         <lastmod>2025-06-01</lastmod>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/http/jwt/refreshToken/intro/</loc>
-         <lastmod>2025-05-30</lastmod>
+         <lastmod>2025-06-01</lastmod>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/interview/draft/</loc>
-         <lastmod>2025-05-30</lastmod>
+         <lastmod>2025-06-01</lastmod>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/interview/intro/</loc>
-         <lastmod>2025-05-30</lastmod>
+         <lastmod>2025-06-01</lastmod>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/interview/core/function-signature/</loc>
-         <lastmod>2025-05-30</lastmod>
+         <lastmod>2025-06-01</lastmod>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/interview/core/memonic/</loc>
-         <lastmod>2025-05-30</lastmod>
+         <lastmod>2025-06-01</lastmod>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/interview/core/serialization-versus-deserialization/</loc>
-         <lastmod>2025-05-30</lastmod>
+         <lastmod>2025-06-01</lastmod>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/interview/core/theory/</loc>
-         <lastmod>2025-05-30</lastmod>
+         <lastmod>2025-06-01</lastmod>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/interview/leetcode/intro/</loc>
-         <lastmod>2025-05-30</lastmod>
+         <lastmod>2025-06-01</lastmod>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/interview/why-question/control-statement-detail/</loc>
-         <lastmod>2025-05-30</lastmod>
+         <lastmod>2025-06-01</lastmod>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/interview/why-question/control-statement/</loc>
-         <lastmod>2025-05-30</lastmod>
+         <lastmod>2025-06-01</lastmod>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/interview/why-question/intro/</loc>
-         <lastmod>2025-05-30</lastmod>
+         <lastmod>2025-06-01</lastmod>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/interview/why-question/try-catch/</loc>
-         <lastmod>2025-05-30</lastmod>
+         <lastmod>2025-06-01</lastmod>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/math/intro/</loc>
-         <lastmod>2025-05-30</lastmod>
+         <lastmod>2025-06-01</lastmod>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/paradigm/intro/</loc>
-         <lastmod>2025-05-30</lastmod>
+         <lastmod>2025-06-01</lastmod>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/python/args/</loc>
-         <lastmod>2025-05-30</lastmod>
+         <lastmod>2025-06-01</lastmod>
     </url>
     <url>
          <loc>https://bishowtheitguy.github.io/python/content-management-system/</loc>
-         <lastmod>2025-05-30</lastmod>
+         <lastmod>2025-06-01</lastmod>
     </url>
 </urlset>
